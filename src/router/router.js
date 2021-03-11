@@ -3,9 +3,11 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import paths from "services/shared/router-paths";
 import Dashboard from "../pages/dashboard";
 import Simulation from "../pages/simulation";
+import Header from "components/shared/header";
 
 const Router = () => (
   <BrowserRouter>
+  <Header pageName="Dashboard" />
     <Switch>
         <Route
           path={paths.Root}
