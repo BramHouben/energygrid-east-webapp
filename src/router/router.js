@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import paths from "services/shared/router-paths";
 import Dashboard from "../pages/dashboard";
 import Simulation from "../pages/simulation";
+import Login from "../pages/login";
 
 const Router = () => (
   <BrowserRouter>
@@ -15,6 +16,10 @@ const Router = () => (
           path={paths.Simulation}
           exact component={Simulation}
         />
+        <Route
+          path={paths.Login}
+          exact component={Login}
+          />
     </Switch>
   </BrowserRouter>
 );

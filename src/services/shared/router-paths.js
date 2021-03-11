@@ -2,6 +2,7 @@
 const paths = {
   Root: "/",
   Simulation: "/simulation/",
+  Login: "/login"
 };
 
 export default paths;
