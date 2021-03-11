@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import { Button } from "react-bootstrap";
 import { getClaim } from "services/jwt";
 import accountRole from "services/shared/account-role";
@@ -7,32 +7,26 @@ import routerPaths from "services/shared/router-paths";
 import Cookies from "universal-cookie";
 import "./index.css";
 
-export default class Menu extends Component {
-  constructor(props) {
-    super(props);
+export default function Menu() {
+  const [menuLinks, setMenuLinks] = useState({});
 
-    this.state = {
-      menuLinks: [],
-    };
-  }
-
-  openNav = () => {
+  const openNav = () => {
     const menu = document.getElementById("menu");
     menu.style.width = "125px";
   };
 
-  closeNav = () => {
+  const closeNav = () => {
     const menu = document.getElementById("menu");
     menu.style.width = "0";
   };
 
-  logout = () => {
+  const logout = () => {
     const cookie = new Cookies();
     cookie.remove("Jwt", { path: "/" });
     window.location.pathname = "/login";
   };
 
-  generateLinks = () => {
+  const generateLinks = () => {
     const userRole = getClaim(jwtClaims.accountRole);
     const links = [
       {
@@ -66,38 +60,32 @@ export default class Menu extends Component {
       .map((link) => link.a);
   };
 
-  render() {
-    return (
-      <div>
-        <Button
-          id="open-menu-button"
-          className="link-btn corporate-identity-font"
-          type="button"
-          onClick={this.openNav}
-        >
-          &#9776;
-        </Button>
+  return (
+    <div>
+      <Button
+        id="open-menu-button"
+        className="link-btn corporate-identity-font"
+        type="button"
+        onClick={() => openNav()}
+      >
+        &#9776;
+      </Button>
 
-        <div id="menu">
-          <button
-            className="closebtn link-btn"
-            type="button"
-            onClick={this.closeNav}
-          >
-            &times;
+      <div id="menu">
+        <button
+          className="closebtn link-btn"
+          type="button"
+          onClick={() => closeNav()}
+        >
+          &times;
+        </button>
+        <div id="menu-links">
+          {generateLinks}
+          <button onClick={() => logout()} type="button" className="link-btn">
+            Afmelden
           </button>
-          <div id="menu-links">
-            {this.generateLinks()}
-            <button
-              onClick={() => this.logout()}
-              type="button"
-              className="link-btn"
-            >
-              Afmelden
-            </button>
-          </div>
         </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
