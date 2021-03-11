@@ -1,14 +1,17 @@
 import React from 'react'
 import './index.css'
+import Button from 'react-bootstrap/Button';
+import Header from 'components/shared/header';
 
 export default class Simulation extends React.Component {
 
     render() {
         return (
             <div id="simulationWrapper">
-                <div id="simulationHeader">
+                <Header />
+                <div id="simulationHeader" className="content">
                     <div>
-                        <h1>ewdweewfewf</h1>
+                        <Button type="success">WQDEWDEW</Button>
                     </div>
                 </div>
             </div>
