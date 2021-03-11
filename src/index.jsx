@@ -4,6 +4,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import { I18nextProvider } from "react-i18next";
+import i18next from "./i18n";
 
 ReactDOM.render(
   <React.StrictMode>
