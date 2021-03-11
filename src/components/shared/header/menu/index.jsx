@@ -7,26 +7,31 @@ import routerPaths from "services/shared/router-paths";
 import Cookies from "universal-cookie";
 import "./index.css";
 
-export default function Menu() {
-  const [menuLinks, setMenuLinks] = useState({});
+export default class Menu extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      menuLinks: {}
+    }
+  }
 
-  const openNav = () => {
+  openNav = () => {
     const menu = document.getElementById("menu");
     menu.style.width = "125px";
   };
 
-  const closeNav = () => {
+  closeNav = () => {
     const menu = document.getElementById("menu");
     menu.style.width = "0";
   };
 
-  const logout = () => {
+  logout = () => {
     const cookie = new Cookies();
     cookie.remove("Jwt", { path: "/" });
     window.location.pathname = "/login";
   };
 
-  const generateLinks = () => {
+  generateLinks = () => {
     const userRole = getClaim(jwtClaims.accountRole);
     const links = [
       {
@@ -60,32 +65,36 @@ export default function Menu() {
       .map((link) => link.a);
   };
 
-  return (
-    <div>
-      <Button
-        id="open-menu-button"
-        className="link-btn corporate-identity-font"
-        type="button"
-        onClick={() => openNav()}
-      >
-        &#9776;
-      </Button>
+  render() {
 
-      <div id="menu">
-        <button
-          className="closebtn link-btn"
+    return (
+      <div>
+        <Button
+          id="open-menu-button"
+          className="link-btn corporate-identity-font"
           type="button"
-          onClick={() => closeNav()}
+          onClick={() => this.openNav()}
         >
-          &times;
-        </button>
-        <div id="menu-links">
-          {generateLinks}
-          <button onClick={() => logout()} type="button" className="link-btn">
-            Afmelden
+          &#9776;
+        </Button>
+
+        <div id="menu">
+          <button
+            className="closebtn link-btn"
+            type="button"
+            onClick={() => this.closeNav()}
+          >
+            &times;
           </button>
+          <div id="menu-links">
+            {this.generateLinks}
+            <button onClick={() => this.logout()} type="button" className="link-btn">
+              Afmelden
+            </button>
+          </div>
         </div>
       </div>
-    </div>
-  );
+    );
+
+  }
 }
