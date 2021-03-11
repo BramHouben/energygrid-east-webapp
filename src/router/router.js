@@ -1,15 +1,24 @@
 import React, { Suspense } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import paths from "services/shared/router-paths";
 
 const Router = () => (
-    <BrowserRouter>
-      <Switch>
+  <BrowserRouter>
+    <Switch>
       <Suspense fallback={<div>Loading admin component</div>}>
-        <ProtectedRoute component={React.lazy(() => import("../pages/homepage/index"))} />
-        <ProtectedRoute component={React.lazy(() => import("../pages/simulation/index"))} />
+        <Route
+          path={paths.Root}
+          component={React.lazy(() => import("pages/dashboard/index"))}
+        />
       </Suspense>
-      </Switch>
-    </BrowserRouter>
-  );
+      <Suspense fallback={<div>Loading admin component</div>}>
+        <Route
+          path={paths.Simulation}
+          component={React.lazy(() => import("pages/simulation/index"))}
+        />{" "}
+      </Suspense>
+    </Switch>
+  </BrowserRouter>
+);
 
-  export default Router;
+export default Router;

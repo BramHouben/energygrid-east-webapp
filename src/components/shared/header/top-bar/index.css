@@ -1,0 +1,14 @@
+#top-bar-wrapper {
+  height: 50px;
+  background-color: rgb(45, 45, 45);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  color: white;
+  width: 100%;
+  z-index: 999;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  display: flex;
+  place-items: center;
+  place-content: center;
+}
