@@ -1,15 +1,17 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './index.css'
 
-export default function Simulation() {
+export default class Simulation extends React.Component {
 
-    return (
-        <div id="simulationWrapper">
-            <div id="simulationHeader">
-                <div>
-                    <Button variant="success">Success</Button>
+    render() {
+        return (
+            <div id="simulationWrapper">
+                <div id="simulationHeader">
+                    <div>
+                        <h1>ewdweewfewf</h1>
+                    </div>
                 </div>
             </div>
-        </div>
-    )
+        )
+    }
 }
