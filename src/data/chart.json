@@ -124,7 +124,7 @@
       "type": "bar",
       "data": {
         "key": "energy-import-export-countries",
-        "total": ["Import 19.773", "Export 22.433"],
+        "total": ["Import 19.773 (mln kWh)", "Export 22.433 (mln kWh)"],
         "labels": [
           "België",
           "Denemarken",
