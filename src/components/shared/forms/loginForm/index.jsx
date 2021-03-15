@@ -1,7 +1,22 @@
 import React, { Component } from 'react';
-import { Container, Form, Button } from "react-bootstrap"
+import { Form, Button } from "react-bootstrap"
+import ApiActions from "services/shared/api/ApiActions"
+import { Post } from "services/shared/api/Api";
+import { setAuthorizationCookie } from 'services/shared/cookie';
 
 export default class LoginForm extends Component {
+    async login(e) {
+        e.preventDefault();
+        const formData = new FormData(e.target);
+        const formDataObj = Object.fromEntries(formData.entries());
+
+        const result = await Post(ApiActions.login, formDataObj);
+        if (result.status === 200) {
+            const data = await result.text();
+            setAuthorizationCookie(data);
+        }
+        else console.log("Geen succes");
+    }
 
     render() {
         return (

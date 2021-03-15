@@ -1,5 +1,4 @@
 import LoginForm from "components/shared/forms/loginForm";
-import Header from "components/shared/header";
 import React, { Component } from 'react';
 import { Container } from "react-bootstrap";
 import "./index.css";
