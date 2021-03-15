@@ -5,4 +5,6 @@
 
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=BramHouben_energygrid-east-webapp&metric=security_rating)](https://sonarcloud.io/dashboard?id=BramHouben_energygrid-east-webapp)
 
+## Libraries
+
 - 📈 [Chart JS](https://www.chartjs.org/) — Chart JS library for visualize charts
