@@ -39,8 +39,13 @@ export default class ChartCard extends React.Component {
             {chart.data.key}
           </Card.Header>
           <Card.Body>{this.getChartType(chart)}</Card.Body>
-          <Card.Footer>
-            {chart.data.total ? `Totaal: ${chart.data.total}` : ""}
+          <Card.Footer className="text-right">
+            {chart.data.total &&
+              chart.data.total.length > 0 &&
+              chart.data.total.map((total) => {
+                console.log(total);
+                return <div>Totaal: {total}</div>;
+              })}
           </Card.Footer>
         </Card>
       </div>

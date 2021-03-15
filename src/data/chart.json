@@ -5,7 +5,7 @@
       "type": "line",
       "data": {
         "key": "energy-year-overview",
-        "total": 118920,
+        "total": [118920],
         "labels": [
           "January",
           "February",
@@ -97,6 +97,7 @@
       "type": "pie",
       "data": {
         "key": "energy-import-export",
+        "total": ["42.206"],
         "labels": ["import", "export"],
         "datasets": [
           {
@@ -123,7 +124,7 @@
       "type": "bar",
       "data": {
         "key": "energy-import-export-countries",
-        "total": "19.773 (Import) - 22.433 (Export)",
+        "total": ["Import 19.773", "Export 22.433"],
         "labels": [
           "België",
           "Denemarken",
@@ -172,7 +173,7 @@
       "type": "doughnut",
       "data": {
         "key": "solar-parks-amount",
-        "total": 3,
+        "total": [3],
         "labels": ["Flevoland", "Overijssel", "Gelderland"],
         "datasets": [
           {
