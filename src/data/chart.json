@@ -1,0 +1,171 @@
+{
+  "charts": [
+    {
+      "id": 1,
+      "type": "line",
+      "data": {
+        "key": "energy-year-overview",
+        "total": 118920,
+        "labels": [
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "September",
+          "October",
+          "November",
+          "December"
+        ],
+        "datasets": [
+          {
+            "label": "production",
+            "fill": false,
+            "lineTension": 0.5,
+            "backgroundColor": "#87f283",
+            "borderColor": "#41eb3b",
+            "borderWidth": 2,
+            "data": [
+              11228,
+              10023,
+              9669,
+              8027,
+              9201,
+              8893,
+              10463,
+              10726,
+              9833,
+              10199,
+              10126,
+              10531
+            ]
+          },
+          {
+            "label": "consumption",
+            "fill": false,
+            "lineTension": 0.5,
+            "backgroundColor": "#f76f6f",
+            "borderColor": "#f73131",
+            "borderWidth": 2,
+            "data": [
+              10500,
+              9761,
+              9497,
+              8154,
+              8461,
+              8472,
+              8787,
+              9161,
+              8922,
+              9675,
+              9621,
+              10196
+            ]
+          }
+        ]
+      },
+      "options": {
+        "title": {
+          "display": true,
+          "text": "2020",
+          "fontSize": 20
+        },
+        "legend": {
+          "display": true,
+          "position": "right"
+        },
+        "scales": {
+          "yAxes": [
+            {
+              "ticks": {
+                "beginAtZero": false
+              },
+              "scaleLabel": {
+                "display": true,
+                "labelString": "Energy in (mln kWh)"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 2,
+      "type": "pie",
+      "data": {
+        "key": "energy-import-export",
+        "labels": ["import", "export"],
+        "datasets": [
+          {
+            "label": "Import Export",
+            "backgroundColor": ["#08275E", "#0B6E08"],
+            "hoverBackgroundColor": ["#0B398A", "#0E910A"],
+            "data": [19773, 22433]
+          }
+        ]
+      },
+      "options": {
+        "title": {
+          "display": true,
+          "fontSize": 20
+        },
+        "legend": {
+          "display": true,
+          "position": "right"
+        }
+      }
+    },
+    {
+      "id": 3,
+      "type": "bar",
+      "data": {
+        "key": "energy-import-export-countries",
+        "total": "19.773 (Import) - 22.433 (Export)",
+        "labels": [
+          "België",
+          "Denemarken",
+          "Duitsland",
+          "Verenigd Koninkrijk",
+          "Noorwegen"
+        ],
+        "datasets": [
+          {
+            "label": "import",
+            "backgroundColor": "#08275E",
+            "hoverBackgroundColor": "#0B398A",
+            "data": [3782, 2082, 8748, 541, 4621]
+          },
+          {
+            "label": "export",
+            "backgroundColor": "#0B6E08",
+            "hoverBackgroundColor": "#0E910A",
+            "data": [7806, 1053, 8677, 4787, 110]
+          }
+        ]
+      },
+      "options": {
+        "barValueSpacing": 20,
+        "legend": {
+          "display": true,
+          "position": "right"
+        },
+        "scales": {
+          "yAxes": [
+            {
+              "ticks": {
+                "beginAtZero": false
+              },
+              "scaleLabel": {
+                "display": true,
+                "labelString": "Energy in (mln kWh)"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

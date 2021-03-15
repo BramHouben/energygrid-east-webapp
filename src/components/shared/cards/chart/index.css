@@ -1,4 +1,4 @@
 #card-wrapper {
-    width: 500px;
-    margin: 75px 50px 75px 150px;
+  flex-basis: 500px;
+  margin: 75px 50px 75px 150px;
 }
