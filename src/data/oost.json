@@ -1,0 +1,5361 @@
+{
+  "type": "FeatureCollection",
+  "totalFeatures": 501,
+  "features": [
+    {
+      "type": "Feature",
+      "id": "sde_zon.1",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.1132777251542105, 52.46974613309643]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2013",
+        "referentie": "SDE1308118",
+        "aanvrager": "ENGIE Energie Zonnepark Harculo B.V.",
+        "adres": "IJsselcentraleweg 6",
+        "postcode": "8015PA",
+        "plaats_lok": "ZWOLLE",
+        "provincien": "Overijssel",
+        "gemeentena": "Zwolle",
+        "vermogen__": 1.01,
+        "max_s": 1408950,
+        "gerealisee": "Ja",
+        "x": 204337,
+        "y": 498248.12,
+        "grondgebon": "Ja",
+        "jaar": 2013,
+        "jaar_real": 2015,
+        "opmerkinge": null,
+        "controle": "realisatie_locatie",
+        "bbox": [
+          6.1132777251542105,
+          52.46974613309643,
+          6.1132777251542105,
+          52.46974613309643
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.7",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.30917082237407, 52.05817723871769]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2014",
+        "referentie": "SDE1417236",
+        "aanvrager": "Sunwatt De Kwekerij B.V.",
+        "adres": "Vordenseweg 58",
+        "postcode": "7255BX",
+        "plaats_lok": "HENGELO GLD",
+        "provincien": "Gelderland",
+        "gemeentena": "Bronckhorst",
+        "vermogen__": 2,
+        "max_s": 3090000,
+        "gerealisee": "Ja",
+        "x": 218230,
+        "y": 452610,
+        "grondgebon": "Ja",
+        "jaar": 2014,
+        "jaar_real": 2016,
+        "opmerkinge": null,
+        "controle": "realisatie_locatie",
+        "bbox": [
+          6.30917082237407,
+          52.05817723871769,
+          6.30917082237407,
+          52.05817723871769
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.8",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.326008743927849, 51.86711327577287]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2014",
+        "referentie": "SDE1423073",
+        "aanvrager": "Avri Solar B.V.",
+        "adres": "Meersteeg 17-c",
+        "postcode": "4191NK",
+        "plaats_lok": "GELDERMALSEN",
+        "provincien": "Gelderland",
+        "gemeentena": "West Betuwe",
+        "vermogen__": 6.699,
+        "max_s": 1.0322401e7,
+        "gerealisee": "Ja",
+        "x": 150785.25,
+        "y": 430952.93,
+        "grondgebon": "Ja",
+        "jaar": 2014,
+        "jaar_real": 2017,
+        "opmerkinge": null,
+        "controle": "realisatie_locatie",
+        "bbox": [
+          5.326008743927849,
+          51.86711327577287,
+          5.326008743927849,
+          51.86711327577287
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.10",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.326571389399491, 51.86589798710941]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2014",
+        "referentie": "SDE1426463",
+        "aanvrager": "Avri Solar B.V.",
+        "adres": "Meersteeg 17-b",
+        "postcode": "4191NK",
+        "plaats_lok": "GELDERMALSEN",
+        "provincien": "Gelderland",
+        "gemeentena": "West Betuwe",
+        "vermogen__": 1.933,
+        "max_s": 2978534,
+        "gerealisee": "Ja",
+        "x": 150823.89,
+        "y": 430817.69,
+        "grondgebon": "Ja",
+        "jaar": 2014,
+        "jaar_real": 2017,
+        "opmerkinge": null,
+        "controle": "realisatie_locatie",
+        "bbox": [
+          5.326571389399491,
+          51.86589798710941,
+          5.326571389399491,
+          51.86589798710941
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.17",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.7842783364985655, 52.722304383081756]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2014",
+        "referentie": "SDE1468340",
+        "aanvrager": "Obton Solenergi \"de Munt\" C.V.",
+        "adres": "Muntweg 8",
+        "postcode": "8305AL",
+        "plaats_lok": "EMMELOORD",
+        "provincien": "Flevoland",
+        "gemeentena": "Noordoostpolder",
+        "vermogen__": 11.461,
+        "max_s": 1.7707245e7,
+        "gerealisee": "Ja",
+        "x": 181827.24,
+        "y": 526176.62,
+        "grondgebon": "Ja",
+        "jaar": 2014,
+        "jaar_real": 2017,
+        "opmerkinge": null,
+        "controle": "realisatie_locatie",
+        "bbox": [
+          5.7842783364985655,
+          52.722304383081756,
+          5.7842783364985655,
+          52.722304383081756
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.25",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.531332567397516, 52.57768011883653]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2016 II",
+        "referentie": "SDE1601601",
+        "aanvrager": "Maximazon B.V.",
+        "adres": "IJsselmeerdijk 101",
+        "postcode": "8221RC",
+        "plaats_lok": "LELYSTAD",
+        "provincien": "Flevoland",
+        "gemeentena": "Lelystad",
+        "vermogen__": 2.488,
+        "max_s": 2659050,
+        "gerealisee": "Ja",
+        "x": 164769.72,
+        "y": 510020.02,
+        "grondgebon": "Ja",
+        "jaar": 2016,
+        "jaar_real": 2017,
+        "opmerkinge": null,
+        "controle": "realisatie_locatie",
+        "bbox": [
+          5.531332567397516,
+          52.57768011883653,
+          5.531332567397516,
+          52.57768011883653
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.26",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.496428896477237, 52.59949708915047]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2016 II",
+        "referentie": "SDE1602322",
+        "aanvrager": "NPG Solar Dedemsvaart B.V. i.o.",
+        "adres": "Archimedes 38a-zn",
+        "postcode": "7701SG",
+        "plaats_lok": "DEDEMSVAART",
+        "provincien": "Overijssel",
+        "gemeentena": "Hardenberg",
+        "vermogen__": 2.738,
+        "max_s": 2926238,
+        "gerealisee": "Ja",
+        "x": 230149.801883,
+        "y": 513014.20844,
+        "grondgebon": "Ja",
+        "jaar": 2016,
+        "jaar_real": 2019,
+        "opmerkinge": null,
+        "controle": "realisatie_locatie",
+        "bbox": [
+          6.496428896477237,
+          52.59949708915047,
+          6.496428896477237,
+          52.59949708915047
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.29",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.211231760397507, 52.15567779195109]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2016 II",
+        "referentie": "SDE1615683",
+        "aanvrager": "Zonnepark Noordveen B.V.",
+        "adres": "Brandts Buijsstraat 6",
+        "postcode": "7203AC",
+        "plaats_lok": "ZUTPHEN",
+        "provincien": "Gelderland",
+        "gemeentena": "Zutphen",
+        "vermogen__": 1.65,
+        "max_s": 1763438,
+        "gerealisee": "Ja",
+        "x": 211390.21,
+        "y": 463376.59,
+        "grondgebon": "Ja",
+        "jaar": 2016,
+        "jaar_real": 2017,
+        "opmerkinge": null,
+        "controle": "realisatie_locatie",
+        "bbox": [
+          6.211231760397507,
+          52.15567779195109,
+          6.211231760397507,
+          52.15567779195109
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.33",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.471603806725014, 51.92255702793297]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2016 I",
+        "referentie": "SDE1621658",
+        "aanvrager": "Lingesolar B.V.",
+        "adres": "Medelsestraat 2",
+        "postcode": "4054NH",
+        "plaats_lok": "LIENDEN",
+        "provincien": "Gelderland",
+        "gemeentena": "Buren",
+        "vermogen__": 1.331,
+        "max_s": 1043172,
+        "gerealisee": "Ja",
+        "x": 160806,
+        "y": 437123,
+        "grondgebon": "Ja",
+        "jaar": 2016,
+        "jaar_real": 2017,
+        "opmerkinge": null,
+        "controle": "realisatie_locatie",
+        "bbox": [
+          5.471603806725014,
+          51.92255702793297,
+          5.471603806725014,
+          51.92255702793297
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.35",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.288235045251693, 52.334961662742415]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2016 II",
+        "referentie": "SDE1624442",
+        "aanvrager": "Endona Projecten B.V.",
+        "adres": "Johannalaan 39",
+        "postcode": "8111AV",
+        "plaats_lok": "HEETEN",
+        "provincien": "Overijssel",
+        "gemeentena": "Raalte",
+        "vermogen__": 1.8468,
+        "max_s": 1973768,
+        "gerealisee": "Ja",
+        "x": 216411.63,
+        "y": 483385.68,
+        "grondgebon": "Ja",
+        "jaar": 2016,
+        "jaar_real": 2017,
+        "opmerkinge": null,
+        "controle": "realisatie_locatie",
+        "bbox": [
+          6.288235045251693,
+          52.334961662742415,
+          6.288235045251693,
+          52.334961662742415
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.43",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.599750455072001, 52.37728278446259]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2016 II",
+        "referentie": "SDE1653741",
+        "aanvrager": "De Groene Weuste B.V.",
+        "adres": "Wetering 1",
+        "postcode": "7641LG",
+        "plaats_lok": "WIERDEN",
+        "provincien": "Overijssel",
+        "gemeentena": "Wierden",
+        "vermogen__": 4.032,
+        "max_s": 4309200,
+        "gerealisee": "Ja",
+        "x": 237563.59,
+        "y": 488403.74,
+        "grondgebon": "Ja",
+        "jaar": 2016,
+        "jaar_real": 2017,
+        "opmerkinge": null,
+        "controle": "realisatie_locatie",
+        "bbox": [
+          6.599750455072001,
+          52.37728278446259,
+          6.599750455072001,
+          52.37728278446259
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.49",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.90247713895763, 51.926396040833644]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2016 II",
+        "referentie": "SDE1679581",
+        "aanvrager": "Drijvend Zonnepark Lingewaard B.V.",
+        "adres": "Azalealaan 12",
+        "postcode": "6681RJ",
+        "plaats_lok": "BEMMEL",
+        "provincien": "Gelderland",
+        "gemeentena": "Lingewaard",
+        "vermogen__": 1.845,
+        "max_s": 1971844,
+        "gerealisee": "Ja",
+        "x": 190442.8,
+        "y": 437672.47,
+        "grondgebon": "Drijvende installatie",
+        "jaar": 2016,
+        "jaar_real": 2017,
+        "opmerkinge": null,
+        "controle": "realisatie_locatie",
+        "bbox": [
+          5.90247713895763,
+          51.926396040833644,
+          5.90247713895763,
+          51.926396040833644
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.51",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.610316206618321, 52.065492940898096]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2016 II",
+        "referentie": "SDE1684174",
+        "aanvrager": "Greenspread Solar I B.V.",
+        "adres": "Deventer Kunstweg 11",
+        "postcode": "7156JA",
+        "plaats_lok": "BELTRUM",
+        "provincien": "Gelderland",
+        "gemeentena": "Oost Gelre",
+        "vermogen__": 2.232,
+        "max_s": 2353644,
+        "gerealisee": "Ja",
+        "x": 238868.12,
+        "y": 453729.01,
+        "grondgebon": "Ja",
+        "jaar": 2016,
+        "jaar_real": 2017,
+        "opmerkinge": null,
+        "controle": "realisatie_locatie",
+        "bbox": [
+          6.610316206618321,
+          52.065492940898096,
+          6.610316206618321,
+          52.065492940898096
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.56",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.797573291421072, 52.226363833536276]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2016 I",
+        "referentie": "SDE1696122",
+        "aanvrager": "Twence Zon B.V.",
+        "adres": "Boldershoekweg 51",
+        "postcode": "7554RT",
+        "plaats_lok": "HENGELO OV",
+        "provincien": "Overijssel",
+        "gemeentena": "Enschede",
+        "vermogen__": 1,
+        "max_s": 1068750,
+        "gerealisee": "Ja",
+        "x": 251359.23,
+        "y": 471858.1,
+        "grondgebon": "Ja",
+        "jaar": 2016,
+        "jaar_real": 2017,
+        "opmerkinge": "exacte locatie onduidelijk",
+        "controle": "realisatie_locatie",
+        "bbox": [
+          6.797573291421072,
+          52.226363833536276,
+          6.797573291421072,
+          52.226363833536276
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.59",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.7927395185813655, 52.22683029803418]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2017 I",
+        "referentie": "SDE1701746",
+        "aanvrager": "Twence Zon B.V.",
+        "adres": "Oude Hengelosedijk 10",
+        "postcode": "7547PB",
+        "plaats_lok": "HENGELO OV",
+        "provincien": "Overijssel",
+        "gemeentena": "Enschede",
+        "vermogen__": 13.5,
+        "max_s": 1.76985e7,
+        "gerealisee": "Ja",
+        "x": 251028,
+        "y": 471903.58,
+        "grondgebon": "Ja",
+        "jaar": 2017,
+        "jaar_real": 2018,
+        "opmerkinge": "exacte locatie onduidelijk",
+        "controle": "realisatie_locatie",
+        "bbox": [
+          6.7927395185813655,
+          52.22683029803418,
+          6.7927395185813655,
+          52.22683029803418
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.69",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.870474398704344, 52.74410956910856]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2017 I",
+        "referentie": "SDE1708342",
+        "aanvrager": "Exploitatiemaatschappij Groen Energie B.V.",
+        "adres": "Weteringweg 16",
+        "postcode": "8315RL",
+        "plaats_lok": "LUTTELGEEST",
+        "provincien": "Flevoland",
+        "gemeentena": "Noordoostpolder",
+        "vermogen__": 6.24,
+        "max_s": 7380360,
+        "gerealisee": "Ja",
+        "x": 187634.579962,
+        "y": 528638.41378,
+        "grondgebon": "Ja",
+        "jaar": 2017,
+        "jaar_real": 2019,
+        "opmerkinge": null,
+        "controle": "realisatie_locatie",
+        "bbox": [
+          5.870474398704344,
+          52.74410956910856,
+          5.870474398704344,
+          52.74410956910856
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.78",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.580161625829584, 52.52070512963385]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2017 II",
+        "referentie": "SDE1724092",
+        "aanvrager": "Solarvation B.V.",
+        "adres": "Solarvation Fase 3",
+        "postcode": null,
+        "plaats_lok": "LELYSTAD",
+        "provincien": "Flevoland",
+        "gemeentena": "Lelystad",
+        "vermogen__": 3.591,
+        "max_s": 4451943,
+        "gerealisee": "Nee",
+        "x": 168096.526754,
+        "y": 503688.197243,
+        "grondgebon": "Ja",
+        "jaar": 2017,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan_locatie",
+        "bbox": [
+          5.580161625829584,
+          52.52070512963385,
+          5.580161625829584,
+          52.52070512963385
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.80",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.750952000497799, 52.43030582554799]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2017 II",
+        "referentie": "SDE1728682",
+        "aanvrager": "***",
+        "adres": "***",
+        "postcode": null,
+        "plaats_lok": "BIDDINGHUIZEN",
+        "provincien": "Flevoland",
+        "gemeentena": "Dronten",
+        "vermogen__": 39.16,
+        "max_s": 4.910664e7,
+        "gerealisee": "Nee",
+        "x": 179739.069069,
+        "y": 493674.409606,
+        "grondgebon": "Ja",
+        "jaar": 2017,
+        "jaar_real": 0,
+        "opmerkinge": "aanvrager: Solarfields Projecten B.V.,  Spijkweg 31 Biddinghuizen",
+        "controle": null,
+        "bbox": [
+          5.750952000497799,
+          52.43030582554799,
+          5.750952000497799,
+          52.43030582554799
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.82",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.796815177201207, 52.22584541287809]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2017 I",
+        "referentie": "SDE1735469",
+        "aanvrager": "Twence Zon B.V.",
+        "adres": "Boldershoekweg 51",
+        "postcode": "7554RT",
+        "plaats_lok": "HENGELO OV",
+        "provincien": "Overijssel",
+        "gemeentena": "Enschede",
+        "vermogen__": 1.728,
+        "max_s": 2068416,
+        "gerealisee": "Ja",
+        "x": 251308.56,
+        "y": 471799.42,
+        "grondgebon": "Ja",
+        "jaar": 2017,
+        "jaar_real": 2017,
+        "opmerkinge": "exacte locatie onduidelijk",
+        "controle": "realisatie_locatie",
+        "bbox": [
+          6.796815177201207,
+          52.22584541287809,
+          6.796815177201207,
+          52.22584541287809
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.92",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.586579980560882, 52.23648313610753]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2017 II",
+        "referentie": "SDE1744326",
+        "aanvrager": "Zonnepark Waterlanden B.V.",
+        "adres": "Zonnepark Waterlanden",
+        "postcode": null,
+        "plaats_lok": "GOOR",
+        "provincien": "Overijssel",
+        "gemeentena": "Hof van Twente",
+        "vermogen__": 10.84776,
+        "max_s": 1.3603092e7,
+        "gerealisee": "Nee",
+        "x": 236926.124622,
+        "y": 472724.456784,
+        "grondgebon": "Ja",
+        "jaar": 2017,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": null,
+        "bbox": [
+          6.586579980560882,
+          52.23648313610753,
+          6.586579980560882,
+          52.23648313610753
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.95",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.640535002344596, 52.41019079638181]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2017 II",
+        "referentie": "SDE1745248",
+        "aanvrager": "Zonnepark Oosterweilanden B.V.",
+        "adres": "VZV00K1286/7/8 en 1097, 1433, 1422, 1096",
+        "postcode": null,
+        "plaats_lok": "VRIEZENVEEN",
+        "provincien": "Overijssel",
+        "gemeentena": "Twenterand",
+        "vermogen__": 12.152,
+        "max_s": 1.4026446e7,
+        "gerealisee": "Ja",
+        "x": 240277.102766,
+        "y": 492112.147934,
+        "grondgebon": "Ja",
+        "jaar": 2017,
+        "jaar_real": 2019,
+        "opmerkinge": "VZV00K1286/7/8 en 1097, 1433, 1422, 1096",
+        "controle": "realisatie_locatie",
+        "bbox": [
+          6.640535002344596,
+          52.41019079638181,
+          6.640535002344596,
+          52.41019079638181
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.101",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.231682763797426, 52.1220408102406]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2017 I",
+        "referentie": "SDE1747799",
+        "aanvrager": "Zonnepark Revelhorst B.V.",
+        "adres": "Revelhorst Zutphen",
+        "postcode": null,
+        "plaats_lok": "ZUTPHEN",
+        "provincien": "Gelderland",
+        "gemeentena": "Zutphen",
+        "vermogen__": 6.569,
+        "max_s": 7582269,
+        "gerealisee": "Nee",
+        "x": 212833.24,
+        "y": 459650.41,
+        "grondgebon": "Ja",
+        "jaar": 2017,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan_locatie",
+        "bbox": [
+          6.231682763797426,
+          52.1220408102406,
+          6.231682763797426,
+          52.1220408102406
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.102",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.221177923595518, 52.589559705122824]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2017 II",
+        "referentie": "SDE1748355",
+        "aanvrager": "Herbo GroenLeven B.V.",
+        "adres": "Zonnepark Uithofsweg Staphorst",
+        "postcode": null,
+        "plaats_lok": "STAPHORST",
+        "provincien": "Overijssel",
+        "gemeentena": "Staphorst",
+        "vermogen__": 7.3125,
+        "max_s": 9274079,
+        "gerealisee": "Nee",
+        "x": 211515,
+        "y": 511658,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2017,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan_locatie",
+        "bbox": [
+          6.221177923595518,
+          52.589559705122824,
+          6.221177923595518,
+          52.589559705122824
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.115",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.527132345918863, 52.552978239641945]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2017 II",
+        "referentie": "SDE1755972",
+        "aanvrager": "N.V. Rova Holding",
+        "adres": "Ommerweg 69",
+        "postcode": "7797RC",
+        "plaats_lok": "RHEEZERVEEN",
+        "provincien": "Overijssel",
+        "gemeentena": "Hardenberg",
+        "vermogen__": 6.211,
+        "max_s": 7346061,
+        "gerealisee": "Nee",
+        "x": 232311.406283,
+        "y": 507870.860433,
+        "grondgebon": "Ja",
+        "jaar": 2017,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": null,
+        "bbox": [
+          6.527132345918863,
+          52.552978239641945,
+          6.527132345918863,
+          52.552978239641945
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.128",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.791489702419279, 52.22735862155604]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2017 I",
+        "referentie": "SDE1764454",
+        "aanvrager": "Twence Zon B.V.",
+        "adres": "Zonnepark Boldershoek West deel 1",
+        "postcode": "7554RT",
+        "plaats_lok": "HENGELO OV",
+        "provincien": "Overijssel",
+        "gemeentena": "Enschede",
+        "vermogen__": 4,
+        "max_s": 4902000,
+        "gerealisee": "Ja",
+        "x": 250941.48,
+        "y": 471960.7,
+        "grondgebon": "Ja",
+        "jaar": 2017,
+        "jaar_real": 2018,
+        "opmerkinge": "exacte locatie onduidelijk",
+        "controle": "realisatie_locatie",
+        "bbox": [
+          6.791489702419279,
+          52.22735862155604,
+          6.791489702419279,
+          52.22735862155604
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.137",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.175077698543678, 52.536470808331444]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2017 II",
+        "referentie": "SDE1773095",
+        "aanvrager": "Zonneweide Hessenpoort B.V.",
+        "adres": "Bedrijventerrein Hessenpoort",
+        "postcode": null,
+        "plaats_lok": "ZWOLLE",
+        "provincien": "Overijssel",
+        "gemeentena": "Zwolle",
+        "vermogen__": 4.429,
+        "max_s": 5680193,
+        "gerealisee": "Nee",
+        "x": 208455.397932,
+        "y": 505716.045601,
+        "grondgebon": "Ja",
+        "jaar": 2017,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": null,
+        "bbox": [
+          6.175077698543678,
+          52.536470808331444,
+          6.175077698543678,
+          52.536470808331444
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.153",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.58023532017104, 52.5198305152562]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2017 II",
+        "referentie": "SDE1785290",
+        "aanvrager": "Solarvation B.V.",
+        "adres": "Solarvation Fase 4",
+        "postcode": null,
+        "plaats_lok": "LELYSTAD",
+        "provincien": "Flevoland",
+        "gemeentena": "Lelystad",
+        "vermogen__": 2.6865,
+        "max_s": 3177458,
+        "gerealisee": "Nee",
+        "x": 168101.788364,
+        "y": 503590.893905,
+        "grondgebon": "Ja",
+        "jaar": 2017,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan_locatie",
+        "bbox": [
+          5.58023532017104,
+          52.5198305152562,
+          5.58023532017104,
+          52.5198305152562
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.156",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.5801457850899645, 52.521334315377]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2017 II",
+        "referentie": "SDE1786841",
+        "aanvrager": "Solarvation B.V.",
+        "adres": "Solarvation Fase 1",
+        "postcode": null,
+        "plaats_lok": "LELYSTAD",
+        "provincien": "Flevoland",
+        "gemeentena": "Lelystad",
+        "vermogen__": 11.8989,
+        "max_s": 1.4073424e7,
+        "gerealisee": "Nee",
+        "x": 168095.264809,
+        "y": 503758.202693,
+        "grondgebon": "Ja",
+        "jaar": 2017,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan_locatie",
+        "bbox": [
+          5.5801457850899645,
+          52.521334315377,
+          5.5801457850899645,
+          52.521334315377
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.157",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.008436019765259, 52.24162202575992]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2017 I",
+        "referentie": "SDE1788222",
+        "aanvrager": "Zonnepark Apeldoorn B.V.",
+        "adres": "Laan van Zodiak 500",
+        "postcode": "7324BC",
+        "plaats_lok": "APELDOORN",
+        "provincien": "Gelderland",
+        "gemeentena": "Apeldoorn",
+        "vermogen__": 3.85,
+        "max_s": 4553588,
+        "gerealisee": "Ja",
+        "x": 197430.77,
+        "y": 472800.35,
+        "grondgebon": "Ja",
+        "jaar": 2017,
+        "jaar_real": 2017,
+        "opmerkinge": null,
+        "controle": "realisatie_locatie",
+        "bbox": [
+          6.008436019765259,
+          52.24162202575992,
+          6.008436019765259,
+          52.24162202575992
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.160",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.136698584064351, 52.50611269144065]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2017 II",
+        "referentie": "SDE1790468",
+        "aanvrager": "Energiepark Zwolle B.V.",
+        "adres": "Herfterlaan 2",
+        "postcode": "8024PJ",
+        "plaats_lok": "ZWOLLE",
+        "provincien": "Overijssel",
+        "gemeentena": "Zwolle",
+        "vermogen__": 5.192,
+        "max_s": 6732726,
+        "gerealisee": "Ja",
+        "x": 205886.516054,
+        "y": 502310.608239,
+        "grondgebon": "Ja",
+        "jaar": 2017,
+        "jaar_real": 2019,
+        "opmerkinge": null,
+        "controle": "realisatie_locatie",
+        "bbox": [
+          6.136698584064351,
+          52.50611269144065,
+          6.136698584064351,
+          52.50611269144065
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.165",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.450609124583258, 52.17249810515748]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2017 II",
+        "referentie": "SDE1797931",
+        "aanvrager": "Tpsolar Lochem B.V.",
+        "adres": "percelen R60 en R62",
+        "postcode": null,
+        "plaats_lok": "LOCHEM",
+        "provincien": "Gelderland",
+        "gemeentena": "Lochem",
+        "vermogen__": 8.926,
+        "max_s": 1.13204e7,
+        "gerealisee": "Nee",
+        "x": 227743.21176,
+        "y": 465460.996566,
+        "grondgebon": "Ja",
+        "jaar": 2017,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": null,
+        "bbox": [
+          6.450609124583258,
+          52.17249810515748,
+          6.450609124583258,
+          52.17249810515748
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.166",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.523806180091385, 52.55976637245377]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2017 II",
+        "referentie": "SDE1799263",
+        "aanvrager": "Flevokustzon B.V.",
+        "adres": "Zonnepark Flevokust",
+        "postcode": null,
+        "plaats_lok": "LELYSTAD",
+        "provincien": "Flevoland",
+        "gemeentena": "Lelystad",
+        "vermogen__": 17.13,
+        "max_s": 2.050461e7,
+        "gerealisee": "Ja",
+        "x": 164263.309834,
+        "y": 508025.775774,
+        "grondgebon": "Ja",
+        "jaar": 2017,
+        "jaar_real": 2019,
+        "opmerkinge": null,
+        "controle": "realisatie_locatie",
+        "bbox": [
+          5.523806180091385,
+          52.55976637245377,
+          5.523806180091385,
+          52.55976637245377
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.174",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.538509231793786, 52.45677231663358]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2018 I",
+        "referentie": "SDE1812246",
+        "aanvrager": "Zonnepark PV7 B.V.",
+        "adres": "Den Ham, N, 1412, 1258, 1027, 1003",
+        "postcode": null,
+        "plaats_lok": "DEN HAM",
+        "provincien": "Overijssel",
+        "gemeentena": "Twenterand",
+        "vermogen__": 5.616,
+        "max_s": 5681988,
+        "gerealisee": "Nee",
+        "x": 233253.245974,
+        "y": 497179.387203,
+        "grondgebon": "Ja",
+        "jaar": 2018,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": null,
+        "bbox": [
+          6.538509231793786,
+          52.45677231663358,
+          6.538509231793786,
+          52.45677231663358
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.177",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.313315373660048, 51.861427973317895]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2018 I",
+        "referentie": "SDE1813624",
+        "aanvrager": "Energie van Hollandsche Bodem B.V.",
+        "adres": "Geldermalsen, N, 923",
+        "postcode": null,
+        "plaats_lok": "GELDERMALSEN",
+        "provincien": "Gelderland",
+        "gemeentena": "West Betuwe",
+        "vermogen__": 1.13076,
+        "max_s": 1369634,
+        "gerealisee": "Nee",
+        "x": 149910.347009,
+        "y": 430321.219036,
+        "grondgebon": "Ja",
+        "jaar": 2018,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": null,
+        "bbox": [
+          5.313315373660048,
+          51.861427973317895,
+          5.313315373660048,
+          51.861427973317895
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.178",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.73698946358346, 51.858501235702995]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2018 I",
+        "referentie": "SDE1813775",
+        "aanvrager": "Zonnepark Beuningen B.V.",
+        "adres": "Ewijk, E, 1266, 1289, 1290, 2407",
+        "postcode": null,
+        "plaats_lok": "BEUNINGEN GLD",
+        "provincien": "Gelderland",
+        "gemeentena": "Beuningen",
+        "vermogen__": 6,
+        "max_s": 7267500,
+        "gerealisee": "Nee",
+        "x": 179096.286484,
+        "y": 430051.049987,
+        "grondgebon": "Ja",
+        "jaar": 2018,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": null,
+        "bbox": [
+          5.73698946358346,
+          51.858501235702995,
+          5.73698946358346,
+          51.858501235702995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.179",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.133832641962442, 52.22461080698273]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2018 I",
+        "referentie": "SDE1813924",
+        "aanvrager": "Zonneakker Voorst B.V.",
+        "adres": "Holtweg 4",
+        "postcode": "7384AG",
+        "plaats_lok": "WILP GLD",
+        "provincien": "Gelderland",
+        "gemeentena": "Voorst",
+        "vermogen__": 45.198,
+        "max_s": 5.2813863e7,
+        "gerealisee": "Nee",
+        "x": 206014.781399,
+        "y": 470988.521487,
+        "grondgebon": "Ja",
+        "jaar": 2018,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": null,
+        "bbox": [
+          6.133832641962442,
+          52.22461080698273,
+          6.133832641962442,
+          52.22461080698273
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.180",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.241693183537771, 52.42021230356996]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2018 I",
+        "referentie": "SDE1814132",
+        "aanvrager": "Zuyderzon Almere B.V.",
+        "adres": "Caissonweg 102",
+        "postcode": "1332BX",
+        "plaats_lok": "ALMERE",
+        "provincien": "Flevoland",
+        "gemeentena": "Almere",
+        "vermogen__": 34.54308,
+        "max_s": 3.3472245e7,
+        "gerealisee": "Ja",
+        "x": 145101.246571,
+        "y": 492499.078847,
+        "grondgebon": "Ja",
+        "jaar": 2018,
+        "jaar_real": 2019,
+        "opmerkinge": null,
+        "controle": "realisatie_locatie",
+        "bbox": [
+          5.241693183537771,
+          52.42021230356996,
+          5.241693183537771,
+          52.42021230356996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.184",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.944054059042801, 51.96218220484864]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2018 I",
+        "referentie": "SDE1815372",
+        "aanvrager": "Zonnepark Koningspleij Arnhem B.V.",
+        "adres": "Arnhem, D, 5515, 4904 (gedeeltelijk)",
+        "postcode": null,
+        "plaats_lok": "ARNHEM",
+        "provincien": "Gelderland",
+        "gemeentena": "Arnhem",
+        "vermogen__": 10.1,
+        "max_s": 1.20897e7,
+        "gerealisee": "Nee",
+        "x": 193272.080332,
+        "y": 441674.943639,
+        "grondgebon": "Ja",
+        "jaar": 2018,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": null,
+        "bbox": [
+          5.944054059042801,
+          51.96218220484864,
+          5.944054059042801,
+          51.96218220484864
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.186",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.5208419899146435, 52.55802723309972]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2018 I",
+        "referentie": "SDE1816000",
+        "aanvrager": "Flevokustzon B.V.",
+        "adres": "Karperweg 8",
+        "postcode": "8221RB",
+        "plaats_lok": "LELYSTAD",
+        "provincien": "Flevoland",
+        "gemeentena": "Lelystad",
+        "vermogen__": 10,
+        "max_s": 1.21125e7,
+        "gerealisee": "Ja",
+        "x": 164062.657648,
+        "y": 507831.887247,
+        "grondgebon": "Ja",
+        "jaar": 2018,
+        "jaar_real": 2019,
+        "opmerkinge": null,
+        "controle": "realisatie_locatie",
+        "bbox": [
+          5.5208419899146435,
+          52.55802723309972,
+          5.5208419899146435,
+          52.55802723309972
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.190",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.098390875753596, 52.001806207677646]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2018 I",
+        "referentie": "SDE1818107",
+        "aanvrager": "Lingedelta B.V.",
+        "adres": "Dieren, T, 645",
+        "postcode": null,
+        "plaats_lok": "DIEREN",
+        "provincien": "Gelderland",
+        "gemeentena": "Rheden",
+        "vermogen__": 2.53232,
+        "max_s": 2995102,
+        "gerealisee": "Nee",
+        "x": 203836.184752,
+        "y": 446175.853585,
+        "grondgebon": "Ja",
+        "jaar": 2018,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": null,
+        "bbox": [
+          6.098390875753596,
+          52.001806207677646,
+          6.098390875753596,
+          52.001806207677646
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.196",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.2835604530512645, 52.389163852744595]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2018 I",
+        "referentie": "SDE1819330",
+        "aanvrager": "HMO",
+        "adres": "Kanaalstraat OZ 1",
+        "postcode": "8102GG",
+        "plaats_lok": "RAALTE",
+        "provincien": "Overijssel",
+        "gemeentena": "Raalte",
+        "vermogen__": 1.42308,
+        "max_s": 1683148,
+        "gerealisee": "Nee",
+        "x": 216018.411183,
+        "y": 489412.191705,
+        "grondgebon": "Ja",
+        "jaar": 2018,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": null,
+        "bbox": [
+          6.2835604530512645,
+          52.389163852744595,
+          6.2835604530512645,
+          52.389163852744595
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.198",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.145106564055199, 52.53851377890747]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2018 I",
+        "referentie": "SDE1819551",
+        "aanvrager": "Zonnepark Hessenpoort B.V.",
+        "adres": "517, 538, 570 en 571",
+        "postcode": null,
+        "plaats_lok": "ZWOLLE",
+        "provincien": "Overijssel",
+        "gemeentena": "Zwolle",
+        "vermogen__": 3.65,
+        "max_s": 4004963,
+        "gerealisee": "Nee",
+        "x": 206419.595588,
+        "y": 505921.633384,
+        "grondgebon": "Ja",
+        "jaar": 2018,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": null,
+        "bbox": [
+          6.145106564055199,
+          52.53851377890747,
+          6.145106564055199,
+          52.53851377890747
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.210",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.9435357009821645, 51.962105168913304]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2018 II",
+        "referentie": "SDE1821281",
+        "aanvrager": "Zonnepark Koningspleij Arnhem",
+        "adres": "Arnhem, D, 4904 (ged.), 5515 (ged.)",
+        "postcode": null,
+        "plaats_lok": "ARNHEM",
+        "provincien": "Gelderland",
+        "gemeentena": "Arnhem",
+        "vermogen__": 3.246,
+        "max_s": 3561674,
+        "gerealisee": "Nee",
+        "x": 193236.52,
+        "y": 441666.1,
+        "grondgebon": "Veldopstelling",
+        "jaar": 2018,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan_locatie",
+        "bbox": [
+          5.9435357009821645,
+          51.962105168913304,
+          5.9435357009821645,
+          51.962105168913304
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.211",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.265040225988046, 52.537977900601774]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2018 II",
+        "referentie": "SDE1821312",
+        "aanvrager": "GroenLeven B.V.",
+        "adres": "Dalfsen, P, 474",
+        "postcode": null,
+        "plaats_lok": "DALFSEN",
+        "provincien": "Overijssel",
+        "gemeentena": "Dalfsen",
+        "vermogen__": 7.999,
+        "max_s": 8548932,
+        "gerealisee": "Nee",
+        "x": 214556.92,
+        "y": 505953.99,
+        "grondgebon": "Veldopstelling",
+        "jaar": 2018,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan_locatie",
+        "bbox": [
+          6.265040225988046,
+          52.537977900601774,
+          6.265040225988046,
+          52.537977900601774
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.214",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.590639415717609, 52.249925651431916]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2018 II",
+        "referentie": "SDE1821910",
+        "aanvrager": "Zuiver Hof van Twente B.V.",
+        "adres": "Goor, A, 3090",
+        "postcode": null,
+        "plaats_lok": "GOOR",
+        "provincien": "Overijssel",
+        "gemeentena": "Hof van Twente",
+        "vermogen__": 2.144,
+        "max_s": 2352504,
+        "gerealisee": "Nee",
+        "x": 237178.57,
+        "y": 474224.55,
+        "grondgebon": "Veldopstelling",
+        "jaar": 2018,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan_locatie",
+        "bbox": [
+          6.590639415717609,
+          52.249925651431916,
+          6.590639415717609,
+          52.249925651431916
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.216",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.364846923582752, 51.89565609276325]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2018 II",
+        "referentie": "SDE1822146",
+        "aanvrager": "Manoir Solar B.V.",
+        "adres": "Holserweg 14",
+        "postcode": "7076AV",
+        "plaats_lok": "VARSSELDER",
+        "provincien": "Gelderland",
+        "gemeentena": "Oude IJsselstreek",
+        "vermogen__": 1.8112,
+        "max_s": 1987340,
+        "gerealisee": "Nee",
+        "x": 222291.587953,
+        "y": 434579.444171,
+        "grondgebon": "Veldopstelling",
+        "jaar": 2018,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan_locatie",
+        "bbox": [
+          6.364846923582752,
+          51.89565609276325,
+          6.364846923582752,
+          51.89565609276325
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.218",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.6885814785469675, 52.42748787685757]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2018 II",
+        "referentie": "SDE1822728",
+        "aanvrager": "Flevoland Duurzame Energie B.V.",
+        "adres": "Strandgaperweg 20",
+        "postcode": "8256PZ",
+        "plaats_lok": "BIDDINGHUIZEN",
+        "provincien": "Flevoland",
+        "gemeentena": "Dronten",
+        "vermogen__": 3,
+        "max_s": 3291750,
+        "gerealisee": "Nee",
+        "x": 175498.47,
+        "y": 493341.38,
+        "grondgebon": "Veldopstelling",
+        "jaar": 2018,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan_locatie",
+        "bbox": [
+          5.6885814785469675,
+          52.42748787685757,
+          5.6885814785469675,
+          52.42748787685757
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.222",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.6260691989742435, 52.26608700111748]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2018 II",
+        "referentie": "SDE1823303",
+        "aanvrager": "Twence Zon B.V.",
+        "adres": "Rikkerinksweg 11",
+        "postcode": "7495RM",
+        "plaats_lok": "AMBT DELDEN",
+        "provincien": "Overijssel",
+        "gemeentena": "Hof van Twente",
+        "vermogen__": 12.5,
+        "max_s": 1.3715625e7,
+        "gerealisee": "Nee",
+        "x": 239567.06,
+        "y": 476063.27,
+        "grondgebon": "Veldopstelling",
+        "jaar": 2018,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan_locatie",
+        "bbox": [
+          6.6260691989742435,
+          52.26608700111748,
+          6.6260691989742435,
+          52.26608700111748
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.230",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.6372998338983225, 52.3520558589372]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2018 II",
+        "referentie": "SDE1824567",
+        "aanvrager": "Obton Solenergi Aadijk C.V.",
+        "adres": "Zonnepark Almelo 2 - Aadijk\r\nZonnepark Almelo 2 - Aadijk",
+        "postcode": null,
+        "plaats_lok": "ALMELO",
+        "provincien": "Overijssel",
+        "gemeentena": "Almelo",
+        "vermogen__": 17.121,
+        "max_s": 1.7078198e7,
+        "gerealisee": "Nee",
+        "x": 240168.63,
+        "y": 485640.63,
+        "grondgebon": "Veldopstelling",
+        "jaar": 2018,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": null,
+        "bbox": [
+          6.6372998338983225,
+          52.3520558589372,
+          6.6372998338983225,
+          52.3520558589372
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.238",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.584567200128764, 52.24886729266899]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2018 II",
+        "referentie": "SDE1824723",
+        "aanvrager": "KS NL19 B.V.",
+        "adres": "Goor, A, 3134, 3131, 3130",
+        "postcode": null,
+        "plaats_lok": "GOOR",
+        "provincien": "Overijssel",
+        "gemeentena": "Hof van Twente",
+        "vermogen__": 9.35,
+        "max_s": 9859575,
+        "gerealisee": "Nee",
+        "x": 236765.89,
+        "y": 474099.94,
+        "grondgebon": "Veldopstelling",
+        "jaar": 2018,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan_locatie",
+        "bbox": [
+          6.584567200128764,
+          52.24886729266899,
+          6.584567200128764,
+          52.24886729266899
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.246",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.1226992222881265, 52.45956499924419]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2018 II",
+        "referentie": "SDE1825987",
+        "aanvrager": "KS NL22 B.V.",
+        "adres": "Zwolle, U, 428, 428, 431, 445, 446",
+        "postcode": null,
+        "plaats_lok": "ZWOLLE",
+        "provincien": "Overijssel",
+        "gemeentena": "Zwolle",
+        "vermogen__": 16.28,
+        "max_s": 1.716726e7,
+        "gerealisee": "Nee",
+        "x": 204988.69,
+        "y": 497121.8,
+        "grondgebon": "Veldopstelling",
+        "jaar": 2018,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan_locatie",
+        "bbox": [
+          6.1226992222881265,
+          52.45956499924419,
+          6.1226992222881265,
+          52.45956499924419
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.247",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.482835097643693, 52.296612586942516]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2018 II",
+        "referentie": "SDE1826048",
+        "aanvrager": "Zunneweide Riessen B.V.",
+        "adres": "Kijzersdijk 109",
+        "postcode": "7462JC",
+        "plaats_lok": "RIJSSEN",
+        "provincien": "Overijssel",
+        "gemeentena": "Rijssen-Holten",
+        "vermogen__": 18.586,
+        "max_s": 1.9863788e7,
+        "gerealisee": "Nee",
+        "x": 229738.87,
+        "y": 479301.92,
+        "grondgebon": "Veldopstelling",
+        "jaar": 2018,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan_locatie",
+        "bbox": [
+          6.482835097643693,
+          52.296612586942516,
+          6.482835097643693,
+          52.296612586942516
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.253",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.057240281835742, 52.24521609370483]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2018 II",
+        "referentie": "SDE1826792",
+        "aanvrager": "KS NL7 B.V.",
+        "adres": "Losser, Q, 1291, 1344, 1374",
+        "postcode": null,
+        "plaats_lok": "LOSSER",
+        "provincien": "Overijssel",
+        "gemeentena": "Losser",
+        "vermogen__": 22.414,
+        "max_s": 2.3316164e7,
+        "gerealisee": "Nee",
+        "x": 269049.86,
+        "y": 474332.1,
+        "grondgebon": "Veldopstelling",
+        "jaar": 2018,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan_locatie",
+        "bbox": [
+          7.057240281835742,
+          52.24521609370483,
+          7.057240281835742,
+          52.24521609370483
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.259",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.68286931540739, 52.358693142809706]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2018 II",
+        "referentie": "SDE1827660",
+        "aanvrager": "Obton Solenergi Almelo C.V.",
+        "adres": "Zonnepark Almelo - t.o. Van der Hoopweg",
+        "postcode": null,
+        "plaats_lok": "ALMELO",
+        "provincien": "Overijssel",
+        "gemeentena": "Almelo",
+        "vermogen__": 22.546,
+        "max_s": 2.2489635e7,
+        "gerealisee": "Nee",
+        "x": 243259.83,
+        "y": 486433.59,
+        "grondgebon": "Veldopstelling",
+        "jaar": 2018,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": null,
+        "bbox": [
+          6.68286931540739,
+          52.358693142809706,
+          6.68286931540739,
+          52.358693142809706
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.269",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.940894453013976, 52.201251178584236]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2018 II",
+        "referentie": "SDE1829814",
+        "aanvrager": "KS NL4 B.V.",
+        "adres": "Lonneker, AA, 403-437",
+        "postcode": null,
+        "plaats_lok": "ENSCHEDE",
+        "provincien": "Overijssel",
+        "gemeentena": "Enschede",
+        "vermogen__": 15.2,
+        "max_s": 1.58118e7,
+        "gerealisee": "Nee",
+        "x": 261210.08,
+        "y": 469264.62,
+        "grondgebon": "Veldopstelling",
+        "jaar": 2018,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan_locatie",
+        "bbox": [
+          6.940894453013976,
+          52.201251178584236,
+          6.940894453013976,
+          52.201251178584236
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.284",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.494345978127572, 52.59579367677168]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2019 I",
+        "referentie": "SDE1911638",
+        "aanvrager": "Waterschapshuis Waterschap Vechtstromen",
+        "adres": "Woudbloemweg 8",
+        "postcode": "7701PG",
+        "plaats_lok": "AVEREEST",
+        "provincien": "Overijssel",
+        "gemeentena": "Hardenberg",
+        "vermogen__": 2.011,
+        "max_s": 1948659,
+        "gerealisee": "Nee",
+        "x": 230015,
+        "y": 512600,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2019,
+        "jaar_real": 0,
+        "opmerkinge": "rwzi",
+        "controle": "plan_locatie",
+        "bbox": [
+          6.494345978127572,
+          52.59579367677168,
+          6.494345978127572,
+          52.59579367677168
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.298",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.483083897701418, 52.543570569177575]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2019 I",
+        "referentie": "SDE1914327",
+        "aanvrager": "GroenLeven B.V.",
+        "adres": "Zonnepark Hoogengraven",
+        "postcode": null,
+        "plaats_lok": "OMMEN",
+        "provincien": "Overijssel",
+        "gemeentena": "Ommen",
+        "vermogen__": 3.231,
+        "max_s": 3130839,
+        "gerealisee": "Nee",
+        "x": 229340,
+        "y": 506778,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2019,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan_locatie",
+        "bbox": [
+          6.483083897701418,
+          52.543570569177575,
+          6.483083897701418,
+          52.543570569177575
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.306",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.551404293519745, 52.610752237630635]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2019 I",
+        "referentie": "SDE1915573",
+        "aanvrager": "Coöperatieve Vereniging \"Lutten Levert\" U.A.",
+        "adres": "Dedemvaartseweg-Noord 110",
+        "postcode": "7775AK",
+        "plaats_lok": "LUTTEN",
+        "provincien": "Overijssel",
+        "gemeentena": "Hardenberg",
+        "vermogen__": 1.6,
+        "max_s": 1550400,
+        "gerealisee": "Nee",
+        "x": 233854,
+        "y": 514325,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2019,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan_locatie",
+        "bbox": [
+          6.551404293519745,
+          52.610752237630635,
+          6.551404293519745,
+          52.610752237630635
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.307",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.803736791659455, 51.89515330264143]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2019 I",
+        "referentie": "SDE1915807",
+        "aanvrager": "Zonnepark Overbetuwe B.V.",
+        "adres": "Overbetuwe",
+        "postcode": null,
+        "plaats_lok": "ELST",
+        "provincien": "Gelderland",
+        "gemeentena": "Overbetuwe",
+        "vermogen__": 80,
+        "max_s": 7.524e7,
+        "gerealisee": "Nee",
+        "x": 183671,
+        "y": 434153,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2019,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan_locatie",
+        "bbox": [
+          5.803736791659455,
+          51.89515330264143,
+          5.803736791659455,
+          51.89515330264143
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.341",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.6003100810995425, 52.37766190045934]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2019 II",
+        "referentie": "SDE1921119",
+        "aanvrager": "De Groene Weuste B.V.",
+        "adres": "Wetering 1",
+        "postcode": "7641LG",
+        "plaats_lok": "WIERDEN",
+        "provincien": "Overijssel",
+        "gemeentena": "Wierden",
+        "vermogen__": 1.5,
+        "max_s": 1282500,
+        "gerealisee": "Nee",
+        "x": 237600.986613,
+        "y": 488446.556233,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2019,
+        "jaar_real": 0,
+        "opmerkinge": "uitbreiding bestaande park",
+        "controle": "plan locatie",
+        "bbox": [
+          6.6003100810995425,
+          52.37766190045934,
+          6.6003100810995425,
+          52.37766190045934
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.348",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.116074292251738, 52.329684118655095]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2019 II",
+        "referentie": "SDE1921585",
+        "aanvrager": "IJssellandschap B.V.",
+        "adres": "Zonneweide Overkamp",
+        "postcode": null,
+        "plaats_lok": "OLST",
+        "provincien": "Overijssel",
+        "gemeentena": "Olst-Wijhe",
+        "vermogen__": 2.65,
+        "max_s": 2379038,
+        "gerealisee": "Nee",
+        "x": 204683.872333,
+        "y": 482666.512397,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2019,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan locatie",
+        "bbox": [
+          6.116074292251738,
+          52.329684118655095,
+          6.116074292251738,
+          52.329684118655095
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.349",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.453445269501636, 52.16636298847525]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2019 II",
+        "referentie": "SDE1921689",
+        "aanvrager": "KS NL5 B.V.",
+        "adres": "Zonnepark Goorseweg",
+        "postcode": null,
+        "plaats_lok": "LOCHEM",
+        "provincien": "Gelderland",
+        "gemeentena": "Lochem",
+        "vermogen__": 3.5,
+        "max_s": 3042375,
+        "gerealisee": "Nee",
+        "x": 227947.244827,
+        "y": 464781.29925,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2019,
+        "jaar_real": 0,
+        "opmerkinge": "uitbreiding?",
+        "controle": "locatie niet zeker",
+        "bbox": [
+          6.453445269501636,
+          52.16636298847525,
+          6.453445269501636,
+          52.16636298847525
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.352",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.6502558475673235, 52.12801441876984]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2019 II",
+        "referentie": "SDE1921821",
+        "aanvrager": "Zonnepark Munsterjansdijk B.V.",
+        "adres": "Zonnepark Munsterjansdijk-Berkelland",
+        "postcode": null,
+        "plaats_lok": "NEEDE",
+        "provincien": "Gelderland",
+        "gemeentena": "Berkelland",
+        "vermogen__": 14.304,
+        "max_s": 1.2433752e7,
+        "gerealisee": "Nee",
+        "x": 241485.505896,
+        "y": 460731.270853,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2019,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan locatie",
+        "bbox": [
+          6.6502558475673235,
+          52.12801441876984,
+          6.6502558475673235,
+          52.12801441876984
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.354",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.057995385340494, 52.244438390874535]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2019 II",
+        "referentie": "SDE1922060",
+        "aanvrager": "KS NL7 B.V.",
+        "adres": "Zonnepark Drielandweg",
+        "postcode": null,
+        "plaats_lok": "LOSSER",
+        "provincien": "Overijssel",
+        "gemeentena": "Losser",
+        "vermogen__": 4.5,
+        "max_s": 3911625,
+        "gerealisee": "Nee",
+        "x": 269103.415051,
+        "y": 474246.775339,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2019,
+        "jaar_real": 0,
+        "opmerkinge": "uitbreiding?",
+        "controle": "plan locatie",
+        "bbox": [
+          7.057995385340494,
+          52.244438390874535,
+          7.057995385340494,
+          52.244438390874535
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.368",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.533705417940824, 52.445981340746414]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2019 II",
+        "referentie": "SDE1923989",
+        "aanvrager": "Zonnepark Daarle B.V.",
+        "adres": "Dalvoordeweg 38a",
+        "postcode": "7688PV",
+        "plaats_lok": "DAARLE",
+        "provincien": "Overijssel",
+        "gemeentena": "Hellendoorn",
+        "vermogen__": 7.561,
+        "max_s": 6572400,
+        "gerealisee": "Nee",
+        "x": 232945.767559,
+        "y": 495973.634661,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2019,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan locatie",
+        "bbox": [
+          6.533705417940824,
+          52.445981340746414,
+          6.533705417940824,
+          52.445981340746414
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.385",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.529832551468488, 52.25591727935901]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2019 II",
+        "referentie": "SDE1925712",
+        "aanvrager": "Zonnepark Markelo B.V.",
+        "adres": "Zonnepark Markelo",
+        "postcode": null,
+        "plaats_lok": "MARKELO",
+        "provincien": "Overijssel",
+        "gemeentena": "Hof van Twente",
+        "vermogen__": 7.773,
+        "max_s": 6867446,
+        "gerealisee": "Nee",
+        "x": 233016.012806,
+        "y": 474823.947091,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2019,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "locatie onbekend",
+        "bbox": [
+          6.529832551468488,
+          52.25591727935901,
+          6.529832551468488,
+          52.25591727935901
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.386",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.542038527789941, 52.53312706833238]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2019 II",
+        "referentie": "SDE1925722",
+        "aanvrager": "Solarvation B.V.",
+        "adres": "Edelhertweg H1214",
+        "postcode": null,
+        "plaats_lok": "LELYSTAD",
+        "provincien": "Flevoland",
+        "gemeentena": "Lelystad",
+        "vermogen__": 36.30528,
+        "max_s": 3.2075715e7,
+        "gerealisee": "Nee",
+        "x": 165506.045113,
+        "y": 505064.14329,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2019,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "locatie kad perceel",
+        "bbox": [
+          5.542038527789941,
+          52.53312706833238,
+          5.542038527789941,
+          52.53312706833238
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.389",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.14020885692552, 52.396096599193726]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2019 II",
+        "referentie": "SDE1925894",
+        "aanvrager": "Zonnepark Noordmanshoek B.V.",
+        "adres": "Zonnepark Noordmanshoek",
+        "postcode": null,
+        "plaats_lok": "WIJHE",
+        "provincien": "Overijssel",
+        "gemeentena": "Olst-Wijhe",
+        "vermogen__": 9,
+        "max_s": 8079750,
+        "gerealisee": "Nee",
+        "x": 206252.164341,
+        "y": 490072.418773,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2019,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan locatie",
+        "bbox": [
+          6.14020885692552,
+          52.396096599193726,
+          6.14020885692552,
+          52.396096599193726
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.390",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.7715542549573975, 51.83699325415224]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2019 II",
+        "referentie": "SDE1925914",
+        "aanvrager": "Koolen Industries Solar Nijmegen B.V",
+        "adres": "Zonnepark A73 Nijmegen",
+        "postcode": null,
+        "plaats_lok": "NIJMEGEN",
+        "provincien": "Gelderland",
+        "gemeentena": "Nijmegen",
+        "vermogen__": 22,
+        "max_s": 1.91235e7,
+        "gerealisee": "Nee",
+        "x": 181490.042028,
+        "y": 427670.223464,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2019,
+        "jaar_real": 0,
+        "opmerkinge": "deel van zonnepark",
+        "controle": "plan locatie",
+        "bbox": [
+          5.7715542549573975,
+          51.83699325415224,
+          5.7715542549573975,
+          51.83699325415224
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.391",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.560889092000621, 52.52618244834289]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2019 II",
+        "referentie": "SDE1925939",
+        "aanvrager": "Solarvation B.V.",
+        "adres": "Runderweg H1632",
+        "postcode": null,
+        "plaats_lok": "LELYSTAD",
+        "provincien": "Flevoland",
+        "gemeentena": "Lelystad",
+        "vermogen__": 10.1376,
+        "max_s": 9101031,
+        "gerealisee": "Nee",
+        "x": 166786.982215,
+        "y": 504294.332634,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2019,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "locatie kad perceel",
+        "bbox": [
+          5.560889092000621,
+          52.52618244834289,
+          5.560889092000621,
+          52.52618244834289
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.407",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.9399130836107625, 52.20142984018838]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2019 II",
+        "referentie": "SDE1927167",
+        "aanvrager": "KS NL4 B.V.",
+        "adres": "Schukkinkweg 140",
+        "postcode": "7534PZ",
+        "plaats_lok": "ENSCHEDE",
+        "provincien": "Overijssel",
+        "gemeentena": "Enschede",
+        "vermogen__": 3.1,
+        "max_s": 2694675,
+        "gerealisee": "Nee",
+        "x": 261142.575298,
+        "y": 469283.058107,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2019,
+        "jaar_real": 0,
+        "opmerkinge": "uitbreiding?",
+        "controle": "plan locatie",
+        "bbox": [
+          6.9399130836107625,
+          52.20142984018838,
+          6.9399130836107625,
+          52.20142984018838
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.408",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.261248621941276, 52.14843098778318]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2019 II",
+        "referentie": "SDE1927339",
+        "aanvrager": "Zonnig Lochem B.V.",
+        "adres": "Lochem Afleidingskanaal",
+        "postcode": null,
+        "plaats_lok": "GORSSEL",
+        "provincien": "Gelderland",
+        "gemeentena": "Lochem",
+        "vermogen__": 15.674,
+        "max_s": 1.3624625e7,
+        "gerealisee": "Nee",
+        "x": 214822.585312,
+        "y": 462610.410995,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2019,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan locatie",
+        "bbox": [
+          6.261248621941276,
+          52.14843098778318,
+          6.261248621941276,
+          52.14843098778318
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.411",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.657946897894435, 52.579733982089394]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2019 II",
+        "referentie": "SDE1927667",
+        "aanvrager": "Zonnepark Zunneveld B.V.",
+        "adres": "Kanaalweg-Oost 103nabij",
+        "postcode": "7793HA",
+        "plaats_lok": "HOOGENWEG",
+        "provincien": "Overijssel",
+        "gemeentena": "Hardenberg",
+        "vermogen__": 14.603,
+        "max_s": 1.3109844e7,
+        "gerealisee": "Nee",
+        "x": 241130.524339,
+        "y": 510995.448727,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2019,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": null,
+        "bbox": [
+          6.657946897894435,
+          52.579733982089394,
+          6.657946897894435,
+          52.579733982089394
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.413",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.645783941946046, 52.56139211192046]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2019 II",
+        "referentie": "SDE1927710",
+        "aanvrager": "KS NL11 B.V.",
+        "adres": "Zonnepark Hardenberg",
+        "postcode": null,
+        "plaats_lok": "HARDENBERG",
+        "provincien": "Overijssel",
+        "gemeentena": "Hardenberg",
+        "vermogen__": 14,
+        "max_s": 1.21695e7,
+        "gerealisee": "Nee",
+        "x": 240341.688279,
+        "y": 508940.358309,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2019,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan locatie",
+        "bbox": [
+          6.645783941946046,
+          52.56139211192046,
+          6.645783941946046,
+          52.56139211192046
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.424",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.581461276221652, 52.579783051847315]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2019 II",
+        "referentie": "SDE1929029",
+        "aanvrager": "Zonnepark Haardijk Hardenberg B.V.",
+        "adres": "Zonnepark Haardijk-Hardenberg",
+        "postcode": null,
+        "plaats_lok": "HARDENBERG",
+        "provincien": "Overijssel",
+        "gemeentena": "Hardenberg",
+        "vermogen__": 16.891,
+        "max_s": 1.4682502e7,
+        "gerealisee": "Nee",
+        "x": 235946.601182,
+        "y": 510912.575084,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2019,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan locatie",
+        "bbox": [
+          6.581461276221652,
+          52.579783051847315,
+          6.581461276221652,
+          52.579783051847315
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.426",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.768078111962148, 51.831994434106534]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2019 II",
+        "referentie": "SDE1929045",
+        "aanvrager": "ENGIE Energie Nederland N.V.",
+        "adres": "Zonnepark A73 Bijsterhuizenstraat",
+        "postcode": null,
+        "plaats_lok": "NIJMEGEN",
+        "provincien": "Gelderland",
+        "gemeentena": "Nijmegen",
+        "vermogen__": 26.023,
+        "max_s": 2.3362149e7,
+        "gerealisee": "Nee",
+        "x": 181253.377506,
+        "y": 427112.823114,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2019,
+        "jaar_real": 0,
+        "opmerkinge": "deel van zonnepark",
+        "controle": null,
+        "bbox": [
+          5.768078111962148,
+          51.831994434106534,
+          5.768078111962148,
+          51.831994434106534
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.427",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.166257100219436, 52.100176935112614]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2019 II",
+        "referentie": "SDE1929187",
+        "aanvrager": "Zonnepark Elzenbos B.V.",
+        "adres": "Zonnepark Elzenbos",
+        "postcode": null,
+        "plaats_lok": "BRUMMEN",
+        "provincien": "Gelderland",
+        "gemeentena": "Brummen",
+        "vermogen__": 2.47752,
+        "max_s": 2224194,
+        "gerealisee": "Nee",
+        "x": 208378.877387,
+        "y": 457167.813105,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2019,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "exacte locatie onbekend",
+        "bbox": [
+          6.166257100219436,
+          52.100176935112614,
+          6.166257100219436,
+          52.100176935112614
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.437",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.9308467395827416, 52.194687040109905]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2020 I",
+        "referentie": "SDE2011005",
+        "aanvrager": "Enschede Energie",
+        "adres": "Holterhofweg 270",
+        "postcode": "7534PT",
+        "plaats_lok": "ENSCHEDE",
+        "provincien": "Overijssel",
+        "gemeentena": "Enschede",
+        "vermogen__": 6,
+        "max_s": 3847500,
+        "gerealisee": "Nee",
+        "x": 260538.836914,
+        "y": 468519.733735,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2020,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan locatie",
+        "bbox": [
+          6.9308467395827416,
+          52.194687040109905,
+          6.9308467395827416,
+          52.194687040109905
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.439",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.479966508699057, 52.35303382695386]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2020 I",
+        "referentie": "SDE2011140",
+        "aanvrager": "TPSolar Bloesemlaan Zeewolde B.V.",
+        "adres": "Zonnepark Bloesemlaan 5",
+        "postcode": null,
+        "plaats_lok": "ZEEWOLDE",
+        "provincien": "Flevoland",
+        "gemeentena": "Zeewolde",
+        "vermogen__": 8.475,
+        "max_s": 4709932,
+        "gerealisee": "Nee",
+        "x": 161319.939252,
+        "y": 485018.591318,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2020,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan locatie",
+        "bbox": [
+          5.479966508699057,
+          52.35303382695386,
+          5.479966508699057,
+          52.35303382695386
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.445",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.270608668205113, 52.25290925856619]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2020 I",
+        "referentie": "SDE2012360",
+        "aanvrager": "Brilman Bathmen Duurzame Energie B.V.",
+        "adres": "Zonnepark Brilman Bathmen Duurzame Energie BV",
+        "postcode": null,
+        "plaats_lok": "BATHMEN",
+        "provincien": "Overijssel",
+        "gemeentena": "Deventer",
+        "vermogen__": 7,
+        "max_s": 4289250,
+        "gerealisee": "Nee",
+        "x": 215321.591642,
+        "y": 474241.950993,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2020,
+        "jaar_real": 0,
+        "opmerkinge": "lijkt zelfde als SDE2013737",
+        "controle": "plan locatie??",
+        "bbox": [
+          6.270608668205113,
+          52.25290925856619,
+          6.270608668205113,
+          52.25290925856619
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.447",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.568441218766906, 52.30959329691562]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2020 I",
+        "referentie": "SDE2012486",
+        "aanvrager": "Zonnepark Ermelo Schaapsdijk B.V.",
+        "adres": "Ermelo Schaapsdijk",
+        "postcode": null,
+        "plaats_lok": "ERMELO",
+        "provincien": "Gelderland",
+        "gemeentena": "Ermelo",
+        "vermogen__": 7.997,
+        "max_s": 4558290,
+        "gerealisee": "Nee",
+        "x": 167359.861907,
+        "y": 480196.647669,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2020,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan locatie",
+        "bbox": [
+          5.568441218766906,
+          52.30959329691562,
+          5.568441218766906,
+          52.30959329691562
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.448",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.3364568724963455, 52.28875645901944]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2020 I",
+        "referentie": "SDE2012627",
+        "aanvrager": "Zonnepark Holten B.V.",
+        "adres": "Beumersteeg 13",
+        "postcode": "7451LM",
+        "plaats_lok": "HOLTEN",
+        "provincien": "Overijssel",
+        "gemeentena": "Rijssen-Holten",
+        "vermogen__": 4.173,
+        "max_s": 2378610,
+        "gerealisee": "Nee",
+        "x": 219765.504331,
+        "y": 478287.001676,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2020,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "exacte locatie onbekend",
+        "bbox": [
+          6.3364568724963455,
+          52.28875645901944,
+          6.3364568724963455,
+          52.28875645901944
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.450",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.209216144690855, 52.37517850925413]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2020 I",
+        "referentie": "SDE2013425",
+        "aanvrager": "***",
+        "adres": "***",
+        "postcode": "8107**",
+        "plaats_lok": "BROEKLAND OV",
+        "provincien": "Overijssel",
+        "gemeentena": "Raalte",
+        "vermogen__": 2.369,
+        "max_s": 1350330,
+        "gerealisee": "Nee",
+        "x": 210975.326619,
+        "y": 487796.14333,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2020,
+        "jaar_real": 0,
+        "opmerkinge": "zonnepark potties gat?",
+        "controle": "locatie onbekend",
+        "bbox": [
+          6.209216144690855,
+          52.37517850925413,
+          6.209216144690855,
+          52.37517850925413
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.453",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.276069645251093, 52.253139128583996]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2020 I",
+        "referentie": "SDE2013737",
+        "aanvrager": "Brilman Bathmen Zonnepark B.V.",
+        "adres": "Zonnepark Brilman Bathmen Zonnepark",
+        "postcode": null,
+        "plaats_lok": "BATHMEN",
+        "provincien": "Overijssel",
+        "gemeentena": "Deventer",
+        "vermogen__": 7,
+        "max_s": 4289250,
+        "gerealisee": "Nee",
+        "x": 215694.157341,
+        "y": 474272.083706,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2020,
+        "jaar_real": 0,
+        "opmerkinge": "lijkt zelfde als SDE2012360",
+        "controle": "plan locatie??",
+        "bbox": [
+          6.276069645251093,
+          52.253139128583996,
+          6.276069645251093,
+          52.253139128583996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.454",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.694596922121425, 51.97992743777891]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2020 I",
+        "referentie": "SDE2013790",
+        "aanvrager": "Zonnepark Winterswijk Arrasveldweg B.V.",
+        "adres": "Winterswijk Arresveldweg",
+        "postcode": null,
+        "plaats_lok": "WINTERSWIJK",
+        "provincien": "Gelderland",
+        "gemeentena": "Winterswijk",
+        "vermogen__": 8.316,
+        "max_s": 4740120,
+        "gerealisee": "Nee",
+        "x": 244818.187022,
+        "y": 444310.972343,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2020,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan locatie",
+        "bbox": [
+          6.694596922121425,
+          51.97992743777891,
+          6.694596922121425,
+          51.97992743777891
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.475",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.978986812043417, 52.579470509965645]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2020 I",
+        "referentie": "SDE2016482",
+        "aanvrager": "Zonnepark IJsselmuiden B.V.",
+        "adres": "Zonnepark IJsselmuiden",
+        "postcode": null,
+        "plaats_lok": "IJSSELMUIDEN",
+        "provincien": "Overijssel",
+        "gemeentena": "Kampen",
+        "vermogen__": 21.567,
+        "max_s": 1.1985861e7,
+        "gerealisee": "Nee",
+        "x": 195112.171439,
+        "y": 510373.629881,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2020,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan locatie",
+        "bbox": [
+          5.978986812043417,
+          52.579470509965645,
+          5.978986812043417,
+          52.579470509965645
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.476",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.760221222894746, 52.37083497788996]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2020 I",
+        "referentie": "SDE2016695",
+        "aanvrager": "Gemeente Nunspeet",
+        "adres": "Zonneweide Kijktuinen",
+        "postcode": null,
+        "plaats_lok": "NUNSPEET",
+        "provincien": "Gelderland",
+        "gemeentena": "Nunspeet",
+        "vermogen__": 1.023,
+        "max_s": 597688,
+        "gerealisee": "Nee",
+        "x": 180403.571431,
+        "y": 487060.625161,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2020,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "locatie onbekend",
+        "bbox": [
+          5.760221222894746,
+          52.37083497788996,
+          5.760221222894746,
+          52.37083497788996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.477",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.259089111997477, 52.51170752036287]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2020 I",
+        "referentie": "SDE2016788",
+        "aanvrager": "***",
+        "adres": "***",
+        "postcode": null,
+        "plaats_lok": "DALFSEN",
+        "provincien": "Overijssel",
+        "gemeentena": "Dalfsen",
+        "vermogen__": 2.97,
+        "max_s": 1692900,
+        "gerealisee": "Nee",
+        "x": 214188.400004,
+        "y": 503026.190972,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2020,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "locatie onbekend",
+        "bbox": [
+          6.259089111997477,
+          52.51170752036287,
+          6.259089111997477,
+          52.51170752036287
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.486",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.531388232490469, 52.25490587935624]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2020 I",
+        "referentie": "SDE2017637",
+        "aanvrager": "Zuiver Hof van Twente B.V.",
+        "adres": "Herikerweg 31",
+        "postcode": "7475TS",
+        "plaats_lok": "MARKELO",
+        "provincien": "Overijssel",
+        "gemeentena": "Hof van Twente",
+        "vermogen__": 2.1,
+        "max_s": 1256850,
+        "gerealisee": "Nee",
+        "x": 233124.000984,
+        "y": 474713.101509,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2020,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "exacte locatie onbekend",
+        "bbox": [
+          6.531388232490469,
+          52.25490587935624,
+          6.531388232490469,
+          52.25490587935624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.487",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.632698035174497, 51.92068089438486]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2020 I",
+        "referentie": "SDE2017672",
+        "aanvrager": "Rivierenland, Waterschap",
+        "adres": "Appelenburgseveldweg 2",
+        "postcode": "6669CX",
+        "plaats_lok": "DODEWAARD",
+        "provincien": "Gelderland",
+        "gemeentena": "Neder-Betuwe",
+        "vermogen__": 1.4,
+        "max_s": 817950,
+        "gerealisee": "Nee",
+        "x": 171888.45287,
+        "y": 436939.447745,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2020,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "exacte locatie onbekend",
+        "bbox": [
+          5.632698035174497,
+          51.92068089438486,
+          5.632698035174497,
+          51.92068089438486
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.497",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.920104223407032, 52.20419721014936]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2020 I",
+        "referentie": "SDE2019444",
+        "aanvrager": "Enschede Energie",
+        "adres": "Kromhofsweg 10",
+        "postcode": "7535PC",
+        "plaats_lok": "ENSCHEDE",
+        "provincien": "Overijssel",
+        "gemeentena": "Enschede",
+        "vermogen__": 1.75,
+        "max_s": 1122188,
+        "gerealisee": "Nee",
+        "x": 259782.083357,
+        "y": 469562.103177,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2020,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan locatie",
+        "bbox": [
+          6.920104223407032,
+          52.20419721014936,
+          6.920104223407032,
+          52.20419721014936
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.498",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.561710220570176, 52.27844294961951]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2020 I",
+        "referentie": "SDE2019616",
+        "aanvrager": "Solar-EW IV B.V.",
+        "adres": "Wierden Enter",
+        "postcode": null,
+        "plaats_lok": "WIERDEN",
+        "provincien": "Overijssel",
+        "gemeentena": "Wierden",
+        "vermogen__": 4.865,
+        "max_s": 2842085,
+        "gerealisee": "Nee",
+        "x": 235151.806746,
+        "y": 477364.766441,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2020,
+        "jaar_real": 0,
+        "opmerkinge": "zonnepark enterveen?",
+        "controle": "plan locatie",
+        "bbox": [
+          6.561710220570176,
+          52.27844294961951,
+          6.561710220570176,
+          52.27844294961951
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.500",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.257223722018224, 52.38610943947599]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2020 I",
+        "referentie": "SDE2019923",
+        "aanvrager": "Energie Coöperatie Endona U.A.",
+        "adres": "Zonneweide Torenallee",
+        "postcode": null,
+        "plaats_lok": "RAALTE",
+        "provincien": "Overijssel",
+        "gemeentena": "Raalte",
+        "vermogen__": 2.915,
+        "max_s": 1869244,
+        "gerealisee": "Nee",
+        "x": 214229.711986,
+        "y": 489050.49614,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2020,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "exacte locatie onbekend",
+        "bbox": [
+          6.257223722018224,
+          52.38610943947599,
+          6.257223722018224,
+          52.38610943947599
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.501",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.122639114253955, 52.45991895958547]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2020 I",
+        "referentie": "SDE2019952",
+        "aanvrager": "KS NL22 B.V.",
+        "adres": "Jan van Arkelweg 1a",
+        "postcode": null,
+        "plaats_lok": "ZWOLLE",
+        "provincien": "Overijssel",
+        "gemeentena": "Zwolle",
+        "vermogen__": 2.9,
+        "max_s": 1570350,
+        "gerealisee": "Nee",
+        "x": 204984.20467,
+        "y": 497161.141139,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2020,
+        "jaar_real": 0,
+        "opmerkinge": "zonnepark weekhorst",
+        "controle": "plan locatie",
+        "bbox": [
+          6.122639114253955,
+          52.45991895958547,
+          6.122639114253955,
+          52.45991895958547
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.104",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.5813423136256715, 52.52138117841922]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2017 II",
+        "referentie": "SDE1750853",
+        "aanvrager": "Solarvation B.V.",
+        "adres": "Solarvation Fase 2",
+        "postcode": null,
+        "plaats_lok": "LELYSTAD",
+        "provincien": "Flevoland",
+        "gemeentena": "Lelystad",
+        "vermogen__": 10.0224,
+        "max_s": 1.1853994e7,
+        "gerealisee": "Nee",
+        "x": 168176.461359,
+        "y": 503763.634407,
+        "grondgebon": "Ja",
+        "jaar": 2017,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan_locatie",
+        "bbox": [
+          5.5813423136256715,
+          52.52138117841922,
+          5.5813423136256715,
+          52.52138117841922
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.123",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.531077684997611, 52.47667620067577]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2017 I",
+        "referentie": "SDE1759189",
+        "aanvrager": "Obton Vermunt Solenergi CV",
+        "adres": "Vlotgrasweg 18",
+        "postcode": "8219PP",
+        "plaats_lok": "LELYSTAD",
+        "provincien": "Flevoland",
+        "gemeentena": "Lelystad",
+        "vermogen__": 2.317,
+        "max_s": 2740432,
+        "gerealisee": "Ja",
+        "x": 164774.81,
+        "y": 498781.44,
+        "grondgebon": "Ja",
+        "jaar": 2017,
+        "jaar_real": 2017,
+        "opmerkinge": null,
+        "controle": "realisatie_locatie",
+        "bbox": [
+          5.531077684997611,
+          52.47667620067577,
+          5.531077684997611,
+          52.47667620067577
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.133",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.581396627637689, 52.520738390107475]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2017 II",
+        "referentie": "SDE1768780",
+        "aanvrager": "Solarvation B.V.",
+        "adres": "Solarvation Fse 5",
+        "postcode": null,
+        "plaats_lok": "LELYSTAD",
+        "provincien": "Flevoland",
+        "gemeentena": "Lelystad",
+        "vermogen__": 9.768,
+        "max_s": 1.2388266e7,
+        "gerealisee": "Nee",
+        "x": 168180.339809,
+        "y": 503692.122455,
+        "grondgebon": "Ja",
+        "jaar": 2017,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan_locatie",
+        "bbox": [
+          5.581396627637689,
+          52.520738390107475,
+          5.581396627637689,
+          52.520738390107475
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.227",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.523469672257221, 52.56839477921348]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2018 II",
+        "referentie": "SDE1824320",
+        "aanvrager": "Sunvest B.V.",
+        "adres": "Lelystad, H, 1988, 1989",
+        "postcode": null,
+        "plaats_lok": "LELYSTAD",
+        "provincien": "Flevoland",
+        "gemeentena": "Lelystad",
+        "vermogen__": 10.2,
+        "max_s": 1.090125e7,
+        "gerealisee": "Nee",
+        "x": 164238.68,
+        "y": 508985.81,
+        "grondgebon": "Veldopstelling",
+        "jaar": 2018,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan_locatie",
+        "bbox": [
+          5.523469672257221,
+          52.56839477921348,
+          5.523469672257221,
+          52.56839477921348
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.281",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.486123231607622, 52.45421390279993]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2019 I",
+        "referentie": "SDE1910980",
+        "aanvrager": "***",
+        "adres": "***",
+        "postcode": "8218**",
+        "plaats_lok": "LELYSTAD",
+        "provincien": "Flevoland",
+        "gemeentena": "Lelystad",
+        "vermogen__": 56,
+        "max_s": 5.1072e7,
+        "gerealisee": "Nee",
+        "x": 161724,
+        "y": 496277,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2019,
+        "jaar_real": 0,
+        "opmerkinge": "Meerkoetenweg 21 Lelystad",
+        "controle": "plan_locatie",
+        "bbox": [
+          5.486123231607622,
+          52.45421390279993,
+          5.486123231607622,
+          52.45421390279993
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.282",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.580119005823263, 52.51947216600348]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2019 I",
+        "referentie": "SDE1911097",
+        "aanvrager": "Solarvation B.V.",
+        "adres": "Solarvation Fase 7",
+        "postcode": null,
+        "plaats_lok": "LELYSTAD",
+        "provincien": "Flevoland",
+        "gemeentena": "Lelystad",
+        "vermogen__": 1.18104,
+        "max_s": 1110769,
+        "gerealisee": "Nee",
+        "x": 168094,
+        "y": 503551,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2019,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan_locatie",
+        "bbox": [
+          5.580119005823263,
+          52.51947216600348,
+          5.580119005823263,
+          52.51947216600348
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.296",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.532015279050832, 52.577670120461995]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2019 I",
+        "referentie": "SDE1913569",
+        "aanvrager": "Engie Energie Nederland N.V.",
+        "adres": "Zonnepark Flevokust 3.0",
+        "postcode": null,
+        "plaats_lok": "LELYSTAD",
+        "provincien": "Flevoland",
+        "gemeentena": "Lelystad",
+        "vermogen__": 2.5,
+        "max_s": 2422500,
+        "gerealisee": "Nee",
+        "x": 164816,
+        "y": 510019,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2019,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan_locatie",
+        "bbox": [
+          5.532015279050832,
+          52.577670120461995,
+          5.532015279050832,
+          52.577670120461995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.297",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.396912366436248, 52.17392274985791]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2019 I",
+        "referentie": "SDE1914227",
+        "aanvrager": "KS NL26 B.V.",
+        "adres": "Zonnepark Lochem",
+        "postcode": null,
+        "plaats_lok": "LOCHEM",
+        "provincien": "Gelderland",
+        "gemeentena": "Lochem",
+        "vermogen__": 8.6,
+        "max_s": 7843200,
+        "gerealisee": "Nee",
+        "x": 224068,
+        "y": 465567,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2019,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan_locatie",
+        "bbox": [
+          6.396912366436248,
+          52.17392274985791,
+          6.396912366436248,
+          52.17392274985791
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.303",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.601806629848336, 52.377172585165276]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2019 I",
+        "referentie": "SDE1915377",
+        "aanvrager": "Obton Solenergi Harderwold C.V.",
+        "adres": "Zonnepark Harderwold",
+        "postcode": null,
+        "plaats_lok": "ZEEWOLDE",
+        "provincien": "Flevoland",
+        "gemeentena": "Zeewolde",
+        "vermogen__": 43.689,
+        "max_s": 3.7976664e7,
+        "gerealisee": "Nee",
+        "x": 169613,
+        "y": 487722,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2019,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan_locatie",
+        "bbox": [
+          5.601806629848336,
+          52.377172585165276,
+          5.601806629848336,
+          52.377172585165276
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.305",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.8494032876569015, 51.89275332179101]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2019 I",
+        "referentie": "SDE1915412",
+        "aanvrager": "Zonnepark De Grift B.V.",
+        "adres": "Zonnepark De Grift",
+        "postcode": null,
+        "plaats_lok": "NIJMEGEN",
+        "provincien": "Gelderland",
+        "gemeentena": "Nijmegen",
+        "vermogen__": 4.9,
+        "max_s": 4748100,
+        "gerealisee": "Nee",
+        "x": 186816,
+        "y": 433905,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2019,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan_locatie",
+        "bbox": [
+          5.8494032876569015,
+          51.89275332179101,
+          5.8494032876569015,
+          51.89275332179101
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.312",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.466682772571409, 52.34413147711032]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2019 I",
+        "referentie": "SDE1916719",
+        "aanvrager": "Ham Nederland B.V.",
+        "adres": "Bosruiterweg 14",
+        "postcode": "3897LV",
+        "plaats_lok": "ZEEWOLDE",
+        "provincien": "Flevoland",
+        "gemeentena": "Zeewolde",
+        "vermogen__": 4.013,
+        "max_s": 3774227,
+        "gerealisee": "Nee",
+        "x": 160416,
+        "y": 484027,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2019,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan_locatie",
+        "bbox": [
+          5.466682772571409,
+          52.34413147711032,
+          5.466682772571409,
+          52.34413147711032
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.313",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.573660775608852, 52.28453058461145]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2019 I",
+        "referentie": "SDE1916812",
+        "aanvrager": "Zonnestroom Nederland B.V.",
+        "adres": "Zonneweide Aalbertshoeve",
+        "postcode": null,
+        "plaats_lok": "ERMELO",
+        "provincien": "Gelderland",
+        "gemeentena": "Ermelo",
+        "vermogen__": 3.472,
+        "max_s": 3364368,
+        "gerealisee": "Nee",
+        "x": 167723,
+        "y": 477409,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2019,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan_locatie",
+        "bbox": [
+          5.573660775608852,
+          52.28453058461145,
+          5.573660775608852,
+          52.28453058461145
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.328",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.5813446869693175, 52.520117250856316]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2019 I",
+        "referentie": "SDE1919335",
+        "aanvrager": "Solarvation B.V.",
+        "adres": "Solarvation Fase 6",
+        "postcode": null,
+        "plaats_lok": "LELYSTAD",
+        "provincien": "Flevoland",
+        "gemeentena": "Lelystad",
+        "vermogen__": 1.27428,
+        "max_s": 1198461,
+        "gerealisee": "Nee",
+        "x": 168177,
+        "y": 503623,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2019,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan_locatie",
+        "bbox": [
+          5.5813446869693175,
+          52.520117250856316,
+          5.5813446869693175,
+          52.520117250856316
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.379",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.284592655227681, 52.33589618627988]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2019 II",
+        "referentie": "SDE1925248",
+        "aanvrager": "N.V. Afvalzorg Holding",
+        "adres": "Kemphaanweg 2",
+        "postcode": "1358AB",
+        "plaats_lok": "ALMERE",
+        "provincien": "Flevoland",
+        "gemeentena": "Almere",
+        "vermogen__": 17.2,
+        "max_s": 1.51962e7,
+        "gerealisee": "Nee",
+        "x": 148006.315808,
+        "y": 483112.66048,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2019,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan locatie",
+        "bbox": [
+          5.284592655227681,
+          52.33589618627988,
+          5.284592655227681,
+          52.33589618627988
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.380",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.681541751891129, 52.41449786795512]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2019 II",
+        "referentie": "SDE1925347",
+        "aanvrager": "Zonnepark Dorhout Mees B.V.",
+        "adres": "Dorhout Mees",
+        "postcode": null,
+        "plaats_lok": "DRONTEN",
+        "provincien": "Flevoland",
+        "gemeentena": "Dronten",
+        "vermogen__": 147.766,
+        "max_s": 1.28445596e8,
+        "gerealisee": "Nee",
+        "x": 175025.534609,
+        "y": 491894.07191,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2019,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan locatie",
+        "bbox": [
+          5.681541751891129,
+          52.41449786795512,
+          5.681541751891129,
+          52.41449786795512
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.383",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.697454639013624, 52.41579533801083]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2019 II",
+        "referentie": "SDE1925637",
+        "aanvrager": "Flevoland Duurzame Energie B.V.",
+        "adres": "Strandgaperweg 20",
+        "postcode": "8256PZ",
+        "plaats_lok": "BIDDINGHUIZEN",
+        "provincien": "Flevoland",
+        "gemeentena": "Dronten",
+        "vermogen__": 30.6,
+        "max_s": 2.70351e7,
+        "gerealisee": "Nee",
+        "x": 176107.560993,
+        "y": 492042.956234,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2019,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "locatie onbekend",
+        "bbox": [
+          5.697454639013624,
+          52.41579533801083,
+          5.697454639013624,
+          52.41579533801083
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.398",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.545096245882474, 52.52474719828632]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2019 II",
+        "referentie": "SDE1926380",
+        "aanvrager": "Solarvation B.V.",
+        "adres": "Runderweg H1828",
+        "postcode": null,
+        "plaats_lok": "LELYSTAD",
+        "provincien": "Flevoland",
+        "gemeentena": "Lelystad",
+        "vermogen__": 3.40032,
+        "max_s": 3052638,
+        "gerealisee": "Nee",
+        "x": 165715.559045,
+        "y": 504132.177161,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2019,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "locatie onbekend, kad perceel niet gevonden",
+        "bbox": [
+          5.545096245882474,
+          52.52474719828632,
+          5.545096245882474,
+          52.52474719828632
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.87",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.899695783618179, 51.914239849001305]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2017 II",
+        "referentie": "SDE1738689",
+        "aanvrager": "KS NL2 B.V.",
+        "adres": "Lingewal 14",
+        "postcode": "6681LJ",
+        "plaats_lok": "BEMMEL",
+        "provincien": "Gelderland",
+        "gemeentena": "Lingewaard",
+        "vermogen__": 13,
+        "max_s": 1.482e7,
+        "gerealisee": "Ja",
+        "x": 190261.02947,
+        "y": 436318.686305,
+        "grondgebon": "Ja",
+        "jaar": 2017,
+        "jaar_real": 2020,
+        "opmerkinge": null,
+        "controle": "plan locatie",
+        "bbox": [
+          5.899695783618179,
+          51.914239849001305,
+          5.899695783618179,
+          51.914239849001305
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.89",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.499880609795855, 51.872652226395715]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2017 I",
+        "referentie": "SDE1740135",
+        "aanvrager": "Zonnepark West Maas en Waal B.V.",
+        "adres": "Liesterstraat 10z",
+        "postcode": "6658KM",
+        "plaats_lok": "BENEDEN-LEEUWEN",
+        "provincien": "Gelderland",
+        "gemeentena": "West Maas en Waal",
+        "vermogen__": 3.3,
+        "max_s": 3950100,
+        "gerealisee": "Ja",
+        "x": 162759.797042,
+        "y": 431573.436484,
+        "grondgebon": "Ja",
+        "jaar": 2017,
+        "jaar_real": 2020,
+        "opmerkinge": null,
+        "controle": "realisatie_locatie",
+        "bbox": [
+          5.499880609795855,
+          51.872652226395715,
+          5.499880609795855,
+          51.872652226395715
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.110",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.193199342288541, 52.163940245374015]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2017 II",
+        "referentie": "SDE1753490",
+        "aanvrager": "Zonnepark Fort de Pol B.V.",
+        "adres": "Fort de Pol - Zutphen",
+        "postcode": null,
+        "plaats_lok": "ZUTPHEN",
+        "provincien": "Gelderland",
+        "gemeentena": "Zutphen",
+        "vermogen__": 5.584,
+        "max_s": 7002336,
+        "gerealisee": "Ja",
+        "x": 210146.03,
+        "y": 464281.97,
+        "grondgebon": "Ja",
+        "jaar": 2017,
+        "jaar_real": 2020,
+        "opmerkinge": null,
+        "controle": "plan_locatie",
+        "bbox": [
+          6.193199342288541,
+          52.163940245374015,
+          6.193199342288541,
+          52.163940245374015
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.112",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.515936542682456, 51.87211726175407]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2017 I",
+        "referentie": "SDE1754185",
+        "aanvrager": "Zonnepark West Maas en Waal B.V.",
+        "adres": "Zonnepark West Maas en Waal locatie Oost",
+        "postcode": null,
+        "plaats_lok": "WAMEL",
+        "provincien": "Gelderland",
+        "gemeentena": "West Maas en Waal",
+        "vermogen__": 2.917,
+        "max_s": 3491649,
+        "gerealisee": "Ja",
+        "x": 163865.625296,
+        "y": 431515.757202,
+        "grondgebon": "Ja",
+        "jaar": 2017,
+        "jaar_real": 2020,
+        "opmerkinge": null,
+        "controle": null,
+        "bbox": [
+          5.515936542682456,
+          51.87211726175407,
+          5.515936542682456,
+          51.87211726175407
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.114",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.131701000346324, 51.90090704230367]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2017 I",
+        "referentie": "SDE1755300",
+        "aanvrager": "***",
+        "adres": "***",
+        "postcode": "6909**",
+        "plaats_lok": "BABBERICH",
+        "provincien": "Gelderland",
+        "gemeentena": "Zevenaar",
+        "vermogen__": 8.565,
+        "max_s": 1.1838972e7,
+        "gerealisee": "Nee",
+        "x": 206238.540756,
+        "y": 434973.467917,
+        "grondgebon": "Ja",
+        "jaar": 2017,
+        "jaar_real": 0,
+        "opmerkinge": "aanvrager GroenLeven, Emmerichseweg 2 B.V., Emmerichseweg 2, 6909DE",
+        "controle": null,
+        "bbox": [
+          6.131701000346324,
+          51.90090704230367,
+          6.131701000346324,
+          51.90090704230367
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.125",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.3262759933889186, 51.89058996887918]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2017 I",
+        "referentie": "SDE1763160",
+        "aanvrager": "Solarpark Azewijn Montferland B.V.",
+        "adres": "Solarpark Azewijn",
+        "postcode": null,
+        "plaats_lok": "AZEWIJN",
+        "provincien": "Gelderland",
+        "gemeentena": "Montferland",
+        "vermogen__": 4.4,
+        "max_s": 5204100,
+        "gerealisee": "Nee",
+        "x": 219644.125963,
+        "y": 433980.82806,
+        "grondgebon": "Ja",
+        "jaar": 2017,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": null,
+        "bbox": [
+          6.3262759933889186,
+          51.89058996887918,
+          6.3262759933889186,
+          51.89058996887918
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.130",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.854872754972738, 51.965177468519435]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2017 II",
+        "referentie": "SDE1765307",
+        "aanvrager": "Rivierenland, Waterschap",
+        "adres": "Drielsedijk 25",
+        "postcode": "6841HJ",
+        "plaats_lok": "ARNHEM",
+        "provincien": "Gelderland",
+        "gemeentena": "Arnhem",
+        "vermogen__": 2.052,
+        "max_s": 2602449,
+        "gerealisee": "Ja",
+        "x": 187140.616199,
+        "y": 441964.950216,
+        "grondgebon": "Ja",
+        "jaar": 2017,
+        "jaar_real": 2019,
+        "opmerkinge": "rwzi",
+        "controle": "realisatie_locatie",
+        "bbox": [
+          5.854872754972738,
+          51.965177468519435,
+          5.854872754972738,
+          51.965177468519435
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.225",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.276225267551023, 51.81673850750587]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2018 II",
+        "referentie": "SDE1823968",
+        "aanvrager": "Energie van Hollandsche Bodem B.V.",
+        "adres": "Zaltbommel, K, 234, 237, 238 Ketelsteeg 1085",
+        "postcode": null,
+        "plaats_lok": "ZALTBOMMEL",
+        "provincien": "Gelderland",
+        "gemeentena": "Zaltbommel",
+        "vermogen__": 2.5,
+        "max_s": 2743125,
+        "gerealisee": "Nee",
+        "x": 147347.85,
+        "y": 425352.53,
+        "grondgebon": "Veldopstelling",
+        "jaar": 2018,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan_locatie",
+        "bbox": [
+          5.276225267551023,
+          51.81673850750587,
+          5.276225267551023,
+          51.81673850750587
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.240",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.454988186105161, 52.16523867728543]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2018 II",
+        "referentie": "SDE1825117",
+        "aanvrager": "KS NL5 B.V.",
+        "adres": "Lochem, A, 2123, Laren, L, 1610, 1943, 1944, 1947, 1609, 1680, 1941",
+        "postcode": null,
+        "plaats_lok": "LOCHEM",
+        "provincien": "Gelderland",
+        "gemeentena": "Lochem",
+        "vermogen__": 17.23,
+        "max_s": 1.7923508e7,
+        "gerealisee": "Nee",
+        "x": 228054.64,
+        "y": 464657.77,
+        "grondgebon": "Veldopstelling",
+        "jaar": 2018,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan_locatie",
+        "bbox": [
+          6.454988186105161,
+          52.16523867728543,
+          6.454988186105161,
+          52.16523867728543
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.241",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.356230649240711, 51.87817228268912]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2018 II",
+        "referentie": "SDE1825339",
+        "aanvrager": "Netterden Zand en Grind B.V.",
+        "adres": "Azewijnsestraat 13",
+        "postcode": "7081HL",
+        "plaats_lok": "GENDRINGEN",
+        "provincien": "Gelderland",
+        "gemeentena": "Oude IJsselstreek",
+        "vermogen__": 1.264,
+        "max_s": 1386924,
+        "gerealisee": "Nee",
+        "x": 221724.487953,
+        "y": 432626.444171,
+        "grondgebon": "Drijvende installatie",
+        "jaar": 2018,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan_locatie",
+        "bbox": [
+          6.356230649240711,
+          51.87817228268912,
+          6.356230649240711,
+          51.87817228268912
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.245",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.370823420967097, 51.86252032005998]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2018 II",
+        "referentie": "SDE1825972",
+        "aanvrager": "'t Oerlegoed B.V.",
+        "adres": "Munsterweg 4",
+        "postcode": "7081HJ",
+        "plaats_lok": "GENDRINGEN",
+        "provincien": "Gelderland",
+        "gemeentena": "Oude IJsselstreek",
+        "vermogen__": 2.03264,
+        "max_s": 2230315,
+        "gerealisee": "Nee",
+        "x": 222752.827953,
+        "y": 430898.684171,
+        "grondgebon": "Veldopstelling",
+        "jaar": 2018,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan_locatie",
+        "bbox": [
+          6.370823420967097,
+          51.86252032005998,
+          6.370823420967097,
+          51.86252032005998
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.249",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.634203280510283, 52.359740645547184]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2018 II",
+        "referentie": "SDE1826306",
+        "aanvrager": "Waterschap Vallei en Veluwe",
+        "adres": "Lorentzstraat 5",
+        "postcode": "3846AV",
+        "plaats_lok": "HARDERWIJK",
+        "provincien": "Gelderland",
+        "gemeentena": "Harderwijk",
+        "vermogen__": 2.23145,
+        "max_s": 2448460,
+        "gerealisee": "Nee",
+        "x": 171825.61,
+        "y": 485789.48,
+        "grondgebon": "Veldopstelling",
+        "jaar": 2018,
+        "jaar_real": 0,
+        "opmerkinge": "rwzi",
+        "controle": "plan_locatie",
+        "bbox": [
+          5.634203280510283,
+          52.359740645547184,
+          5.634203280510283,
+          52.359740645547184
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.250",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.076872750936495, 52.098318392038465]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2018 II",
+        "referentie": "SDE1826317",
+        "aanvrager": "Zonnepark Eerbeek B.V.",
+        "adres": "Hall, C, 1913",
+        "postcode": null,
+        "plaats_lok": "EERBEEK",
+        "provincien": "Gelderland",
+        "gemeentena": "Brummen",
+        "vermogen__": 5.9,
+        "max_s": 6473775,
+        "gerealisee": "Nee",
+        "x": 202256.58,
+        "y": 456899.06,
+        "grondgebon": "Veldopstelling",
+        "jaar": 2018,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan_locatie",
+        "bbox": [
+          6.076872750936495,
+          52.098318392038465,
+          6.076872750936495,
+          52.098318392038465
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.255",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.495809141327964, 51.86283183701368]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2018 II",
+        "referentie": "SDE1827471",
+        "aanvrager": "H.J. Klomps Project Ontwikkeling B.V.",
+        "adres": "Dinxperlo, F, 787, 788, 789, 790, 1232, 2321",
+        "postcode": null,
+        "plaats_lok": "DINXPERLO",
+        "provincien": "Gelderland",
+        "gemeentena": "Aalten",
+        "vermogen__": 2.35,
+        "max_s": 2578538,
+        "gerealisee": "Nee",
+        "x": 231361.007953,
+        "y": 431057.244171,
+        "grondgebon": "Veldopstelling",
+        "jaar": 2018,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan_locatie",
+        "bbox": [
+          6.495809141327964,
+          51.86283183701368,
+          6.495809141327964,
+          51.86283183701368
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.261",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.94071833558384, 52.31973769502874]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2018 II",
+        "referentie": "SDE1828351",
+        "aanvrager": "Solarpark Emst-Epe B.V.",
+        "adres": "Pollenseveenweg 3",
+        "postcode": "8166HT",
+        "plaats_lok": "EMST",
+        "provincien": "Gelderland",
+        "gemeentena": "Epe",
+        "vermogen__": 2.485,
+        "max_s": 2726667,
+        "gerealisee": "Nee",
+        "x": 192739.27,
+        "y": 481454.07,
+        "grondgebon": "Veldopstelling",
+        "jaar": 2018,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan_locatie",
+        "bbox": [
+          5.94071833558384,
+          52.31973769502874,
+          5.94071833558384,
+          52.31973769502874
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.279",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.643305274882828, 51.964409074722774]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2019 I",
+        "referentie": "SDE1910771",
+        "aanvrager": "Zonnepark Haarweg B.V.",
+        "adres": "Zonnepark Haarweg",
+        "postcode": null,
+        "plaats_lok": "WAGENINGEN",
+        "provincien": "Gelderland",
+        "gemeentena": "Wageningen",
+        "vermogen__": 6.144,
+        "max_s": 5690880,
+        "gerealisee": "Nee",
+        "x": 172601,
+        "y": 441807,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2019,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan_locatie",
+        "bbox": [
+          5.643305274882828,
+          51.964409074722774,
+          5.643305274882828,
+          51.964409074722774
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.291",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.03161109144974, 52.192698412053126]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2019 I",
+        "referentie": "SDE1912434",
+        "aanvrager": "Gemeente Apeldoorn",
+        "adres": "Brinkenweg 126",
+        "postcode": "7381BN",
+        "plaats_lok": "KLARENBEEK",
+        "provincien": "Gelderland",
+        "gemeentena": "Apeldoorn",
+        "vermogen__": 2.718,
+        "max_s": 2633742,
+        "gerealisee": "Nee",
+        "x": 199062,
+        "y": 467371,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2019,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan_locatie",
+        "bbox": [
+          6.03161109144974,
+          52.192698412053126,
+          6.03161109144974,
+          52.192698412053126
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.292",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.977475391304621, 52.2506308700351]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2019 I",
+        "referentie": "SDE1912470",
+        "aanvrager": "Zonnepark Wenumse Veld B.V.",
+        "adres": "Wenumse Veld",
+        "postcode": null,
+        "plaats_lok": "APELDOORN",
+        "provincien": "Gelderland",
+        "gemeentena": "Apeldoorn",
+        "vermogen__": 15.5,
+        "max_s": 1.50195e7,
+        "gerealisee": "Nee",
+        "x": 195308,
+        "y": 473785,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2019,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan_locatie",
+        "bbox": [
+          5.977475391304621,
+          52.2506308700351,
+          5.977475391304621,
+          52.2506308700351
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.301",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.043051316354941, 52.191925317842816]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2019 I",
+        "referentie": "SDE1915251",
+        "aanvrager": "Zonnepark Apeldoorn IJsseldijk B.V.",
+        "adres": "IJsseldijk",
+        "postcode": null,
+        "plaats_lok": "APELDOORN",
+        "provincien": "Gelderland",
+        "gemeentena": "Apeldoorn",
+        "vermogen__": 4.395,
+        "max_s": 4070869,
+        "gerealisee": "Nee",
+        "x": 199845,
+        "y": 467292,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2019,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan_locatie",
+        "bbox": [
+          6.043051316354941,
+          52.191925317842816,
+          6.043051316354941,
+          52.191925317842816
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.309",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.545435373688785, 52.128315449239295]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2019 I",
+        "referentie": "SDE1915971",
+        "aanvrager": "Zonnig Berkelland B.V.",
+        "adres": "Berkelland Brokersweg",
+        "postcode": null,
+        "plaats_lok": "GEESTEREN",
+        "provincien": "Gelderland",
+        "gemeentena": "Berkelland",
+        "vermogen__": 13.24,
+        "max_s": 1.264089e7,
+        "gerealisee": "Nee",
+        "x": 234308,
+        "y": 460645,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2019,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan_locatie",
+        "bbox": [
+          6.545435373688785,
+          52.128315449239295,
+          6.545435373688785,
+          52.128315449239295
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.310",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.021738794600537, 52.27380609463112]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2019 I",
+        "referentie": "SDE1916400",
+        "aanvrager": "Zonnepark Apeldoorn Bloemenkamp B.V.",
+        "adres": "Beemte-Broekland",
+        "postcode": null,
+        "plaats_lok": "APELDOORN",
+        "provincien": "Gelderland",
+        "gemeentena": "Apeldoorn",
+        "vermogen__": 27.628,
+        "max_s": 2.5590435e7,
+        "gerealisee": "Nee",
+        "x": 198308,
+        "y": 476389,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2019,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan_locatie",
+        "bbox": [
+          6.021738794600537,
+          52.27380609463112,
+          6.021738794600537,
+          52.27380609463112
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.311",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.079128518646747, 52.19456852250271]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2019 I",
+        "referentie": "SDE1916697",
+        "aanvrager": "KS NL15 B.V.",
+        "adres": "Oude Zutphenseweg 3t",
+        "postcode": null,
+        "plaats_lok": "KLARENBEEK",
+        "provincien": "Gelderland",
+        "gemeentena": "Voorst",
+        "vermogen__": 13,
+        "max_s": 1.204125e7,
+        "gerealisee": "Nee",
+        "x": 202309,
+        "y": 467609,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2019,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan_locatie",
+        "bbox": [
+          6.079128518646747,
+          52.19456852250271,
+          6.079128518646747,
+          52.19456852250271
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.321",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.059700832156583, 52.18749032802762]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2019 I",
+        "referentie": "SDE1918092",
+        "aanvrager": "Zonnepark Broekstraat B.V.",
+        "adres": "Zonnepark Broekstraat",
+        "postcode": null,
+        "plaats_lok": "VOORST",
+        "provincien": "Gelderland",
+        "gemeentena": "Voorst",
+        "vermogen__": 19,
+        "max_s": 1.8411e7,
+        "gerealisee": "Nee",
+        "x": 200988,
+        "y": 466809,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2019,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan_locatie",
+        "bbox": [
+          6.059700832156583,
+          52.18749032802762,
+          6.059700832156583,
+          52.18749032802762
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.324",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.683685233754445, 51.92073001150179]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2019 I",
+        "referentie": "SDE1919079",
+        "aanvrager": "Zonnepark Hemmen B.V.",
+        "adres": "Zonnepark Hemmen",
+        "postcode": null,
+        "plaats_lok": "VALBURG",
+        "provincien": "Gelderland",
+        "gemeentena": "Overbetuwe",
+        "vermogen__": 24.638,
+        "max_s": 2.3874222e7,
+        "gerealisee": "Nee",
+        "x": 175396,
+        "y": 436958,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2019,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan_locatie",
+        "bbox": [
+          5.683685233754445,
+          51.92073001150179,
+          5.683685233754445,
+          51.92073001150179
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.343",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.575659524871687, 52.00207707760504]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2019 II",
+        "referentie": "SDE1921390",
+        "aanvrager": "Sunvest Ontwikkeling B.V.",
+        "adres": "Zonnepark Lievelde",
+        "postcode": null,
+        "plaats_lok": "LICHTENVOORDE",
+        "provincien": "Gelderland",
+        "gemeentena": "Oost Gelre",
+        "vermogen__": 12,
+        "max_s": 1.0431e7,
+        "gerealisee": "Nee",
+        "x": 236607.373953,
+        "y": 446634.658683,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2019,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan locatie",
+        "bbox": [
+          6.575659524871687,
+          52.00207707760504,
+          6.575659524871687,
+          52.00207707760504
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.359",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.483134157924606, 51.917469553962015]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2019 II",
+        "referentie": "SDE1922464",
+        "aanvrager": "Zonnepark Medel B.V.",
+        "adres": "Broekdijksestraat 2nabij",
+        "postcode": "4054NJ",
+        "plaats_lok": "ECHTELD",
+        "provincien": "Gelderland",
+        "gemeentena": "Neder-Betuwe",
+        "vermogen__": 16.08,
+        "max_s": 1.443582e7,
+        "gerealisee": "Nee",
+        "x": 161599.927817,
+        "y": 436557.972438,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2019,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan locatie",
+        "bbox": [
+          5.483134157924606,
+          51.917469553962015,
+          5.483134157924606,
+          51.917469553962015
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.373",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.53878293674954, 52.10438152826621]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2019 II",
+        "referentie": "SDE1924408",
+        "aanvrager": "Zonnig Batendijk B.V.",
+        "adres": "Berkelland Batendijk",
+        "postcode": null,
+        "plaats_lok": "BORCULO",
+        "provincien": "Gelderland",
+        "gemeentena": "Berkelland",
+        "vermogen__": 10.829,
+        "max_s": 9413109,
+        "gerealisee": "Nee",
+        "x": 233894.772061,
+        "y": 457975.103861,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2019,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan locatie",
+        "bbox": [
+          6.53878293674954,
+          52.10438152826621,
+          6.53878293674954,
+          52.10438152826621
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.374",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.765953802956028, 51.83023080408799]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2019 II",
+        "referentie": "SDE1924521",
+        "aanvrager": "ENGIE Energie Nederland N.V.",
+        "adres": "Zonnepark A73 Palkerdijk",
+        "postcode": null,
+        "plaats_lok": "NIJMEGEN",
+        "provincien": "Gelderland",
+        "gemeentena": "Nijmegen",
+        "vermogen__": 1.634,
+        "max_s": 1466924,
+        "gerealisee": "Nee",
+        "x": 181107.974418,
+        "y": 426915.84697,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2019,
+        "jaar_real": 0,
+        "opmerkinge": "deel van zonnepark",
+        "controle": "plan locatie",
+        "bbox": [
+          5.765953802956028,
+          51.83023080408799,
+          5.765953802956028,
+          51.83023080408799
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.376",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.413320755124465, 52.16899605837681]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2019 II",
+        "referentie": "SDE1924815",
+        "aanvrager": "KS NL26 B.V.",
+        "adres": "Zonnepark Lochem II",
+        "postcode": null,
+        "plaats_lok": "LOCHEM",
+        "provincien": "Gelderland",
+        "gemeentena": "Lochem",
+        "vermogen__": 1.8,
+        "max_s": 1564650,
+        "gerealisee": "Nee",
+        "x": 225198.100079,
+        "y": 465034.642971,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2019,
+        "jaar_real": 0,
+        "opmerkinge": "uitbreiding?",
+        "controle": "plan locatie",
+        "bbox": [
+          6.413320755124465,
+          52.16899605837681,
+          6.413320755124465,
+          52.16899605837681
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.393",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.07520215155597, 52.1167568770185]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2019 II",
+        "referentie": "SDE1926024",
+        "aanvrager": "Green Solar Future Brummen B.V.",
+        "adres": "Zonnepark Oude Zutphenseweg",
+        "postcode": null,
+        "plaats_lok": "BRUMMEN",
+        "provincien": "Gelderland",
+        "gemeentena": "Brummen",
+        "vermogen__": 45,
+        "max_s": 3.97575e7,
+        "gerealisee": "Nee",
+        "x": 202122.660697,
+        "y": 458949.365171,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2019,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan locatie",
+        "bbox": [
+          6.07520215155597,
+          52.1167568770185,
+          6.07520215155597,
+          52.1167568770185
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.395",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.540156538622732, 52.122185048402734]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2019 II",
+        "referentie": "SDE1926141",
+        "aanvrager": "Zonnig Borculo B.V.",
+        "adres": "Borculo Hekweg",
+        "postcode": null,
+        "plaats_lok": "GEESTEREN",
+        "provincien": "Gelderland",
+        "gemeentena": "Berkelland",
+        "vermogen__": 2.974,
+        "max_s": 2669909,
+        "gerealisee": "Nee",
+        "x": 233957.39978,
+        "y": 459957.235919,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2019,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan locatie",
+        "bbox": [
+          6.540156538622732,
+          52.122185048402734,
+          6.540156538622732,
+          52.122185048402734
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.405",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.688449370210903, 51.841031893960576]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2019 II",
+        "referentie": "SDE1927025",
+        "aanvrager": "Dutch Durables Energy 3 B.V.",
+        "adres": "Kampbroek 5",
+        "postcode": "6616BP",
+        "plaats_lok": "HERNEN",
+        "provincien": "Gelderland",
+        "gemeentena": "Wijchen",
+        "vermogen__": 14.1,
+        "max_s": 1.2256425e7,
+        "gerealisee": "Nee",
+        "x": 175760.505726,
+        "y": 428092.524352,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2019,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan locatie",
+        "bbox": [
+          5.688449370210903,
+          51.841031893960576,
+          5.688449370210903,
+          51.841031893960576
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.406",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.391433912959903, 52.165231938285125]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2019 II",
+        "referentie": "SDE1927083",
+        "aanvrager": "TPSolar Berkelweide Lochem B.V.",
+        "adres": "Kanaaldijk 7t",
+        "postcode": "7241TE",
+        "plaats_lok": "LOCHEM",
+        "provincien": "Gelderland",
+        "gemeentena": "Lochem",
+        "vermogen__": 10.584,
+        "max_s": 9350964,
+        "gerealisee": "Nee",
+        "x": 223706.656228,
+        "y": 464594.916845,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2019,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan locatie",
+        "bbox": [
+          6.391433912959903,
+          52.165231938285125,
+          6.391433912959903,
+          52.165231938285125
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.415",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.2219845621689425, 52.073663087124594]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2019 II",
+        "referentie": "SDE1927904",
+        "aanvrager": "Obton GreenIPP 7 C.V.",
+        "adres": "Hofstraat 1",
+        "postcode": "7223LR",
+        "plaats_lok": "BAAK",
+        "provincien": "Gelderland",
+        "gemeentena": "Bronckhorst",
+        "vermogen__": 2.351,
+        "max_s": 2110611,
+        "gerealisee": "Nee",
+        "x": 212231.006027,
+        "y": 454260.50082,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2019,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan locatie",
+        "bbox": [
+          6.2219845621689425,
+          52.073663087124594,
+          6.2219845621689425,
+          52.073663087124594
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.419",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.00925807002424, 52.2417263177205]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2019 II",
+        "referentie": "SDE1928191",
+        "aanvrager": "Zonnepark Apeldoorn II B.V.",
+        "adres": "Laan van Zodiak 500a",
+        "postcode": "7324BC",
+        "plaats_lok": "APELDOORN",
+        "provincien": "Gelderland",
+        "gemeentena": "Apeldoorn",
+        "vermogen__": 2.812,
+        "max_s": 2524473,
+        "gerealisee": "Nee",
+        "x": 197486.816316,
+        "y": 472812.434912,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2019,
+        "jaar_real": 0,
+        "opmerkinge": "uitbreiding",
+        "controle": "plan locatie",
+        "bbox": [
+          6.00925807002424,
+          52.2417263177205,
+          6.00925807002424,
+          52.2417263177205
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.458",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.65002961266876, 52.148645256040965]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2020 I",
+        "referentie": "SDE2014415",
+        "aanvrager": "Zonnepark Branderwal B.V.",
+        "adres": "Wesselseweg 132",
+        "postcode": "3774RL",
+        "plaats_lok": "KOOTWIJKERBROEK",
+        "provincien": "Gelderland",
+        "gemeentena": "Barneveld",
+        "vermogen__": 30,
+        "max_s": 1.539e7,
+        "gerealisee": "Nee",
+        "x": 172988.889416,
+        "y": 462306.415747,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2020,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan locatie",
+        "bbox": [
+          5.65002961266876,
+          52.148645256040965,
+          5.65002961266876,
+          52.148645256040965
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.459",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.235349403693169, 51.9394698234599]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2020 I",
+        "referentie": "SDE2014564",
+        "aanvrager": "Rivierenland, Waterschap",
+        "adres": "Parallelweg Oost 23a",
+        "postcode": "4103ND",
+        "plaats_lok": "CULEMBORG",
+        "provincien": "Gelderland",
+        "gemeentena": "Culemborg",
+        "vermogen__": 1.26,
+        "max_s": 736155,
+        "gerealisee": "Nee",
+        "x": 144557.851826,
+        "y": 439012.161978,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2020,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "exacte locatie onbekend",
+        "bbox": [
+          5.235349403693169,
+          51.9394698234599,
+          5.235349403693169,
+          51.9394698234599
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.460",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.107804342335663, 52.05119382663615]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2020 I",
+        "referentie": "SDE2014594",
+        "aanvrager": "Rijn en IJssel Energie Coöperatie U.A.",
+        "adres": "Spankerenseweg 48",
+        "postcode": "6951CH",
+        "plaats_lok": "DIEREN",
+        "provincien": "Gelderland",
+        "gemeentena": "Rheden",
+        "vermogen__": 1.25,
+        "max_s": 801563,
+        "gerealisee": "Nee",
+        "x": 204428.040722,
+        "y": 451676.80863,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2020,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan locatie",
+        "bbox": [
+          6.107804342335663,
+          52.05119382663615,
+          6.107804342335663,
+          52.05119382663615
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.464",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.615400390317274, 52.11985762860618]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2020 I",
+        "referentie": "SDE2014915",
+        "aanvrager": "KS NL8 B.V.",
+        "adres": "Zonnepark Hoondermaatsweg",
+        "postcode": null,
+        "plaats_lok": "NEEDE",
+        "provincien": "Gelderland",
+        "gemeentena": "Berkelland",
+        "vermogen__": 13,
+        "max_s": 7039500,
+        "gerealisee": "Nee",
+        "x": 239114.356251,
+        "y": 459782.864914,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2020,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan locatie",
+        "bbox": [
+          6.615400390317274,
+          52.11985762860618,
+          6.615400390317274,
+          52.11985762860618
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.465",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.015128950111164, 52.48740848944889]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2020 I",
+        "referentie": "SDE2015096",
+        "aanvrager": "Groenleven",
+        "adres": "Zonnepark Hattemerbroek Drijvend",
+        "postcode": null,
+        "plaats_lok": "OLDEBROEK",
+        "provincien": "Gelderland",
+        "gemeentena": "Oldebroek",
+        "vermogen__": 14.805,
+        "max_s": 9493784,
+        "gerealisee": "Nee",
+        "x": 197650.821169,
+        "y": 500150.933509,
+        "grondgebon": "Watersysteem",
+        "jaar": 2020,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan locatie",
+        "bbox": [
+          6.015128950111164,
+          52.48740848944889,
+          6.015128950111164,
+          52.48740848944889
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.467",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.990224962195, 52.45123832912515]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2020 I",
+        "referentie": "SDE2015266",
+        "aanvrager": "Gemeente Oldebroek",
+        "adres": "Zonnepark Heidehoek",
+        "postcode": null,
+        "plaats_lok": "OLDEBROEK",
+        "provincien": "Gelderland",
+        "gemeentena": "Oldebroek",
+        "vermogen__": 2.8,
+        "max_s": 1635900,
+        "gerealisee": "Nee",
+        "x": 195992.811796,
+        "y": 496112.095846,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2020,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "plan locatie",
+        "bbox": [
+          5.990224962195,
+          52.45123832912515,
+          5.990224962195,
+          52.45123832912515
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sde_zon.489",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.165341202468999, 52.10024838715656]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "sde_ronde": "SDE+ 2020 I",
+        "referentie": "SDE2017851",
+        "aanvrager": "Zonnepark Elzenbos B.V.",
+        "adres": "Zonnepark Elzenbos",
+        "postcode": null,
+        "plaats_lok": "BRUMMEN",
+        "provincien": "Gelderland",
+        "gemeentena": "Brummen",
+        "vermogen__": 1.3,
+        "max_s": 833625,
+        "gerealisee": "Nee",
+        "x": 208316.03872,
+        "y": 457175.089161,
+        "grondgebon": "Veldsysteem",
+        "jaar": 2020,
+        "jaar_real": 0,
+        "opmerkinge": null,
+        "controle": "exacte locatie onbekend",
+        "bbox": [
+          6.165341202468999,
+          52.10024838715656,
+          6.165341202468999,
+          52.10024838715656
+        ]
+      }
+    }
+  ]
+}

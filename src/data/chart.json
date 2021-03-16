@@ -1,0 +1,198 @@
+{
+  "charts": [
+    {
+      "id": 1,
+      "type": "line",
+      "data": {
+        "key": "energy-year-overview",
+        "total": [118920],
+        "labels": [
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "September",
+          "October",
+          "November",
+          "December"
+        ],
+        "datasets": [
+          {
+            "label": "production",
+            "fill": false,
+            "lineTension": 0.5,
+            "backgroundColor": "#0E910A",
+            "borderColor": "#0E910A",
+            "borderWidth": 2,
+            "data": [
+              11228,
+              10023,
+              9669,
+              8027,
+              9201,
+              8893,
+              10463,
+              10726,
+              9833,
+              10199,
+              10126,
+              10531
+            ]
+          },
+          {
+            "label": "consumption",
+            "fill": false,
+            "lineTension": 0.5,
+            "backgroundColor": "#BF210B",
+            "borderColor": "#BF210B",
+            "borderWidth": 2,
+            "data": [
+              10500,
+              9761,
+              9497,
+              8154,
+              8461,
+              8472,
+              8787,
+              9161,
+              8922,
+              9675,
+              9621,
+              10196
+            ]
+          }
+        ]
+      },
+      "options": {
+        "title": {
+          "display": true,
+          "text": "2020",
+          "fontSize": 20
+        },
+        "legend": {
+          "display": true,
+          "position": "right"
+        },
+        "scales": {
+          "yAxes": [
+            {
+              "ticks": {
+                "beginAtZero": false
+              },
+              "scaleLabel": {
+                "display": true,
+                "labelString": "Energy in (mln kWh)"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 2,
+      "type": "pie",
+      "data": {
+        "key": "energy-import-export",
+        "total": ["42.206"],
+        "labels": ["import", "export"],
+        "datasets": [
+          {
+            "label": "Import Export",
+            "backgroundColor": ["#08275E", "#0E910A"],
+            "hoverBackgroundColor": ["#0B398A", "#0B6E08"],
+            "data": [19773, 22433]
+          }
+        ]
+      },
+      "options": {
+        "title": {
+          "display": true,
+          "fontSize": 20
+        },
+        "legend": {
+          "display": true,
+          "position": "right"
+        }
+      }
+    },
+    {
+      "id": 3,
+      "type": "bar",
+      "data": {
+        "key": "energy-import-export-countries",
+        "total": ["Import 19.773 (mln kWh)", "Export 22.433 (mln kWh)"],
+        "labels": [
+          "België",
+          "Denemarken",
+          "Duitsland",
+          "Verenigd Koninkrijk",
+          "Noorwegen"
+        ],
+        "datasets": [
+          {
+            "label": "import",
+            "backgroundColor": "#0B398A",
+            "hoverBackgroundColor": "#08275E",
+            "data": [3782, 2082, 8748, 541, 4621]
+          },
+          {
+            "label": "export",
+            "backgroundColor": "#0E910A",
+            "hoverBackgroundColor": "#0B6E08",
+            "data": [7806, 1053, 8677, 4787, 110]
+          }
+        ]
+      },
+      "options": {
+        "barValueSpacing": 20,
+        "legend": {
+          "display": true,
+          "position": "right"
+        },
+        "scales": {
+          "yAxes": [
+            {
+              "ticks": {
+                "beginAtZero": false
+              },
+              "scaleLabel": {
+                "display": true,
+                "labelString": "Energy in (mln kWh)"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 4,
+      "type": "doughnut",
+      "data": {
+        "key": "solar-parks-amount",
+        "total": [3],
+        "labels": ["Flevoland", "Overijssel", "Gelderland"],
+        "datasets": [
+          {
+            "backgroundColor": ["#0E910A", "#BF210B", "#0B398A"],
+            "hoverBackgroundColor": ["#0B6E08", "#911A0A", "#08275E"],
+            "data": [7, 10, 13]
+          }
+        ]
+      },
+      "options": {
+        "title": {
+          "display": true,
+          "fontSize": 20
+        },
+        "legend": {
+          "display": true,
+          "position": "right"
+        }
+      }
+    }
+  ]
+}
