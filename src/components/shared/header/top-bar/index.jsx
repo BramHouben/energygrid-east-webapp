@@ -2,8 +2,6 @@ import React from "react";
 import "./index.css";
 
 export default class TopBar extends React.Component {
-
-
   render() {
     return (
       <div id="top-bar-wrapper">
