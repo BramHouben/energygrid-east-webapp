@@ -1,18 +1,16 @@
-import React, { Component, useState } from "react";
+import React, { Component } from "react";
 import { Button } from "react-bootstrap";
-import { getClaim } from "services/jwt";
-import accountRole from "services/shared/account-role";
-import jwtClaims from "services/shared/jwt-claims";
+import { withTranslation } from "react-i18next";
 import routerPaths from "services/shared/router-paths";
 import Cookies from "universal-cookie";
 import "./index.css";
 
-export default class Menu extends React.Component {
+class Menu extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-      menuLinks: {}
-    }
+      menuLinks: {},
+    };
   }
 
   openNav = () => {
@@ -31,42 +29,8 @@ export default class Menu extends React.Component {
     window.location.pathname = "/login";
   };
 
-  generateLinks = () => {
-    const userRole = getClaim(jwtClaims.accountRole);
-    const links = [
-      {
-        a: (
-          <a key="menu-dashboard" href={routerPaths.Dashboard}>
-            Dashboard
-          </a>
-        ),
-        accountRoles: [
-          accountRole.User,
-          accountRole.Admin,
-          accountRole.SiteAdmin,
-        ],
-      },
-      {
-        a: (
-          <a key="menu-apps" href={routerPaths.AppDashboard}>
-            Apps
-          </a>
-        ),
-        accountRoles: [
-          accountRole.User,
-          accountRole.Admin,
-          accountRole.SiteAdmin,
-        ],
-      },
-    ];
-
-    return links
-      .filter((link) => link.accountRoles.includes(userRole))
-      .map((link) => link.a);
-  };
-
   render() {
-
+    const { t } = this.props;
     return (
       <div>
         <Button
@@ -87,14 +51,21 @@ export default class Menu extends React.Component {
             &times;
           </button>
           <div id="menu-links">
-            {this.generateLinks}
-            <button onClick={() => this.logout()} type="button" className="link-btn">
-              Afmelden
+            <a key="account" href={routerPaths.Account}>
+              {t("account")}
+            </a>
+            <button
+              onClick={() => this.logout()}
+              type="button"
+              className="link-btn"
+            >
+              {t("logout")}
             </button>
           </div>
         </div>
       </div>
     );
-
   }
 }
+
+export default withTranslation("menu")(Menu);

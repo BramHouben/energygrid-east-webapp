@@ -2,6 +2,7 @@
 const paths = {
   Root: "/",
   Simulation: "/simulation/",
+  Account: "/account/",
   Login: "/login"
 };
 
