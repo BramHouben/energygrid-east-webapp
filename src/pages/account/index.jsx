@@ -15,7 +15,7 @@ class Account extends Component {
 
   render() {
     const { t } = this.props;
-    const availableLanguages = ["nl", "gb"];
+    const availableLanguages = ["nl", "en"];
 
     return (
       <div>

@@ -1,22 +1,22 @@
 import i18n from "i18next";
 
-import dashboardGb from "./translations/gb/dashboard.json";
+import dashboardEn from "./translations/en/dashboard.json";
 import dashboardNl from "./translations/nl/dashboard.json";
 
-import accountGb from "./translations/gb/account.json";
+import accountEn from "./translations/en/account.json";
 import accountNl from "./translations/nl/account.json";
 
+import menuEn from "./translations/en/menu.json";
 import menuNl from "./translations/nl/menu.json";
-import menuGb from "./translations/gb/menu.json";
 
 i18n.init({
   interpolation: { escapeValue: false }, // React already does escaping
-  lng: "gb", // language to use
+  lng: "en", // language to use
   resources: {
-    gb: {
-      dashboard: dashboardGb,
-      account: accountGb,
-      menu: menuGb,
+    en: {
+      dashboard: dashboardEn,
+      account: accountEn,
+      menu: menuEn,
     },
     nl: {
       dashboard: dashboardNl,
