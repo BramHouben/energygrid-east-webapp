@@ -1,10 +1,13 @@
 import Header from "components/shared/header";
 import React from "react";
 
-export default function Dashboard() {
-  return (
-    <div>
-      <Header pageName="Dashboard" />
-    </div>
-  );
+export default class Dashboard extends React.Component {
+  
+  render() {
+    return (
+      <div>
+        <Header pageName="Dashboard" />
+      </div>
+    );
+  }
 }

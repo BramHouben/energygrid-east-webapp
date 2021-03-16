@@ -1,91 +1,71 @@
-import React, { Component, useState } from "react";
+import React, { Component } from "react";
 import { Button } from "react-bootstrap";
-import { getClaim } from "services/jwt";
-import accountRole from "services/shared/account-role";
-import jwtClaims from "services/shared/jwt-claims";
+import { withTranslation } from "react-i18next";
 import routerPaths from "services/shared/router-paths";
 import Cookies from "universal-cookie";
 import "./index.css";
 
-export default function Menu() {
-  const [menuLinks, setMenuLinks] = useState({});
+class Menu extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      menuLinks: {},
+    };
+  }
 
-  const openNav = () => {
+  openNav = () => {
     const menu = document.getElementById("menu");
     menu.style.width = "125px";
   };
 
-  const closeNav = () => {
+  closeNav = () => {
     const menu = document.getElementById("menu");
     menu.style.width = "0";
   };
 
-  const logout = () => {
+  logout = () => {
     const cookie = new Cookies();
     cookie.remove("Jwt", { path: "/" });
     window.location.pathname = "/login";
   };
 
-  const generateLinks = () => {
-    const userRole = getClaim(jwtClaims.accountRole);
-    const links = [
-      {
-        a: (
-          <a key="menu-dashboard" href={routerPaths.Dashboard}>
-            Dashboard
-          </a>
-        ),
-        accountRoles: [
-          accountRole.User,
-          accountRole.Admin,
-          accountRole.SiteAdmin,
-        ],
-      },
-      {
-        a: (
-          <a key="menu-apps" href={routerPaths.AppDashboard}>
-            Apps
-          </a>
-        ),
-        accountRoles: [
-          accountRole.User,
-          accountRole.Admin,
-          accountRole.SiteAdmin,
-        ],
-      },
-    ];
-
-    return links
-      .filter((link) => link.accountRoles.includes(userRole))
-      .map((link) => link.a);
-  };
-
-  return (
-    <div>
-      <Button
-        id="open-menu-button"
-        className="link-btn corporate-identity-font"
-        type="button"
-        onClick={() => openNav()}
-      >
-        &#9776;
-      </Button>
-
-      <div id="menu">
-        <button
-          className="closebtn link-btn"
+  render() {
+    const { t } = this.props;
+    return (
+      <div>
+        <Button
+          id="open-menu-button"
+          className="link-btn corporate-identity-font"
           type="button"
-          onClick={() => closeNav()}
+          onClick={() => this.openNav()}
         >
-          &times;
-        </button>
-        <div id="menu-links">
-          {generateLinks}
-          <button onClick={() => logout()} type="button" className="link-btn">
-            Afmelden
+          &#9776;
+        </Button>
+
+        <div id="menu">
+          <button
+            className="closebtn link-btn"
+            type="button"
+            onClick={() => this.closeNav()}
+          >
+            &times;
           </button>
+          <div id="menu-links">
+            <a key="account" href={routerPaths.Account}>
+              {t("account")}
+            </a>
+            <button
+              onClick={() => this.logout()}
+              type="button"
+              className="link-btn"
+            >
+              {t("logout")}
+            </button>
+          </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
+
+export default withTranslation("menu")(Menu);
