@@ -9,7 +9,7 @@ export default class Login extends Component {
             <div>
                 <div className="content">
                     <Container className="loginContainer">
-                        <LoginForm></LoginForm>
+                        <LoginForm/>
                     </Container>
                 </div>
             </div>

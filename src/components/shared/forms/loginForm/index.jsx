@@ -3,12 +3,12 @@ import { Form, Button } from "react-bootstrap"
 import ApiActions from "services/shared/api/ApiActions"
 import { Post } from "services/shared/api/Api";
 import { setAuthorizationCookie } from 'services/shared/cookie';
+import { getFormData } from 'services/shared/form-data-helper';
 
 export default class LoginForm extends Component {
     async login(e) {
-        e.preventDefault();
-        const formData = new FormData(e.target);
-        const formDataObj = Object.fromEntries(formData.entries());
+    e.preventDefault();
+        const formDataObj = getFormData(e);
 
         const result = await Post(ApiActions.login, formDataObj);
         if (result.status === 200) {
