@@ -7,41 +7,61 @@ export default class Weather extends Component {
     super();
     this.state = {
       city: "",
+      temperature: 0,
+      symbol: "",
     };
   }
 
   componentDidMount() {
-    // window.addEventListener("weather-header", function (event) {
-    //   console.log("received????");
-    //   console.log(event);
-    // });
+    this.selectLocation("Enschede");
+    window.addEventListener("weather-header", (e) => {
+      console.log(16, e);
+      this.selectLocation(e.detail.location);
+    });
 
+    // const weather = Axios.get(
+    //   "http://localhost:8081/weather/current?city=valkenswaard"
+    // )
+    //   .then((response) => {
+    //     console.log(response.data.location);
+    //     this.setState({ city: response.data.location });
+    //   })
+    //   .catch(() => {
+    //     console.log("Werkt niet");
+    //   });
+    // // console.log("test");
+    // console.log(weather, this.state.city);
+  }
+
+  selectLocation(location) {
     const weather = Axios.get(
-      "http://localhost:8081/weather/current?city=valkenswaard"
+      `http://localhost:8081/weather/current?city=${location}`
     )
       .then((response) => {
         console.log(response.data.location);
-        this.setState({ city: response.data.location });
+        this.setState({
+          city: response.data.location,
+          temperature: response.data.temperature,
+          symbol: response.data.symbol,
+        });
       })
       .catch(() => {
         console.log("Werkt niet");
       });
-    // console.log("test");
-    console.log(weather, this.state.city);
   }
 
   render() {
-    let { city } = this.state;
+    let { city, temperature, symbol } = this.state;
 
     return (
       <div className="weather-container">
         <div className="weather-data">
-          <div>22°</div>
+          <div>{temperature}°</div>
           <div>{city}</div>
         </div>
         <div
           className="weather-image"
-          style={{ backgroundImage: `url(/assets/weather/zonnig.png)` }}
+          style={{ backgroundImage: `url(/assets/weather/${symbol}.png)` }}
         ></div>
       </div>
     );

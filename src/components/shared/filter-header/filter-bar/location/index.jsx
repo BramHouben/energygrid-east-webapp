@@ -17,8 +17,10 @@ export default class Location extends Component {
 
   handleSelect = (e) => {
     window.dispatchEvent(
-      new Event("weather-header", {
-        data: e,
+      new CustomEvent("weather-header", {
+        bubbles: true,
+        composed: true,
+        detail: { location: e },
       })
     );
   };
@@ -35,7 +37,7 @@ export default class Location extends Component {
 
           <Dropdown.Menu>
             {cities.map((city) => (
-              <Dropdown.Item eventKey={city.id}>
+              <Dropdown.Item eventKey={city.properties.location}>
                 {city.properties.location}
               </Dropdown.Item>
             ))}
