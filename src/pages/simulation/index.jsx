@@ -17,10 +17,6 @@ export default class Simulation extends React.Component {
         this.startSimulation = this.startSimulation.bind(this);
     }
 
-    // componentDidMount() {
-    //     this.setState( {chart: data} )
-    // }
-
     startSimulation() {
         alert("Simulation started")
     }
