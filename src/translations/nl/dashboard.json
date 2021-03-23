@@ -1,3 +1,7 @@
 {
-  "pageName": "Dashboard"
+  "pageName": "Dashboard",
+  "availableLanguages": {
+    "NL": "Netherlands",
+    "GB": "United Kingdom"
+  }
 }
