@@ -4,9 +4,7 @@ import Header from "components/shared/header";
 import { Table } from "react-bootstrap";
 import data from "../../data/solarparks-east.json";
 import SearchBar from "components/shared/inputs/search";
-//import Maps from "components/shared/maps";
-
-import { ArrowUp, ArrowDown } from "react-bootstrap-icons";
+import { ArrowUp } from "react-bootstrap-icons";
 
 export default class Details extends React.Component {
   constructor() {
@@ -52,7 +50,6 @@ export default class Details extends React.Component {
 
   render() {
     let { filteredSolarParks, input } = this.state;
-    //const MapWrapped = withGoogleMap(Maps);
 
     return (
       <div>
