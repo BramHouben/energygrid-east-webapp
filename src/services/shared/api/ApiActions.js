@@ -1,4 +1,4 @@
-const apiUrl = "http://localhost:5000/";
+const apiUrl = "http://localhost:8081/";
 
 const user = `${apiUrl}user/`;
 const dashboard = `${apiUrl}dashboard/`;
@@ -12,6 +12,7 @@ const hobby = `${apiUrl}hobby/`;
 const artist = `${apiUrl}artist/`;
 const datePicker = `${apiUrl}datepicker/`;
 const datepickerAvailability = `${apiUrl}datepicker/availability/`;
+const weather = `${apiUrl}weather/`;
 
 // All paths need to end with a '/'
 
@@ -34,6 +35,7 @@ const actions = {
   Log: log,
   Datepicker: datePicker,
   DatepickerAvailability: datepickerAvailability,
+  CurrentWeather: `${weather}current`,
 };
 
 export default actions;
