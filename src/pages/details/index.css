@@ -9,3 +9,12 @@
 th {
   cursor: pointer;
 }
+
+#th-icon {
+  margin-top: 5px;
+  float: right;
+}
+
+#search-bar {
+  padding: 20px;
+}
