@@ -2,15 +2,32 @@ import React, { Component } from "react";
 import "./index.css";
 import ApiActions from "services/shared/api/ApiActions";
 import { Get } from "services/shared/api/Api";
+import Axios from "axios";
 
 export default class Weather extends Component {
+  constructor() {
+    super();
+    this.state = {
+      city: "Select city",
+    };
+  }
+
   async componentDidMount() {
-    const weather = await Get(ApiActions.CurrentWeather);
-    console.log(weather);
+    // window.addEventListener("weather-header", function (event) {
+    //   console.log("received????");
+    //   console.log(event);
+    // });
+
+    const weather = await Axios.get(
+      "http://localhost:8081/weather/current?city=valkenswaard"
+    );
+    // console.log("test");
+    // // console.log(weather);
   }
 
   render() {
-    var test = "sun.png";
+    let { city } = this.state;
+
     return (
       <div className="weather-container">
         <div className="weather-data">

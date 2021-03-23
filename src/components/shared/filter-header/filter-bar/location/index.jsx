@@ -16,7 +16,11 @@ export default class Location extends Component {
   }
 
   handleSelect = (e) => {
-    console.log(data.solarParks[e]);
+    window.dispatchEvent(
+      new Event("weather-header", {
+        data: e,
+      })
+    );
   };
 
   render() {
