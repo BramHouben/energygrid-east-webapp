@@ -47,24 +47,3 @@
     display: flex;
     flex-direction: row;
 }
-
-#chartRow .chartWrapper{
-    flex-basis: 0;
-    flex-grow: 1;
-    border: 1px solid blue;
-    height: 40vh;
-}
-
-.chartWrapper:first-child{
-    margin-right: 1rem;
-    background-color: red;
-}
-
-.chartWrapper:nth-child(2){
-    background-color: white;
-}
-
-.chartWrapper:last-child{
-    margin-left: 1rem;
-    background-color: blue;
-}

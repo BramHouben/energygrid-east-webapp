@@ -2,6 +2,8 @@ import React from 'react'
 import './index.css'
 import Button from 'react-bootstrap/Button';
 import Header from 'components/shared/header';
+import ChartCard from "components/shared/cards/chart";
+import data from "./simulation.json";
 
 export default class Simulation extends React.Component {
     constructor(props) {
@@ -9,16 +11,25 @@ export default class Simulation extends React.Component {
 
         this.state = {
             simulationId: "simulation id",
+            chart: data
         }
 
         this.startSimulation = this.startSimulation.bind(this);
     }
+
+    // componentDidMount() {
+    //     this.setState( {chart: data} )
+    // }
 
     startSimulation() {
         alert("Simulation started")
     }
 
     render() {
+
+        let chart = this.state.chart
+        console.log(chart.id)
+
         return (
             <div id="simulationWrapper">
                 <Header />
@@ -44,15 +55,8 @@ export default class Simulation extends React.Component {
                                 <h3>Simulatie</h3>
                             </div>
                             <div id="chartRow">
-                                <div class="chartWrapper">
-
-                                </div>
-                                <div class="chartWrapper">
-
-                                </div>
-                                <div class="chartWrapper">
-
-                                </div>
+                                <ChartCard chart={chart} key={chart.data.key} />
+                                <ChartCard chart={chart} key={chart.data.key} />
                             </div>
                         </div>
                     </div>
