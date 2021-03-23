@@ -1,28 +1,33 @@
 import React, { Component } from "react";
 import "./index.css";
-import ApiActions from "services/shared/api/ApiActions";
-import { Get } from "services/shared/api/Api";
 import Axios from "axios";
 
 export default class Weather extends Component {
   constructor() {
     super();
     this.state = {
-      city: "Select city",
+      city: "",
     };
   }
 
-  async componentDidMount() {
+  componentDidMount() {
     // window.addEventListener("weather-header", function (event) {
     //   console.log("received????");
     //   console.log(event);
     // });
 
-    const weather = await Axios.get(
+    const weather = Axios.get(
       "http://localhost:8081/weather/current?city=valkenswaard"
-    );
+    )
+      .then((response) => {
+        console.log(response.data.location);
+        this.setState({ city: response.data.location });
+      })
+      .catch(() => {
+        console.log("Werkt niet");
+      });
     // console.log("test");
-    // // console.log(weather);
+    console.log(weather, this.state.city);
   }
 
   render() {
@@ -32,7 +37,7 @@ export default class Weather extends Component {
       <div className="weather-container">
         <div className="weather-data">
           <div>22°</div>
-          <div>Valkenswaard</div>
+          <div>{city}</div>
         </div>
         <div
           className="weather-image"
