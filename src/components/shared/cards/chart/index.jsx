@@ -36,7 +36,7 @@ export default class ChartCard extends React.Component {
         <Card
           border="dark"
           style={{
-            width: "32rem;",
+            width: "100%",
           }}
         >
           <Card.Header as="h5" style={{ textAlign: "center" }}>

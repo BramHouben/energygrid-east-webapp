@@ -19,16 +19,16 @@ export default class Location extends Component {
 
   getUniqueCities(cities) {
     cities.forEach((city) => {
-      city.properties.location =
-        city.properties.location.charAt(0) +
-        city.properties.location.substr(1).toLowerCase();
+      city.location =
+        city.location.charAt(0) +
+        city.location.substr(1).toLowerCase();
     });
 
     return cities.filter(
       (ele, ind) =>
         ind ===
         cities.findIndex(
-          (elem) => elem.properties.location === ele.properties.location
+          (elem) => elem.location === ele.location
         )
     );
   }
@@ -55,8 +55,8 @@ export default class Location extends Component {
 
           <Dropdown.Menu>
             {cities.map((city) => (
-              <Dropdown.Item eventKey={city.properties.location}>
-                {city.properties.location}
+              <Dropdown.Item eventKey={city.location}>
+                {city.location}
               </Dropdown.Item>
             ))}
           </Dropdown.Menu>
