@@ -4,20 +4,7 @@
     "data": {
       "key": "energy-simulation",
       "total": [],
-      "labels": [
-        "00:00",
-        "01:00",
-        "02:00",
-        "04:00",
-        "05:00",
-        "06:00",
-        "07:00",
-        "08:00",
-        "09:00",
-        "10:00",
-        "11:00",
-        "12:00"
-      ],
+      "labels": [],
       "datasets": [
         {
           "label": "Harculo",
@@ -25,7 +12,7 @@
             "backgroundColor": "transparent",
             "borderColor": "#0E910A",
             "borderWidth": 2,
-          "data": [3782, 2082, 8748, 541, 4621, 3782, 2082, 8748, 541, 4621, 3782, 2082]
+          "data": []
         }
       ]
     },
