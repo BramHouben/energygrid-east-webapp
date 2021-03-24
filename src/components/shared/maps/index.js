@@ -36,7 +36,7 @@ export default function Map() {
               }}
             >
               <img
-                src="assets/solarpark/solar-panel.png"
+                src="/assets/solarpark/solar-panel.png"
                 alt="solarpanel-icon"
               />
             </button>

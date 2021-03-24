@@ -5,9 +5,10 @@ import ChartBar from "components/shared/charts/bar";
 import ChartPie from "components/shared/charts/pie";
 import ChartDoughnut from "components/shared/charts/doughnut";
 import HeatMap from "components/shared/charts/heatmap";
+import { withTranslation } from "react-i18next";
 import "./index.css";
 
-export default class ChartCard extends React.Component {
+class ChartCard extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -30,6 +31,7 @@ export default class ChartCard extends React.Component {
 
   render() {
     let { chart } = this.props;
+    const { t } = this.props;
 
     return (
       <div id="card-wrapper">
@@ -56,3 +58,5 @@ export default class ChartCard extends React.Component {
     );
   }
 }
+
+export default withTranslation("chart")(ChartCard);

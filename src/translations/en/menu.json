@@ -1,4 +1,7 @@
 {
+  "dashboard": "Dashboard",
   "account": "Account",
-  "logout": "Logout"
+  "logout": "Logout",
+  "details": "Solarparks",
+  "simulation": "Simulation"
 }

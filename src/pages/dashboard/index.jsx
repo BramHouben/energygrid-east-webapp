@@ -19,7 +19,6 @@ export default class Dashboard extends React.Component {
 
   render() {
     let { charts } = this.state;
-    console.log(charts);
 
     return (
       <div>

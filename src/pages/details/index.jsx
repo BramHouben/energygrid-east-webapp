@@ -6,6 +6,7 @@ import data from "../../data/solarparks-east.json";
 import SearchBar from "components/shared/inputs/search";
 import { ArrowUp } from "react-bootstrap-icons";
 import Map from "components/shared/maps";
+import FilterHeader from "components/shared/filter-header";
 
 export default class Details extends React.Component {
   constructor() {
@@ -54,7 +55,10 @@ export default class Details extends React.Component {
 
     return (
       <div>
-        <Header pageName="details" />
+        <div className="header-wrapper">
+          <Header pageName="Details" />
+          <FilterHeader />
+        </div>
         <div id="details-body">
           <div id="search-bar">
             <SearchBar input={input} />
