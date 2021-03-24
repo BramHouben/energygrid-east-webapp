@@ -1,3 +1,7 @@
 {
-  "energy-year-overview": "Energy year overview"
+  "energy-year-overview": "Energy year overview",
+  "energy-import-export": "Energy import & export",
+  "energy-import-export-countries": "Energy import & export per country",
+  "solar-parks-amount": "Amount of solarparks",
+  "heatmap": "Heatmap"
 }

@@ -173,7 +173,7 @@
       "type": "doughnut",
       "data": {
         "key": "solar-parks-amount",
-        "total": [3],
+        "total": [30],
         "labels": ["Flevoland", "Overijssel", "Gelderland"],
         "datasets": [
           {

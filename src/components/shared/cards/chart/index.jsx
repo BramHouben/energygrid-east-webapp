@@ -42,7 +42,7 @@ class ChartCard extends React.Component {
           }}
         >
           <Card.Header as="h5" style={{ textAlign: "center" }}>
-            {chart.data.key}
+            {t(chart.data.key)}
           </Card.Header>
           <Card.Body>{this.getChartType(chart)}</Card.Body>
           <Card.Footer className="text-right">
