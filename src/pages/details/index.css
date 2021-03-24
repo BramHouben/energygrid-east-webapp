@@ -18,3 +18,7 @@ th {
 #search-bar {
   padding: 20px;
 }
+
+#details-map {
+  height: 500px;
+}

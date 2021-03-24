@@ -5,6 +5,7 @@ import { Table } from "react-bootstrap";
 import data from "../../data/solarparks-east.json";
 import SearchBar from "components/shared/inputs/search";
 import { ArrowUp } from "react-bootstrap-icons";
+import Map from "components/shared/maps";
 
 export default class Details extends React.Component {
   constructor() {
@@ -116,6 +117,9 @@ export default class Details extends React.Component {
                 ))}
             </tbody>
           </Table>
+          <div id="details-map">
+            <Map />
+          </div>
         </div>
       </div>
     );
