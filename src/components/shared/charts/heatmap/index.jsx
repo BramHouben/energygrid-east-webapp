@@ -19,7 +19,7 @@ export default class HeatMap extends Component {
   }
 
   getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max - min + 100)) + min;
+    return Math.floor(100 * (max - min + 100)) + min;
   }
 
   render() {
@@ -32,43 +32,51 @@ export default class HeatMap extends Component {
       };
     });
 
+    let result = null;
+
     return (
       <div>
-        <CalendarHeatmap
-          startDate={this.shiftDate(today, -365)}
-          endDate={today}
-          values={randomValues}
-          classForValue={(value) => {
-            if (!value) {
-              return "color-empty";
-            }
-            return `color-github-${
-              value.count < 0
-                ? 0
-                : value.count >= 0 && value.count < 25
-                ? 1
-                : value.count >= 25 && value.count < 50
-                ? 2
-                : value.count >= 50 && value.count < 75
-                ? 3
-                : value.count >= 75
-                ? 4
-                : 0
-            }`;
-          }}
-          tooltipDataAttrs={(value) => {
-            return {
-              "data-tip": `${value.date
-                .toISOString()
-                .slice(0, 10)} energy in KwH: ${value.count}`,
-            };
-          }}
-          showWeekdayLabels={true}
-          onClick={(value) =>
-            alert(`Clicked on value with count: ${value.count}`)
-          }
-        />
-        <ReactTooltip />
+        {result ? (
+          <div>
+            <CalendarHeatmap
+              startDate={this.shiftDate(today, -365)}
+              endDate={today}
+              values={randomValues}
+              classForValue={(value) => {
+                if (!value) {
+                  return "color-empty";
+                }
+                return `color-github-${
+                  value.count < 0
+                    ? 0
+                    : value.count >= 0 && value.count < 25
+                    ? 1
+                    : value.count >= 25 && value.count < 50
+                    ? 2
+                    : value.count >= 50 && value.count < 75
+                    ? 3
+                    : value.count >= 75
+                    ? 4
+                    : 0
+                }`;
+              }}
+              tooltipDataAttrs={(value) => {
+                return {
+                  "data-tip": `${value.date
+                    .toISOString()
+                    .slice(0, 10)} energy in KwH: ${value.count}`,
+                };
+              }}
+              showWeekdayLabels={true}
+              onClick={(value) =>
+                alert(`Clicked on value with count: ${value.count}`)
+              }
+            />
+            <ReactTooltip />
+          </div>
+        ) : (
+          <div>No Data :(</div>
+        )}
       </div>
     );
   }
