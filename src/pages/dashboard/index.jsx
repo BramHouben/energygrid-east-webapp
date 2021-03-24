@@ -4,6 +4,7 @@ import data from "../../data/chart.json";
 import Header from "components/shared/header";
 import FilterHeader from "components/shared/filter-header";
 import "./index.css";
+import Header from "components/shared/header";
 
 export default class Dashboard extends React.Component {
   constructor() {

@@ -1,0 +1,20 @@
+#details-body {
+  margin: 80px 150px 20px 150px;
+  display: flex;
+  text-align: center;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+th {
+  cursor: pointer;
+}
+
+#th-icon {
+  margin-top: 5px;
+  float: right;
+}
+
+#search-bar {
+  padding: 20px;
+}

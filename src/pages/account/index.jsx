@@ -9,7 +9,7 @@ class Account extends Component {
   onSubmit = (e) => {
     const { i18n } = this.props;
     e.preventDefault();
-    const formData = getFormData("account-form");
+    const formData = getFormData(e);
     i18n.changeLanguage(formData.language);
   };
 
@@ -26,7 +26,9 @@ class Account extends Component {
               <Form.Label>{t("translation-label")}</Form.Label>
               <Form.Control name="language" as="select">
                 {availableLanguages.map((lang) => (
-                  <option value={lang}>{lang}</option>
+                  <option key={lang} value={lang}>
+                    {lang}
+                  </option>
                 ))}
               </Form.Control>
             </Form.Group>

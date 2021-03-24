@@ -2,519 +2,487 @@
   "solarParks": [
     {
       "id": 1,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [6.1132777251542105, 52.46974613309643]
+      "coordinates": {
+        "x": 52.46974613309643,
+        "y": 6.1132777251542105
       },
-      "properties": {
-        "applicant": "ENGIE Energie Zonnepark Harculo B.V.",
-        "adresss": "IJsselcentraleweg 6",
-        "zipcode": "8015PA",
-        "location": "ZWOLLE",
-        "province": "Overijssel",
-        "power": 1.01,
-        "max": 1408950,
-        "realised_at": 2015
-      }
+      "applicant": "ENGIE Energie Zonnepark Harculo B.V.",
+      "adress": "IJsselcentraleweg 6",
+      "zipcode": "8015PA",
+      "location": "ZWOLLE",
+      "province": "Overijssel",
+      "power": 1.01,
+      "max": 1408950,
+      "realised_at": 2015,
+      "units": 10
     },
     {
       "id": 2,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [6.30917082237407, 52.05817723871769]
+      "coordinates": {
+        "x": 52.05817723871769,
+        "y": 6.30917082237407
       },
-      "properties": {
-        "applicant": "Sunwatt De Kwekerij B.V.",
-        "adresss": "Vordenseweg 58",
-        "zipcode": "7255BX",
-        "location": "HENGELO",
-        "province": "Gelderland",
-        "power": 2,
-        "max": 3090000,
-        "realised_at": 2016
-      }
+      "applicant": "Sunwatt De Kwekerij B.V.",
+      "adress": "Vordenseweg 58",
+      "zipcode": "7255BX",
+      "location": "HENGELO",
+      "province": "Gelderland",
+      "power": 2,
+      "max": 3090000,
+      "realised_at": 2016,
+      "units": 10
     },
     {
       "id": 3,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [5.326008743927849, 51.86711327577287]
+      "coordinates": {
+        "x": 51.86711327577287,
+        "y": 5.326008743927849
       },
-      "properties": {
-        "applicant": "Avri Solar B.V.",
-        "adresss": "Meersteeg 17-c",
-        "zipcode": "4191NK",
-        "location": "GELDERMALSEN",
-        "province": "Gelderland",
-        "power": 6.699,
-        "max": 1.0322401e7,
-        "realised_at": 2017
-      }
+      "applicant": "Avri Solar B.V.",
+      "adress": "Meersteeg 17-c",
+      "zipcode": "4191NK",
+      "location": "GELDERMALSEN",
+      "province": "Gelderland",
+      "power": 6.699,
+      "max": 1.0322401e7,
+      "realised_at": 2017,
+      "units": 10
     },
     {
       "id": 4,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [5.326571389399491, 51.86589798710941]
+      "coordinates": {
+        "x": 51.86589798710941,
+        "y": 5.326571389399491
       },
-      "properties": {
-        "applicant": "Avri Solar B.V.",
-        "adress": "Meersteeg 17-b",
-        "zipcode": "4191NK",
-        "location": "GELDERMALSEN",
-        "province": "Gelderland",
-        "power": 1.933,
-        "max": 2978534,
-        "realised_at": 2017
-      }
+      "applicant": "Avri Solar B.V.",
+      "adress": "Meersteeg 17-b",
+      "zipcode": "4191NK",
+      "location": "GELDERMALSEN",
+      "province": "Gelderland",
+      "power": 1.933,
+      "max": 2978534,
+      "realised_at": 2017,
+      "units": 10
     },
     {
       "id": 5,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [5.7842783364985655, 52.722304383081756]
+      "coordinates": {
+        "x": 52.722304383081756,
+        "y": 5.7842783364985655
       },
-      "properties": {
-        "applicant": "Obton Solenergi \"de Munt\" C.V.",
-        "adress": "Muntweg 8",
-        "zipcode": "8305AL",
-        "location": "EMMELOORD",
-        "province": "Flevoland",
-        "power": 11.461,
-        "max": 1.7707245e7,
-        "realised_at": 2017
-      }
+      "applicant": "Obton Solenergi \"de Munt\" C.V.",
+      "adress": "Muntweg 8",
+      "zipcode": "8305AL",
+      "location": "EMMELOORD",
+      "province": "Flevoland",
+      "power": 11.461,
+      "max": 1.7707245e7,
+      "realised_at": 2017,
+      "units": 10
     },
     {
       "id": 6,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [5.531332567397516, 52.57768011883653]
+      "coordinates": {
+        "x": 52.57768011883653,
+        "y": 5.531332567397516
       },
-      "properties": {
-        "applicant": "Maximazon B.V.",
-        "adress": "IJsselmeerdijk 101",
-        "zipcode": "8221RC",
-        "location": "LELYSTAD",
-        "province": "Flevoland",
-        "power": 2.488,
-        "max": 2659050,
-        "realised_at": 2017
-      }
+      "applicant": "Maximazon B.V.",
+      "adress": "IJsselmeerdijk 101",
+      "zipcode": "8221RC",
+      "location": "LELYSTAD",
+      "province": "Flevoland",
+      "power": 2.488,
+      "max": 2659050,
+      "realised_at": 2017,
+      "units": 10
     },
     {
       "id": 7,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [6.496428896477237, 52.59949708915047]
+      "coordinates": {
+        "x": 52.59949708915047,
+        "y": 6.496428896477237
       },
-      "properties": {
-        "applicant": "NPG Solar Dedemsvaart B.V. i.o.",
-        "adress": "Archimedes 38a-zn",
-        "zipcode": "7701SG",
-        "location": "DEDEMSVAART",
-        "province": "Overijssel",
-        "power": 2.738,
-        "max": 2926238,
-        "realised_at": 2019
-      }
+      "applicant": "NPG Solar Dedemsvaart B.V. i.o.",
+      "adress": "Archimedes 38a-zn",
+      "zipcode": "7701SG",
+      "location": "DEDEMSVAART",
+      "province": "Overijssel",
+      "power": 2.738,
+      "max": 2926238,
+      "realised_at": 2019,
+      "units": 10
     },
     {
       "id": 8,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [6.211231760397507, 52.15567779195109]
+      "coordinates": {
+        "x": 52.15567779195109,
+        "y": 6.211231760397507
       },
-      "properties": {
-        "applicant": "Zonnepark Noordveen B.V.",
-        "adress": "Brandts Buijsstraat 6",
-        "zipcode": "7203AC",
-        "location": "ZUTPHEN",
-        "province": "Gelderland",
-        "power": 1.65,
-        "max": 1763438,
-        "realised_at": 2017
-      }
+      "applicant": "Zonnepark Noordveen B.V.",
+      "adress": "Brandts Buijsstraat 6",
+      "zipcode": "7203AC",
+      "location": "ZUTPHEN",
+      "province": "Gelderland",
+      "power": 1.65,
+      "max": 1763438,
+      "realised_at": 2017,
+      "units": 10
     },
     {
       "id": 9,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [5.471603806725014, 51.92255702793297]
+      "coordinates": {
+        "x": 51.92255702793297,
+        "y": 5.471603806725014
       },
-      "properties": {
-        "applicant": "Lingesolar B.V.",
-        "adress": "Medelsestraat 2",
-        "zipcode": "4054NH",
-        "location": "LIENDEN",
-        "province": "Gelderland",
-        "power": 1.331,
-        "max": 1043172,
-        "realised_at": 2017
-      }
+      "applicant": "Lingesolar B.V.",
+      "adress": "Medelsestraat 2",
+      "zipcode": "4054NH",
+      "location": "LIENDEN",
+      "province": "Gelderland",
+      "power": 1.331,
+      "max": 1043172,
+      "realised_at": 2017,
+      "units": 10
     },
     {
       "id": 10,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [6.288235045251693, 52.334961662742415]
+      "coordinates": {
+        "x": 52.334961662742415,
+        "y": 6.288235045251693
       },
-      "properties": {
-        "applicant": "Endona Projecten B.V.",
-        "adress": "Johannalaan 39",
-        "zipcode": "8111AV",
-        "location": "HEETEN",
-        "province": "Overijssel",
-        "power": 1.8468,
-        "max": 1973768,
-        "realised_at": 2017
-      }
+      "applicant": "Endona Projecten B.V.",
+      "adress": "Johannalaan 39",
+      "zipcode": "8111AV",
+      "location": "HEETEN",
+      "province": "Overijssel",
+      "power": 1.8468,
+      "max": 1973768,
+      "realised_at": 2017,
+      "units": 10
     },
     {
       "id": 11,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [6.599750455072001, 52.37728278446259]
+      "coordinates": {
+        "x": 52.37728278446259,
+        "y": 6.599750455072001
       },
-      "properties": {
-        "applicant": "De Groene Weuste B.V.",
-        "adress": "Wetering 1",
-        "zipcode": "7641LG",
-        "location": "WIERDEN",
-        "province": "Overijssel",
-        "power": 4.032,
-        "max": 4309200,
-        "realised_at": 2017
-      }
+      "applicant": "De Groene Weuste B.V.",
+      "adress": "Wetering 1",
+      "zipcode": "7641LG",
+      "location": "WIERDEN",
+      "province": "Overijssel",
+      "power": 4.032,
+      "max": 4309200,
+      "realised_at": 2017,
+      "units": 10
     },
     {
       "id": 12,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [5.90247713895763, 51.926396040833644]
+      "coordinates": {
+        "x": 51.926396040833644,
+        "y": 5.90247713895763
       },
-      "properties": {
-        "applicant": "Drijvend Zonnepark Lingewaard B.V.",
-        "adress": "Azalealaan 12",
-        "zipcode": "6681RJ",
-        "location": "BEMMEL",
-        "province": "Gelderland",
-        "power": 1.845,
-        "max": 1971844,
-        "realised_at": 2017
-      }
+      "applicant": "Drijvend Zonnepark Lingewaard B.V.",
+      "adress": "Azalealaan 12",
+      "zipcode": "6681RJ",
+      "location": "BEMMEL",
+      "province": "Gelderland",
+      "power": 1.845,
+      "max": 1971844,
+      "realised_at": 2017,
+      "units": 10
     },
     {
       "id": 13,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [6.610316206618321, 52.065492940898096]
+      "coordinates": {
+        "x": 52.065492940898096,
+        "y": 6.610316206618321
       },
-      "properties": {
-        "applicant": "Greenspread Solar I B.V.",
-        "adress": "Deventer Kunstweg 11",
-        "zipcode": "7156JA",
-        "location": "BELTRUM",
-        "province": "Gelderland",
-        "power": 2.232,
-        "max": 2353644,
-        "realised_at": 2017
-      }
+      "applicant": "Greenspread Solar I B.V.",
+      "adress": "Deventer Kunstweg 11",
+      "zipcode": "7156JA",
+      "location": "BELTRUM",
+      "province": "Gelderland",
+      "power": 2.232,
+      "max": 2353644,
+      "realised_at": 2017,
+      "units": 10
     },
     {
       "id": 14,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [6.797573291421072, 52.226363833536276]
+      "coordinates": {
+        "x": 52.226363833536276,
+        "y": 6.797573291421072
       },
-      "properties": {
-        "applicant": "Twence Zon B.V.",
-        "adress": "Boldershoekweg 51",
-        "zipcode": "7554RT",
-        "location": "HENGELO OV",
-        "province": "Overijssel",
-        "power": 1,
-        "max": 1068750,
-        "realised_at": 2017
-      }
+      "applicant": "Twence Zon B.V.",
+      "adress": "Boldershoekweg 51",
+      "zipcode": "7554RT",
+      "location": "HENGELO OV",
+      "province": "Overijssel",
+      "power": 1,
+      "max": 1068750,
+      "realised_at": 2017,
+      "units": 10
     },
     {
       "id": 15,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [6.7927395185813655, 52.22683029803418]
+      "coordinates": {
+        "x": 52.22683029803418,
+        "y": 6.7927395185813655
       },
-      "properties": {
-        "applicant": "Twence Zon B.V.",
-        "adress": "Oude Hengelosedijk 10",
-        "zipcode": "7547PB",
-        "location": "HENGELO OV",
-        "province": "Overijssel",
-        "gemeentena": "Enschede",
-        "power": 13.5,
-        "max": 1.76985e7,
-        "realised_at": 2018
-      }
+      "applicant": "Twence Zon B.V.",
+      "adress": "Oude Hengelosedijk 10",
+      "zipcode": "7547PB",
+      "location": "HENGELO OV",
+      "province": "Overijssel",
+      "gemeentena": "Enschede",
+      "power": 13.5,
+      "max": 1.76985e7,
+      "realised_at": 2018,
+      "units": 10
     },
     {
       "id": 16,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [5.870474398704344, 52.74410956910856]
+      "coordinates": {
+        "x": 52.74410956910856,
+        "y": 5.870474398704344
       },
-      "properties": {
-        "applicant": "Exploitatiemaatschappij Groen Energie B.V.",
-        "adress": "Weteringweg 16",
-        "zipcode": "8315RL",
-        "location": "LUTTELGEEST",
-        "province": "Flevoland",
-        "power": 6.24,
-        "max": 7380360,
-        "realised_at": 2019
-      }
+      "applicant": "Exploitatiemaatschappij Groen Energie B.V.",
+      "adress": "Weteringweg 16",
+      "zipcode": "8315RL",
+      "location": "LUTTELGEEST",
+      "province": "Flevoland",
+      "power": 6.24,
+      "max": 7380360,
+      "realised_at": 2019,
+      "units": 10
     },
     {
       "id": 17,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [6.796815177201207, 52.22584541287809]
+      "coordinates": {
+        "x": 52.22584541287809,
+        "y": 6.796815177201207
       },
-      "properties": {
-        "applicant": "Twence Zon B.V.",
-        "adress": "Boldershoekweg 51",
-        "zipcode": "7554RT",
-        "location": "HENGELO OV",
-        "province": "Overijssel",
-        "power": 1.728,
-        "max": 2068416,
-        "realised_at": 2017
-      }
+      "applicant": "Twence Zon B.V.",
+      "adress": "Boldershoekweg 51",
+      "zipcode": "7554RT",
+      "location": "HENGELO OV",
+      "province": "Overijssel",
+      "power": 1.728,
+      "max": 2068416,
+      "realised_at": 2017,
+      "units": 10
     },
     {
       "id": 18,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [6.640535002344596, 52.41019079638181]
+      "coordinates": {
+        "x": 52.41019079638181,
+        "y": 6.640535002344596
       },
-      "properties": {
-        "applicant": "Zonnepark Oosterweilanden B.V.",
-        "adress": "VZV00K1286/7/8 en 1097, 1433, 1422, 1096",
-        "zipcode": null,
-        "location": "VRIEZENVEEN",
-        "province": "Overijssel",
-        "power": 12.152,
-        "max": 1.4026446e7,
-        "realised_at": 2019
-      }
+      "applicant": "Zonnepark Oosterweilanden B.V.",
+      "adress": "VZV00K1286/7/8 en 1097, 1433, 1422, 1096",
+      "zipcode": null,
+      "location": "VRIEZENVEEN",
+      "province": "Overijssel",
+      "power": 12.152,
+      "max": 1.4026446e7,
+      "realised_at": 2019,
+      "units": 10
     },
     {
       "id": 19,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [6.791489702419279, 52.22735862155604]
+      "coordinates": {
+        "x": 52.22735862155604,
+        "y": 6.791489702419279
       },
       "geometry_name": "the_geom",
-      "properties": {
-        "applicant": "Twence Zon B.V.",
-        "adress": "Zonnepark Boldershoek West deel 1",
-        "zipcode": "7554RT",
-        "location": "HENGELO OV",
-        "province": "Overijssel",
-        "power": 4,
-        "max": 4902000,
-        "realised_at": 2018
-      }
+      "applicant": "Twence Zon B.V.",
+      "adress": "Zonnepark Boldershoek West deel 1",
+      "zipcode": "7554RT",
+      "location": "HENGELO OV",
+      "province": "Overijssel",
+      "power": 4,
+      "max": 4902000,
+      "realised_at": 2018,
+      "units": 10
     },
     {
       "id": 20,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [6.008436019765259, 52.24162202575992]
+      "coordinates": {
+        "x": 52.24162202575992,
+        "y": 6.008436019765259
       },
-      "properties": {
-        "applicant": "Zonnepark Apeldoorn B.V.",
-        "adress": "Laan van Zodiak 500",
-        "zipcode": "7324BC",
-        "location": "APELDOORN",
-        "province": "Gelderland",
-        "power": 3.85,
-        "max": 4553588,
-        "realised_at": 2017
-      }
+      "applicant": "Zonnepark Apeldoorn B.V.",
+      "adress": "Laan van Zodiak 500",
+      "zipcode": "7324BC",
+      "location": "APELDOORN",
+      "province": "Gelderland",
+      "power": 3.85,
+      "max": 4553588,
+      "realised_at": 2017,
+      "units": 10
     },
     {
       "id": 21,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [6.136698584064351, 52.50611269144065]
+      "coordinates": {
+        "x": 52.50611269144065,
+        "y": 6.136698584064351
       },
-      "properties": {
-        "applicant": "Energiepark Zwolle B.V.",
-        "adress": "Herfterlaan 2",
-        "zipcode": "8024PJ",
-        "location": "ZWOLLE",
-        "province": "Overijssel",
-        "power": 5.192,
-        "max": 6732726,
-        "realised_at": 2019
-      }
+      "applicant": "Energiepark Zwolle B.V.",
+      "adress": "Herfterlaan 2",
+      "zipcode": "8024PJ",
+      "location": "ZWOLLE",
+      "province": "Overijssel",
+      "power": 5.192,
+      "max": 6732726,
+      "realised_at": 2019,
+      "units": 10
     },
     {
       "id": 22,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [5.523806180091385, 52.55976637245377]
+      "coordinates": {
+        "x": 52.55976637245377,
+        "y": 5.523806180091385
       },
-      "properties": {
-        "applicant": "Flevokustzon B.V.",
-        "adress": "Zonnepark Flevokust",
-        "zipcode": null,
-        "location": "LELYSTAD",
-        "province": "Flevoland",
-        "gemeentena": "Lelystad",
-        "power": 17.13,
-        "max": 2.050461e7,
-        "realised_at": 2019
-      }
+      "applicant": "Flevokustzon B.V.",
+      "adress": "Zonnepark Flevokust",
+      "zipcode": null,
+      "location": "LELYSTAD",
+      "province": "Flevoland",
+      "gemeentena": "Lelystad",
+      "power": 17.13,
+      "max": 2.050461e7,
+      "realised_at": 2019,
+      "units": 10
     },
     {
       "id": 23,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [5.241693183537771, 52.42021230356996]
+      "coordinates": {
+        "x": 52.42021230356996,
+        "y": 5.241693183537771
       },
-      "properties": {
-        "applicant": "Zuyderzon Almere B.V.",
-        "adress": "Caissonweg 102",
-        "zipcode": "1332BX",
-        "location": "ALMERE",
-        "province": "Flevoland",
-        "power": 34.54308,
-        "max": 3.3472245e7,
-        "realised_at": 2019
-      }
+      "applicant": "Zuyderzon Almere B.V.",
+      "adress": "Caissonweg 102",
+      "zipcode": "1332BX",
+      "location": "ALMERE",
+      "province": "Flevoland",
+      "power": 34.54308,
+      "max": 3.3472245e7,
+      "realised_at": 2019,
+      "units": 10
     },
     {
       "id": 24,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [5.5208419899146435, 52.55802723309972]
+      "coordinates": {
+        "x": 52.55802723309972,
+        "y": 5.5208419899146435
       },
-      "properties": {
-        "applicant": "Flevokustzon B.V.",
-        "adress": "Karperweg 8",
-        "zipcode": "8221RB",
-        "location": "LELYSTAD",
-        "province": "Flevoland",
-        "power": 10,
-        "max": 1.21125e7,
-        "realised_at": 2019
-      }
+      "applicant": "Flevokustzon B.V.",
+      "adress": "Karperweg 8",
+      "zipcode": "8221RB",
+      "location": "LELYSTAD",
+      "province": "Flevoland",
+      "power": 10,
+      "max": 1.21125e7,
+      "realised_at": 2019,
+      "units": 10
     },
     {
       "id": 25,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [5.531077684997611, 52.47667620067577]
+      "coordinates": {
+        "x": 52.47667620067577,
+        "y": 5.531077684997611
       },
-      "properties": {
-        "applicant": "Obton Vermunt Solenergi CV",
-        "adress": "Vlotgrasweg 18",
-        "zipcode": "8219PP",
-        "location": "LELYSTAD",
-        "province": "Flevoland",
-        "power": 2.317,
-        "max": 2740432,
-        "realised_at": 2017
-      }
+      "applicant": "Obton Vermunt Solenergi CV",
+      "adress": "Vlotgrasweg 18",
+      "zipcode": "8219PP",
+      "location": "LELYSTAD",
+      "province": "Flevoland",
+      "power": 2.317,
+      "max": 2740432,
+      "realised_at": 2017,
+      "units": 10
     },
     {
       "id": 26,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [5.899695783618179, 51.914239849001305]
+      "coordinates": {
+        "x": 51.914239849001305,
+        "y": 5.899695783618179
       },
-      "properties": {
-        "applicant": "KS NL2 B.V.",
-        "adress": "Lingewal 14",
-        "zipcode": "6681LJ",
-        "location": "BEMMEL",
-        "province": "Gelderland",
-        "power": 13,
-        "max": 1.482e7,
-        "realised_at": 2020
-      }
+      "applicant": "KS NL2 B.V.",
+      "adress": "Lingewal 14",
+      "zipcode": "6681LJ",
+      "location": "BEMMEL",
+      "province": "Gelderland",
+      "power": 13,
+      "max": 1.482e7,
+      "realised_at": 2020,
+      "units": 10
     },
     {
       "id": 27,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [5.499880609795855, 51.872652226395715]
+      "coordinates": {
+        "x": 51.872652226395715,
+        "y": 5.499880609795855
       },
-      "properties": {
-        "applicant": "Zonnepark West Maas en Waal B.V.",
-        "adress": "Liesterstraat 10z",
-        "zipcode": "6658KM",
-        "location": "BENEDEN-LEEUWEN",
-        "province": "Gelderland",
-        "power": 3.3,
-        "max": 3950100,
-        "realised_at": 2020,
-        "opmerkinge": null
-      }
+      "applicant": "Zonnepark West Maas en Waal B.V.",
+      "adress": "Liesterstraat 10z",
+      "zipcode": "6658KM",
+      "location": "BENEDEN-LEEUWEN",
+      "province": "Gelderland",
+      "power": 3.3,
+      "max": 3950100,
+      "realised_at": 2020,
+      "units": 10
     },
     {
       "id": 28,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [6.193199342288541, 52.163940245374015]
+      "coordinates": {
+        "x": 52.163940245374015,
+        "y": 6.193199342288541
       },
-      "properties": {
-        "applicant": "Zonnepark Fort de Pol B.V.",
-        "adress": "Fort de Pol - Zutphen",
-        "zipcode": null,
-        "location": "ZUTPHEN",
-        "province": "Gelderland",
-        "gemeentena": "Zutphen",
-        "power": 5.584,
-        "max": 7002336,
-        "realised_at": 2020,
-        "opmerkinge": null
-      }
+      "applicant": "Zonnepark Fort de Pol B.V.",
+      "adress": "Fort de Pol - Zutphen",
+      "zipcode": null,
+      "location": "ZUTPHEN",
+      "province": "Gelderland",
+      "gemeentena": "Zutphen",
+      "power": 5.584,
+      "max": 7002336,
+      "realised_at": 2020,
+      "units": 10
     },
     {
       "id": 29,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [5.515936542682456, 51.87211726175407]
+      "coordinates": {
+        "x": 51.87211726175407,
+        "y": 5.515936542682456
       },
-      "properties": {
-        "applicant": "Zonnepark West Maas en Waal B.V.",
-        "adress": "Zonnepark West Maas en Waal locatie Oost",
-        "zipcode": null,
-        "location": "WAMEL",
-        "province": "Gelderland",
-        "power": 2.917,
-        "max": 3491649,
-        "realised_at": 2020
-      }
+      "applicant": "Zonnepark West Maas en Waal B.V.",
+      "adress": "Zonnepark West Maas en Waal locatie Oost",
+      "zipcode": null,
+      "location": "WAMEL",
+      "province": "Gelderland",
+      "power": 2.917,
+      "max": 3491649,
+      "realised_at": 2020,
+      "units": 10
     },
     {
       "id": 30,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [5.854872754972738, 51.965177468519435]
+      "coordinates": {
+        "x": 51.965177468519435,
+        "y": 5.854872754972738
       },
-      "properties": {
-        "applicant": "Rivierenland, Waterschap",
-        "adress": "Drielsedijk 25",
-        "zipcode": "6841HJ",
-        "location": "ARNHEM",
-        "province": "Gelderland",
-        "power": 2.052,
-        "max": 2602449,
-        "realised_at": 2019
-      }
+      "applicant": "Rivierenland, Waterschap",
+      "adress": "Drielsedijk 25",
+      "zipcode": "6841HJ",
+      "location": "ARNHEM",
+      "province": "Gelderland",
+      "power": 2.052,
+      "max": 2602449,
+      "realised_at": 2019,
+      "units": 10
     }
   ]
 }

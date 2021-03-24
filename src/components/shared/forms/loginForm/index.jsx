@@ -10,7 +10,7 @@ export default class LoginForm extends Component {
     e.preventDefault();
         const formDataObj = getFormData(e);
 
-        const result = await Post(ApiActions.login, formDataObj);
+        const result = await Post(ApiActions.Login, formDataObj);
         if (result.status === 200) {
             const data = await result.text();
             setAuthorizationCookie(data);
