@@ -193,6 +193,13 @@
           "position": "right"
         }
       }
+    },
+    {
+      "id": 5,
+      "type": "heatmap",
+      "data": {
+        "key": "heatmap"
+      }
     }
   ]
 }

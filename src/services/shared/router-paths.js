@@ -3,7 +3,8 @@ const paths = {
   Root: "/",
   Simulation: "/simulation/",
   Account: "/account/",
-  Login: "/login/"
+  Login: "/login/",
+  Details: "/details/",
 };
 
 export default paths;

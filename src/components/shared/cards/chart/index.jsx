@@ -4,6 +4,7 @@ import ChartLine from "components/shared/charts/line";
 import ChartBar from "components/shared/charts/bar";
 import ChartPie from "components/shared/charts/pie";
 import ChartDoughnut from "components/shared/charts/doughnut";
+import HeatMap from "components/shared/charts/heatmap";
 import "./index.css";
 
 export default class ChartCard extends React.Component {
@@ -21,6 +22,9 @@ export default class ChartCard extends React.Component {
         return <ChartLine chart={chart} />;
       case "bar":
         return <ChartBar chart={chart} />;
+      case "heatmap":
+        console.log(chart);
+        return <HeatMap chart={chart} />;
     }
   }
 
