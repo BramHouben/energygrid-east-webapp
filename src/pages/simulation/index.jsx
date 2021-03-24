@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Header from 'components/shared/header';
 import ChartCard from "components/shared/cards/chart";
 import data from "./simulation.json";
+import axios from 'axios';
 
 export default class Simulation extends React.Component {
     constructor(props) {
@@ -19,6 +20,40 @@ export default class Simulation extends React.Component {
 
     startSimulation() {
         alert("Simulation started")
+    }
+
+    fetchLastSimulation() {
+        const postData = [{
+                "solarParkName": "Harculo2",
+                "totalCountSolarPanels":  1000,
+                "placeSolarPark": {
+                "x": "52.46974613309643",
+                "y": "6.1132777251542105"
+            }
+        }]
+
+        axios.post('http://localhost:8081/simulation/getLatestSimulation', postData)
+        .then((result) => {
+            const chartData = result.data.kwh
+            let chartLabels = []
+            let chartKw = []
+            console.log(result)
+            for(let i = 0; i < chartData.length; i++) {
+                chartLabels.push(chartData[i].time)
+                chartKw.push(chartData[i].kilowatt)
+            }
+            data.data.labels = chartLabels
+            data.data.datasets[0].data = chartKw
+            this.setState({chart: data})
+            
+        })
+        .catch((error) => {
+            console.log(error)
+        })
+    }
+
+    componentDidMount() {
+        this.fetchLastSimulation()
     }
 
     render() {
@@ -51,7 +86,7 @@ export default class Simulation extends React.Component {
                                 <h3>Simulatie</h3>
                             </div>
                             <div id="chartRow">
-                                <ChartCard chart={chart} key={chart.data.key} />
+                                {/* <ChartCard chart={chart} key={chart.data.key} /> */}
                                 <ChartCard chart={chart} key={chart.data.key} />
                             </div>
                         </div>

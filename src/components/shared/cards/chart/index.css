@@ -1,12 +1,11 @@
 #card-wrapper {
-  flex-basis: 600px;
-  margin: 80px 50px 20px 50px;
-  width: 100%;
+  flex-basis: 1000px;
+  margin: 50px 50px 20px 50px;
 }
 
 @media only screen and (max-width: 500px) {
   #card-wrapper {
-    margin: 80px 10px 20px 10px;
+    margin: 50px 10px 20px 10px;
     width: 50%;
     /* flex-basis: 350px; */
   }
