@@ -12,7 +12,25 @@ export default class Location extends Component {
   }
 
   componentDidMount() {
-    this.setState({ cities: data.solarParks });
+    var cities = this.getUniqueCities(data.solarParks);
+
+    this.setState({ cities: cities });
+  }
+
+  getUniqueCities(cities) {
+    cities.forEach((city) => {
+      city.properties.location =
+        city.properties.location.charAt(0) +
+        city.properties.location.substr(1).toLowerCase();
+    });
+
+    return cities.filter(
+      (ele, ind) =>
+        ind ===
+        cities.findIndex(
+          (elem) => elem.properties.location === ele.properties.location
+        )
+    );
   }
 
   handleSelect = (e) => {

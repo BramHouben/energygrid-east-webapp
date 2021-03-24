@@ -15,30 +15,15 @@ export default class Weather extends Component {
   componentDidMount() {
     this.selectLocation("Enschede");
     window.addEventListener("weather-header", (e) => {
-      console.log(16, e);
       this.selectLocation(e.detail.location);
     });
-
-    // const weather = Axios.get(
-    //   "http://localhost:8081/weather/current?city=valkenswaard"
-    // )
-    //   .then((response) => {
-    //     console.log(response.data.location);
-    //     this.setState({ city: response.data.location });
-    //   })
-    //   .catch(() => {
-    //     console.log("Werkt niet");
-    //   });
-    // // console.log("test");
-    // console.log(weather, this.state.city);
   }
 
   selectLocation(location) {
-    const weather = Axios.get(
-      `http://localhost:8081/weather/current?city=${location}`
-    )
+    Axios.post(`http://localhost:8081/weather/current`, {
+      city: location,
+    })
       .then((response) => {
-        console.log(response.data.location);
         this.setState({
           city: response.data.location,
           temperature: response.data.temperature,
@@ -56,7 +41,7 @@ export default class Weather extends Component {
     return (
       <div className="weather-container">
         <div className="weather-data">
-          <div>{temperature}°</div>
+          <div>{temperature} °C</div>
           <div>{city}</div>
         </div>
         <div
