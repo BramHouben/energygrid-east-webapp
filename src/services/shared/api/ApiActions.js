@@ -8,8 +8,8 @@ const authentication = `${apiUrl}authentication/`;
 
 const actions = {
   User: user,
-  CurrentWeather: `${weather}current`,
-  Login: `${authentication}login`,
+  CurrentWeather: `${weather}current/`,
+  Login: `${authentication}login/`,
 };
 
 export default actions;
