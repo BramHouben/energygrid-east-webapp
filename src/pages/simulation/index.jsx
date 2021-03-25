@@ -48,6 +48,7 @@ export default class Simulation extends React.Component {
         }
         data.data.labels = chartLabels;
         data.data.datasets[0].data = chartKw;
+        data.data.datasets[0].lineTension = 0.5;
         this.setState({ chart: data });
       })
       .catch((error) => {

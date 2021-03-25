@@ -7,8 +7,8 @@ export default function Map() {
   const [viewport, setViewport] = useState({
     latitude: 52.18889722321286,
     longitude: 6.124005761032457,
-    width: "75vw",
-    height: "75vh",
+    width: "83.5vw",
+    height: "83.5vh",
     zoom: 8,
   });
   const [selectedSolarPark, setSelectedSolarPark] = useState(null);
