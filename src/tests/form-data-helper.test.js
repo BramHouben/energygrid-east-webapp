@@ -1,7 +1,6 @@
 import { configure, EnzymeAdapter } from "enzyme";
 import {
-  stringIsNullOrEmpty,
-  createGuid,
+  stringIsNullOrEmpty
 } from "services/shared/form-data-helper";
 
 configure({ adapter: new EnzymeAdapter() });
