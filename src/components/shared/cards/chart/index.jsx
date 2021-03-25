@@ -50,7 +50,11 @@ class ChartCard extends React.Component {
               chart.data.total.length > 0 &&
               chart.data.total.map((total) => {
                 console.log(total);
-                return <div>Totaal: {total}</div>;
+                return (
+                  <div>
+                    {t("total")}: {total}
+                  </div>
+                );
               })}
           </Card.Footer>
         </Card>

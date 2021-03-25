@@ -3,5 +3,6 @@
   "energy-import-export": "Energie import & export",
   "energy-import-export-countries": "Energie import & export per land",
   "solar-parks-amount": "Aantal zonneparken",
-  "heatmap": "Heatmap"
+  "heatmap": "Heatmap",
+  "total": "Totaal"
 }

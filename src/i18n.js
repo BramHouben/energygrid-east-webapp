@@ -14,7 +14,7 @@ import chartNl from "./translations/nl/chart.json";
 
 i18n.init({
   interpolation: { escapeValue: false }, // React already does escaping
-  lng: "en", // language to use
+  lng: localStorage.getItem("language") ?? "en", // language to use
   resources: {
     en: {
       dashboard: dashboardEn,
