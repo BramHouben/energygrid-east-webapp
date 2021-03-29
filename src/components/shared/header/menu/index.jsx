@@ -60,6 +60,9 @@ class Menu extends Component {
             <a key="details" href={routerPaths.Details}>
               {t("details")}
             </a>
+            <a key="map" href={routerPaths.Map}>
+              {t("map")}
+            </a>
             <a key="account" href={routerPaths.Account}>
               {t("account")}
             </a>

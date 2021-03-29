@@ -6,6 +6,7 @@ import Dashboard from "pages/dashboard";
 import Simulation from "pages/simulation";
 import Login from "pages/login";
 import Details from "pages/details";
+import Map from "pages/map";
 
 const Router = () => (
   <BrowserRouter>
@@ -15,6 +16,7 @@ const Router = () => (
       <Route path={paths.Account} exact component={Account} />
       <Route path={paths.Login} exact component={Login} />
       <Route path={paths.Details} component={Details} />
+      <Route path={paths.Map} exact component={Map} />
     </Switch>
   </BrowserRouter>
 );

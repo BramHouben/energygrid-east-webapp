@@ -4,7 +4,6 @@ import Header from "components/shared/header";
 import { Table } from "react-bootstrap";
 import data from "../../data/solarparks-east.json";
 import SearchBar from "components/shared/inputs/search";
-import Map from "components/shared/maps";
 import FilterHeader from "components/shared/filter-header";
 
 export default class Details extends React.Component {
@@ -44,7 +43,6 @@ export default class Details extends React.Component {
           : null;
       });
 
-      console.log(filtered);
       this.setState({ input: value, filteredSolarParks: filtered });
     }
   }
@@ -93,7 +91,6 @@ export default class Details extends React.Component {
                 ))}
             </tbody>
           </Table>
-          <Map />
         </div>
       </div>
     );
