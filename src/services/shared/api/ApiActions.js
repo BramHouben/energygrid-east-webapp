@@ -10,6 +10,7 @@ const actions = {
   User: user,
   CurrentWeather: `${weather}current/`,
   Login: `${authentication}login/`,
+  Register: `${user}/register/`,
 };
 
 export default actions;

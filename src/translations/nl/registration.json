@@ -1,11 +1,11 @@
 {
-  "pageName": "Account",
+  "page-name": "Registratie",
   "username-label": "Gebruikersnaam",
   "username-placeholder": "Jan",
+  "password-label": "Wachtwoord",
+  "password-placeholder": "*****",
   "email-label": "Email",
   "email-placeholder": "example@example.com",
-  "password-label": "Wachtwoord",
-  "password-placeholder": "******",
   "translation-label": "Taal",
-  "submit-btn": "Opslaan"
+  "submit-btn": "Registeren"
 }

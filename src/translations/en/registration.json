@@ -1,0 +1,11 @@
+{
+  "page-name": "Registration",
+  "username-label": "Username",
+  "username-placeholder": "James",
+  "password-label": "Password",
+  "password-placeholder": "*****",
+  "email-label": "Email",
+  "email-placeholder": "example@example.com",
+  "translation-label": "Language",
+  "submit-btn": "Register"
+}
