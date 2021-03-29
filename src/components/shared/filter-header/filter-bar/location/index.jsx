@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Dropdown, DropdownButton } from "react-bootstrap";
+import { Dropdown } from "react-bootstrap";
 import "./index.css";
 import data from "data/solarparks-east.json";
 
@@ -20,16 +20,12 @@ export default class Location extends Component {
   getUniqueCities(cities) {
     cities.forEach((city) => {
       city.location =
-        city.location.charAt(0) +
-        city.location.substr(1).toLowerCase();
+        city.location.charAt(0) + city.location.substr(1).toLowerCase();
     });
 
     return cities.filter(
       (ele, ind) =>
-        ind ===
-        cities.findIndex(
-          (elem) => elem.location === ele.location
-        )
+        ind === cities.findIndex((elem) => elem.location === ele.location)
     );
   }
 

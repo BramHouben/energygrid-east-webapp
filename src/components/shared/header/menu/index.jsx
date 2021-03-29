@@ -51,6 +51,15 @@ class Menu extends Component {
             &times;
           </button>
           <div id="menu-links">
+            <a key="dashboard" href="/">
+              {t("dashboard")}
+            </a>
+            <a key="simulation" href={routerPaths.Simulation}>
+              {t("simulation")}
+            </a>
+            <a key="details" href={routerPaths.Details}>
+              {t("details")}
+            </a>
             <a key="account" href={routerPaths.Account}>
               {t("account")}
             </a>

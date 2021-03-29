@@ -4,8 +4,8 @@ import Header from "components/shared/header";
 import { Table } from "react-bootstrap";
 import data from "../../data/solarparks-east.json";
 import SearchBar from "components/shared/inputs/search";
-import { ArrowUp } from "react-bootstrap-icons";
 import Map from "components/shared/maps";
+import FilterHeader from "components/shared/filter-header";
 
 export default class Details extends React.Component {
   constructor() {
@@ -54,7 +54,10 @@ export default class Details extends React.Component {
 
     return (
       <div>
-        <Header pageName="details" />
+        <div className="header-wrapper">
+          <Header pageName="Details" />
+          <FilterHeader />
+        </div>
         <div id="details-body">
           <div id="search-bar">
             <SearchBar input={input} />
@@ -62,42 +65,15 @@ export default class Details extends React.Component {
           <Table striped bordered hover responsive="sm">
             <thead>
               <tr>
-                <th>
-                  ID
-                  <ArrowUp id="th-icon" />
-                </th>
-                <th>
-                  Aanvrager
-                  <ArrowUp id="th-icon" />
-                </th>
-                <th>
-                  Adres
-                  <ArrowUp id="th-icon" />
-                </th>
-                <th>
-                  Postcode
-                  <ArrowUp id="th-icon" />
-                </th>
-                <th>
-                  Plaats
-                  <ArrowUp id="th-icon" />
-                </th>
-                <th>
-                  Provincie
-                  <ArrowUp id="th-icon" />
-                </th>
-                <th>
-                  Power
-                  <ArrowUp id="th-icon" />
-                </th>
-                <th>
-                  Max
-                  <ArrowUp id="th-icon" />
-                </th>
-                <th>
-                  Gerealiseerd op
-                  <ArrowUp id="th-icon" />
-                </th>
+                <th>ID</th>
+                <th>Aanvrager</th>
+                <th>Adres</th>
+                <th>Postcode</th>
+                <th>Plaats</th>
+                <th>Provincie</th>
+                <th>Power</th>
+                <th>Max</th>
+                <th>Gerealiseerd op</th>
               </tr>
             </thead>
             <tbody>
@@ -117,9 +93,7 @@ export default class Details extends React.Component {
                 ))}
             </tbody>
           </Table>
-          <div id="details-map">
-            <Map />
-          </div>
+          <Map />
         </div>
       </div>
     );

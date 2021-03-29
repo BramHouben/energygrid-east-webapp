@@ -11,6 +11,7 @@ class Account extends Component {
     e.preventDefault();
     const formData = getFormData(e);
     i18n.changeLanguage(formData.language);
+    localStorage.setItem("language", formData.language);
   };
 
   render() {
@@ -21,7 +22,7 @@ class Account extends Component {
       <div>
         <Header pageName={t("pageName")} />
         <div className="content">
-          <Form onSubmit={this.onSubmit} id="account-form">
+          <Form onSubmit={(e) => this.onSubmit(e)} id="account-form">
             <Form.Group>
               <Form.Label>{t("translation-label")}</Form.Label>
               <Form.Control name="language" as="select">

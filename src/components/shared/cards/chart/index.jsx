@@ -5,9 +5,10 @@ import ChartBar from "components/shared/charts/bar";
 import ChartPie from "components/shared/charts/pie";
 import ChartDoughnut from "components/shared/charts/doughnut";
 import HeatMap from "components/shared/charts/heatmap";
+import { withTranslation } from "react-i18next";
 import "./index.css";
 
-export default class ChartCard extends React.Component {
+class ChartCard extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -30,6 +31,7 @@ export default class ChartCard extends React.Component {
 
   render() {
     let { chart } = this.props;
+    const { t } = this.props;
 
     return (
       <div id="card-wrapper">
@@ -40,7 +42,7 @@ export default class ChartCard extends React.Component {
           }}
         >
           <Card.Header as="h5" style={{ textAlign: "center" }}>
-            {chart.data.key}
+            {t(chart.data.key)}
           </Card.Header>
           <Card.Body>{this.getChartType(chart)}</Card.Body>
           <Card.Footer className="text-right">
@@ -48,7 +50,11 @@ export default class ChartCard extends React.Component {
               chart.data.total.length > 0 &&
               chart.data.total.map((total) => {
                 console.log(total);
-                return <div>Totaal: {total}</div>;
+                return (
+                  <div>
+                    {t("total")}: {total}
+                  </div>
+                );
               })}
           </Card.Footer>
         </Card>
@@ -56,3 +62,5 @@ export default class ChartCard extends React.Component {
     );
   }
 }
+
+export default withTranslation("chart")(ChartCard);

@@ -1,4 +1,7 @@
 {
+  "dashboard": "Dashboard",
   "account": "Account",
-  "logout": "Afmelden"
+  "logout": "Afmelden",
+  "details": "Zonneparken",
+  "simulation": "Simulatie"
 }

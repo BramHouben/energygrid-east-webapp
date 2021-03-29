@@ -33,12 +33,11 @@
 #menu a,
 #menu button {
   display: grid;
-  place-items: center;
   width: 100%;
-  padding: 10px 0 10px 0;
+  padding: 10px 10px 10px 10px;
   color: white;
   text-decoration: none;
-  text-align: center;
+  text-align: left;
 }
 
 #menu a:hover,
