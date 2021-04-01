@@ -15,7 +15,7 @@ export default class Weather extends Component {
   componentDidMount() {
     this.selectLocation("Enschede");
     window.addEventListener("weather-header", (e) => {
-      this.selectLocation(e.detail.location);
+      this.selectLocation(e.detail.coordinates);
     });
   }
 

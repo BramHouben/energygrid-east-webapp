@@ -30,14 +30,25 @@ export default class Location extends Component {
   }
 
   handleSelect = (e) => {
+    const coordinates = this.getCoordinates(e);
     window.dispatchEvent(
       new CustomEvent("weather-header", {
         bubbles: true,
         composed: true,
-        detail: { location: e },
+        detail: { coordinates: coordinates },
       })
     );
   };
+
+  getCoordinates(e) {
+    let coordinates;
+    this.state.cities.forEach((city) => {
+      if (city.location == e) {
+        coordinates = city.coordinates;
+      }
+    });
+    return coordinates;
+  }
 
   render() {
     let { cities } = this.state;
