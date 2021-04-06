@@ -35,7 +35,7 @@ export default class Location extends Component {
       new CustomEvent("weather-header", {
         bubbles: true,
         composed: true,
-        detail: { coordinates: coordinates },
+        detail: { coordinates: coordinates, city: e },
       })
     );
   };

@@ -15,18 +15,17 @@ export default class Weather extends Component {
   componentDidMount() {
     this.selectLocation("Enschede");
     window.addEventListener("weather-header", (e) => {
-      this.selectLocation(e.detail.coordinates);
+      this.selectLocation(e.detail.coordinates, e.detail.city);
     });
   }
 
-  selectLocation(coordinates) {
-    console.log(coordinates);
+  selectLocation(coordinates, city) {
     Axios.post(`http://localhost:8081/weather/current`, {
       coordinates: coordinates,
     })
       .then((response) => {
         this.setState({
-          city: response.data.location,
+          city: city,
           temperature: response.data.temperature,
           symbol: response.data.symbol,
         });
