@@ -1,0 +1,39 @@
+{
+    "id": 1,
+    "type": "line",
+    "data": {
+      "key": "energy-simulation",
+      "total": [],
+      "labels": [],
+      "datasets": [
+        {
+          "label": "Harculo",
+          "lineTension": 0.5,
+            "backgroundColor": "transparent",
+            "borderColor": "#0E910A",
+            "borderWidth": 2,
+          "data": []
+        }
+      ]
+    },
+    "options": {
+      "barValueSpacing": 20,
+      "legend": {
+        "display": true,
+        "position": "right"
+      },
+      "scales": {
+        "yAxes": [
+          {
+            "ticks": {
+              "beginAtZero": true
+            },
+            "scaleLabel": {
+              "display": true,
+              "labelString": "Energy Simulation Production"
+            }
+          }
+        ]
+      }
+    }
+}
