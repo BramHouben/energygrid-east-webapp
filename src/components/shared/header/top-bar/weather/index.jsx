@@ -19,9 +19,10 @@ export default class Weather extends Component {
     });
   }
 
-  selectLocation(location) {
+  selectLocation(coordinates) {
+    console.log(coordinates);
     Axios.post(`http://localhost:8081/weather/current`, {
-      city: location,
+      coordinates: coordinates,
     })
       .then((response) => {
         this.setState({
@@ -46,7 +47,9 @@ export default class Weather extends Component {
         </div>
         <div
           className="weather-image"
-          style={{ backgroundImage: `url(/assets/weather/${symbol}.png)` }}
+          style={{
+            backgroundImage: `url(http://openweathermap.org/img/wn/${symbol}@2x.png)`,
+          }}
         ></div>
       </div>
     );
