@@ -1,5 +1,7 @@
 import { configure, EnzymeAdapter } from "enzyme";
-import { stringIsNullOrEmpty, createGuid } from "services/shared/form-data-helper";
+import {
+  stringIsNullOrEmpty
+} from "services/shared/form-data-helper";
 
 configure({ adapter: new EnzymeAdapter() });
 
@@ -21,8 +23,4 @@ test("stringIsNullOrEmpty null", () => {
 
 test("stringIsNullOrEmpty undefined", () => {
   expect(stringIsNullOrEmpty(undefined)).toEqual(true);
-});
-
-test("createGuid", () => {
-  expect(createGuid().length).toEqual(36);
 });

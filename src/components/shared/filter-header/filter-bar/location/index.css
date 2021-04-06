@@ -1,0 +1,15 @@
+.location-container {
+  z-index: 999;
+  text-align: center;
+  position: fixed;
+  display: flex;
+  padding-right: 5px;
+  place-items: center;
+  place-content: center;
+  right: 0;
+}
+
+.dropdown-menu {
+  height: 300px;
+  overflow-y: scroll;
+}
