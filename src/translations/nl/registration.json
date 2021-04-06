@@ -8,6 +8,8 @@
   "email-label": "Email",
   "email-placeholder": "example@example.com",
   "translation-label": "Taal",
+  "terms-and-services-label": "Gebruikersovereenkomst",
+  "terms-and-services-checkbox": "Ik accepteer de gebruikersovereenkomst",
   "submit-btn": "Registeren",
   "password-mismatch": "Wachtwoorden komen niet overeen",
   "registration-success": "Account aangemaakt",

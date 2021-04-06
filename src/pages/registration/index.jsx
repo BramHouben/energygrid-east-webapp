@@ -6,6 +6,7 @@ import { getFormData } from "services/shared/form-data-helper";
 import PasswordStrengthBar from "react-password-strength-bar";
 import "./index.css";
 import { toast } from "react-toastify";
+import paths from "services/shared/router-paths";
 
 class Registration extends Component {
   constructor() {
@@ -13,6 +14,7 @@ class Registration extends Component {
     this.state = {
       password: "",
       submitBtnDisabled: false,
+      displayTermsAndServices: false,
     };
   }
 
@@ -29,7 +31,7 @@ class Registration extends Component {
       return false;
     }
 
-    return true;
+    if (formData.termsAndServices) return true;
   };
 
   onSubmit = async (e) => {
@@ -68,6 +70,7 @@ class Registration extends Component {
           <Form.Group>
             <Form.Label>{t("username-label")}</Form.Label>
             <Form.Control
+              required
               minLength={5}
               name="username"
               placeholder={t("username-placeholder")}
@@ -76,6 +79,7 @@ class Registration extends Component {
           <Form.Group>
             <Form.Label>{t("password-label")}</Form.Label>
             <Form.Control
+              required
               onChange={(e) => this.setState({ password: e.target.value })}
               minLength={10}
               name="password"
@@ -87,6 +91,7 @@ class Registration extends Component {
           <Form.Group>
             <Form.Label>{t("repeat-password-label")}</Form.Label>
             <Form.Control
+              required
               minLength={10}
               name="passwordRepeat"
               type="password"
@@ -100,6 +105,7 @@ class Registration extends Component {
           <Form.Group>
             <Form.Label>{t("translation-label")}</Form.Label>
             <Form.Control
+              required
               onChange={this.onLanguageChange}
               name="language"
               as="select"
@@ -110,6 +116,24 @@ class Registration extends Component {
                 </option>
               ))}
             </Form.Control>
+          </Form.Group>
+          <Form.Group controlId="formCheckbox">
+            <Form.Label>
+              {
+                <a
+                  href={paths.TermsAndServices}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {t("terms-and-services-label")}
+                </a>
+              }
+            </Form.Label>
+            <Form.Check
+              required
+              type="checkbox"
+              label={t("terms-and-services-checkbox")}
+            />
           </Form.Group>
           <Button disabled={this.state.submitBtnDisabled} block type="submit">
             {t("submit-btn")}

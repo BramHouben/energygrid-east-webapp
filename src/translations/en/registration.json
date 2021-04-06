@@ -8,6 +8,8 @@
   "email-label": "Email",
   "email-placeholder": "example@example.com",
   "translation-label": "Language",
+  "terms-and-services-label": "Terms and services",
+  "terms-and-services-checkbox": "I accept the terms and services",
   "submit-btn": "Register",
   "password-mismatch": "Passwords do not match",
   "registration-success": "Account created",

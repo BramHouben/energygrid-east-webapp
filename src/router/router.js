@@ -7,6 +7,7 @@ import Simulation from "pages/simulation";
 import Login from "pages/login";
 import Details from "pages/details";
 import registration from "pages/registration";
+import TermsAndServices from "pages/terms-and-services";
 
 const Router = () => (
   <BrowserRouter>
@@ -17,6 +18,7 @@ const Router = () => (
       <Route path={paths.Registration} exact component={registration} />
       <Route path={paths.Login} exact component={Login} />
       <Route path={paths.Details} component={Details} />
+      <Route path={paths.TermsAndServices} component={TermsAndServices} />
     </Switch>
   </BrowserRouter>
 );
