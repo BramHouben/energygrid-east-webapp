@@ -1,0 +1,10 @@
+#dashboard-body {
+  display: flex;
+  text-align: center;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.header-wrapper {
+  height: 100px;
+}
