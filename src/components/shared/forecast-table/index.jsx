@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import "./index.css";
+import { GiWindTurbine } from "react-icons/gi";
+import { FaSolarPanel } from "react-icons/fa";
 import Axios from "axios";
 
 export default class ForecastTable extends Component {
@@ -26,15 +28,29 @@ export default class ForecastTable extends Component {
           city: city,
           forecast: response.data,
         });
+        this.setGrades();
       })
       .catch(() => {
         console.log("Werkt niet");
       });
   }
 
+  setSunGrade(sunPercentage) {
+    if (sunPercentage <= 15) return "#fe4444";
+    if (sunPercentage > 15 && sunPercentage <= 60) return "#fe982f";
+    if (sunPercentage > 60) return "#39a839";
+  }
+
+  setWindGrade(windSpeed) {
+    if (windSpeed > 2.5 && windSpeed <= 9) return "#39a839";
+    if (windSpeed > 9 && windSpeed <= 25) return "#fe4444";
+    else return "#fe982f";
+  }
+
   render() {
     let { city, forecast } = this.state;
     console.log(forecast);
+
     return (
       <div className="forecast-container">
         {forecast.map((day) => (
@@ -62,6 +78,20 @@ export default class ForecastTable extends Component {
               </div>
               <div>
                 <b>Sun percentage:</b> {day.sunPercentage}%
+              </div>
+            </div>
+            <div className="grade-container">
+              <div
+                className="icon"
+                style={{ backgroundColor: this.setSunGrade(day.sunPercentage) }}
+              >
+                <FaSolarPanel size={30} />
+              </div>
+              <div
+                className="icon"
+                style={{ backgroundColor: this.setWindGrade(day.windSpeed) }}
+              >
+                <GiWindTurbine size={30} />
               </div>
             </div>
           </div>

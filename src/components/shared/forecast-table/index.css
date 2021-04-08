@@ -38,12 +38,12 @@
 .temperature-data {
   text-align: left;
   margin-right: 5px;
+  width: 125px;
 }
 
 .forecast-image {
   width: 70px;
   height: 70px;
-  margin-left: 35%;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -55,4 +55,21 @@
   text-align: left;
   position: relative;
   place-items: center;
+}
+
+.grade-container {
+  width: 100%;
+  display: flex;
+  margin-top: 45px;
+  place-content: center;
+}
+
+.icon {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin: 0px 10px 0px 10px;
+  display: flex;
+  align-items: center;
+  place-content: center;
 }
