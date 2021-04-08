@@ -1,0 +1,58 @@
+.forecast-container {
+  margin: 20px 20px 20px 20px;
+  border: 1px solid black;
+  border-radius: 25px;
+  width: 97%;
+  height: 320px;
+  display: table;
+  table-layout: fixed;
+  overflow: hidden;
+}
+
+.day-container {
+  height: 100%;
+  display: table-cell;
+  background-color: #d8d8d8;
+}
+
+.day-container:nth-child(odd) {
+  background-color: #afafaf;
+}
+
+.day-date {
+  top: 0;
+  text-align: center;
+  margin-top: 8px;
+  font-weight: bold;
+}
+
+.temperature-container {
+  margin-top: 10px;
+  margin-left: 15px;
+  text-align: left;
+  position: relative;
+  display: flex;
+  place-items: center;
+}
+
+.temperature-data {
+  text-align: left;
+  margin-right: 5px;
+}
+
+.forecast-image {
+  width: 70px;
+  height: 70px;
+  margin-left: 35%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.stats-container {
+  margin-top: 15px;
+  margin-left: 15px;
+  text-align: left;
+  position: relative;
+  place-items: center;
+}
