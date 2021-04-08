@@ -1,0 +1,49 @@
+#flexColumn{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+#simulationHeader, #simulationBoard{
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 1rem;
+}
+
+.flexRow{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+#startSimulationWrapp{
+    margin-right: 1em;
+}
+
+#elapsedTimeWrapper, #simulationInfoWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#simulationInfoWrapper{
+    flex-direction: row;
+    justify-content: flex-end;
+    flex: 1;
+}
+
+#simulationId{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+#simulationBoard{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+#chartRow{
+    display: flex;
+    flex-direction: row;
+}

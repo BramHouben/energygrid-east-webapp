@@ -1,0 +1,11 @@
+{
+  "pageName": "Account",
+  "translation-label": "Language",
+  "username-label": "Username",
+  "username-placeholder": "James",
+  "email-label": "Email",
+  "email-placeholder": "example@example.com",
+  "password-label": "Password",
+  "password-placeholder": "******",
+  "submit-btn": "Save"
+}
