@@ -25,6 +25,12 @@ export default function MapForm() {
     );
   }
 
+  window.addEventListener("set-marker", (e) => {
+    if (e.detail.coordinates !== null) {
+      setSelectedCoordinates(e.detail.coordinates);
+    }
+  });
+
   return (
     <div>
       <ReactMapGL
@@ -47,8 +53,8 @@ export default function MapForm() {
           >
             <button className="marker-btn">
               <img
-                src="/assets/windturbines/marker-turbines.png"
-                alt="solarpanel-icon"
+                src="/assets/windturbines/marker-turbine.png"
+                alt="turbine-icon"
               />
             </button>
           </Marker>
