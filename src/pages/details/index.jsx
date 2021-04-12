@@ -5,6 +5,7 @@ import { Table } from "react-bootstrap";
 import data from "../../data/solarparks-east.json";
 import SearchBar from "components/shared/inputs/search";
 import FilterHeader from "components/shared/filter-header";
+import Modal from "components/shared/modal";
 
 export default class Details extends React.Component {
   constructor() {
@@ -92,6 +93,7 @@ export default class Details extends React.Component {
             </tbody>
           </Table>
         </div>
+        <Modal />
       </div>
     );
   }

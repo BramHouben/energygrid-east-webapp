@@ -1,5 +1,6 @@
 import Router from "./router/router";
 import "./App.css";
+import "mapbox-gl/dist/mapbox-gl.css";
 
 function App() {
   return (
