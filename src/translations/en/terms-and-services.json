@@ -1,0 +1,8 @@
+{
+  "index-label": "Terms and services",
+  "index": "By agreeing to the terms and services i accept the following: \n - You agree to store your information on our systems \n - We can change the terms and services at any time \n - We are not liable for any misinformation in our systems",
+  "data-processing-label": "Data processing",
+  "data-processing": "To make our services work for you we process your data. We process the data you provide to us",
+  "data-protection-label": "Data protection",
+  "data-protection": "To comply with the data regulations we protect your data by encrypting, hashing and use access management policies to restrict access"
+}

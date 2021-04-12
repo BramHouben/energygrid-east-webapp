@@ -6,6 +6,8 @@ const paths = {
   Login: "/login/",
   Forecast: "/forecast/",
   Details: "/details/",
+  Registration: "/registration/",
+  TermsAndServices: "/terms-and-services/",
 };
 
 export default paths;

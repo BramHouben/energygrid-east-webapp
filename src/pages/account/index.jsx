@@ -16,7 +16,7 @@ class Account extends Component {
 
   render() {
     const { t } = this.props;
-    const availableLanguages = ["nl", "en"];
+    const availableLanguages = ["en", "nl"];
 
     return (
       <div>
@@ -24,10 +24,29 @@ class Account extends Component {
         <div className="content">
           <Form onSubmit={(e) => this.onSubmit(e)} id="account-form">
             <Form.Group>
+              <Form.Label>{t("username-label")}</Form.Label>
+              <Form.Control
+                placeholder={t("username-placeholder")}
+                name="username"
+              />
+            </Form.Group>
+            <Form.Group>
+              <Form.Label>{t("email-label")}</Form.Label>
+              <Form.Control type="email" placeholder={t("email-placeholder")} />
+            </Form.Group>
+            <Form.Group>
+              <Form.Label>{t("password-label")}</Form.Label>
+              <Form.Control placeholder={t("password-placeholder")} />
+            </Form.Group>
+            <Form.Group>
               <Form.Label>{t("translation-label")}</Form.Label>
               <Form.Control name="language" as="select">
                 {availableLanguages.map((lang) => (
-                  <option key={lang} value={lang}>
+                  <option
+                    selected={localStorage.getItem("language") === lang}
+                    key={lang}
+                    value={lang}
+                  >
                     {lang}
                   </option>
                 ))}
