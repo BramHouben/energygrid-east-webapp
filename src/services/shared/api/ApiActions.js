@@ -11,6 +11,8 @@ const actions = {
   CurrentWeather: `${weather}current/`,
   ProvinceInfo: `${region}provinceinfo/`,
   CityInfo: `${region}cityinfo/`,
+  CityInfoStats: `${region}cityinfostats/`,
+  AllCitiesRegion: `${region}citiesregion/`,
   StreetInfo: `${region}streetinfo`,
   Login: `${authentication}login/`,
 };

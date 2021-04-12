@@ -73,14 +73,16 @@ const RemotePagination = ({
   </div>
 );
 
-export default class Housetable extends Component {
+export default class housetable extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      streetname: this.props.streetname,
       items: [],
       allpoints: [],
       page: 1,
       totalSize: 0,
+      currentcity: this.props.currentcity,
       sizePerPage: 10,
       updatelist: this.props.updatelist,
     };
@@ -99,9 +101,11 @@ export default class Housetable extends Component {
     page = this.state.page,
     sizeperPage = this.state.sizePerPage
   ) {
+    console.log(this.state.streetname);
     await Axios.get(ApiActions.StreetInfo, {
       params: {
-        streetname: "Josephine Bakerstraat",
+        streetname: this.state.streetname,
+        city: this.state.currentcity,
         page: page,
       },
     })
