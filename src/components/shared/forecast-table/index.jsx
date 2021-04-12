@@ -48,7 +48,7 @@ export default class ForecastTable extends Component {
   }
 
   render() {
-    let { city, forecast } = this.state;
+    let { forecast } = this.state;
     console.log(forecast);
 
     return (
