@@ -42,9 +42,9 @@ export default class ForecastTable extends Component {
   }
 
   setWindGrade(windSpeed) {
-    if (windSpeed > 2.5 && windSpeed <= 9) return "#39a839";
-    if (windSpeed > 9 && windSpeed <= 25) return "#fe4444";
-    else return "#fe982f";
+    if (windSpeed > 2.5 && windSpeed <= 9) return "#fe982f";
+    if (windSpeed > 9 && windSpeed <= 25) return "#39a839";
+    else return "#fe4444";
   }
 
   render() {
@@ -93,6 +93,15 @@ export default class ForecastTable extends Component {
               >
                 <GiWindTurbine size={30} />
               </div>
+            </div>
+            <div className="winddirection-container">
+              <div
+                className="icon"
+                style={{
+                  backgroundImage: `url(/assets/weather/windarrow.png)`,
+                  transform: `rotate(${day.windDirection}deg)`,
+                }}
+              />
             </div>
           </div>
         ))}

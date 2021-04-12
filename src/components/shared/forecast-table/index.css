@@ -60,7 +60,14 @@
 .grade-container {
   width: 100%;
   display: flex;
-  margin-top: 45px;
+  margin-top: 25px;
+  place-content: center;
+}
+
+.winddirection-container {
+  width: 100%;
+  display: flex;
+  margin-top: 20px;
   place-content: center;
 }
 
@@ -72,4 +79,7 @@
   display: flex;
   align-items: center;
   place-content: center;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
