@@ -135,7 +135,16 @@ class Registration extends Component {
               label={t("terms-and-services-checkbox")}
             />
           </Form.Group>
-          <Button disabled={this.state.submitBtnDisabled} block type="submit">
+          <Button
+            disabled={this.state.submitBtnDisabled}
+            block
+            type="submit"
+            style={{
+              backgroundColor: "#82de94",
+              borderColor: "#82de94",
+              color: "black",
+            }}
+          >
             {t("submit-btn")}
             <span hidden>
               <Spinner
