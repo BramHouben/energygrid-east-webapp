@@ -7,17 +7,15 @@ export default class RegionCityTable extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentregion: this.props.currentregion,
       cities: [],
       dataloaded: false,
-      cityChanged: this.props.cityChanged,
     };
   }
 
   async fetchCityData() {
     await Axios.get(ApiActions.AllCitiesRegion, {
       params: {
-        region: this.state.currentregion,
+        region: this.props.currentregion,
       },
     })
       .then((result) => {
@@ -30,13 +28,18 @@ export default class RegionCityTable extends Component {
       });
   }
 
+  componentDidUpdate(prevprops) {
+    if (prevprops.currentregion !== this.props.currentregion) {
+      this.fetchCityData();
+    }
+  }
+
   componentDidMount() {
-    console.log("new component" + this.state.currentregion);
     this.fetchCityData();
   }
 
   render() {
-    let cities = this.state.cities;
+    const { cities } = this.state;
 
     return (
       <div>
@@ -46,7 +49,7 @@ export default class RegionCityTable extends Component {
             <Form.Control
               as='select'
               onChange={(e) => {
-                this.state.cityChanged(e.currentTarget.value);
+                this.props.cityChanged(e.currentTarget.value);
               }}
             >
               <option>select city</option>

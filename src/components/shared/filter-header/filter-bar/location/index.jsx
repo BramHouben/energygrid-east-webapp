@@ -43,15 +43,15 @@ export default class Location extends Component {
     let { cities } = this.state;
 
     return (
-      <div className="location-container">
+      <div className='location-container'>
         <Dropdown onSelect={this.handleSelect}>
-          <Dropdown.Toggle variant="secondary" id="dropdown-basic">
+          <Dropdown.Toggle variant='secondary' id='dropdown-basic'>
             Kies locatie
           </Dropdown.Toggle>
 
           <Dropdown.Menu>
             {cities.map((city) => (
-              <Dropdown.Item eventKey={city.location}>
+              <Dropdown.Item key={city.location} eventKey={city.location}>
                 {city.location}
               </Dropdown.Item>
             ))}

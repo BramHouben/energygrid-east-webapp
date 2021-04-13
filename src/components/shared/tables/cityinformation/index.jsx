@@ -13,7 +13,6 @@ export default class cityinformation extends Component {
     super(props);
     this.state = {
       StreetChanged: this.props.StreetChanged,
-      currentCity: this.props.currentCity,
       countHouses: 0,
       countSolarPanelHouses: 0,
       averageUsageEnergyRegion: 0,
@@ -25,7 +24,7 @@ export default class cityinformation extends Component {
   async fetchData() {
     await Axios.get(ApiActions.CityInfoStats, {
       params: {
-        city: this.state.currentCity,
+        city: this.props.currentCity,
       },
     })
       .then((result) => {
@@ -41,7 +40,11 @@ export default class cityinformation extends Component {
         console.log("error loading results");
       });
   }
-
+  componentDidUpdate(prevprops) {
+    if (prevprops.currentCity !== this.props.currentCity) {
+      this.fetchData();
+    }
+  }
   componentDidMount() {
     this.fetchData();
   }
@@ -54,12 +57,12 @@ export default class cityinformation extends Component {
             <Container>
               <Row>
                 <Col>
-                  <h1>Houses</h1>
+                  <h3>Houses</h3>
                   <img src='/assets/house/house.png' alt='house-icon' />
                   <CountUp end={this.state.countHouses} />
                 </Col>
                 <Col>
-                  <h1>How many have sonar panals</h1>
+                  <h3>How many have sonar panals</h3>
                   <img
                     height='50px'
                     src='/assets/solarpark/solar-panel.png'
@@ -68,10 +71,10 @@ export default class cityinformation extends Component {
                   <CountUp end={this.state.countSolarPanelHouses} />
                 </Col>
                 <Col>
-                  <h1>Average energy consumption per house</h1>
+                  <h3>Average energy consumption per house</h3>
                   <img
                     height='50px'
-                    src='/assets/energy/energyicon.png'
+                    src='/assets/energy/energyiconv2.png'
                     alt='energyicon'
                   />
                   <CountUp end={this.state.averageUsageEnergyRegion} />

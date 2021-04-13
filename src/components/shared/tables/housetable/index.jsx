@@ -59,6 +59,11 @@ const RemotePagination = ({
                 sort: true,
               },
               {
+                dataField: "city",
+                text: "city",
+                sort: true,
+              },
+              {
                 dataField: "coordinates",
                 text: "coordinates",
                 sort: true,
@@ -96,6 +101,11 @@ export default class housetable extends Component {
       }));
     }, 1000);
   };
+  componentDidUpdate(prevprops) {
+    if (prevprops.streetname !== this.props.streetname) {
+      this.fetchData();
+    }
+  }
 
   async fetchData(
     page = this.state.page,
@@ -104,8 +114,8 @@ export default class housetable extends Component {
     console.log(this.state.streetname);
     await Axios.get(ApiActions.StreetInfo, {
       params: {
-        streetname: this.state.streetname,
-        city: this.state.currentcity,
+        streetname: this.props.streetname,
+        city: this.props.currentcity,
         page: page,
       },
     })
