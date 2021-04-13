@@ -77,6 +77,19 @@ export default class ScenarioForm extends Component {
           <Row>
             <Col>
               <Form.Group>
+                <Form.Label>Beschrijving</Form.Label>
+                <Form.Control
+                  placeholder="description"
+                  type="text"
+                  value={
+                    this.state.selectedTurbine &&
+                    this.state.selectedTurbine.text
+                  }
+                />
+              </Form.Group>
+            </Col>
+            <Col>
+              <Form.Group>
                 <Form.Label>Aantal turbines</Form.Label>
                 <Form.Control placeholder="Amount" type="number" />
               </Form.Group>
@@ -95,14 +108,31 @@ export default class ScenarioForm extends Component {
         );
       case "ADD_WIND_TURBINE":
         return (
-          <FormGroup>
-            <Form.Label>Type turbine</Form.Label>
-            <Form.Control as="select" required defaultValue="Kies...">
-              <option>1.8</option>
-              <option>2.0</option>
-              <option>3.0</option>
-            </Form.Control>
-          </FormGroup>
+          <Row>
+            <Col>
+              <Form.Group>
+                <Form.Label>Beschrijving</Form.Label>
+                <Form.Control
+                  placeholder="description"
+                  type="text"
+                  value={
+                    this.state.selectedTurbine &&
+                    this.state.selectedTurbine.text
+                  }
+                />
+              </Form.Group>
+            </Col>
+            <Col>
+              <FormGroup>
+                <Form.Label>Type turbine</Form.Label>
+                <Form.Control as="select" required defaultValue="Kies...">
+                  <option>1.8</option>
+                  <option>2.0</option>
+                  <option>3.0</option>
+                </Form.Control>
+              </FormGroup>
+            </Col>
+          </Row>
         );
       case "REMOVE_WIND_TURBINE":
         return (
@@ -251,7 +281,7 @@ export default class ScenarioForm extends Component {
             </div>
           </Form>
         ) : (
-          <div></div>
+          <div>{selectedItem === "Sun" ? "Currently not available" : ""}</div>
         )}
       </div>
     );

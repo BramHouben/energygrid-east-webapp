@@ -44,8 +44,8 @@ class DefaultCard extends React.Component {
         <div
           style={{
             display: "flex",
-            margin: "0 auto",
             columnGap: "10px",
+            textAlign: "left",
           }}
         >
           Verwachte misgelopen productie:
@@ -58,8 +58,8 @@ class DefaultCard extends React.Component {
       <div
         style={{
           display: "flex",
-          margin: "0 auto",
           columnGap: "10px",
+          textAlign: "left",
         }}
       >
         {" "}
@@ -94,7 +94,9 @@ class DefaultCard extends React.Component {
         const color = this.generateRandomColor();
 
         let dataset = {
-          label: !!simulation.turbineId ? simulation.turbineId : "Undefined",
+          label: !!simulation.turbineId
+            ? "Turbine Id: " + simulation.turbineId
+            : "Undefined",
           fill: false,
           lineTension: 0.5,
           backgroundColor: color,
@@ -109,49 +111,16 @@ class DefaultCard extends React.Component {
       console.log(chart);
 
       chart.data.labels = chartLabels;
-      chart.options.title.text = "Aantal turbines: " + result.length;
+      chart.options.title.text =
+        result.length > 1
+          ? scenario.description + ", Aantal turbines: " + result.length
+          : scenario.description;
       chart.options.scales.yAxes[0].scaleLabel.labelString =
         result.length > 1
           ? "Gemiddelde opwekking per turbine in KwH"
           : "Production in kWh";
       chart.data.key = simulation.turbineId ? simulation.turbineId : 0;
     }
-
-    // for (var i = 0; i < result.length; i++) {
-    //   console.log(i);
-    //   const production =
-    //     scenario.simulationExpectationResult.simulationResults[i]
-    //       .productionExpectations;
-    //   let chartKw = [];
-    //   let chartLabels = [];
-
-    //   for (var j = 0; j < production.length; j++) {
-    //     chartLabels.push(production[j].localDateTime);
-    //     chartKw.push(production[j].kw);
-    //   }
-
-    //   console.log(result[i].name);
-
-    //   let dataset = {
-    //     label: "Production turbineId: " + i,
-    //     fill: false,
-    //     lineTension: 0.5,
-    //     backgroundColor: "#0A8D91",
-    //     borderColor: "#0A8D91",
-    //     borderWidth: 2,
-    //     data: chartKw,
-    //   };
-
-    //   datasets = [...datasets, dataset];
-
-    //   console.log(dataset);
-    //   chart.data.labels = chartLabels;
-    //   chart.options.title.text = "Aantal turbines: " + (i + 1);
-    //   chart.options.scales.yAxes[0].scaleLabel.labelString =
-    //     i > 1 ? "Gemiddelde opwekking per turbine in KwH" : "Production in kWh";
-    //   chart.data.key = production[i].turbineId ? production[i].turbineId : i;
-    //}
-    console.log(datasets);
     chart.data.key = scenario.scenarioId;
     chart.data.datasets = datasets;
 
@@ -172,9 +141,27 @@ class DefaultCard extends React.Component {
                 {t(scenario.name)}
               </Card.Title>
               <Card.Text>
-                {this.getIconUpOrDown(
-                  scenario.simulationExpectationResult.kwTotalResult
-                )}
+                <div
+                  style={{
+                    display: "flex",
+                    margin: "0 auto",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  {this.getIconUpOrDown(
+                    scenario.simulationExpectationResult.kwTotalResult
+                  )}
+                  {scenario.coordinates &&
+                  scenario.coordinates.x &&
+                  scenario.coordinates.y ? (
+                    <div>
+                      Lat: {scenario.coordinates.x}, Lon:{" "}
+                      {scenario.coordinates.y}
+                    </div>
+                  ) : (
+                    <div></div>
+                  )}
+                </div>
               </Card.Text>
               {this.getChartData(scenario, id)}
             </Card.Body>
