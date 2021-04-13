@@ -4,6 +4,7 @@ const paths = {
   Simulation: "/simulation/",
   Account: "/account/",
   Login: "/login/",
+  Forecast: "/forecast/",
   Details: "/details/",
   Registration: "/registration/",
   TermsAndServices: "/terms-and-services/",
