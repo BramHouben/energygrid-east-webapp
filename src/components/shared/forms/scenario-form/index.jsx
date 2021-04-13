@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import { Form, Button, Dropdown, FormGroup, Row, Col } from "react-bootstrap";
+import { Form, Dropdown, FormGroup, Row, Col, Button } from "react-bootstrap";
 
 import MapForm from "components/shared/maps/map-form";
 import data from "data/turbine.json";
+import "./index.css";
 
 export default class ScenarioForm extends Component {
   constructor(props) {
@@ -33,7 +34,6 @@ export default class ScenarioForm extends Component {
 
   componentDidMount() {
     window.addEventListener("map-click-coordinates", (e) => {
-      console.log("dit werkt", e.detail.coordinates);
       if (e.detail.coordinates !== null) {
         this.setState({ coordinates: e.detail.coordinates });
       }
@@ -45,14 +45,10 @@ export default class ScenarioForm extends Component {
   };
 
   handleScenario(event) {
-    console.log(event.target.value);
     this.setState({ scenarioItem: event.target.value });
-    console.log(this.state.scenarioItem);
   }
 
   handleSelectTurbine(event) {
-    console.log(event.target.value);
-
     if (data && data.turbines) {
       data.turbines.map((turbine) => {
         if (turbine.title === event.target.value) {
@@ -70,8 +66,11 @@ export default class ScenarioForm extends Component {
     }
   }
 
+  startSimulation() {
+    console.log("StartSImulatie");
+  }
+
   getScenarioForm(scenario) {
-    console.log(scenario);
     switch (scenario) {
       case "ADD_WIND_PARK":
         return (
@@ -157,6 +156,9 @@ export default class ScenarioForm extends Component {
             </Col>
           </Row>
         );
+      default:
+        console.log("Niks");
+        break;
     }
   }
 
@@ -242,6 +244,11 @@ export default class ScenarioForm extends Component {
                 </Form.Group>
               </Col>
             </Row>
+            <div className="scenario-btn">
+              <Button variant="primary" onClick={this.startSimulation}>
+                Start simulatie
+              </Button>
+            </div>
           </Form>
         ) : (
           <div></div>

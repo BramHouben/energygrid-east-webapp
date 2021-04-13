@@ -3,6 +3,12 @@ import ScenarioForm from "components/shared/forms/scenario-form";
 import "./index.css";
 
 export default class Modal extends Component {
+  componentDidMount() {
+    window.addEventListener("open-modal", () => {
+      this.openModel();
+    });
+  }
+
   openModel() {
     var modal = document.getElementById("myModal");
     modal.style.display = "block";
@@ -16,9 +22,6 @@ export default class Modal extends Component {
   render() {
     return (
       <div>
-        <button id="myBtn" onClick={() => this.openModel()}>
-          Open Modal
-        </button>
         <div id="myModal" className="modal-container">
           <div className="modal-items">
             <div className="modal-top">
