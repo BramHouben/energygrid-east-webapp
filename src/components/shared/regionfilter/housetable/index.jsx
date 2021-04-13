@@ -1,4 +1,5 @@
 import "./index.css";
+import { withTranslation } from "react-i18next";
 import Axios from "axios";
 import ApiActions from "services/shared/api/ApiActions";
 import React, { Component } from "react";
@@ -50,7 +51,7 @@ const RemotePagination = ({
               },
               {
                 dataField: "postcode",
-                text: "postcode",
+                text: "postalcode",
                 sort: true,
               },
               {
@@ -78,7 +79,7 @@ const RemotePagination = ({
   </div>
 );
 
-export default class housetable extends Component {
+class houseTable extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -136,6 +137,7 @@ export default class housetable extends Component {
     this.fetchData(this.state.page);
   }
   render() {
+    const { t } = this.props;
     let { items, sizePerPage, page, totalsize } = this.state;
     return (
       <div>
@@ -150,3 +152,4 @@ export default class housetable extends Component {
     );
   }
 }
+export default withTranslation("regionfilter")(houseTable);

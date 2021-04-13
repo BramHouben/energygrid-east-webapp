@@ -6,6 +6,9 @@ import dashboardNl from "./translations/nl/dashboard.json";
 import accountEn from "./translations/en/account.json";
 import accountNl from "./translations/nl/account.json";
 
+import regionfilterEn from "./translations/en/regionfilter.json";
+import regionfilterNl from "./translations/nl/regionfilter.json";
+
 import menuEn from "./translations/en/menu.json";
 import menuNl from "./translations/nl/menu.json";
 
@@ -21,12 +24,14 @@ i18n.init({
       account: accountEn,
       menu: menuEn,
       chart: chartEn,
+      regionfilter: regionfilterEn,
     },
     nl: {
       dashboard: dashboardNl,
       account: accountNl,
       menu: menuNl,
       chart: chartNl,
+      regionfilter: regionfilterNl,
     },
   },
 });

@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import Axios from "axios";
 import { Form } from "react-bootstrap";
 import ApiActions from "services/shared/api/ApiActions";
-
-export default class RegionCityTable extends Component {
+import { withTranslation } from "react-i18next";
+class regionCityDropdown extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -40,19 +40,19 @@ export default class RegionCityTable extends Component {
 
   render() {
     const { cities } = this.state;
-
+  const { t } = this.props;
     return (
       <div>
         {cities.length > 0 ? (
           <Form.Group controlId='formBasicSelectregion'>
-            <Form.Label>Select city</Form.Label>
+            <Form.Label>{t("select city")}</Form.Label>
             <Form.Control
               as='select'
               onChange={(e) => {
                 this.props.cityChanged(e.currentTarget.value);
               }}
             >
-              <option>select city</option>
+              <option>{t("select city")}</option>
               {cities.map((city) => (
                 <option key={city} value={city}>
                   {city}
@@ -61,9 +61,10 @@ export default class RegionCityTable extends Component {
             </Form.Control>
           </Form.Group>
         ) : (
-          <div>Select a city</div>
+            <div>{t("select city")}</div>
         )}
       </div>
     );
   }
 }
+export default withTranslation("regionfilter")(regionCityDropdown);

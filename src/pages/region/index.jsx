@@ -1,14 +1,14 @@
 import React, { Component } from "react";
-import { Container } from "react-bootstrap";
-import HouseTable from "components/shared/tables/housetable";
+import HouseTable from "components/shared/regionfilter/housetable";
 import "./index.css";
+import { withTranslation } from "react-i18next";
 import { Form } from "react-bootstrap";
-import ReactMapGL, { Marker, Popup } from "react-map-gl";
+import ReactMapGL, { Marker } from "react-map-gl";
 import Header from "components/shared/header";
 import FilterHeader from "components/shared/filter-header";
-import CityInformation from "components/shared/tables/cityinformation";
-import RegionTable from "components/shared/tables/RegionCityTable";
-export default class region extends Component {
+import CityInformation from "components/shared/regionfilter/cityinformation";
+import RegionCityDropdown from "components/shared/regionfilter/regioncitydropdown";
+class region extends Component {
   constructor(props) {
     super(props);
 
@@ -68,7 +68,7 @@ export default class region extends Component {
     if (!this.state.items.length > 1) {
       return <div />;
     }
-
+    const { t } = this.props;
     const {
       regions,
       currentregion,
@@ -87,14 +87,14 @@ export default class region extends Component {
         </div>
         <div id='regiondetailsinfo'>
           <Form.Group controlId='formBasicSelectregion'>
-            <Form.Label>Select region</Form.Label>
+            <Form.Label>{t("select region")}</Form.Label>
             <Form.Control
               as='select'
               onChange={(e) => {
                 this.regionchanged(e.target.value);
               }}
             >
-              <option>Select region</option>
+              <option>{t("select region")}</option>
               {regions.map((region) => (
                 <option key={region} value={region}>
                   {region}
@@ -103,10 +103,10 @@ export default class region extends Component {
             </Form.Control>
           </Form.Group>
           {currentregion !== "" ? (
-            <RegionTable
+            <RegionCityDropdown
               currentregion={currentregion}
               cityChanged={(currentCity) => this.cityChanged(currentCity)}
-            ></RegionTable>
+            ></RegionCityDropdown>
           ) : (
             <div></div>
           )}
@@ -158,34 +158,9 @@ export default class region extends Component {
           ) : (
             <div></div>
           )}
-
-          {/* {this.selectedhouses ? (
-                      <Popup
-                        className='popup'
-                        latitude={this.selectedhouses.coordinates[1]}
-                        longitude={this.selectedhouses.coordinates[0]}
-                        onClose={() => {
-                          this.setState({
-                            selectedhouses: null,
-                          });
-                        }}
-                      >
-                        <div id='popup-items'>
-                          <h4>{this.selectedhouses.street}</h4>
-                          <p>
-                            {this.selectedhouses.region}{" "}
-                            {this.selectedhouses.postcode}{" "}
-                            {this.selectedhouses.number}{" "}
-                          </p>
-                          <p>
-                            <b>Province: </b>
-                            {this.selectedhouses.region}
-                          </p>
-                        </div>
-                      </Popup>
-                    ) : null} */}
         </div>
       </div>
     );
   }
 }
+export default withTranslation("regionfilter")(region);
