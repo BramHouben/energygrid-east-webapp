@@ -63,7 +63,7 @@ class cityInformation extends Component {
                   <CountUp end={this.state.countHouses} />
                 </Col>
                 <Col>
-                  <h3>{t("how many have sonar panals")}</h3>
+                  <h3>{t("how many have solar panals")}</h3>
                   <img
                     height='50px'
                     src='/assets/solarpark/solar-panel.png'

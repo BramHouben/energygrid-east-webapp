@@ -13,7 +13,7 @@ const actions = {
   CityInfo: `${region}cityinfo/`,
   CityInfoStats: `${region}cityinfostats/`,
   AllCitiesRegion: `${region}citiesregion/`,
-  StreetInfo: `${region}streetinfo`,
+  StreetInfo: `${region}streetinfo/`,
   Login: `${authentication}login/`,
 };
 
