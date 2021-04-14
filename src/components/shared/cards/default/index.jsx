@@ -50,7 +50,7 @@ class DefaultCard extends React.Component {
         >
           Verwachte misgelopen productie:
           <HiArrowDown size={30} style={{ color: "red" }} />
-          {result} Kilowatt
+          {result.toFixed(0)} Kilowatt
         </div>
       );
     }
@@ -65,7 +65,7 @@ class DefaultCard extends React.Component {
         {" "}
         Verwachte productie:
         <HiArrowUp size={30} style={{ color: "green" }} />
-        {result} Kilowatt
+        {result.toFixed(0)} Kilowatt
       </div>
     );
   }
@@ -94,7 +94,9 @@ class DefaultCard extends React.Component {
         const color = this.generateRandomColor();
 
         let dataset = {
-          label: !!simulation.turbineId
+          label: !!simulation.name
+            ? simulation.name
+            : !!simulation.turbineId
             ? "Turbine Id: " + simulation.turbineId
             : "Undefined",
           fill: false,
@@ -109,10 +111,7 @@ class DefaultCard extends React.Component {
       }
 
       chart.data.labels = chartLabels;
-      chart.options.title.text =
-        result.length > 1
-          ? scenario.description + ", Aantal turbines: " + result.length
-          : scenario.description;
+      chart.options.title.text = scenario.description;
       chart.options.scales.yAxes[0].scaleLabel.labelString =
         result.length > 1
           ? "Gemiddelde opwekking per turbine in KwH"

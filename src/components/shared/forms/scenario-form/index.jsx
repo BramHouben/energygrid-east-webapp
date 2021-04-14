@@ -7,6 +7,11 @@ import "./index.css";
 import { getFormData } from "services/shared/form-data-helper";
 
 import Axios from "axios";
+import Datetime from "react-datetime";
+import moment from "moment";
+import "moment/locale/nl";
+
+import "react-datetime/css/react-datetime.css";
 
 export default class ScenarioForm extends Component {
   constructor(props) {
@@ -27,12 +32,15 @@ export default class ScenarioForm extends Component {
         },
         {
           name: "TURN_OFF_WIND_TURBINE",
-          value: "Zet winmolen tijdelijk uit",
+          value: "Zet windmolen tijdelijk uit",
         },
       ],
       coordinates: [],
       selectedTurbine: null,
+      startDate: null,
     };
+
+    this.handleStartChange = this.handleStartChange.bind(this);
   }
 
   componentDidMount() {
@@ -49,6 +57,10 @@ export default class ScenarioForm extends Component {
 
   handleScenario(event) {
     this.setState({ scenarioItem: event.target.value });
+  }
+
+  handleStartChange(date) {
+    this.setState({ startDate: date });
   }
 
   handleSelectTurbine(event) {
@@ -72,26 +84,23 @@ export default class ScenarioForm extends Component {
   startSimulation(e) {
     e.preventDefault();
     const formDataObj = getFormData(e);
-
     if (!!formDataObj) {
+      let url = "http://localhost:8081/scenario/wind/create";
       formDataObj.coordinates = JSON.parse(formDataObj.coordinates);
       formDataObj.type = parseFloat(formDataObj.type);
-      if (!formDataObj.windTurbine) {
-        formDataObj.windTurbine = {};
-        formDataObj.windTurbine.coordinates = formDataObj.coordinates;
-        formDataObj.windTurbine.type = formDataObj.type;
-      }
 
-      if (!!formDataObj.windTurbine) {
+      if (!!formDataObj.windTurbine && formDataObj.windTurbine !== "null") {
         let windTurbine = JSON.parse(formDataObj.windTurbine);
         let newWindTurbine = {};
-
         newWindTurbine.turbineId = parseInt(windTurbine.id);
         newWindTurbine.description = windTurbine.text;
         newWindTurbine.coordinates = formDataObj.coordinates;
         newWindTurbine.type = formDataObj.type;
-
         formDataObj.windTurbine = newWindTurbine;
+      } else {
+        formDataObj.windTurbine = {};
+        formDataObj.windTurbine.coordinates = formDataObj.coordinates;
+        formDataObj.windTurbine.type = formDataObj.type;
       }
 
       if (!!formDataObj.turbineId) {
@@ -102,9 +111,35 @@ export default class ScenarioForm extends Component {
         formDataObj.amount = parseInt(formDataObj.amount);
       }
 
-      console.log(formDataObj);
+      if (!!formDataObj.from && formDataObj.hours) {
+        console.log(formDataObj.from + ":" + formDataObj.hours);
+        let dates = [];
+        let date = new Date(formDataObj.from);
+        for (var i = 0; i <= parseInt(formDataObj.hours); i++) {
+          let newDate = new Date(date.valueOf() + i * 1000 * 60 * 60);
+          let year = newDate.getFullYear();
+          let month = ("0" + (newDate.getMonth() + 1)).slice(-2);
+          let day = ("0" + newDate.getDate()).slice(-2);
+          let hours = "0" + newDate.getHours();
+          let minutes = "0" + newDate.getMinutes();
 
-      Axios.post(`http://localhost:8081/scenario/wind/create`, {
+          let formattedTime =
+            year +
+            "-" +
+            month +
+            "-" +
+            day +
+            "T" +
+            hours.substr(-2) +
+            ":" +
+            minutes.substr(-2);
+          dates.push(formattedTime);
+        }
+
+        url = url + "?times=" + dates.join();
+      }
+
+      Axios.post(url, {
         name: formDataObj.name,
         scenarioType: formDataObj.scenarioType,
         description: formDataObj.description,
@@ -260,6 +295,75 @@ export default class ScenarioForm extends Component {
             </Col>
           </Row>
         );
+      case "TURN_OFF_WIND_TURBINE":
+        return (
+          <Row>
+            <Col>
+              <FormGroup>
+                <Form.Label>Selecteer turbine</Form.Label>
+                <Form.Control
+                  as="select"
+                  required
+                  onChange={this.handleSelectTurbine.bind(this)}
+                >
+                  <option>---Select---</option>
+                  {data &&
+                    data.turbines &&
+                    data.turbines.map((turbine) => {
+                      return (
+                        <option value={turbine.title}>{turbine.title}</option>
+                      );
+                    })}
+                </Form.Control>
+              </FormGroup>
+            </Col>
+            <Col>
+              <Form.Group>
+                <Form.Label>Beschrijving</Form.Label>
+                <Form.Control
+                  placeholder="description"
+                  name="description"
+                  type="text"
+                  value={
+                    this.state.selectedTurbine &&
+                    this.state.selectedTurbine.text
+                  }
+                />
+              </Form.Group>
+            </Col>
+            <Col>
+              <Form.Group>
+                <Form.Label>Type turbine</Form.Label>
+                <Form.Control
+                  placeholder="1.8"
+                  name="type"
+                  type="text"
+                  value={
+                    this.state.selectedTurbine &&
+                    this.state.selectedTurbine.type.toFixed(1)
+                  }
+                />
+              </Form.Group>
+            </Col>
+            <Col>
+              <FormGroup>
+                <Form.Label>Van: </Form.Label>
+                <Datetime
+                  name="from"
+                  locale="nl"
+                  value={this.state.startDate}
+                  onChange={this.handleStartChange}
+                />
+              </FormGroup>
+            </Col>
+            <Col>
+              <FormGroup>
+                <Form.Label>Aantal uren: </Form.Label>
+                <Form.Control placeholder="1" name="hours" type="number" />
+              </FormGroup>
+            </Col>
+          </Row>
+        );
       default:
         console.log("Niks");
         break;
@@ -269,7 +373,8 @@ export default class ScenarioForm extends Component {
   getJson() {
     const json = this.state.selectedTurbine;
     console.log(json);
-    return JSON.stringify(json);
+    if (json) return JSON.stringify(json);
+    return null;
   }
 
   getCoordinatesJson() {
@@ -283,6 +388,37 @@ export default class ScenarioForm extends Component {
 
     const result = { x: json[1], y: json[0] };
     return JSON.stringify(result);
+  }
+
+  getFromJson() {
+    let json = this.state.startDate;
+    if (!!json) {
+      json = this.getFormattedDate(json);
+    }
+    return json;
+  }
+
+  getFormattedDate(d) {
+    let date = new Date(d);
+
+    let year = date.getFullYear();
+    let month = ("0" + (date.getMonth() + 1)).slice(-2);
+    let day = ("0" + date.getDate()).slice(-2);
+    let hours = "0" + date.getHours();
+    let minutes = "0" + date.getMinutes();
+
+    let formattedTime =
+      year +
+      "-" +
+      month +
+      "-" +
+      day +
+      "T" +
+      hours.substr(-2) +
+      ":" +
+      minutes.substr(-2);
+
+    return formattedTime;
   }
 
   render() {
@@ -396,6 +532,12 @@ export default class ScenarioForm extends Component {
               type="hidden"
               name="coordinates"
               value={this.getCoordinatesJson()}
+              data-cast="json"
+            />
+            <Form.Control
+              type="hidden"
+              name="from"
+              value={this.getFromJson()}
               data-cast="json"
             />
           </Form>
