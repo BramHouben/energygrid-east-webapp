@@ -30,28 +30,39 @@ export default class Location extends Component {
   }
 
   handleSelect = (e) => {
+    const coordinates = this.getCoordinates(e);
     window.dispatchEvent(
       new CustomEvent("weather-header", {
         bubbles: true,
         composed: true,
-        detail: { location: e },
+        detail: { coordinates: coordinates, city: e },
       })
     );
   };
+
+  getCoordinates(e) {
+    let coordinates;
+    this.state.cities.forEach((city) => {
+      if (city.location == e) {
+        coordinates = city.coordinates;
+      }
+    });
+    return coordinates;
+  }
 
   render() {
     let { cities } = this.state;
 
     return (
-      <div className="location-container">
+      <div className='location-container'>
         <Dropdown onSelect={this.handleSelect}>
-          <Dropdown.Toggle variant="secondary" id="dropdown-basic">
+          <Dropdown.Toggle variant='secondary' id='dropdown-basic'>
             Kies locatie
           </Dropdown.Toggle>
 
           <Dropdown.Menu>
             {cities.map((city) => (
-              <Dropdown.Item eventKey={city.location}>
+              <Dropdown.Item key={city.location} eventKey={city.location}>
                 {city.location}
               </Dropdown.Item>
             ))}

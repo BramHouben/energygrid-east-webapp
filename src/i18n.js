@@ -6,11 +6,20 @@ import dashboardNl from "./translations/nl/dashboard.json";
 import accountEn from "./translations/en/account.json";
 import accountNl from "./translations/nl/account.json";
 
+import regionfilterEn from "./translations/en/regionfilter.json";
+import regionfilterNl from "./translations/nl/regionfilter.json";
+
 import menuEn from "./translations/en/menu.json";
 import menuNl from "./translations/nl/menu.json";
 
 import chartEn from "./translations/en/chart.json";
 import chartNl from "./translations/nl/chart.json";
+
+import registrationEn from "./translations/en/registration.json";
+import registrationNl from "./translations/nl/registration.json";
+
+import termsAndServicesEn from "./translations/en/terms-and-services.json";
+import termsAndServicesNl from "./translations/nl/terms-and-services.json";
 
 i18n.init({
   interpolation: { escapeValue: false }, // React already does escaping
@@ -21,12 +30,18 @@ i18n.init({
       account: accountEn,
       menu: menuEn,
       chart: chartEn,
+      regionfilter: regionfilterEn,
+      registration: registrationEn,
+      termsAndServices: termsAndServicesEn,
     },
     nl: {
       dashboard: dashboardNl,
       account: accountNl,
       menu: menuNl,
       chart: chartNl,
+      regionfilter: regionfilterNl,
+      registration: registrationNl,
+      termsAndServices: termsAndServicesNl,
     },
   },
 });

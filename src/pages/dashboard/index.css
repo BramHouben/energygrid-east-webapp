@@ -9,7 +9,14 @@
   height: 100px;
 }
 
+<<<<<<< HEAD
 .scenario-container {
   margin: 40px;
   text-align: center;
+=======
+.chartRow{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+>>>>>>> e4d928ca9eb9bf3a88efd0338c4370d4eeb3f5f9
 }
