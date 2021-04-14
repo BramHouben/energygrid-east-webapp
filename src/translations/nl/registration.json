@@ -1,0 +1,18 @@
+{
+  "page-name": "Registratie",
+  "username-label": "Gebruikersnaam",
+  "username-placeholder": "Jan",
+  "password-label": "Wachtwoord",
+  "repeat-password-label": "Herhaal wachtwoord",
+  "password-placeholder": "*****",
+  "email-label": "Email",
+  "email-placeholder": "example@example.com",
+  "translation-label": "Taal",
+  "terms-and-services-label": "Gebruikersovereenkomst",
+  "terms-and-services-checkbox": "Ik accepteer de gebruikersovereenkomst",
+  "submit-btn": "Registeren",
+  "password-mismatch": "Wachtwoorden komen niet overeen",
+  "registration-success": "Account aangemaakt",
+  "registration-duplicate": "Gebruikersnaam of email al in gebruik",
+  "registration-failure": "Registratie niet gelukt"
+}
