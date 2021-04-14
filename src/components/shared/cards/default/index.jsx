@@ -50,7 +50,7 @@ class DefaultCard extends React.Component {
         >
           Verwachte misgelopen productie:
           <HiArrowDown size={30} style={{ color: "red" }} />
-          {result} KwH
+          {result} Kilowatt
         </div>
       );
     }
@@ -65,7 +65,7 @@ class DefaultCard extends React.Component {
         {" "}
         Verwachte productie:
         <HiArrowUp size={30} style={{ color: "green" }} />
-        {result} KwH
+        {result} Kilowatt
       </div>
     );
   }
@@ -107,8 +107,6 @@ class DefaultCard extends React.Component {
 
         datasets = [...datasets, dataset];
       }
-
-      console.log(chart);
 
       chart.data.labels = chartLabels;
       chart.options.title.text =

@@ -4,6 +4,7 @@ import { Form, Dropdown, FormGroup, Row, Col, Button } from "react-bootstrap";
 import MapForm from "components/shared/maps/map-form";
 import data from "data/turbine.json";
 import "./index.css";
+import { getFormData } from "services/shared/form-data-helper";
 
 export default class ScenarioForm extends Component {
   constructor(props) {
@@ -66,8 +67,20 @@ export default class ScenarioForm extends Component {
     }
   }
 
-  startSimulation() {
-    console.log("StartSImulatie");
+  startSimulation(e) {
+    e.preventDefault();
+    const formDataObj = getFormData(e);
+
+    console.log(this.state.coordinates);
+
+    if (!!formDataObj) {
+      formDataObj.coordinates = {
+        x: this.state.coordinates[1],
+        y: this.state.coordinates[0],
+      };
+
+      console.log(formDataObj);
+    }
   }
 
   getScenarioForm(scenario) {
@@ -80,6 +93,7 @@ export default class ScenarioForm extends Component {
                 <Form.Label>Beschrijving</Form.Label>
                 <Form.Control
                   placeholder="description"
+                  name="description"
                   type="text"
                   value={
                     this.state.selectedTurbine &&
@@ -91,13 +105,22 @@ export default class ScenarioForm extends Component {
             <Col>
               <Form.Group>
                 <Form.Label>Aantal turbines</Form.Label>
-                <Form.Control placeholder="Amount" type="number" />
+                <Form.Control
+                  placeholder="Amount"
+                  name="amount"
+                  type="number"
+                />
               </Form.Group>
             </Col>
             <Col>
               <FormGroup>
                 <Form.Label>Type turbine</Form.Label>
-                <Form.Control as="select" required defaultValue="Kies...">
+                <Form.Control
+                  name="type"
+                  as="select"
+                  required
+                  defaultValue="Kies..."
+                >
                   <option>1.8</option>
                   <option>2.0</option>
                   <option>3.0</option>
@@ -114,6 +137,7 @@ export default class ScenarioForm extends Component {
                 <Form.Label>Beschrijving</Form.Label>
                 <Form.Control
                   placeholder="description"
+                  name="description"
                   type="text"
                   value={
                     this.state.selectedTurbine &&
@@ -125,7 +149,12 @@ export default class ScenarioForm extends Component {
             <Col>
               <FormGroup>
                 <Form.Label>Type turbine</Form.Label>
-                <Form.Control as="select" required defaultValue="Kies...">
+                <Form.Control
+                  name="type"
+                  as="select"
+                  required
+                  defaultValue="Kies..."
+                >
                   <option>1.8</option>
                   <option>2.0</option>
                   <option>3.0</option>
@@ -161,6 +190,7 @@ export default class ScenarioForm extends Component {
                 <Form.Label>Beschrijving</Form.Label>
                 <Form.Control
                   placeholder="description"
+                  name="description"
                   type="text"
                   value={
                     this.state.selectedTurbine &&
@@ -175,6 +205,7 @@ export default class ScenarioForm extends Component {
                 <Form.Label>Type turbine</Form.Label>
                 <Form.Control
                   placeholder="1.8"
+                  name="type"
                   type="text"
                   value={
                     this.state.selectedTurbine &&
@@ -192,8 +223,20 @@ export default class ScenarioForm extends Component {
     }
   }
 
+  getJson() {
+    const json = this.selectedTurbine;
+    console.log(json);
+    return JSON.stringify(json);
+  }
+
   render() {
-    let { selectedItem, items, scenarioItem, scenarioItems } = this.state;
+    let {
+      selectedItem,
+      items,
+      scenarioItem,
+      scenarioItems,
+      selectedTurbine,
+    } = this.state;
 
     return (
       <div id="scenario-form">
@@ -210,7 +253,7 @@ export default class ScenarioForm extends Component {
         </Dropdown>
         <br />
         {selectedItem && selectedItem === "Wind" ? (
-          <Form>
+          <Form onSubmit={this.startSimulation}>
             <Form.Group>
               <Form.Label>Naam</Form.Label>
               <Form.Control
@@ -223,6 +266,7 @@ export default class ScenarioForm extends Component {
             <FormGroup>
               <Form.Label>Selecteer scenario</Form.Label>
               <Form.Control
+                name="scenarioType"
                 as="select"
                 required
                 onChange={this.handleScenario.bind(this)}
@@ -250,24 +294,30 @@ export default class ScenarioForm extends Component {
                   <Form.Label>Lat</Form.Label>
                   <Form.Control
                     placeholder="lat"
+                    name="latitude"
                     type="number"
                     value={
                       this.state.coordinates[1] ||
-                      (this.state.selectedTurbine &&
-                        this.state.selectedTurbine.geometry &&
-                        this.state.selectedTurbine.geometry.coordinates[1])
+                      (selectedTurbine &&
+                      selectedTurbine.geometry &&
+                      selectedTurbine.geometry.coordinates[1]
+                        ? selectedTurbine.geometry.coordinates[1]
+                        : "")
                     }
                     disabled
                   />
                   <Form.Label>Lon</Form.Label>
                   <Form.Control
                     placeholder="lon"
+                    name="longitude"
                     type="number"
                     value={
                       this.state.coordinates[0] ||
-                      (this.state.selectedTurbine &&
-                        this.state.selectedTurbine.geometry &&
-                        this.state.selectedTurbine.geometry.coordinates[0])
+                      (selectedTurbine &&
+                      selectedTurbine.geometry &&
+                      selectedTurbine.geometry.coordinates[0]
+                        ? selectedTurbine.geometry.coordinates[0]
+                        : "")
                     }
                     disabled
                   />
@@ -275,10 +325,16 @@ export default class ScenarioForm extends Component {
               </Col>
             </Row>
             <div className="scenario-btn">
-              <Button variant="primary" onClick={this.startSimulation}>
+              <Button variant="primary" type="submit">
                 Start simulatie
               </Button>
             </div>
+            <Form.Control
+              type="hidden"
+              name="windTurbine"
+              value={this.getJson()}
+              data-cast="json"
+            />
           </Form>
         ) : (
           <div>{selectedItem === "Sun" ? "Currently not available" : ""}</div>
