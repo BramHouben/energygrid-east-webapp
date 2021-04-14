@@ -8,3 +8,9 @@
 .header-wrapper {
   height: 100px;
 }
+
+.chartRow{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
