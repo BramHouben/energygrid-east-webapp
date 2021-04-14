@@ -4,5 +4,6 @@
   "logout": "Afmelden",
   "details": "Zonneparken",
   "regiondetails": "Regio details",
-  "simulation": "Simulatie"
+  "simulation": "Simulatie",
+  "forecast": "Weers verwachting"
 }

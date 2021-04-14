@@ -4,5 +4,6 @@
   "logout": "Logout",
   "details": "Solarparks",
   "regiondetails": "Region details",
-  "simulation": "Simulation"
+  "simulation": "Simulation",
+  "forecast": "Forecast"
 }
