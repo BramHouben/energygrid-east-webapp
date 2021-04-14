@@ -9,11 +9,11 @@ const region = `${apiUrl}region/`;
 const actions = {
   User: user,
   CurrentWeather: `${weather}current/`,
-  ProvinceInfo: `${region}provinceinfo/`,
-  CityInfo: `${region}cityinfo/`,
-  CityInfoStats: `${region}cityinfostats/`,
-  AllCitiesRegion: `${region}citiesregion/`,
-  StreetInfo: `${region}streetinfo/`,
+  ProvinceInfo: `${region}province/info/`,
+  CityInfo: `${region}city/info/`,
+  CityInfoStats: `${region}city/stats/`,
+  AllCitiesRegion: `${region}cities/region/`,
+  StreetInfo: `${region}street/info/`,
   Login: `${authentication}login/`,
 };
 
