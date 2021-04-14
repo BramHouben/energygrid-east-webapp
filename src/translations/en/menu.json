@@ -3,6 +3,7 @@
   "account": "Account",
   "logout": "Logout",
   "details": "Solarparks",
+  "regiondetails": "Region details",
   "simulation": "Simulation",
   "forecast": "Forecast"
 }

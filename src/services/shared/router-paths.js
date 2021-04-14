@@ -6,6 +6,7 @@ const paths = {
   Login: "/login/",
   Forecast: "/forecast/",
   Details: "/details/",
+  Region: "/region/",
   Registration: "/registration/",
   TermsAndServices: "/terms-and-services/",
 };
