@@ -1,38 +1,35 @@
 import React, { Component } from "react";
-import { Form, Dropdown, FormGroup, Row, Col, Button } from "react-bootstrap";
-
-import MapForm from "components/shared/maps/map-form";
-import data from "data/turbine.json";
-import "./index.css";
+import { withTranslation } from "react-i18next";
 import { getFormData } from "services/shared/form-data-helper";
-
+import { Form, Dropdown, FormGroup, Row, Col, Button } from "react-bootstrap";
 import Axios from "axios";
+import data from "data/turbine.json";
 import Datetime from "react-datetime";
-import moment from "moment";
+import MapForm from "components/shared/maps/map-form";
+import "./index.css";
 import "moment/locale/nl";
-
 import "react-datetime/css/react-datetime.css";
 
-export default class ScenarioForm extends Component {
+class ScenarioForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
       selectedItem: "",
-      items: ["Wind", "Sun"],
+      items: ["wind", "sun"],
       scenarioItem: "ADD_WIND_PARK",
       scenarioItems: [
-        { name: "ADD_WIND_PARK", value: "Windpark toevoegen" },
+        { name: "ADD_WIND_PARK", value: "add_windpark" },
         {
           name: "ADD_WIND_TURBINE",
-          value: "Windmolen toevoegen",
+          value: "add_turbine",
         },
         {
           name: "REMOVE_WIND_TURBINE",
-          value: "Windmolen verwijderen",
+          value: "remove_turbine",
         },
         {
           name: "TURN_OFF_WIND_TURBINE",
-          value: "Zet windmolen tijdelijk uit",
+          value: "turn_off_turbine",
         },
       ],
       coordinates: [],
@@ -149,224 +146,22 @@ export default class ScenarioForm extends Component {
         coordinates: formDataObj.coordinates,
       })
         .then((response) => {
-          console.log(response);
+          if (response.status === 200) {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+
+            window.dispatchEvent(
+              new CustomEvent("refresh-create-scenario", {
+                bubbles: true,
+                composed: true,
+                detail: {},
+              })
+            );
+          }
         })
         .catch(() => {
           console.log("Werkt niet");
         });
-    }
-  }
-
-  getScenarioForm(scenario) {
-    switch (scenario) {
-      case "ADD_WIND_PARK":
-        return (
-          <Row>
-            <Col>
-              <Form.Group>
-                <Form.Label>Beschrijving</Form.Label>
-                <Form.Control
-                  placeholder="description"
-                  name="description"
-                  type="text"
-                  value={
-                    this.state.selectedTurbine &&
-                    this.state.selectedTurbine.text
-                  }
-                />
-              </Form.Group>
-            </Col>
-            <Col>
-              <Form.Group>
-                <Form.Label>Aantal turbines</Form.Label>
-                <Form.Control
-                  placeholder="Amount"
-                  name="amount"
-                  type="number"
-                />
-              </Form.Group>
-            </Col>
-            <Col>
-              <FormGroup>
-                <Form.Label>Type turbine</Form.Label>
-                <Form.Control
-                  name="type"
-                  as="select"
-                  required
-                  defaultValue="Kies..."
-                >
-                  <option>1.8</option>
-                  <option>2.0</option>
-                  <option>3.0</option>
-                </Form.Control>
-              </FormGroup>
-            </Col>
-          </Row>
-        );
-      case "ADD_WIND_TURBINE":
-        return (
-          <Row>
-            <Col>
-              <Form.Group>
-                <Form.Label>Id</Form.Label>
-                <Form.Control placeholder="1" name="turbineId" type="number" />
-              </Form.Group>
-            </Col>
-            <Col>
-              <Form.Group>
-                <Form.Label>Beschrijving</Form.Label>
-                <Form.Control
-                  placeholder="description"
-                  name="description"
-                  type="text"
-                  value={
-                    this.state.selectedTurbine &&
-                    this.state.selectedTurbine.text
-                  }
-                />
-              </Form.Group>
-            </Col>
-            <Col>
-              <FormGroup>
-                <Form.Label>Type turbine</Form.Label>
-                <Form.Control
-                  name="type"
-                  as="select"
-                  required
-                  defaultValue="Kies..."
-                >
-                  <option>1.8</option>
-                  <option>2.0</option>
-                  <option>3.0</option>
-                </Form.Control>
-              </FormGroup>
-            </Col>
-          </Row>
-        );
-      case "REMOVE_WIND_TURBINE":
-        return (
-          <Row>
-            <Col>
-              <FormGroup>
-                <Form.Label>Selecteer turbine</Form.Label>
-                <Form.Control
-                  as="select"
-                  required
-                  onChange={this.handleSelectTurbine.bind(this)}
-                >
-                  <option>---Select---</option>
-                  {data &&
-                    data.turbines &&
-                    data.turbines.map((turbine) => {
-                      return (
-                        <option value={turbine.title}>{turbine.title}</option>
-                      );
-                    })}
-                </Form.Control>
-              </FormGroup>
-            </Col>
-            <Col>
-              <Form.Group>
-                <Form.Label>Beschrijving</Form.Label>
-                <Form.Control
-                  placeholder="description"
-                  name="description"
-                  type="text"
-                  value={
-                    this.state.selectedTurbine &&
-                    this.state.selectedTurbine.text
-                  }
-                />
-              </Form.Group>
-            </Col>
-            <Col>
-              <Form.Group>
-                <Form.Label>Type turbine</Form.Label>
-                <Form.Control
-                  placeholder="1.8"
-                  name="type"
-                  type="text"
-                  value={
-                    this.state.selectedTurbine &&
-                    this.state.selectedTurbine.type.toFixed(1)
-                  }
-                />
-              </Form.Group>
-            </Col>
-          </Row>
-        );
-      case "TURN_OFF_WIND_TURBINE":
-        return (
-          <Row>
-            <Col>
-              <FormGroup>
-                <Form.Label>Selecteer turbine</Form.Label>
-                <Form.Control
-                  as="select"
-                  required
-                  onChange={this.handleSelectTurbine.bind(this)}
-                >
-                  <option>---Select---</option>
-                  {data &&
-                    data.turbines &&
-                    data.turbines.map((turbine) => {
-                      return (
-                        <option value={turbine.title}>{turbine.title}</option>
-                      );
-                    })}
-                </Form.Control>
-              </FormGroup>
-            </Col>
-            <Col>
-              <Form.Group>
-                <Form.Label>Beschrijving</Form.Label>
-                <Form.Control
-                  placeholder="description"
-                  name="description"
-                  type="text"
-                  value={
-                    this.state.selectedTurbine &&
-                    this.state.selectedTurbine.text
-                  }
-                />
-              </Form.Group>
-            </Col>
-            <Col>
-              <Form.Group>
-                <Form.Label>Type turbine</Form.Label>
-                <Form.Control
-                  placeholder="1.8"
-                  name="type"
-                  type="text"
-                  value={
-                    this.state.selectedTurbine &&
-                    this.state.selectedTurbine.type.toFixed(1)
-                  }
-                />
-              </Form.Group>
-            </Col>
-            <Col>
-              <FormGroup>
-                <Form.Label>Van: </Form.Label>
-                <Datetime
-                  name="from"
-                  locale="nl"
-                  value={this.state.startDate}
-                  onChange={this.handleStartChange}
-                />
-              </FormGroup>
-            </Col>
-            <Col>
-              <FormGroup>
-                <Form.Label>Aantal uren: </Form.Label>
-                <Form.Control placeholder="1" name="hours" type="number" />
-              </FormGroup>
-            </Col>
-          </Row>
-        );
-      default:
-        console.log("Niks");
-        break;
     }
   }
 
@@ -421,6 +216,215 @@ export default class ScenarioForm extends Component {
     return formattedTime;
   }
 
+  getScenarioForm(scenario, translate) {
+    switch (scenario) {
+      case "ADD_WIND_PARK":
+        return (
+          <Row>
+            <Col>
+              <Form.Group>
+                <Form.Label>{translate("description")}</Form.Label>
+                <Form.Control
+                  placeholder={translate("description")}
+                  name="description"
+                  type="text"
+                  value={
+                    this.state.selectedTurbine &&
+                    this.state.selectedTurbine.text
+                  }
+                />
+              </Form.Group>
+            </Col>
+            <Col>
+              <Form.Group>
+                <Form.Label>{translate("number_of_turbines")}</Form.Label>
+                <Form.Control placeholder="1" name="amount" type="number" />
+              </Form.Group>
+            </Col>
+            <Col>
+              <FormGroup>
+                <Form.Label>Type turbine</Form.Label>
+                <Form.Control
+                  name="type"
+                  as="select"
+                  required
+                  defaultValue={translate("choose")}
+                >
+                  <option>1.8</option>
+                  <option>2.0</option>
+                  <option>3.0</option>
+                </Form.Control>
+              </FormGroup>
+            </Col>
+          </Row>
+        );
+      case "ADD_WIND_TURBINE":
+        return (
+          <Row>
+            <Col>
+              <Form.Group>
+                <Form.Label>{translate("id")}</Form.Label>
+                <Form.Control placeholder="1" name="turbineId" type="number" />
+              </Form.Group>
+            </Col>
+            <Col>
+              <Form.Group>
+                <Form.Label>{translate("description")}</Form.Label>
+                <Form.Control
+                  placeholder={translate("description")}
+                  name="description"
+                  type="text"
+                  value={
+                    this.state.selectedTurbine &&
+                    this.state.selectedTurbine.text
+                  }
+                />
+              </Form.Group>
+            </Col>
+            <Col>
+              <FormGroup>
+                <Form.Label>Type turbine</Form.Label>
+                <Form.Control
+                  name="type"
+                  as="select"
+                  required
+                  defaultValue={translate("choose")}
+                >
+                  <option>1.8</option>
+                  <option>2.0</option>
+                  <option>3.0</option>
+                </Form.Control>
+              </FormGroup>
+            </Col>
+          </Row>
+        );
+      case "REMOVE_WIND_TURBINE":
+        return (
+          <Row>
+            <Col>
+              <FormGroup>
+                <Form.Label>{translate("select_turbine")}</Form.Label>
+                <Form.Control
+                  as="select"
+                  required
+                  onChange={this.handleSelectTurbine.bind(this)}
+                >
+                  <option>{translate("select")}</option>
+                  {data &&
+                    data.turbines &&
+                    data.turbines.map((turbine) => {
+                      return (
+                        <option value={turbine.title}>{turbine.title}</option>
+                      );
+                    })}
+                </Form.Control>
+              </FormGroup>
+            </Col>
+            <Col>
+              <Form.Group>
+                <Form.Label>{translate("description")}</Form.Label>
+                <Form.Control
+                  placeholder={translate("description")}
+                  name="description"
+                  type="text"
+                  value={
+                    this.state.selectedTurbine &&
+                    this.state.selectedTurbine.text
+                  }
+                />
+              </Form.Group>
+            </Col>
+            <Col>
+              <Form.Group>
+                <Form.Label>Type turbine</Form.Label>
+                <Form.Control
+                  placeholder="1.8"
+                  name="type"
+                  type="text"
+                  value={
+                    this.state.selectedTurbine &&
+                    this.state.selectedTurbine.type.toFixed(1)
+                  }
+                />
+              </Form.Group>
+            </Col>
+          </Row>
+        );
+      case "TURN_OFF_WIND_TURBINE":
+        return (
+          <Row>
+            <Col>
+              <FormGroup>
+                <Form.Label>{translate("select_turbine")}</Form.Label>
+                <Form.Control
+                  as="select"
+                  required
+                  onChange={this.handleSelectTurbine.bind(this)}
+                >
+                  <option>{translate("select")}</option>
+                  {data &&
+                    data.turbines &&
+                    data.turbines.map((turbine) => {
+                      return (
+                        <option value={turbine.title}>{turbine.title}</option>
+                      );
+                    })}
+                </Form.Control>
+              </FormGroup>
+            </Col>
+            <Col>
+              <Form.Group>
+                <Form.Label>{translate("description")}</Form.Label>
+                <Form.Control
+                  placeholder={translate("description")}
+                  name="description"
+                  type="text"
+                  value={
+                    this.state.selectedTurbine &&
+                    this.state.selectedTurbine.text
+                  }
+                />
+              </Form.Group>
+            </Col>
+            <Col>
+              <Form.Group>
+                <Form.Label>Type turbine</Form.Label>
+                <Form.Control
+                  placeholder="1.8"
+                  name="type"
+                  type="text"
+                  value={
+                    this.state.selectedTurbine &&
+                    this.state.selectedTurbine.type.toFixed(1)
+                  }
+                />
+              </Form.Group>
+            </Col>
+            <Col>
+              <FormGroup>
+                <Form.Label>{translate("from")}</Form.Label>
+                <Datetime
+                  name="from"
+                  locale={localStorage.getItem("language")}
+                  value={this.state.startDate}
+                  onChange={this.handleStartChange}
+                />
+              </FormGroup>
+            </Col>
+            <Col>
+              <FormGroup>
+                <Form.Label>{translate("number_off_hours")}</Form.Label>
+                <Form.Control placeholder="1" name="hours" type="number" />
+              </FormGroup>
+            </Col>
+          </Row>
+        );
+      default:
+        console.log("Niks");
+        break;
+    }
+  }
+
   render() {
     let {
       selectedItem,
@@ -431,24 +435,27 @@ export default class ScenarioForm extends Component {
       coordinates,
     } = this.state;
 
+    const { t } = this.props;
+
     return (
       <div id="scenario-form">
         <Dropdown onSelect={this.handleSelect}>
           <Dropdown.Toggle variant="secondary">
-            {selectedItem ? selectedItem : "Kies categorie"}
+            {selectedItem ? t(selectedItem) : t("choose_category")}
           </Dropdown.Toggle>
 
           <Dropdown.Menu style={{ height: "auto" }}>
             {items.map((item) => (
-              <Dropdown.Item eventKey={item}>{item}</Dropdown.Item>
+              <Dropdown.Item eventKey={item}>{t(item)}</Dropdown.Item>
             ))}
           </Dropdown.Menu>
         </Dropdown>
         <br />
-        {selectedItem && selectedItem === "Wind" ? (
+        {(selectedItem && selectedItem === "Wind") ||
+        selectedItem === "wind" ? (
           <Form onSubmit={this.startSimulation}>
             <Form.Group>
-              <Form.Label>Naam</Form.Label>
+              <Form.Label>{t("name")}</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Scenario 1"
@@ -457,7 +464,7 @@ export default class ScenarioForm extends Component {
               />
             </Form.Group>
             <FormGroup>
-              <Form.Label>Selecteer scenario</Form.Label>
+              <Form.Label>{t("select_scenario")}</Form.Label>
               <Form.Control
                 name="scenarioType"
                 as="select"
@@ -467,18 +474,18 @@ export default class ScenarioForm extends Component {
                 {scenarioItems &&
                   scenarioItems.map((scenario) => {
                     return (
-                      <option value={scenario.name}>{scenario.value}</option>
+                      <option value={scenario.name}>{t(scenario.value)}</option>
                     );
                   })}
               </Form.Control>
             </FormGroup>
 
-            {this.getScenarioForm(scenarioItem)}
+            {this.getScenarioForm(scenarioItem, t)}
 
             <Row>
               <Col>
                 <Form.Group>
-                  <Form.Label>Coordinaten</Form.Label>
+                  <Form.Label>{t("coordinates")}</Form.Label>
                   <MapForm />
                 </Form.Group>
               </Col>
@@ -519,7 +526,7 @@ export default class ScenarioForm extends Component {
             </Row>
             <div className="scenario-btn">
               <Button variant="primary" type="submit">
-                Start simulatie
+                {t("start_simulation")}
               </Button>
             </div>
             <Form.Control
@@ -542,9 +549,15 @@ export default class ScenarioForm extends Component {
             />
           </Form>
         ) : (
-          <div>{selectedItem === "Sun" ? "Currently not available" : ""}</div>
+          <div>
+            {selectedItem === "Sun" || selectedItem === "sun"
+              ? t("unavailable")
+              : ""}
+          </div>
         )}
       </div>
     );
   }
 }
+
+export default withTranslation("scenario")(ScenarioForm);

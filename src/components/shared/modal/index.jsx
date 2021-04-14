@@ -1,8 +1,9 @@
 import React, { Component } from "react";
+import { withTranslation } from "react-i18next";
 import ScenarioForm from "components/shared/forms/scenario-form";
 import "./index.css";
 
-export default class Modal extends Component {
+class Modal extends Component {
   componentDidMount() {
     window.addEventListener("open-modal", () => {
       this.openModel();
@@ -20,12 +21,14 @@ export default class Modal extends Component {
   }
 
   render() {
+    const { t } = this.props;
+
     return (
       <div>
         <div id="myModal" className="modal-container">
           <div className="modal-items">
             <div className="modal-top">
-              <h2>Scenario toevoegen</h2>
+              <h2>{t("add_scenario")}</h2>
               <span className="modal-close" onClick={() => this.closeModel()}>
                 &times;
               </span>
@@ -39,3 +42,5 @@ export default class Modal extends Component {
     );
   }
 }
+
+export default withTranslation("scenario")(Modal);

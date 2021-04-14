@@ -34,50 +34,48 @@ class Menu extends Component {
     return (
       <div>
         <Button
-          id='open-menu-button'
-          className='link-btn corporate-identity-font'
-          type='button'
+          id="open-menu-button"
+          className="link-btn corporate-identity-font"
+          type="button"
           onClick={() => this.openNav()}
         >
           &#9776;
         </Button>
 
-        <div id='menu'>
+        <div id="menu">
           <button
-            className='closebtn link-btn'
-            type='button'
+            className="closebtn link-btn"
+            type="button"
             onClick={() => this.closeNav()}
           >
             &times;
           </button>
-          <div id='menu-links'>
-            <a key='dashboard' href='/'>
+          <div id="menu-links">
+            <a key="dashboard" href="/">
               {t("dashboard")}
             </a>
-            <a key='simulation' href={routerPaths.Simulation}>
+            <a key="simulation" href={routerPaths.Simulation}>
               {t("simulation")}
             </a>
-            <a key='regiondetails' href={routerPaths.Region}>
+            <a key="regiondetails" href={routerPaths.Region}>
               {t("regiondetails")}
             </a>
-            <a key='details' href={routerPaths.Details}>
+            <a key="details" href={routerPaths.Details}>
               {t("details")}
             </a>
-<<<<<<< HEAD
             <a key="map" href={routerPaths.Map}>
               {t("map")}
-=======
+            </a>
             <a key="forecast" href={routerPaths.Forecast}>
               {t("forecast")}
->>>>>>> e4d928ca9eb9bf3a88efd0338c4370d4eeb3f5f9
             </a>
             <a key="account" href={routerPaths.Account}>
               {t("account")}
             </a>
             <button
               onClick={() => this.logout()}
-              type='button'
-              className='link-btn'
+              type="button"
+              className="link-btn"
             >
               {t("logout")}
             </button>

@@ -4,15 +4,16 @@ import data from "../../data/chart.json";
 import Header from "components/shared/header";
 import FilterHeader from "components/shared/filter-header";
 import { Responsive, WidthProvider } from "react-grid-layout";
+import { withTranslation } from "react-i18next";
 import DefaultCard from "components/shared/cards/default";
 import "./index.css";
 import Modal from "components/shared/modal";
 import Axios from "axios";
-import { Card, Button, CardDeck, CardColumns } from "react-bootstrap";
+import { Card, Button, CardColumns } from "react-bootstrap";
 
 const ResponsiveReactGridLayout = WidthProvider(Responsive);
 
-export default class Dashboard extends React.Component {
+class Dashboard extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -24,6 +25,9 @@ export default class Dashboard extends React.Component {
   componentDidMount() {
     this.setState({ charts: data.charts });
     this.getLatestScenarios();
+    window.addEventListener("refresh-create-scenario", () => {
+      this.getLatestScenarios();
+    });
   }
 
   async getLatestScenarios() {
@@ -50,10 +54,10 @@ export default class Dashboard extends React.Component {
 
   render() {
     let { charts, data } = this.state;
-
+    const { t } = this.props;
     let layout;
 
-    var mq = window.matchMedia( "(max-width: 768px)" );
+    var mq = window.matchMedia("(max-width: 768px)");
     if (mq.matches) {
       layout = [
         { x: 0, y: 0, w: 8, h: 1 },
@@ -61,8 +65,7 @@ export default class Dashboard extends React.Component {
         { x: 0, y: 2, w: 8, h: 1 },
         { x: 0, y: 3, w: 8, h: 1 },
       ];
-    }
-    else {
+    } else {
       layout = [
         { x: 0, y: 0, w: 1, h: 1 },
         { x: 1, y: 0, w: 1, h: 1 },
@@ -115,7 +118,7 @@ export default class Dashboard extends React.Component {
                 <Card.Body>
                   <Card.Text>
                     <Button variant="primary" onClick={this.openModal}>
-                      Voeg een scenario toe
+                      {t("add_scenario")}
                     </Button>
                   </Card.Text>
                 </Card.Body>
@@ -128,3 +131,5 @@ export default class Dashboard extends React.Component {
     );
   }
 }
+
+export default withTranslation("scenario")(Dashboard);

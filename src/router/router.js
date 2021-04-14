@@ -5,7 +5,6 @@ import paths from "services/shared/router-paths";
 import Dashboard from "pages/dashboard";
 import Simulation from "pages/simulation";
 import Login from "pages/login";
-import Details from "pages/details";
 import Map from "pages/map";
 import Region from "pages/region";
 import Forecast from "pages/forecast";
@@ -21,7 +20,6 @@ const Router = () => (
       <Route path={paths.Registration} exact component={registration} />
       <Route path={paths.Login} exact component={Login} />
       <Route path={paths.Forecast} exact component={Forecast} />
-      <Route path={paths.Details} component={Details} />
       <Route path={paths.Map} exact component={Map} />
       <Route path={paths.Region} component={Region} />
       <Route path={paths.TermsAndServices} component={TermsAndServices} />

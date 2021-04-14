@@ -3,12 +3,8 @@
   "account": "Account",
   "logout": "Logout",
   "details": "Solarparks",
-<<<<<<< HEAD
-  "simulation": "Simulation",
-  "map": "Map"
-=======
+  "map": "Map",
   "regiondetails": "Region details",
   "simulation": "Simulation",
   "forecast": "Forecast"
->>>>>>> e4d928ca9eb9bf3a88efd0338c4370d4eeb3f5f9
 }

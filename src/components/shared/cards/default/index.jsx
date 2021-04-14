@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Button, CardDeck, CardColumns } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import { withTranslation } from "react-i18next";
 import ChartLine from "components/shared/charts/line";
 import ChartConfig from "data/line-chart-config.json";
@@ -38,7 +38,7 @@ class DefaultCard extends React.Component {
     );
   }
 
-  getIconUpOrDown(result) {
+  getIconUpOrDown(result, translate) {
     if (result < 0) {
       return (
         <div
@@ -48,7 +48,7 @@ class DefaultCard extends React.Component {
             textAlign: "left",
           }}
         >
-          Verwachte misgelopen productie:
+          {translate("expected_missed_production")}
           <HiArrowDown size={30} style={{ color: "red" }} />
           {result.toFixed(0)} Kilowatt
         </div>
@@ -63,7 +63,7 @@ class DefaultCard extends React.Component {
         }}
       >
         {" "}
-        Verwachte productie:
+        {translate("expected_production")}
         <HiArrowUp size={30} style={{ color: "green" }} />
         {result.toFixed(0)} Kilowatt
       </div>
@@ -76,7 +76,7 @@ class DefaultCard extends React.Component {
     //random color will be freshly served
   }
 
-  getChartData(scenario, index) {
+  getChartData(scenario, index, translate) {
     const data = this.state.data;
     let chart = data.charts.find((c) => c.id === index + 1);
     let result = scenario.simulationExpectationResult.simulationResults;
@@ -95,7 +95,7 @@ class DefaultCard extends React.Component {
 
         let dataset = {
           label: !!simulation.name
-            ? simulation.name
+            ? translate(simulation.name)
             : !!simulation.turbineId
             ? "Turbine Id: " + simulation.turbineId
             : "Undefined",
@@ -113,9 +113,9 @@ class DefaultCard extends React.Component {
       chart.data.labels = chartLabels;
       chart.options.title.text = scenario.description;
       chart.options.scales.yAxes[0].scaleLabel.labelString =
-        result.length > 1
-          ? "Gemiddelde opwekking per turbine in KwH"
-          : "Production in kWh";
+        result.length > 2
+          ? translate("average_production_per_turbine")
+          : translate("production_in_kwh");
       chart.data.key = simulation.turbineId ? simulation.turbineId : 0;
     }
     chart.data.key = scenario.scenarioId;
@@ -146,7 +146,8 @@ class DefaultCard extends React.Component {
                   }}
                 >
                   {this.getIconUpOrDown(
-                    scenario.simulationExpectationResult.kwTotalResult
+                    scenario.simulationExpectationResult.kwTotalResult,
+                    t
                   )}
                   {scenario.coordinates &&
                   scenario.coordinates.x &&
@@ -160,11 +161,12 @@ class DefaultCard extends React.Component {
                   )}
                 </div>
               </Card.Text>
-              {this.getChartData(scenario, id)}
+              {this.getChartData(scenario, id, t)}
             </Card.Body>
             <Card.Footer>
               <small className="text-muted">
-                <b>Aangemaakt op:</b> {this.getDateCreated(scenario.createdAt)}
+                <b>{t("created_at")}: </b>{" "}
+                {this.getDateCreated(scenario.createdAt)}
               </small>
             </Card.Footer>
           </Card>
