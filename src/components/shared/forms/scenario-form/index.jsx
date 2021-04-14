@@ -6,6 +6,8 @@ import data from "data/turbine.json";
 import "./index.css";
 import { getFormData } from "services/shared/form-data-helper";
 
+import Axios from "axios";
+
 export default class ScenarioForm extends Component {
   constructor(props) {
     super(props);
@@ -71,15 +73,52 @@ export default class ScenarioForm extends Component {
     e.preventDefault();
     const formDataObj = getFormData(e);
 
-    console.log(this.state.coordinates);
-
     if (!!formDataObj) {
-      formDataObj.coordinates = {
-        x: this.state.coordinates[1],
-        y: this.state.coordinates[0],
-      };
+      formDataObj.coordinates = JSON.parse(formDataObj.coordinates);
+      formDataObj.type = parseFloat(formDataObj.type);
+      if (!formDataObj.windTurbine) {
+        formDataObj.windTurbine = {};
+        formDataObj.windTurbine.coordinates = formDataObj.coordinates;
+        formDataObj.windTurbine.type = formDataObj.type;
+      }
+
+      if (!!formDataObj.windTurbine) {
+        let windTurbine = JSON.parse(formDataObj.windTurbine);
+        let newWindTurbine = {};
+
+        newWindTurbine.turbineId = parseInt(windTurbine.id);
+        newWindTurbine.description = windTurbine.text;
+        newWindTurbine.coordinates = formDataObj.coordinates;
+        newWindTurbine.type = formDataObj.type;
+
+        formDataObj.windTurbine = newWindTurbine;
+      }
+
+      if (!!formDataObj.turbineId) {
+        formDataObj.windTurbine.turbineId = parseInt(formDataObj.turbineId);
+      }
+
+      if (!!formDataObj.amount) {
+        formDataObj.amount = parseInt(formDataObj.amount);
+      }
 
       console.log(formDataObj);
+
+      Axios.post(`http://localhost:8081/scenario/wind/create`, {
+        name: formDataObj.name,
+        scenarioType: formDataObj.scenarioType,
+        description: formDataObj.description,
+        type: formDataObj.type,
+        windTurbine: formDataObj.windTurbine,
+        amount: formDataObj.amount,
+        coordinates: formDataObj.coordinates,
+      })
+        .then((response) => {
+          console.log(response);
+        })
+        .catch(() => {
+          console.log("Werkt niet");
+        });
     }
   }
 
@@ -132,6 +171,12 @@ export default class ScenarioForm extends Component {
       case "ADD_WIND_TURBINE":
         return (
           <Row>
+            <Col>
+              <Form.Group>
+                <Form.Label>Id</Form.Label>
+                <Form.Control placeholder="1" name="turbineId" type="number" />
+              </Form.Group>
+            </Col>
             <Col>
               <Form.Group>
                 <Form.Label>Beschrijving</Form.Label>
@@ -196,7 +241,6 @@ export default class ScenarioForm extends Component {
                     this.state.selectedTurbine &&
                     this.state.selectedTurbine.text
                   }
-                  disabled
                 />
               </Form.Group>
             </Col>
@@ -211,7 +255,6 @@ export default class ScenarioForm extends Component {
                     this.state.selectedTurbine &&
                     this.state.selectedTurbine.type.toFixed(1)
                   }
-                  disabled
                 />
               </Form.Group>
             </Col>
@@ -224,9 +267,22 @@ export default class ScenarioForm extends Component {
   }
 
   getJson() {
-    const json = this.selectedTurbine;
+    const json = this.state.selectedTurbine;
     console.log(json);
     return JSON.stringify(json);
+  }
+
+  getCoordinatesJson() {
+    let json;
+    if (!!this.state.coordinates) {
+      json = this.state.coordinates;
+    }
+    if (!!this.state.selectedTurbine) {
+      json = this.state.selectedTurbine.geometry.coordinates;
+    }
+
+    const result = { x: json[1], y: json[0] };
+    return JSON.stringify(result);
   }
 
   render() {
@@ -236,6 +292,7 @@ export default class ScenarioForm extends Component {
       scenarioItem,
       scenarioItems,
       selectedTurbine,
+      coordinates,
     } = this.state;
 
     return (
@@ -297,7 +354,7 @@ export default class ScenarioForm extends Component {
                     name="latitude"
                     type="number"
                     value={
-                      this.state.coordinates[1] ||
+                      coordinates[1] ||
                       (selectedTurbine &&
                       selectedTurbine.geometry &&
                       selectedTurbine.geometry.coordinates[1]
@@ -312,7 +369,7 @@ export default class ScenarioForm extends Component {
                     name="longitude"
                     type="number"
                     value={
-                      this.state.coordinates[0] ||
+                      coordinates[0] ||
                       (selectedTurbine &&
                       selectedTurbine.geometry &&
                       selectedTurbine.geometry.coordinates[0]
@@ -333,6 +390,12 @@ export default class ScenarioForm extends Component {
               type="hidden"
               name="windTurbine"
               value={this.getJson()}
+              data-cast="json"
+            />
+            <Form.Control
+              type="hidden"
+              name="coordinates"
+              value={this.getCoordinatesJson()}
               data-cast="json"
             />
           </Form>
