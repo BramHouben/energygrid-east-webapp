@@ -8,3 +8,14 @@
 .header-wrapper {
   height: 100px;
 }
+
+.scenario-container {
+  margin: 40px;
+  text-align: center;
+}
+
+.chartRow {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
