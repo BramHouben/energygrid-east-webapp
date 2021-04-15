@@ -4,7 +4,6 @@ import { withTranslation } from "react-i18next";
 import ChartLine from "components/shared/charts/line";
 import ChartConfig from "data/line-chart-config.json";
 import { HiArrowUp, HiArrowDown } from "react-icons/hi";
-import "./index.css";
 
 class DefaultCard extends React.Component {
   constructor(props) {
@@ -73,7 +72,6 @@ class DefaultCard extends React.Component {
   generateRandomColor() {
     var randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
     return randomColor;
-    //random color will be freshly served
   }
 
   getChartData(scenario, index, translate) {
@@ -96,9 +94,7 @@ class DefaultCard extends React.Component {
         let dataset = {
           label: !!simulation.name
             ? translate(simulation.name)
-            : !!simulation.turbineId
-            ? "Turbine Id: " + simulation.turbineId
-            : "Undefined",
+            : "Turbine Id: " + simulation.turbineId,
           fill: false,
           lineTension: 0.5,
           backgroundColor: color,
@@ -149,15 +145,11 @@ class DefaultCard extends React.Component {
                     scenario.simulationExpectationResult.kwTotalResult,
                     t
                   )}
-                  {scenario.coordinates &&
-                  scenario.coordinates.x &&
-                  scenario.coordinates.y ? (
+                  {!!scenario.coordinates && (
                     <div>
-                      Lat: {scenario.coordinates.x}, Lon:{" "}
+                      Lat: {scenario.coordinates.x}, Lon:
                       {scenario.coordinates.y}
                     </div>
-                  ) : (
-                    <div></div>
                   )}
                 </div>
               </Card.Text>

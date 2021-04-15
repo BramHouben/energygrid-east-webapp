@@ -78,27 +78,59 @@ class ScenarioForm extends Component {
     }
   }
 
+  checkFormTurbine(formDataObj) {
+    if (!!formDataObj.windTurbine && formDataObj.windTurbine !== "null") {
+      let windTurbine = JSON.parse(formDataObj.windTurbine);
+      let newWindTurbine = {};
+      newWindTurbine.turbineId = parseInt(windTurbine.id);
+      newWindTurbine.description = windTurbine.text;
+      newWindTurbine.coordinates = formDataObj.coordinates;
+      newWindTurbine.type = formDataObj.type;
+      return newWindTurbine;
+    }
+    let windTurbine = {};
+    windTurbine.coordinates = formDataObj.coordinates;
+    windTurbine.type = formDataObj.type;
+    return windTurbine;
+  }
+
+  createSimulation(url, formDataObj) {
+    Axios.post(url, {
+      name: formDataObj.name,
+      scenarioType: formDataObj.scenarioType,
+      description: formDataObj.description,
+      type: formDataObj.type,
+      windTurbine: formDataObj.windTurbine,
+      amount: formDataObj.amount,
+      coordinates: formDataObj.coordinates,
+    })
+      .then((response) => {
+        if (response.status === 200) {
+          var modal = document.getElementById("myModal");
+          modal.style.display = "none";
+
+          window.dispatchEvent(
+            new CustomEvent("refresh-create-scenario", {
+              bubbles: true,
+              composed: true,
+              detail: {},
+            })
+          );
+        }
+      })
+      .catch(() => {
+        console.log("Werkt niet");
+      });
+  }
+
   startSimulation(e) {
     e.preventDefault();
-    const formDataObj = getFormData(e);
+    let formDataObj = getFormData(e);
     if (!!formDataObj) {
       let url = "http://localhost:8081/scenario/wind/create";
       formDataObj.coordinates = JSON.parse(formDataObj.coordinates);
       formDataObj.type = parseFloat(formDataObj.type);
-
-      if (!!formDataObj.windTurbine && formDataObj.windTurbine !== "null") {
-        let windTurbine = JSON.parse(formDataObj.windTurbine);
-        let newWindTurbine = {};
-        newWindTurbine.turbineId = parseInt(windTurbine.id);
-        newWindTurbine.description = windTurbine.text;
-        newWindTurbine.coordinates = formDataObj.coordinates;
-        newWindTurbine.type = formDataObj.type;
-        formDataObj.windTurbine = newWindTurbine;
-      } else {
-        formDataObj.windTurbine = {};
-        formDataObj.windTurbine.coordinates = formDataObj.coordinates;
-        formDataObj.windTurbine.type = formDataObj.type;
-      }
+      formDataObj.windTurbine = this.checkFormTurbine(formDataObj);
 
       if (!!formDataObj.turbineId) {
         formDataObj.windTurbine.turbineId = parseInt(formDataObj.turbineId);
@@ -114,54 +146,12 @@ class ScenarioForm extends Component {
         let date = new Date(formDataObj.from);
         for (var i = 0; i <= parseInt(formDataObj.hours); i++) {
           let newDate = new Date(date.valueOf() + i * 1000 * 60 * 60);
-          let year = newDate.getFullYear();
-          let month = ("0" + (newDate.getMonth() + 1)).slice(-2);
-          let day = ("0" + newDate.getDate()).slice(-2);
-          let hours = "0" + newDate.getHours();
-          let minutes = "0" + newDate.getMinutes();
-
-          let formattedTime =
-            year +
-            "-" +
-            month +
-            "-" +
-            day +
-            "T" +
-            hours.substr(-2) +
-            ":" +
-            minutes.substr(-2);
+          let formattedTime = this.getFormattedDate(newDate);
           dates.push(formattedTime);
         }
-
         url = url + "?times=" + dates.join();
       }
-
-      Axios.post(url, {
-        name: formDataObj.name,
-        scenarioType: formDataObj.scenarioType,
-        description: formDataObj.description,
-        type: formDataObj.type,
-        windTurbine: formDataObj.windTurbine,
-        amount: formDataObj.amount,
-        coordinates: formDataObj.coordinates,
-      })
-        .then((response) => {
-          if (response.status === 200) {
-            var modal = document.getElementById("myModal");
-            modal.style.display = "none";
-
-            window.dispatchEvent(
-              new CustomEvent("refresh-create-scenario", {
-                bubbles: true,
-                composed: true,
-                detail: {},
-              })
-            );
-          }
-        })
-        .catch(() => {
-          console.log("Werkt niet");
-        });
+      this.createSimulation(url, formDataObj);
     }
   }
 
@@ -220,139 +210,47 @@ class ScenarioForm extends Component {
     switch (scenario) {
       case "ADD_WIND_PARK":
         return (
-          <Row>
-            <Col>
-              <Form.Group>
-                <Form.Label>{translate("description")}</Form.Label>
-                <Form.Control
-                  placeholder={translate("description")}
-                  name="description"
-                  type="text"
-                  value={
-                    this.state.selectedTurbine &&
-                    this.state.selectedTurbine.text
-                  }
-                />
-              </Form.Group>
-            </Col>
-            <Col>
-              <Form.Group>
-                <Form.Label>{translate("number_of_turbines")}</Form.Label>
-                <Form.Control placeholder="1" name="amount" type="number" />
-              </Form.Group>
-            </Col>
-            <Col>
-              <FormGroup>
-                <Form.Label>Type turbine</Form.Label>
-                <Form.Control
-                  name="type"
-                  as="select"
-                  required
-                  defaultValue={translate("choose")}
-                >
-                  <option>1.8</option>
-                  <option>2.0</option>
-                  <option>3.0</option>
-                </Form.Control>
-              </FormGroup>
-            </Col>
-          </Row>
+          <Col>
+            <Form.Group>
+              <Form.Label>{translate("number_of_turbines")}</Form.Label>
+              <Form.Control placeholder="1" name="amount" type="number" />
+            </Form.Group>
+          </Col>
         );
       case "ADD_WIND_TURBINE":
         return (
-          <Row>
-            <Col>
-              <Form.Group>
-                <Form.Label>{translate("id")}</Form.Label>
-                <Form.Control placeholder="1" name="turbineId" type="number" />
-              </Form.Group>
-            </Col>
-            <Col>
-              <Form.Group>
-                <Form.Label>{translate("description")}</Form.Label>
-                <Form.Control
-                  placeholder={translate("description")}
-                  name="description"
-                  type="text"
-                  value={
-                    this.state.selectedTurbine &&
-                    this.state.selectedTurbine.text
-                  }
-                />
-              </Form.Group>
-            </Col>
-            <Col>
-              <FormGroup>
-                <Form.Label>Type turbine</Form.Label>
-                <Form.Control
-                  name="type"
-                  as="select"
-                  required
-                  defaultValue={translate("choose")}
-                >
-                  <option>1.8</option>
-                  <option>2.0</option>
-                  <option>3.0</option>
-                </Form.Control>
-              </FormGroup>
-            </Col>
-          </Row>
+          <Col>
+            <Form.Group>
+              <Form.Label>{translate("id")}</Form.Label>
+              <Form.Control placeholder="1" name="turbineId" type="number" />
+            </Form.Group>
+          </Col>
         );
       case "REMOVE_WIND_TURBINE":
         return (
-          <Row>
-            <Col>
-              <FormGroup>
-                <Form.Label>{translate("select_turbine")}</Form.Label>
-                <Form.Control
-                  as="select"
-                  required
-                  onChange={this.handleSelectTurbine.bind(this)}
-                >
-                  <option>{translate("select")}</option>
-                  {data &&
-                    data.turbines &&
-                    data.turbines.map((turbine) => {
-                      return (
-                        <option value={turbine.title}>{turbine.title}</option>
-                      );
-                    })}
-                </Form.Control>
-              </FormGroup>
-            </Col>
-            <Col>
-              <Form.Group>
-                <Form.Label>{translate("description")}</Form.Label>
-                <Form.Control
-                  placeholder={translate("description")}
-                  name="description"
-                  type="text"
-                  value={
-                    this.state.selectedTurbine &&
-                    this.state.selectedTurbine.text
-                  }
-                />
-              </Form.Group>
-            </Col>
-            <Col>
-              <Form.Group>
-                <Form.Label>Type turbine</Form.Label>
-                <Form.Control
-                  placeholder="1.8"
-                  name="type"
-                  type="text"
-                  value={
-                    this.state.selectedTurbine &&
-                    this.state.selectedTurbine.type.toFixed(1)
-                  }
-                />
-              </Form.Group>
-            </Col>
-          </Row>
+          <Col>
+            <FormGroup>
+              <Form.Label>{translate("select_turbine")}</Form.Label>
+              <Form.Control
+                as="select"
+                required
+                onChange={this.handleSelectTurbine.bind(this)}
+              >
+                <option>{translate("select")}</option>
+                {data &&
+                  data.turbines &&
+                  data.turbines.map((turbine) => {
+                    return (
+                      <option value={turbine.title}>{turbine.title}</option>
+                    );
+                  })}
+              </Form.Control>
+            </FormGroup>
+          </Col>
         );
       case "TURN_OFF_WIND_TURBINE":
         return (
-          <Row>
+          <div>
             <Col>
               <FormGroup>
                 <Form.Label>{translate("select_turbine")}</Form.Label>
@@ -371,34 +269,6 @@ class ScenarioForm extends Component {
                     })}
                 </Form.Control>
               </FormGroup>
-            </Col>
-            <Col>
-              <Form.Group>
-                <Form.Label>{translate("description")}</Form.Label>
-                <Form.Control
-                  placeholder={translate("description")}
-                  name="description"
-                  type="text"
-                  value={
-                    this.state.selectedTurbine &&
-                    this.state.selectedTurbine.text
-                  }
-                />
-              </Form.Group>
-            </Col>
-            <Col>
-              <Form.Group>
-                <Form.Label>Type turbine</Form.Label>
-                <Form.Control
-                  placeholder="1.8"
-                  name="type"
-                  type="text"
-                  value={
-                    this.state.selectedTurbine &&
-                    this.state.selectedTurbine.type.toFixed(1)
-                  }
-                />
-              </Form.Group>
             </Col>
             <Col>
               <FormGroup>
@@ -417,7 +287,7 @@ class ScenarioForm extends Component {
                 <Form.Control placeholder="1" name="hours" type="number" />
               </FormGroup>
             </Col>
-          </Row>
+          </div>
         );
       default:
         console.log("Niks");
@@ -453,7 +323,7 @@ class ScenarioForm extends Component {
         <br />
         {(selectedItem && selectedItem === "Wind") ||
         selectedItem === "wind" ? (
-          <Form onSubmit={this.startSimulation}>
+          <Form onSubmit={this.startSimulation.bind(this)} id="scenario-form">
             <Form.Group>
               <Form.Label>{t("name")}</Form.Label>
               <Form.Control
@@ -479,9 +349,59 @@ class ScenarioForm extends Component {
                   })}
               </Form.Control>
             </FormGroup>
-
-            {this.getScenarioForm(scenarioItem, t)}
-
+            <Row>
+              {this.getScenarioForm(scenarioItem, t)}
+              <Col>
+                <Form.Group>
+                  <Form.Label>{t("description")}</Form.Label>
+                  <Form.Control
+                    placeholder={t("description")}
+                    name="description"
+                    type="text"
+                    value={
+                      this.state.selectedTurbine &&
+                      this.state.selectedTurbine.text
+                    }
+                  />
+                </Form.Group>
+              </Col>
+              <Col>
+                <FormGroup>
+                  <Form.Label>Type turbine</Form.Label>
+                  <Form.Control
+                    name="type"
+                    as="select"
+                    required
+                    defaultValue={t("choose")}
+                  >
+                    <option
+                      selected={
+                        this.state.selectedTurbine &&
+                        this.state.selectedTurbine.type === 1.8
+                      }
+                    >
+                      1.8
+                    </option>
+                    <option
+                      selected={
+                        this.state.selectedTurbine &&
+                        this.state.selectedTurbine.type === 2.0
+                      }
+                    >
+                      2.0
+                    </option>
+                    <option
+                      selected={
+                        this.state.selectedTurbine &&
+                        this.state.selectedTurbine.type === 3.0
+                      }
+                    >
+                      3.0
+                    </option>
+                  </Form.Control>
+                </FormGroup>
+              </Col>
+            </Row>
             <Row>
               <Col>
                 <Form.Group>
@@ -498,9 +418,7 @@ class ScenarioForm extends Component {
                     type="number"
                     value={
                       coordinates[1] ||
-                      (selectedTurbine &&
-                      selectedTurbine.geometry &&
-                      selectedTurbine.geometry.coordinates[1]
+                      (selectedTurbine && selectedTurbine.geometry
                         ? selectedTurbine.geometry.coordinates[1]
                         : "")
                     }
@@ -513,9 +431,7 @@ class ScenarioForm extends Component {
                     type="number"
                     value={
                       coordinates[0] ||
-                      (selectedTurbine &&
-                      selectedTurbine.geometry &&
-                      selectedTurbine.geometry.coordinates[0]
+                      (selectedTurbine && selectedTurbine.geometry
                         ? selectedTurbine.geometry.coordinates[0]
                         : "")
                     }
