@@ -79,8 +79,9 @@ class ScenarioForm extends Component {
   }
 
   checkFormTurbine(formDataObj) {
+    let windTurbine = {};
     if (!!formDataObj.windTurbine && formDataObj.windTurbine !== "null") {
-      let windTurbine = JSON.parse(formDataObj.windTurbine);
+      windTurbine = JSON.parse(formDataObj.windTurbine);
       let newWindTurbine = {};
       newWindTurbine.turbineId = parseInt(windTurbine.id);
       newWindTurbine.description = windTurbine.text;
@@ -88,7 +89,6 @@ class ScenarioForm extends Component {
       newWindTurbine.type = formDataObj.type;
       return newWindTurbine;
     }
-    let windTurbine = {};
     windTurbine.coordinates = formDataObj.coordinates;
     windTurbine.type = formDataObj.type;
     return windTurbine;
@@ -192,7 +192,7 @@ class ScenarioForm extends Component {
     let hours = "0" + date.getHours();
     let minutes = "0" + date.getMinutes();
 
-    let formattedTime =
+    return (
       year +
       "-" +
       month +
@@ -201,9 +201,8 @@ class ScenarioForm extends Component {
       "T" +
       hours.substr(-2) +
       ":" +
-      minutes.substr(-2);
-
-    return formattedTime;
+      minutes.substr(-2)
+    );
   }
 
   getScenarioForm(scenario, translate) {
@@ -239,9 +238,9 @@ class ScenarioForm extends Component {
                 <option>{translate("select")}</option>
                 {data &&
                   data.turbines &&
-                  data.turbines.map((turbine) => {
+                  data.turbines.map((windmill) => {
                     return (
-                      <option value={turbine.title}>{turbine.title}</option>
+                      <option value={windmill.title}>{windmill.title}</option>
                     );
                   })}
               </Form.Control>
@@ -466,9 +465,8 @@ class ScenarioForm extends Component {
           </Form>
         ) : (
           <div>
-            {selectedItem === "Sun" || selectedItem === "sun"
-              ? t("unavailable")
-              : ""}
+            {selectedItem === "Sun" ||
+              (selectedItem === "sun" && t("unavailable"))}
           </div>
         )}
       </div>

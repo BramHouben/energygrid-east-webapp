@@ -70,8 +70,7 @@ class DefaultCard extends React.Component {
   }
 
   generateRandomColor() {
-    var randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
-    return randomColor;
+    return "#" + Math.floor(Math.random() * 16777215).toString(16);
   }
 
   getChartData(scenario, index, translate) {
