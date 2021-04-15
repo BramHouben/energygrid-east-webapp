@@ -21,6 +21,9 @@ import registrationNl from "./translations/nl/registration.json";
 import termsAndServicesEn from "./translations/en/terms-and-services.json";
 import termsAndServicesNl from "./translations/nl/terms-and-services.json";
 
+import scenarioEn from "./translations/en/scenario.json";
+import scenarioNl from "./translations/nl/scenario.json";
+
 i18n.init({
   interpolation: { escapeValue: false }, // React already does escaping
   lng: localStorage.getItem("language") ?? "en", // language to use
@@ -33,6 +36,7 @@ i18n.init({
       regionfilter: regionfilterEn,
       registration: registrationEn,
       termsAndServices: termsAndServicesEn,
+      scenario: scenarioEn,
     },
     nl: {
       dashboard: dashboardNl,
@@ -42,6 +46,7 @@ i18n.init({
       regionfilter: regionfilterNl,
       registration: registrationNl,
       termsAndServices: termsAndServicesNl,
+      scenario: scenarioNl,
     },
   },
 });

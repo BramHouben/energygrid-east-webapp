@@ -1,0 +1,103 @@
+{
+  "charts": [
+    {
+      "id": 1,
+      "type": "line",
+      "data": {
+        "key": "TITLE",
+        "labels": [],
+        "datasets": []
+      },
+      "options": {
+        "title": {
+          "display": true,
+          "text": "SOMETEXT",
+          "fontSize": 20
+        },
+        "legend": {
+          "display": true,
+          "position": "right"
+        },
+        "scales": {
+          "yAxes": [
+            {
+              "ticks": {
+                "beginAtZero": false
+              },
+              "scaleLabel": {
+                "display": true,
+                "labelString": "Production in kWh"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 2,
+      "type": "line",
+      "data": {
+        "key": "TITLE",
+        "labels": [],
+        "datasets": []
+      },
+      "options": {
+        "title": {
+          "display": true,
+          "text": "SOMETEXT",
+          "fontSize": 20
+        },
+        "legend": {
+          "display": true,
+          "position": "right"
+        },
+        "scales": {
+          "yAxes": [
+            {
+              "ticks": {
+                "beginAtZero": false
+              },
+              "scaleLabel": {
+                "display": true,
+                "labelString": "Production in kWh"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 3,
+      "type": "line",
+      "data": {
+        "key": "TITLE",
+        "labels": [],
+        "datasets": []
+      },
+      "options": {
+        "title": {
+          "display": true,
+          "text": "SOMETEXT",
+          "fontSize": 20
+        },
+        "legend": {
+          "display": true,
+          "position": "right"
+        },
+        "scales": {
+          "yAxes": [
+            {
+              "ticks": {
+                "beginAtZero": false
+              },
+              "scaleLabel": {
+                "display": true,
+                "labelString": "Production in kWh"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
