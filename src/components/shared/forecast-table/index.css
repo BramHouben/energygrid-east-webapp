@@ -1,0 +1,85 @@
+.forecast-container {
+  margin: 20px 20px 20px 20px;
+  border: 1px solid black;
+  border-radius: 25px;
+  width: 97%;
+  height: 320px;
+  display: table;
+  table-layout: fixed;
+  overflow: hidden;
+}
+
+.day-container {
+  height: 100%;
+  display: table-cell;
+  background-color: #d8d8d8;
+}
+
+.day-container:nth-child(odd) {
+  background-color: #afafaf;
+}
+
+.day-date {
+  top: 0;
+  text-align: center;
+  margin-top: 8px;
+  font-weight: bold;
+}
+
+.temperature-container {
+  margin-top: 10px;
+  margin-left: 15px;
+  text-align: left;
+  position: relative;
+  display: flex;
+  place-items: center;
+}
+
+.temperature-data {
+  text-align: left;
+  margin-right: 5px;
+  width: 125px;
+}
+
+.forecast-image {
+  width: 70px;
+  height: 70px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.stats-container {
+  margin-top: 15px;
+  margin-left: 15px;
+  text-align: left;
+  position: relative;
+  place-items: center;
+}
+
+.grade-container {
+  width: 100%;
+  display: flex;
+  margin-top: 25px;
+  place-content: center;
+}
+
+.winddirection-container {
+  width: 100%;
+  display: flex;
+  margin-top: 20px;
+  place-content: center;
+}
+
+.icon {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin: 0px 10px 0px 10px;
+  display: flex;
+  align-items: center;
+  place-content: center;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}

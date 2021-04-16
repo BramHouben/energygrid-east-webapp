@@ -15,17 +15,17 @@ export default class Weather extends Component {
   componentDidMount() {
     this.selectLocation("Enschede");
     window.addEventListener("weather-header", (e) => {
-      this.selectLocation(e.detail.location);
+      this.selectLocation(e.detail.coordinates, e.detail.city);
     });
   }
 
-  selectLocation(location) {
+  selectLocation(coordinates, city) {
     Axios.post(`http://localhost:8081/weather/current`, {
-      city: location,
+      coordinates: coordinates,
     })
       .then((response) => {
         this.setState({
-          city: response.data.location,
+          city: city,
           temperature: response.data.temperature,
           symbol: response.data.symbol,
         });
@@ -46,7 +46,9 @@ export default class Weather extends Component {
         </div>
         <div
           className="weather-image"
-          style={{ backgroundImage: `url(/assets/weather/${symbol}.png)` }}
+          style={{
+            backgroundImage: `url(http://openweathermap.org/img/wn/${symbol}@2x.png)`,
+          }}
         ></div>
       </div>
     );
