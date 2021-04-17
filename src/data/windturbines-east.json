@@ -1,0 +1,647 @@
+{
+  "parks": [
+    {
+      "type": "Feature",
+      "id": 105,
+      "properties": {
+        "turbines": [
+          {
+            "type": "Feature",
+            "id": 105,
+            "title": "De Veenwieken 1",
+            "text": "Windturbine 1 van Windpark de Veenwieken.",
+            "usp": null,
+            "geometry": { "type": "Point", "coordinates": [6.46073, 52.57363] }
+          },
+          {
+            "type": "Feature",
+            "id": 105,
+            "title": "De Veenwieken 2",
+            "text": "Windturbine 2 van Windpark de Veenwieken.",
+            "usp": null,
+            "geometry": { "type": "Point", "coordinates": [6.46051, 52.57072] }
+          },
+          {
+            "type": "Feature",
+            "id": 105,
+            "title": "De Veenwieken 3",
+            "text": "Windturbine 3 van Windpark de Veenwieken.",
+            "usp": null,
+            "geometry": { "type": "Point", "coordinates": [6.45386, 52.57085] }
+          },
+          {
+            "type": "Feature",
+            "id": 105,
+            "title": "De Veenwieken 4",
+            "text": "Windturbine 4 van Windpark de Veenwieken.",
+            "usp": null,
+            "geometry": { "type": "Point", "coordinates": [6.45365, 52.56796] }
+          }
+        ],
+        "id": 105,
+        "title": "Windpark de Veenwieken",
+        "kwhTotal": "6.510.660",
+        "kwhToday": "79.660",
+        "icon": null,
+        "label": null,
+        "description": "Windpark de Veenwieken bestaat uit 4 windmolens.",
+        "city": "Ommen",
+        "usp": null,
+        "link": {
+          "url": "/energiebronnen/windpark-de-veenwieken/",
+          "newWindow": false
+        },
+        "order_link": "/groene-energie/aanmelden?windfarm=ead420fd-a63e-ea11-a831-000d3a2faec1",
+        "customlink": false,
+        "buttontext": "Project bekijken",
+        "type": "windmolens",
+        "type_nice": "Windmolens",
+        "image": "/assets/Uploads/Energiebronnen/Windpark_De_Veenwieken__CompressedW10_FitWzUwMCw1MDBd.jpg",
+        "ke_link": "/groene-energie/aanmelden?windfarm=ead420fd-a63e-ea11-a831-000d3a2faec1"
+      },
+      "geometry": { "type": "Point", "coordinates": [6.463222, 52.570306] }
+    },
+    {
+      "type": "Feature",
+      "id": 138,
+      "properties": {
+        "turbines": [
+          {
+            "type": "Feature",
+            "id": 138,
+            "title": "Deil 1",
+            "text": "Windturbine 1 van Windpark Deil.",
+            "usp": null,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [51.99872, 51.848422]
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 138,
+            "title": "Deil 2",
+            "text": "Windturbine 2 van Windpark Deil.",
+            "usp": null,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [5.205731, 51.849447]
+            }
+          }
+        ],
+        "id": 138,
+        "title": "Windpark Deil",
+        "kwhTotal": "7.142.697",
+        "kwhToday": "100.852",
+        "icon": null,
+        "label": null,
+        "description": "Windpark Deil bestaat uit 2 windmolens.",
+        "city": "Haaften",
+        "usp": null,
+        "link": { "url": "/energiebronnen/windpark-deil/", "newWindow": 0 },
+        "order_link": "/groene-energie/aanmelden?windfarm=0759f3b6-f487-eb11-a81c-000d3abe2480",
+        "customlink": true,
+        "buttontext": "Meer informatie",
+        "type": "windmolens",
+        "type_nice": "Windmolens",
+        "image": "/assets/Uploads/Energiebronnen/Windpark_Deil__CompressedW10_FitWzUwMCw1MDBd.jpg",
+        "ke_link": "/groene-energie/aanmelden?windfarm=0759f3b6-f487-eb11-a81c-000d3abe2480"
+      },
+      "geometry": { "type": "Point", "coordinates": [5.2015, 51.848806] }
+    },
+    {
+      "type": "Feature",
+      "id": 430,
+      "properties": {
+        "turbines": [
+          {
+            "type": "Feature",
+            "id": 430,
+            "title": "Flevoland 1",
+            "text": "Windturbine 1 van Flevoland",
+            "usp": "1.000.000 kWh",
+            "geometry": { "type": "Point", "coordinates": [5.4093, 52.3672] }
+          },
+          {
+            "type": "Feature",
+            "id": 430,
+            "title": "Flevoland 2",
+            "text": "Windturbine 2 van Flevoland",
+            "usp": "1.000.000 kWh",
+            "geometry": { "type": "Point", "coordinates": [5.4112, 52.3846] }
+          },
+          {
+            "type": "Feature",
+            "id": 430,
+            "title": "Flevoland 3",
+            "text": "Windturbine 3 van Flevoland",
+            "usp": "1.000.000 kWh",
+            "geometry": { "type": "Point", "coordinates": [5.396557, 52.37826] }
+          },
+          {
+            "type": "Feature",
+            "id": 430,
+            "title": "Flevoland 4",
+            "text": "Windturbine 4 van Flevoland",
+            "usp": "1.000.000 kWh",
+            "geometry": { "type": "Point", "coordinates": [5.3831, 52.3394] }
+          },
+          {
+            "type": "Feature",
+            "id": 430,
+            "title": "Flevoland 5",
+            "text": "Windturbine 5 van Flevoland",
+            "usp": "1.000.000 kWh",
+            "geometry": { "type": "Point", "coordinates": [5.37, 52.32388] }
+          },
+          {
+            "type": "Feature",
+            "id": 430,
+            "title": "Flevoland 6",
+            "text": "Windturbine 6 van Flevoland",
+            "usp": "1.000.000 kWh",
+            "geometry": { "type": "Point", "coordinates": [5.4128, 52.3455] }
+          },
+          {
+            "type": "Feature",
+            "id": 430,
+            "title": "Flevoland 7",
+            "text": "Windturbine 6 van Flevoland",
+            "usp": "1.000.000 kWh",
+            "geometry": { "type": "Point", "coordinates": [5.36222, 52.39138] }
+          },
+          {
+            "type": "Feature",
+            "id": 430,
+            "title": "Flevoland 8",
+            "text": "Windturbine 8 van Flevoland",
+            "usp": "1.000.000 kWh",
+            "geometry": { "type": "Point", "coordinates": [5.4784, 52.3969] }
+          },
+          {
+            "type": "Feature",
+            "id": 430,
+            "title": "Flevoland 9",
+            "text": "Windturbine 9 van Flevoland",
+            "usp": "1.000.000 kWh",
+            "geometry": { "type": "Point", "coordinates": [5.4002, 52.34] }
+          },
+          {
+            "type": "Feature",
+            "id": 430,
+            "title": "Flevoland 10",
+            "text": "Windturbine 10 van Flevoland",
+            "usp": "1.000.000 kWh",
+            "geometry": { "type": "Point", "coordinates": [5.415, 52.3436] }
+          },
+          {
+            "type": "Feature",
+            "id": 430,
+            "title": "Flevoland 12",
+            "text": "Windturbine 12 van Flevoland",
+            "usp": "1.000.000 kWh",
+            "geometry": { "type": "Point", "coordinates": [5.363, 52.3528] }
+          },
+          {
+            "type": "Feature",
+            "id": 430,
+            "title": "Flevoland 13",
+            "text": "Windturbine 13 van Flevoland",
+            "usp": "1.000.000 kWh",
+            "geometry": { "type": "Point", "coordinates": [5.3671, 52.3491] }
+          },
+          {
+            "type": "Feature",
+            "id": 430,
+            "title": "Flevoland 14",
+            "text": "Windturbine 14 van Flevoland",
+            "usp": "1.000.000 kWh",
+            "geometry": { "type": "Point", "coordinates": [5.4386, 52.3378] }
+          },
+          {
+            "type": "Feature",
+            "id": 430,
+            "title": "Flevoland 15",
+            "text": "Windturbine 15 van Flevoland",
+            "usp": "1.000.000 kWh",
+            "geometry": { "type": "Point", "coordinates": [5.4323, 52.3261] }
+          },
+          {
+            "type": "Feature",
+            "id": 430,
+            "title": "Flevoland 16",
+            "text": "Windturbine 15 van Flevoland",
+            "usp": "1.000.000 kWh",
+            "geometry": { "type": "Point", "coordinates": [5.4846, 52.3579] }
+          },
+          {
+            "type": "Feature",
+            "id": 430,
+            "title": "Flevoland 18",
+            "text": "Windturbine 18 van Flevoland",
+            "usp": "1.000.000 kWh",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [5.469291, 52.355397]
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 430,
+            "title": "Flevoland 19",
+            "text": "Windturbine 19 van Flevoland",
+            "usp": "1.000.000 kWh",
+            "geometry": { "type": "Point", "coordinates": [5.4581, 52.3506] }
+          },
+          {
+            "type": "Feature",
+            "id": 430,
+            "title": "Flevoland 20",
+            "text": "Windturbine 20 van Flevoland",
+            "usp": "1.000.000 kWh",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [5.448825, 52.342197]
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 430,
+            "title": "Flevoland 21",
+            "text": "Windturbine 21 van Flevoland",
+            "usp": "1.000.000 kWh",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [5.478775, 52.353994]
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 430,
+            "title": "Flevoland 22",
+            "text": "Windturbine 22 van Flevoland",
+            "usp": "1.000.000 kWh",
+            "geometry": { "type": "Point", "coordinates": [5.4625, 52.34694] }
+          },
+          {
+            "type": "Feature",
+            "id": 430,
+            "title": "Flevoland 23",
+            "text": "Windturbine 23 van Flevoland",
+            "usp": "1.000.000 kWh",
+            "geometry": { "type": "Point", "coordinates": [5.468002, 52.34935] }
+          },
+          {
+            "type": "Feature",
+            "id": 430,
+            "title": "Flevoland 24",
+            "text": "Windturbine 24 van Flevoland",
+            "usp": "1.000.000 kWh",
+            "geometry": { "type": "Point", "coordinates": [5.4736, 52.3518] }
+          },
+          {
+            "type": "Feature",
+            "id": 430,
+            "title": "Flevoland 25",
+            "text": "Windturbine 25 van Flevoland",
+            "usp": "1.000.000 kWh",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [5.478087, 52.373468]
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 430,
+            "title": "Flevoland 26",
+            "text": "Windturbine 26 van Flevoland",
+            "usp": "1.000.000 kWh",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [5.587002, 52.503923]
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 430,
+            "title": "Flevoland 27",
+            "text": "Windturbine 27 van Flevoland",
+            "usp": "1.000.000 kWh",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [5.739134, 52.832525]
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 430,
+            "title": "Flevoland 29",
+            "text": "Windturbine 29 van Flevoland",
+            "usp": "1.000.000 kWh",
+            "geometry": { "type": "Point", "coordinates": [5.41777, 52.33638] }
+          },
+          {
+            "type": "Feature",
+            "id": 430,
+            "title": "Flevoland 30",
+            "text": "Windturbine 30 van Flevoland",
+            "usp": "1.000.000 kWh",
+            "geometry": { "type": "Point", "coordinates": [5.5334, 52.56281] }
+          }
+        ],
+        "id": 430,
+        "title": "Windpark Flevoland",
+        "kwhTotal": "8.644.035",
+        "kwhToday": "243.671",
+        "icon": "icon-Groen_Vinkje",
+        "label": "Uitverkocht",
+        "description": "De windmolens in dit windpark wekken jaarlijks gemiddeld 33.530.000 kWh op. Dat is genoeg voor 13.412 Nederlandse huishoudens.",
+        "city": "Flevoland",
+        "usp": null,
+        "link": {
+          "url": "/energiebronnen/windpark-flevoland/",
+          "newWindow": false
+        },
+        "order_link": "",
+        "customlink": false,
+        "buttontext": "Project bekijken",
+        "type": "windmolens",
+        "type_nice": "Windmolens",
+        "image": "/assets/Uploads/Energiebronnen/Windpark_Flevoland__CompressedW10_FitWzUwMCw1MDBd.jpg",
+        "ke_link": false
+      },
+      "geometry": { "type": "Point", "coordinates": [5.515952, 52.423831] }
+    },
+    {
+      "type": "Feature",
+      "id": 429,
+      "properties": {
+        "turbines": [
+          {
+            "type": "Feature",
+            "id": 429,
+            "title": "Kloosterlanden 1",
+            "text": "Windturbine 1 van Kloosterlanden",
+            "usp": "4.700.000 kWh",
+            "geometry": { "type": "Point", "coordinates": [6.19775, 52.23587] }
+          },
+          {
+            "type": "Feature",
+            "id": 429,
+            "title": "Kloosterlanden 2",
+            "text": "Windturbine 2 van Kloosterlanden",
+            "usp": "4.700.000 kWh",
+            "geometry": { "type": "Point", "coordinates": [6.18405, 52.23592] }
+          }
+        ],
+        "id": 429,
+        "title": "Windpark Kloosterlanden",
+        "kwhTotal": "2.526.595",
+        "kwhToday": "29.603",
+        "icon": null,
+        "label": null,
+        "description": "Deze 2 windmolens wekken jaarlijks 8.466.000 kWh. Dat is genoeg voor 3.386 Nederlandse huishoudens.",
+        "city": "Deventer",
+        "usp": null,
+        "link": {
+          "url": "/energiebronnen/windpark-kloosterlanden-deventer/",
+          "newWindow": false
+        },
+        "order_link": "/groene-energie/aanmelden?windfarm=2fa7c989-8942-e511-80d8-005056800837",
+        "customlink": false,
+        "buttontext": "Project bekijken",
+        "type": "windmolens",
+        "type_nice": "Windmolens",
+        "image": "/assets/Uploads/Energiebronnen/Windpark_Kloosterlanden-v2__CompressedW10_FitWzUwMCw1MDBd.jpg",
+        "ke_link": "/groene-energie/aanmelden?windfarm=2fa7c989-8942-e511-80d8-005056800837"
+      },
+      "geometry": { "type": "Point", "coordinates": [6.19775, 52.23587] }
+    },
+    {
+      "type": "Feature",
+      "id": 432,
+      "properties": {
+        "turbines": [
+          {
+            "type": "Feature",
+            "id": 432,
+            "title": "Hondtocht 1",
+            "text": "Windturbine 1 van Hondtocht",
+            "usp": "4.000.000 kWh",
+            "geometry": { "type": "Point", "coordinates": [5.79997, 52.522784] }
+          },
+          {
+            "type": "Feature",
+            "id": 432,
+            "title": "Hondtocht 2",
+            "text": "Windturbine 2 van Hondtocht",
+            "usp": "4.000.000 kWh",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [5.799034, 52.519956]
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 432,
+            "title": "Hondtocht 3",
+            "text": "Windturbine 3 van Hondtocht",
+            "usp": "4.000.000 kWh",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [5.798089, 52.517158]
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 432,
+            "title": "Hondtocht 4",
+            "text": "Windturbine 4 van Hondtocht",
+            "usp": "4.000.000 kWh",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [5.797154, 52.514358]
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 432,
+            "title": "Hondtocht 5",
+            "text": "Windturbine 5 van Hondtocht",
+            "usp": "4.000.000 kWh",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [5.796218, 52.511553]
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 432,
+            "title": "Hondtocht 6",
+            "text": "Windturbine 6 van Hondtocht",
+            "usp": "4.000.000 kWh",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [5.795304, 52.508758]
+            }
+          }
+        ],
+        "id": 432,
+        "title": "Windpark Hondtocht",
+        "kwhTotal": "7.121.308",
+        "kwhToday": "128.555",
+        "icon": null,
+        "label": null,
+        "description": "Deze 6 windmolens wekken jaarlijks 23.100.000 kWh op. Dat is genoeg voor 9.240 Nederlandse huishoudens.",
+        "city": "Dronten",
+        "usp": null,
+        "link": {
+          "url": "/energiebronnen/windpark-hondtocht-dronten/",
+          "newWindow": false
+        },
+        "order_link": "/groene-energie/aanmelden?windfarm=5ea540b5-8942-e511-80d8-005056800837",
+        "customlink": false,
+        "buttontext": "Project bekijken",
+        "type": "windmolens",
+        "type_nice": "Windmolens",
+        "image": "/assets/Uploads/Energiebronnen/Windpark_Hondtocht__CompressedW10_FitWzUwMCw1MDBd.jpg",
+        "ke_link": "/groene-energie/aanmelden?windfarm=5ea540b5-8942-e511-80d8-005056800837"
+      },
+      "geometry": { "type": "Point", "coordinates": [5.79857, 52.51576] }
+    },
+    {
+      "type": "Feature",
+      "id": 433,
+      "properties": {
+        "turbines": [
+          {
+            "type": "Feature",
+            "id": 433,
+            "title": "Maanderbroek 1",
+            "text": "Windturbine 1 van Maanderbroek",
+            "usp": "7.000.000 kWh",
+            "geometry": { "type": "Point", "coordinates": [5.61335, 52.03375] }
+          },
+          {
+            "type": "Feature",
+            "id": 433,
+            "title": "Maanderbroek 2",
+            "text": "Windturbine 2 van Maanderbroek",
+            "usp": "7.000.000 kWh",
+            "geometry": { "type": "Point", "coordinates": [5.61189, 52.03047] }
+          }
+        ],
+        "id": 433,
+        "title": "Windpark Maanderbroek",
+        "kwhTotal": "3.220.234",
+        "kwhToday": "38.722",
+        "icon": null,
+        "label": null,
+        "description": "Deze 2 windmolens wekken jaarlijks 11.400.000 kWh op. Dat is genoeg voor 4.560 Nederlandse huishoudens.",
+        "city": "Ede",
+        "usp": null,
+        "link": {
+          "url": "/energiebronnen/windpark-maanderbroek-ede/",
+          "newWindow": false
+        },
+        "order_link": "/groene-energie/aanmelden?windfarm=6059e278-8942-e511-80d8-005056800837",
+        "customlink": false,
+        "buttontext": "Project bekijken",
+        "type": "windmolens",
+        "type_nice": "Windmolens",
+        "image": "/assets/Uploads/Energiebronnen/Windpark_Maanderbroek__CompressedW10_FitWzUwMCw1MDBd.jpg",
+        "ke_link": "/groene-energie/aanmelden?windfarm=6059e278-8942-e511-80d8-005056800837"
+      },
+      "geometry": { "type": "Point", "coordinates": [5.61262, 52.03211] }
+    },
+    {
+      "type": "Feature",
+      "id": 435,
+      "properties": {
+        "turbines": [
+          {
+            "type": "Feature",
+            "id": 435,
+            "title": "Oldebroekertocht 1",
+            "text": "Windturbine 1 van Oldebroekertocht",
+            "usp": "4.000.000 kWh",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [5.754416, 52.464536]
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 435,
+            "title": "Oldebroekertocht 2",
+            "text": "Windturbine 2 van Oldebroekertocht ",
+            "usp": "4.000.000 kWh",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [5.750725, 52.462929]
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 435,
+            "title": "Oldebroekertocht 3",
+            "text": "Windturbine 3 van Oldebroekertocht",
+            "usp": "4.000.000 kWh",
+            "geometry": { "type": "Point", "coordinates": [5.74702, 52.461333] }
+          },
+          {
+            "type": "Feature",
+            "id": 435,
+            "title": "Oldebroekertocht 4",
+            "text": "Windturbine 4 van Oldebroekertocht",
+            "usp": "4.000.000 kWh",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [5.743345, 52.459749]
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 435,
+            "title": "Oldebroekertocht 5",
+            "text": "Windturbine 5 van Oldebroekertocht",
+            "usp": "4.000.000 kWh",
+            "geometry": { "type": "Point", "coordinates": [5.739718, 52.45812] }
+          },
+          {
+            "type": "Feature",
+            "id": 435,
+            "title": "Oldebroekertocht 6",
+            "text": "Windturbine 6 van Oldebroekertocht",
+            "usp": "4.000.000 kWh",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [5.736013, 52.456504]
+            }
+          }
+        ],
+        "id": 435,
+        "title": "Windpark Oldebroekertocht",
+        "kwhTotal": "6.730.044",
+        "kwhToday": "104.685",
+        "icon": null,
+        "label": null,
+        "description": "Deze 6 windmolens wekken jaarlijks 22.000.000 kWh op. Dat is genoeg voor bijna 8.800 Nederlandse huishoudens.",
+        "city": "Biddinghuizen",
+        "usp": null,
+        "link": {
+          "url": "/energiebronnen/windpark-oldebroekertocht-dronten/",
+          "newWindow": false
+        },
+        "order_link": "/groene-energie/aanmelden?windfarm=860c0661-8942-e511-80d8-005056800837",
+        "customlink": false,
+        "buttontext": "Project bekijken",
+        "type": "windmolens",
+        "type_nice": "Windmolens",
+        "image": "/assets/Uploads/Energiebronnen/Windpark_Oldebroekertocht__CompressedW10_FitWzUwMCw1MDBd.jpg",
+        "ke_link": "/groene-energie/aanmelden?windfarm=860c0661-8942-e511-80d8-005056800837"
+      },
+      "geometry": { "type": "Point", "coordinates": [5.74521, 52.46053] }
+    }
+  ]
+}
