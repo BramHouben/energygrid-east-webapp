@@ -1,0 +1,15 @@
+{
+  "city": "City",
+  "region": "Region",
+  "select": "Select",
+  "houses": "Houses",
+  "street": "Street",
+  "number": "Number",
+  "select region": "Select region",
+  "postalcode": "Postal Code",
+  "coordinates": "Coordinates",
+  "select street": "Select street:",
+  "select city": "Select city:",
+  "how many have solar panals": "How many have solar panals?",
+  "average energy consumption per house": "Average energy consumption per house"
+}
