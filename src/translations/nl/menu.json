@@ -3,5 +3,8 @@
   "account": "Account",
   "logout": "Afmelden",
   "details": "Zonneparken",
-  "simulation": "Simulatie"
+  "map": "Map",
+  "regiondetails": "Regio details",
+  "simulation": "Simulatie",
+  "forecast": "Weers verwachting"
 }
