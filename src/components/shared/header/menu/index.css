@@ -4,7 +4,7 @@
   position: fixed;
   z-index: 999;
   top: 0;
-  background: rgb(42, 42, 42);
+  background: #82de94;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 
   overflow-x: hidden;
@@ -26,8 +26,9 @@
 
   z-index: 999;
   cursor: pointer;
-  color: white;
-  background-color: rgb(104, 69, 150) !important;
+  color: black;
+  background-color: transparent;
+  border-color: transparent;
 }
 
 #menu a,
@@ -35,15 +36,15 @@
   display: grid;
   width: 100%;
   padding: 10px 10px 10px 10px;
-  color: white;
+  color: black;
   text-decoration: none;
   text-align: left;
 }
 
 #menu a:hover,
 #menu button:hover {
-  background-color: rgb(104, 69, 150);
-  color: white;
+  background-color: #67bf77;
+  color: black;
 }
 
 .closebtn {
