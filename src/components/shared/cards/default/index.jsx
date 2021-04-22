@@ -155,7 +155,7 @@ class DefaultCard extends React.Component {
               {this.getChartData(scenario, id, t)}
             </Card.Body>
             <Card.Footer>
-              <small className="text-muted">
+              <small className='text-muted'>
                 <b>{t("created_at")}: </b>{" "}
                 {this.getDateCreated(scenario.createdAt)}
               </small>

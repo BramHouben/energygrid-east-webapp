@@ -15,6 +15,7 @@ const RemotePagination = ({
   sizePerPage,
   onTableChange,
   totalSize,
+  translate,
 }) => (
   <div>
     <PaginationProvider
@@ -41,32 +42,32 @@ const RemotePagination = ({
               },
               {
                 dataField: "street",
-                text: "street",
+                text: translate("street"),
                 sort: true,
               },
               {
                 dataField: "number",
-                text: "number",
+                text: translate("number"),
                 sort: true,
               },
               {
                 dataField: "postcode",
-                text: "postalcode",
+                text: translate("postalcode"),
                 sort: true,
               },
               {
                 dataField: "region",
-                text: "region",
+                text: translate("region"),
                 sort: true,
               },
               {
                 dataField: "city",
-                text: "city",
+                text: translate("city"),
                 sort: true,
               },
               {
                 dataField: "coordinates",
-                text: "coordinates",
+                text: translate("coordinates"),
                 sort: true,
               },
             ]}
@@ -145,6 +146,7 @@ class houseTable extends Component {
           data={items}
           page={page}
           sizePerPage={sizePerPage}
+          translate={t}
           totalSize={totalsize}
           onTableChange={this.handleTableChange}
         />
