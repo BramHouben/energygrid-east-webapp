@@ -8,6 +8,7 @@ const paths = {
   Map: "/map/",
   Region: "/region/",
   Registration: "/registration/",
+  Production: '/production',
   TermsAndServices: "/terms-and-services/",
 };
 

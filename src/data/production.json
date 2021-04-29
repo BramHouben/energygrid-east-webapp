@@ -1,0 +1,118 @@
+{
+  "charts": [
+    {
+      "id": 1,
+      "type": "line",
+      "data": {
+        "key": "production-weekly",
+        "total": [38329],
+        "labels": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "datasets": [
+          {
+            "label": "production",
+            "fill": false,
+            "lineTension": 0.5,
+            "backgroundColor": "#0E910A",
+            "borderColor": "#0E910A",
+            "borderWidth": 2,
+            "data": [
+              7824,
+              5467,
+              6785,
+              2346,
+              8975,
+              4567,
+              2365
+            ]
+          }
+        ]
+      },
+      "options": {
+        "title": {
+          "display": true,
+          "text": "2020",
+          "fontSize": 20
+        },
+        "legend": {
+          "display": true,
+          "position": "bottom"
+        },
+        "scales": {
+          "yAxes": [
+            {
+              "ticks": {
+                "beginAtZero": false
+              },
+              "scaleLabel": {
+                "display": true,
+                "labelString": "Energy in (mln kWh)"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 2,
+      "type": "line",
+      "data": {
+        "key": "production-yearly",
+        "total": [19320],
+        "labels": [
+          "2017",
+          "2018",
+          "2019",
+          "2020"
+        ],
+        "datasets": [
+          {
+            "label": "production",
+            "fill": false,
+            "lineTension": 0.5,
+            "backgroundColor": "#0E910A",
+            "borderColor": "#0E910A",
+            "borderWidth": 2,
+            "data": [
+              7824,
+              6785,
+              2346,
+              2365
+            ]
+          }
+        ]
+      },
+      "options": {
+        "title": {
+          "display": true,
+          "text": "2020",
+          "fontSize": 20
+        },
+        "legend": {
+          "display": true,
+          "position": "bottom"
+        },
+        "scales": {
+          "yAxes": [
+            {
+              "ticks": {
+                "beginAtZero": false
+              },
+              "scaleLabel": {
+                "display": true,
+                "labelString": "Energy in (mln kWh)"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
