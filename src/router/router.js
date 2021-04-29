@@ -9,6 +9,7 @@ import Map from "pages/map";
 import Region from "pages/region";
 import Forecast from "pages/forecast";
 import registration from "pages/registration";
+import Production from "pages/production";
 import TermsAndServices from "pages/terms-and-services";
 
 const Router = () => (
@@ -23,6 +24,7 @@ const Router = () => (
       <Route path={paths.Map} exact component={Map} />
       <Route path={paths.Region} component={Region} />
       <Route path={paths.TermsAndServices} component={TermsAndServices} />
+      <Route path={paths.Production} component={Production} />
     </Switch>
   </BrowserRouter>
 );
