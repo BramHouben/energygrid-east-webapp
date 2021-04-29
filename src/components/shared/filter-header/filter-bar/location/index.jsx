@@ -14,7 +14,6 @@ export default class Location extends Component {
   componentDidMount() {
     var cities = this.getUniqueCities(data.solarParks);
 
-    console.log(cities);
 
     if (localStorage.getItem("coordinates") === null) {
       localStorage.setItem(
