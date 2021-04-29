@@ -38,7 +38,6 @@ export default class Weather extends Component {
         });
       })
       .catch(() => {
-        console.log("Something went wrong");
       });
   }
 
