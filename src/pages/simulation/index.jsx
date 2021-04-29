@@ -4,6 +4,7 @@ import Button from "react-bootstrap/Button";
 import Header from "components/shared/header";
 import ChartCard from "components/shared/cards/chart";
 import data from "./simulation.json";
+import Footer from "components/shared/footer";
 import axios from "axios";
 import FilterHeader from "components/shared/filter-header";
 
@@ -99,7 +100,8 @@ export default class Simulation extends React.Component {
               </div>
             </div>
           </div>
-        </div>
+        </div>{" "}
+        <Footer />
       </div>
     );
   }
