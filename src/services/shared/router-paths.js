@@ -8,7 +8,7 @@ const paths = {
   Map: "/map/",
   Region: "/region/",
   Registration: "/registration/",
-  Production: '/production',
+  Production: '/production/',
   TermsAndServices: "/terms-and-services/",
 };
 
