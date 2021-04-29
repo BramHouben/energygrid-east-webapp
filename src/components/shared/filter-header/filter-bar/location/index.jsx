@@ -14,6 +14,16 @@ export default class Location extends Component {
   componentDidMount() {
     var cities = this.getUniqueCities(data.solarParks);
 
+    console.log(cities);
+
+    if (localStorage.getItem("coordinates") === null) {
+      localStorage.setItem(
+        "coordinates",
+        JSON.stringify(cities[0].coordinates)
+      );
+      localStorage.setItem("coordinates", JSON.stringify(cities[0].location));
+    }
+
     this.setState({ cities: cities });
   }
 
@@ -54,9 +64,9 @@ export default class Location extends Component {
     let { cities } = this.state;
 
     return (
-      <div className='location-container'>
+      <div className="location-container">
         <Dropdown onSelect={this.handleSelect}>
-          <Dropdown.Toggle variant='secondary' id='dropdown-basic'>
+          <Dropdown.Toggle variant="secondary" id="dropdown-basic">
             Kies locatie
           </Dropdown.Toggle>
 
