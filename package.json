@@ -27,7 +27,7 @@
     "react-datetime": "^3.0.4",
     "react-grid-layout": "^1.2.4",
     "react-map-gl": "^6.1.11",
-    "react-i18next": "^11.8.11",
+    "react-i18next": "^11.8.13",
     "react-icons": "^4.2.0",
     "react-map-gl": "^6.1.10",
     "react-password-strength-bar": "^0.3.3",
