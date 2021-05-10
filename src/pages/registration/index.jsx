@@ -64,7 +64,7 @@ class Registration extends Component {
     const availableLanguages = ["en", "nl"];
 
     return (
-      <div id="registration">
+      <div id='registration'>
         <h1>{t("page-name")}</h1>
         <Form onSubmit={this.onSubmit}>
           <Form.Group>
@@ -72,7 +72,7 @@ class Registration extends Component {
             <Form.Control
               required
               minLength={5}
-              name="username"
+              name='username'
               placeholder={t("username-placeholder")}
             />
           </Form.Group>
@@ -82,8 +82,8 @@ class Registration extends Component {
               required
               onChange={(e) => this.setState({ password: e.target.value })}
               minLength={10}
-              name="password"
-              type="password"
+              name='password'
+              type='password'
               placeholder={t("password-placeholder")}
             />
             <PasswordStrengthBar password={this.state.password} />
@@ -93,22 +93,22 @@ class Registration extends Component {
             <Form.Control
               required
               minLength={10}
-              name="passwordRepeat"
-              type="password"
+              name='passwordRepeat'
+              type='password'
               placeholder={t("password-placeholder")}
             />
           </Form.Group>
           <Form.Group>
             <Form.Label>{t("email-label")}</Form.Label>
-            <Form.Control name="email" placeholder={t("email-placeholder")} />
+            <Form.Control name='email' placeholder={t("email-placeholder")} />
           </Form.Group>
           <Form.Group>
             <Form.Label>{t("translation-label")}</Form.Label>
             <Form.Control
               required
               onChange={this.onLanguageChange}
-              name="language"
-              as="select"
+              name='language'
+              as='select'
             >
               {availableLanguages.map((lang) => (
                 <option key={lang} value={lang}>
@@ -117,13 +117,13 @@ class Registration extends Component {
               ))}
             </Form.Control>
           </Form.Group>
-          <Form.Group controlId="formCheckbox">
+          <Form.Group controlId='formCheckbox'>
             <Form.Label>
               {
                 <a
                   href={paths.TermsAndServices}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  target='_blank'
+                  rel='noopener noreferrer'
                 >
                   {t("terms-and-services-label")}
                 </a>
@@ -131,14 +131,14 @@ class Registration extends Component {
             </Form.Label>
             <Form.Check
               required
-              type="checkbox"
+              type='checkbox'
               label={t("terms-and-services-checkbox")}
             />
           </Form.Group>
           <Button
             disabled={this.state.submitBtnDisabled}
             block
-            type="submit"
+            type='submit'
             style={{
               backgroundColor: "#82de94",
               borderColor: "#82de94",
@@ -148,15 +148,15 @@ class Registration extends Component {
             {t("submit-btn")}
             <span hidden>
               <Spinner
-                id="registration-spinner"
-                className="ml-2"
-                as="span"
-                animation="border"
-                size="sm"
-                role="status"
-                aria-hidden="true"
+                id='registration-spinner'
+                className='ml-2'
+                as='span'
+                animation='border'
+                size='sm'
+                role='status'
+                aria-hidden='true'
               />
-              <span className="sr-only">Loading...</span>
+              <span className='sr-only'>Loading...</span>
             </span>
           </Button>
         </Form>

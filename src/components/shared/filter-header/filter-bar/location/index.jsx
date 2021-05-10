@@ -14,6 +14,15 @@ export default class Location extends Component {
   componentDidMount() {
     var cities = this.getUniqueCities(data.solarParks);
 
+
+    if (localStorage.getItem("coordinates") === null) {
+      localStorage.setItem(
+        "coordinates",
+        JSON.stringify(cities[0].coordinates)
+      );
+      localStorage.setItem("coordinates", JSON.stringify(cities[0].location));
+    }
+
     this.setState({ cities: cities });
   }
 
@@ -62,7 +71,7 @@ export default class Location extends Component {
 
           <Dropdown.Menu>
             {cities.map((city) => (
-              <Dropdown.Item eventKey={city.location}>
+              <Dropdown.Item key={city.location} eventKey={city.location}>
                 {city.location}
               </Dropdown.Item>
             ))}

@@ -11,6 +11,9 @@ import "./index.css";
 class ChartCard extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      test: [],
+    };
   }
 
   getChartType(chart) {

@@ -1,5 +1,6 @@
 import Router from "./router/router";
 import "./App.css";
+import "mapbox-gl/dist/mapbox-gl.css";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 

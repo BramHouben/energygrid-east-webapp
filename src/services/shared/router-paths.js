@@ -5,8 +5,10 @@ const paths = {
   Account: "/account/",
   Login: "/login/",
   Forecast: "/forecast/",
-  Details: "/details/",
+  Map: "/map/",
+  Region: "/region/",
   Registration: "/registration/",
+  Production: '/production/',
   TermsAndServices: "/terms-and-services/",
 };
 

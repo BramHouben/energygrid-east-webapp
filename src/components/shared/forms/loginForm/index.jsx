@@ -20,43 +20,30 @@ export default class LoginForm extends Component {
 
   render() {
     return (
-      // <Form>
-      //     <Form.Group>
-      //         <Form.Label>Email address</Form.Label>
-      //         <Form.Control type="email" placeholder="Enter Email" name="email"/>
-      //         <Form.Text className="text-muted">Your email will remain private to everyone in our database.</Form.Text>
-      //     </Form.Group>
-      //     <Form.Group>
-      //         <Form.Label>Password</Form.Label>
-      //         <Form.Control type="password" placeholder="Password" name="password"/>
-      //     </Form.Group>
-      //     <Button variant="primary" type="submit">Submit</Button>
-      // </Form>
-
-      <div id="login">
+      <div id='login'>
         <h1>Login</h1>
         <Form>
           <Form.Group>
             <Form.Label>E-mail</Form.Label>
             <Form.Control
               required
-              type="email"
-              name="email"
-              placeholder="E-mail"
+              type='email'
+              name='email'
+              placeholder='E-mail'
             />
           </Form.Group>
           <Form.Group>
             <Form.Label>Password</Form.Label>
             <Form.Control
               required
-              name="password"
-              type="password"
-              placeholder="Password"
+              name='password'
+              type='password'
+              placeholder='Password'
             />
           </Form.Group>
           <Button
             block
-            type="submit"
+            type='submit'
             style={{
               backgroundColor: "#82de94",
               borderColor: "#82de94",
