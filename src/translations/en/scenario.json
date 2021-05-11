@@ -26,5 +26,11 @@
   "choose": "Choose...",
   "select": "---Select---",
   "unavailable": "Currently not available",
-  "average_production_per_turbine": "Average production per windmill"
+  "average_production_per_turbine": "Average production per windmill",
+  "number_of_units": "Number of units, (1 unit = 20 panels)",
+  "select_solarpark": "Select solar park",
+  "solar_type": "Type of solarpanels",
+  "add_solarpark": "Add solar park",
+  "remove_solarpark": "Remove solar park",
+  "turn_off_solarpark": "Temporarily turn off solar park"
 }

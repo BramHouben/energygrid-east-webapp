@@ -6,6 +6,7 @@ import Axios from "axios";
 import data from "data/turbine.json";
 import Datetime from "react-datetime";
 import MapForm from "components/shared/maps/map-form";
+import ScenarioSolarForm from "components/shared/forms/scenario-solar-form";
 import "./index.css";
 import "moment/locale/nl";
 import "react-datetime/css/react-datetime.css";
@@ -70,7 +71,10 @@ class ScenarioForm extends Component {
             new CustomEvent("set-marker", {
               bubbles: true,
               composed: true,
-              detail: { coordinates: turbine.geometry.coordinates },
+              detail: {
+                coordinates: turbine.geometry.coordinates,
+                type: "wind",
+              },
             })
           );
         }
@@ -127,7 +131,7 @@ class ScenarioForm extends Component {
     e.preventDefault();
     let formDataObj = getFormData(e);
     if (!!formDataObj) {
-      let url = "http://localhost:8081/scenario/wind/create";
+      let url = "http://localhost:8120/scenario/wind/create";
       formDataObj.coordinates = JSON.parse(formDataObj.coordinates);
       formDataObj.type = parseFloat(formDataObj.type);
       formDataObj.windTurbine = this.checkFormTurbine(formDataObj);
@@ -466,7 +470,7 @@ class ScenarioForm extends Component {
         ) : (
           <div>
             {selectedItem === "Sun" ||
-              (selectedItem === "sun" && t("unavailable"))}
+              (selectedItem === "sun" && <ScenarioSolarForm />)}
           </div>
         )}
       </div>

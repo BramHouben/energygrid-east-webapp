@@ -49,7 +49,7 @@ class DefaultCard extends React.Component {
         >
           {translate("expected_missed_production")}
           <HiArrowDown size={30} style={{ color: "red" }} />
-          {result.toFixed(0)} Kilowatt
+          {result.toFixed(2)} Kilowatt
         </div>
       );
     }
@@ -64,7 +64,7 @@ class DefaultCard extends React.Component {
         {" "}
         {translate("expected_production")}
         <HiArrowUp size={30} style={{ color: "green" }} />
-        {result.toFixed(0)} Kilowatt
+        {result.toFixed(2)} Kilowatt
       </div>
     );
   }

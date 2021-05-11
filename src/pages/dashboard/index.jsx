@@ -31,7 +31,7 @@ class Dashboard extends React.Component {
   }
 
   async getLatestScenarios() {
-    await Axios.get(`http://localhost:8081/scenario/wind/latest`)
+    await Axios.get(`http://localhost:8120/scenario/solar/latest`)
       .then((response) => {
         this.setState({
           data: response.data,

@@ -26,5 +26,11 @@
   "choose": "Kies...",
   "select": "---Selecteer---",
   "unavailable": "Momenteel niet beschikbaar",
-  "average_production_per_turbine": "Gemiddelde productie per windmolen"
+  "average_production_per_turbine": "Gemiddelde productie per windmolen",
+  "number_of_units": "Aantal units, (1 unit = 20 panelen)",
+  "select_solarpark": "Selecteer zonnepark",
+  "solar_type": "Type zonnepanelen",
+  "add_solarpark": "Zonnepark toevoegen",
+  "remove_solarpark": "Zonnepark verwijderen",
+  "turn_off_solarpark": "Zet zonnepark tijdelijk uit"
 }
