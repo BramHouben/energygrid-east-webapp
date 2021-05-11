@@ -1,10 +1,9 @@
 const apiUrl = "http://localhost:8081/";
 
-const user = `${apiUrl}user/`;
+const user = `${apiUrl}user`;
 const weather = `${apiUrl}weather/`;
 const authentication = `${apiUrl}authentication/`;
 const region = `${apiUrl}region/`;
-// All paths need to end with a '/'
 
 const actions = {
   User: user,

@@ -7,5 +7,8 @@
   "password-label": "Wachtwoord",
   "password-placeholder": "******",
   "translation-label": "Taal",
-  "submit-btn": "Opslaan"
+  "submit-btn": "Opslaan",
+  "success": "Account aangepast",
+  "remove-account": "Account verwijderen",
+  "remove-account-confirm-message": "Weet je zeker dat je je account wilt verwijderen?"
 }
