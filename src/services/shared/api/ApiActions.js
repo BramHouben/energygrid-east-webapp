@@ -1,4 +1,4 @@
-const apiUrl = "http://localhost:8160/";
+const apiUrl = "http://localhost:8081/";
 
 const user = `${apiUrl}user/`;
 const weather = `${apiUrl}weather/`;
