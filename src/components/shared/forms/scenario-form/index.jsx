@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { withTranslation } from "react-i18next";
-import { getFormData } from "services/shared/form-data-helper";
+import { getFormDataInJson } from "services/shared/form-data-helper";
 import { Form, Dropdown, FormGroup, Row, Col, Button } from "react-bootstrap";
 import Axios from "axios";
 import data from "data/turbine.json";
@@ -125,7 +125,7 @@ class ScenarioForm extends Component {
 
   startSimulation(e) {
     e.preventDefault();
-    let formDataObj = getFormData(e);
+    let formDataObj = getFormDataInJson(e);
     if (!!formDataObj) {
       let url = "http://localhost:8081/scenario/wind/create";
       formDataObj.coordinates = JSON.parse(formDataObj.coordinates);

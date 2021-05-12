@@ -1,11 +1,11 @@
 const apiUrl = "http://localhost:8081/";
 
-const user = `${apiUrl}user/`;
+const user = `${apiUrl}user`;
 const weather = `${apiUrl}weather/`;
 const authentication = `${apiUrl}authentication/`;
 const region = `${apiUrl}region/`;
 const balance = `${apiUrl}energybalance/`;
-// All paths need to end with a '/'
+const energyMarket = `${apiUrl}market/`;
 
 const actions = {
   User: user,
@@ -17,6 +17,7 @@ const actions = {
   StreetInfo: `${region}street/info/`,
   Login: `${authentication}login/`,
   latestbalance: `${balance}currentbalance/`,
+  EnergyMarket: `${energyMarket}`,
 };
 
 export default actions;
