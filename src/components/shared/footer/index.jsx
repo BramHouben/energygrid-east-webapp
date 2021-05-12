@@ -4,7 +4,7 @@ import ProgressBar from "react-bootstrap/ProgressBar";
 import "components/shared/footer/index.css";
 import ApiActions from "services/shared/api/ApiActions";
 
-export default class footer extends Component {
+export default class Footer extends Component {
   constructor(props) {
     super(props);
     this.state = {
