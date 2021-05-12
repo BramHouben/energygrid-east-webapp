@@ -11,6 +11,7 @@ import Forecast from "pages/forecast";
 import registration from "pages/registration";
 import Production from "pages/production";
 import TermsAndServices from "pages/terms-and-services";
+import Consumption from "pages/consumption";
 
 const Router = () => (
   <BrowserRouter>
@@ -25,6 +26,7 @@ const Router = () => (
       <Route path={paths.Region} component={Region} />
       <Route path={paths.TermsAndServices} component={TermsAndServices} />
       <Route path={paths.Production} component={Production} />
+      <Route path={paths.Consumption} component={Consumption} />
     </Switch>
   </BrowserRouter>
 );
