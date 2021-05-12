@@ -8,6 +8,7 @@ import { withTranslation } from "react-i18next";
 import DefaultCard from "components/shared/cards/default";
 import "./index.css";
 import Modal from "components/shared/modal";
+import Footer from "components/shared/footer";
 import Axios from "axios";
 import { Card, Button, CardColumns } from "react-bootstrap";
 
@@ -126,7 +127,7 @@ class Dashboard extends React.Component {
             </div>
           </CardColumns>
         </div>
-        <Modal />
+        <Modal /> <Footer />
       </div>
     );
   }
