@@ -1,0 +1,9 @@
+{
+  "title": "Inloggen",
+  "email": "E-mail",
+  "email-placeholder": "E-mail",
+  "password": "Wachtwoord",
+  "password-placeholder": "Wachtwoord",
+  "submit-btn": "Inloggen",
+  "login-failed": "Verkeerde gebruikersnaam of wachtwoord"
+}

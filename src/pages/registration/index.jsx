@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Button, Form, Spinner } from "react-bootstrap";
 import { withTranslation } from "react-i18next";
 import { Register } from "services/registration";
-import { getFormData } from "services/shared/form-data-helper";
+import { getFormDataInJson } from "services/shared/form-data-helper";
 import PasswordStrengthBar from "react-password-strength-bar";
 import "./index.css";
 import { toast } from "react-toastify";
@@ -35,16 +35,17 @@ class Registration extends Component {
   };
 
   onSubmit = async (e) => {
+    const { t } = this.props;
     e.preventDefault();
-    const formData = getFormData(e);
+    const formData = getFormDataInJson(e);
     if (!this.formValid(formData)) {
+      toast.error(t("invalid-data"));
       return;
     }
 
     document.getElementById("registration-spinner").hidden = false;
     this.setState({ submitBtnDisabled: true });
     const result = await Register(formData);
-    const { t } = this.props;
 
     if (result.status === 201) {
       toast.success(t("registration-success"));
@@ -64,7 +65,7 @@ class Registration extends Component {
     const availableLanguages = ["en", "nl"];
 
     return (
-      <div id='registration'>
+      <div id="registration">
         <h1>{t("page-name")}</h1>
         <Form onSubmit={this.onSubmit}>
           <Form.Group>
@@ -72,7 +73,7 @@ class Registration extends Component {
             <Form.Control
               required
               minLength={5}
-              name='username'
+              name="username"
               placeholder={t("username-placeholder")}
             />
           </Form.Group>
@@ -82,8 +83,8 @@ class Registration extends Component {
               required
               onChange={(e) => this.setState({ password: e.target.value })}
               minLength={10}
-              name='password'
-              type='password'
+              name="password"
+              type="password"
               placeholder={t("password-placeholder")}
             />
             <PasswordStrengthBar password={this.state.password} />
@@ -93,22 +94,22 @@ class Registration extends Component {
             <Form.Control
               required
               minLength={10}
-              name='passwordRepeat'
-              type='password'
+              name="passwordRepeat"
+              type="password"
               placeholder={t("password-placeholder")}
             />
           </Form.Group>
           <Form.Group>
             <Form.Label>{t("email-label")}</Form.Label>
-            <Form.Control name='email' placeholder={t("email-placeholder")} />
+            <Form.Control name="email" placeholder={t("email-placeholder")} />
           </Form.Group>
           <Form.Group>
             <Form.Label>{t("translation-label")}</Form.Label>
             <Form.Control
               required
               onChange={this.onLanguageChange}
-              name='language'
-              as='select'
+              name="language"
+              as="select"
             >
               {availableLanguages.map((lang) => (
                 <option key={lang} value={lang}>
@@ -117,13 +118,13 @@ class Registration extends Component {
               ))}
             </Form.Control>
           </Form.Group>
-          <Form.Group controlId='formCheckbox'>
+          <Form.Group controlId="formCheckbox">
             <Form.Label>
               {
                 <a
                   href={paths.TermsAndServices}
-                  target='_blank'
-                  rel='noopener noreferrer'
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   {t("terms-and-services-label")}
                 </a>
@@ -131,14 +132,15 @@ class Registration extends Component {
             </Form.Label>
             <Form.Check
               required
-              type='checkbox'
+              name="termsAndServices"
+              type="checkbox"
               label={t("terms-and-services-checkbox")}
             />
           </Form.Group>
           <Button
             disabled={this.state.submitBtnDisabled}
             block
-            type='submit'
+            type="submit"
             style={{
               backgroundColor: "#82de94",
               borderColor: "#82de94",
@@ -148,15 +150,15 @@ class Registration extends Component {
             {t("submit-btn")}
             <span hidden>
               <Spinner
-                id='registration-spinner'
-                className='ml-2'
-                as='span'
-                animation='border'
-                size='sm'
-                role='status'
-                aria-hidden='true'
+                id="registration-spinner"
+                className="ml-2"
+                as="span"
+                animation="border"
+                size="sm"
+                role="status"
+                aria-hidden="true"
               />
-              <span className='sr-only'>Loading...</span>
+              <span className="sr-only">Loading...</span>
             </span>
           </Button>
         </Form>
