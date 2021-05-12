@@ -9,6 +9,8 @@ import MapForm from "components/shared/maps/map-form";
 import "./index.css";
 import "moment/locale/nl";
 import "react-datetime/css/react-datetime.css";
+import { CreateScenarioWind } from "services/scenario";
+import { toast } from "react-toastify";
 
 class ScenarioSolarForm extends Component {
   constructor(props) {
@@ -98,40 +100,54 @@ class ScenarioSolarForm extends Component {
     return solarPark;
   }
 
-  createSimulation(url, formDataObj) {
-    Axios.post(url, {
-      name: formDataObj.name,
-      scenarioType: formDataObj.scenarioType,
-      description: formDataObj.description,
-      type: formDataObj.type,
-      solarUnit: formDataObj.solarPark,
-      amount: formDataObj.amount,
-      coordinates: formDataObj.coordinates,
-    })
-      .then((response) => {
-        if (response.status === 200) {
-          var modal = document.getElementById("myModal");
-          modal.style.display = "none";
+  async createSimulation(params, formDataObj) {
+    const result = await CreateScenarioWind(params, formDataObj);
+    const { t } = this.props;
 
-          window.dispatchEvent(
-            new CustomEvent("refresh-create-scenario", {
-              bubbles: true,
-              composed: true,
-              detail: {},
-            })
-          );
-        }
-      })
-      .catch(() => {
-        console.log("Werkt niet");
-      });
+    if (result.status === 201) {
+      toast.success(t("registration-success"));
+    } else if (result.status === 409) {
+      toast.error(t("registration-duplicate"));
+      this.setState({ submitBtnDisabled: false });
+    } else {
+      toast.error(t("registration-failure"));
+      this.setState({ submitBtnDisabled: false });
+    }
+
+    // Axios.post(url, {
+    //   name: formDataObj.name,
+    //   scenarioType: formDataObj.scenarioType,
+    //   description: formDataObj.description,
+    //   type: formDataObj.type,
+    //   solarUnit: formDataObj.solarPark,
+    //   amount: formDataObj.amount,
+    //   coordinates: formDataObj.coordinates,
+    // })
+    //   .then((response) => {
+    //     if (response.status === 200) {
+    //       var modal = document.getElementById("myModal");
+    //       modal.style.display = "none";
+
+    //       window.dispatchEvent(
+    //         new CustomEvent("refresh-create-scenario", {
+    //           bubbles: true,
+    //           composed: true,
+    //           detail: {},
+    //         })
+    //       );
+    //     }
+    //   })
+    //   .catch(() => {
+    //     console.log("Werkt niet");
+    //   });
   }
 
   startSimulation(e) {
     e.preventDefault();
     let formDataObj = getFormData(e);
+    let params;
     if (!!formDataObj) {
-      let url = "http://localhost:8120/scenario/solar/create";
+      //let url = "http://localhost:8081/scenario/solar/create";
       formDataObj.coordinates = JSON.parse(formDataObj.coordinates);
       formDataObj.solarPark = this.checkFormSolar(formDataObj);
 
@@ -150,9 +166,9 @@ class ScenarioSolarForm extends Component {
           let formattedTime = this.getFormattedDate(newDate);
           dates.push(formattedTime);
         }
-        url = url + "?times=" + dates.join();
+        params = "?times=" + dates.join();
       }
-      this.createSimulation(url, formDataObj);
+      this.createSimulation(params, formDataObj);
     }
   }
 

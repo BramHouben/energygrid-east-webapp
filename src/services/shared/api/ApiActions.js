@@ -4,6 +4,8 @@ const user = `${apiUrl}user/`;
 const weather = `${apiUrl}weather/`;
 const authentication = `${apiUrl}authentication/`;
 const region = `${apiUrl}region/`;
+const wind = `${apiUrl}scenario/wind`;
+const solar = `${apiUrl}scenario/solar`;
 // All paths need to end with a '/'
 
 const actions = {
@@ -15,6 +17,8 @@ const actions = {
   AllCitiesRegion: `${region}cities/region/`,
   StreetInfo: `${region}street/info/`,
   Login: `${authentication}login/`,
+  CreateScenarioWind: `${wind}/create`,
+  CreateScenarioSolar: `${solar}/create`,
 };
 
 export default actions;
