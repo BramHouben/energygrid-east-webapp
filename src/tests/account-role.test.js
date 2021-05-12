@@ -5,10 +5,10 @@ configure({ adapter: new EnzymeAdapter() });
 
 test("Check if roles exists", () => {
   expect(accountRole).toEqual({
-    Customer: "customer",
-    LargeScaleCustomer: "largeScaleCustomer",
-    Admin: "admin",
-    UtilityCompany: "utilityCompany",
-    ResponsibleParty: "responsibleParty",
+    Customer: "CUSTOMER",
+    LargeScaleCustomer: "LARGE_SCALE_CUSTOMER",
+    Admin: "ADMIN",
+    UtilityCompany: "UTILITY_COMPANY",
+    ResponsibleParty: "RESPONSIBLE_PARTY",
   });
 });
