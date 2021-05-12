@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Form, Dropdown, FormGroup, Row, Col, Button } from "react-bootstrap";
+import { Form, FormGroup } from "react-bootstrap";
 import Datetime from "react-datetime";
 import Header from "components/shared/header";
 import FilterHeader from "components/shared/filter-header";
@@ -37,10 +37,11 @@ export default class Forecast extends Component {
         let chartLabels = [];
         let chartKw = [];
 
-        for (let i = 0; i < result.data.length; i++) {
+        for (let i of result.data) {
           chartLabels.push(result.data[i].hour);
           chartKw.push(result.data[i].kwh);
         }
+
         data.data.labels = chartLabels;
         data.data.datasets[0].data = chartKw;
         data.data.datasets[0].lineTension = 0.5;
