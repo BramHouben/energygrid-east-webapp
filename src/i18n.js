@@ -27,6 +27,9 @@ import scenarioNl from "./translations/nl/scenario.json";
 import loginEn from "./translations/en/login.json";
 import loginNl from "./translations/nl/login.json";
 
+import energyMarketEn from "./translations/en/energy-market.json";
+import energyMarketNl from "./translations/nl/energy-market.json";
+
 i18n.init({
   interpolation: { escapeValue: false }, // React already does escaping
   lng: localStorage.getItem("language") ?? "en", // language to use
@@ -41,6 +44,7 @@ i18n.init({
       termsAndServices: termsAndServicesEn,
       scenario: scenarioEn,
       login: loginEn,
+      energyMarket: energyMarketEn,
     },
     nl: {
       dashboard: dashboardNl,
@@ -52,6 +56,7 @@ i18n.init({
       termsAndServices: termsAndServicesNl,
       scenario: scenarioNl,
       login: loginNl,
+      energyMarket: energyMarketNl,
     },
   },
 });

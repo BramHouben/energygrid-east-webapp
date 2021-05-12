@@ -69,6 +69,9 @@ class Menu extends Component {
             <a key="forecast" href={routerPaths.Forecast}>
               {t("forecast")}
             </a>
+            <a key="energy-market" href={routerPaths.EnergyMarket}>
+              {t("energy-market")}
+            </a>
             <a key="account" href={routerPaths.Account}>
               {t("account")}
             </a>

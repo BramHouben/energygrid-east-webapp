@@ -13,6 +13,7 @@ import Production from "pages/production";
 import TermsAndServices from "pages/terms-and-services";
 import ProtectedRoute from "./ProtectedRoute";
 import roles from "services/shared/account-role";
+import energyMarket from "pages/energy-market";
 
 function routes() {
   return (
@@ -52,6 +53,18 @@ function routes() {
         path={paths.Account}
         exact
         component={Account}
+      />
+      <ProtectedRoute
+        roles={[
+          roles.Customer,
+          roles.LargeScaleCustomer,
+          roles.Admin,
+          roles.UtilityCompany,
+          roles.ResponsibleParty,
+        ]}
+        path={paths.EnergyMarket}
+        exact
+        component={energyMarket}
       />
       <Route
         roles={[
