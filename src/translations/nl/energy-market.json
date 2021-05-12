@@ -1,0 +1,7 @@
+{
+  "pageName": "Energie markt",
+  "sell-buy-label": "Kopen of verkopen energie (kWh)",
+  "sell-by-description": "Negatief nummer is verkopen, positief nummer is kopen van energie",
+  "submit-btn": "Kopen/verkopen",
+  "price": "Prijs €"
+}
