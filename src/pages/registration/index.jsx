@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Button, Form, Spinner } from "react-bootstrap";
 import { withTranslation } from "react-i18next";
 import { Register } from "services/registration";
-import { getFormData } from "services/shared/form-data-helper";
+import { getFormDataInJson } from "services/shared/form-data-helper";
 import PasswordStrengthBar from "react-password-strength-bar";
 import "./index.css";
 import { toast } from "react-toastify";
@@ -35,16 +35,17 @@ class Registration extends Component {
   };
 
   onSubmit = async (e) => {
+    const { t } = this.props;
     e.preventDefault();
-    const formData = getFormData(e);
+    const formData = getFormDataInJson(e);
     if (!this.formValid(formData)) {
+      toast.error(t("invalid-data"));
       return;
     }
 
     document.getElementById("registration-spinner").hidden = false;
     this.setState({ submitBtnDisabled: true });
     const result = await Register(formData);
-    const { t } = this.props;
 
     if (result.status === 201) {
       toast.success(t("registration-success"));
@@ -131,11 +132,21 @@ class Registration extends Component {
             </Form.Label>
             <Form.Check
               required
+              name="termsAndServices"
               type="checkbox"
               label={t("terms-and-services-checkbox")}
             />
           </Form.Group>
-          <Button disabled={this.state.submitBtnDisabled} block type="submit">
+          <Button
+            disabled={this.state.submitBtnDisabled}
+            block
+            type="submit"
+            style={{
+              backgroundColor: "#82de94",
+              borderColor: "#82de94",
+              color: "black",
+            }}
+          >
             {t("submit-btn")}
             <span hidden>
               <Spinner

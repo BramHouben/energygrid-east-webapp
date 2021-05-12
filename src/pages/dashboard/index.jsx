@@ -110,7 +110,7 @@ class Dashboard extends React.Component {
             <div>
               <Card
                 style={{
-                  width: "72rem",
+                  width: "100%",
                   justifyContent: "space-between",
                   flex: 1,
                 }}

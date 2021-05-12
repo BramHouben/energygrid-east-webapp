@@ -13,15 +13,22 @@ export default class Weather extends Component {
   }
 
   componentDidMount() {
-    this.selectLocation("Enschede");
+    this.selectLocation(
+      JSON.parse(localStorage.getItem("coordinates")),
+      JSON.parse(localStorage.getItem("city"))
+    );
+
     window.addEventListener("weather-header", (e) => {
       this.selectLocation(e.detail.coordinates, e.detail.city);
     });
   }
 
   selectLocation(coordinates, city) {
+    localStorage.setItem("coordinates", JSON.stringify(coordinates));
+    localStorage.setItem("city", JSON.stringify(city));
+
     Axios.post(`http://localhost:8081/weather/current`, {
-      coordinates: coordinates,
+      coordinates: JSON.parse(localStorage.getItem("coordinates")),
     })
       .then((response) => {
         this.setState({
@@ -31,7 +38,6 @@ export default class Weather extends Component {
         });
       })
       .catch(() => {
-        console.log("Werkt niet");
       });
   }
 

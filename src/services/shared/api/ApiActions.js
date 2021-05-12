@@ -1,12 +1,13 @@
 const apiUrl = "http://localhost:8081/";
 
-const user = `${apiUrl}user/`;
+const user = `${apiUrl}user`;
 const weather = `${apiUrl}weather/`;
 const authentication = `${apiUrl}authentication/`;
 const region = `${apiUrl}region/`;
 const wind = `${apiUrl}scenario/wind`;
 const solar = `${apiUrl}scenario/solar`;
 // All paths need to end with a '/'
+const energyMarket = `${apiUrl}market/`;
 
 const actions = {
   User: user,
@@ -19,6 +20,7 @@ const actions = {
   Login: `${authentication}login/`,
   CreateScenarioWind: `${wind}/create`,
   CreateScenarioSolar: `${solar}/create`,
+  EnergyMarket: `${energyMarket}`,
 };
 
 export default actions;
