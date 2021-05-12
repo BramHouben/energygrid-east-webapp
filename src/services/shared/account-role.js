@@ -1,7 +1,9 @@
 const roles = {
-  User: "User",
-  Admin: "Admin",
-  SiteAdmin: "SiteAdmin",
+  Customer: "customer",
+  LargeScaleCustomer: "largeScaleCustomer",
+  Admin: "admin",
+  UtilityCompany: "utilityCompany",
+  ResponsibleParty: "responsibleParty",
 };
 
 export default roles;

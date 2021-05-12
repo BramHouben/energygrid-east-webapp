@@ -25,7 +25,7 @@ class Menu extends Component {
 
   logout = () => {
     const cookie = new Cookies();
-    cookie.remove("Jwt", { path: "/" });
+    cookie.remove("jwt", { path: "/" });
     window.location.pathname = "/login";
   };
 
