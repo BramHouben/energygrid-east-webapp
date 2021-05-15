@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { withTranslation } from "react-i18next";
-import { getFormData } from "services/shared/form-data-helper";
+import { getFormDataInJson } from "services/shared/form-data-helper";
 import { Form, Dropdown, FormGroup, Row, Col, Button } from "react-bootstrap";
 import Axios from "axios";
 import data from "data/solarparks-east.json";
@@ -100,54 +100,59 @@ class ScenarioSolarForm extends Component {
     return solarPark;
   }
 
-  async createSimulation(params, formDataObj) {
-    const result = await CreateScenarioWind(params, formDataObj);
-    const { t } = this.props;
+  async createSimulation(url, formDataObj) {
+    // let result;
+    // if (params !== null && params !== undefined) {
+    //   result = await CreateScenarioWind(params, formDataObj);
+    // } else {
+    //   result = await CreateScenarioWind(formDataObj);
+    // }
+    // const { t } = this.props;
 
-    if (result.status === 201) {
-      toast.success(t("registration-success"));
-    } else if (result.status === 409) {
-      toast.error(t("registration-duplicate"));
-      this.setState({ submitBtnDisabled: false });
-    } else {
-      toast.error(t("registration-failure"));
-      this.setState({ submitBtnDisabled: false });
-    }
+    // if (result.status === 201) {
+    //   toast.success(t("registration-success"));
+    // } else if (result.status === 409) {
+    //   toast.error(t("registration-duplicate"));
+    //   this.setState({ submitBtnDisabled: false });
+    // } else {
+    //   toast.error(t("registration-failure"));
+    //   this.setState({ submitBtnDisabled: false });
+    // }
 
-    // Axios.post(url, {
-    //   name: formDataObj.name,
-    //   scenarioType: formDataObj.scenarioType,
-    //   description: formDataObj.description,
-    //   type: formDataObj.type,
-    //   solarUnit: formDataObj.solarPark,
-    //   amount: formDataObj.amount,
-    //   coordinates: formDataObj.coordinates,
-    // })
-    //   .then((response) => {
-    //     if (response.status === 200) {
-    //       var modal = document.getElementById("myModal");
-    //       modal.style.display = "none";
+    Axios.post(url, {
+      name: formDataObj.name,
+      scenarioType: formDataObj.scenarioType,
+      description: formDataObj.description,
+      type: formDataObj.type,
+      solarUnit: formDataObj.solarPark,
+      amount: formDataObj.amount,
+      coordinates: formDataObj.coordinates,
+    })
+      .then((response) => {
+        if (response.status === 200) {
+          var modal = document.getElementById("myModal");
+          modal.style.display = "none";
 
-    //       window.dispatchEvent(
-    //         new CustomEvent("refresh-create-scenario", {
-    //           bubbles: true,
-    //           composed: true,
-    //           detail: {},
-    //         })
-    //       );
-    //     }
-    //   })
-    //   .catch(() => {
-    //     console.log("Werkt niet");
-    //   });
+          window.dispatchEvent(
+            new CustomEvent("refresh-create-scenario", {
+              bubbles: true,
+              composed: true,
+              detail: {},
+            })
+          );
+        }
+      })
+      .catch(() => {
+        console.log("Werkt niet");
+      });
   }
 
   startSimulation(e) {
     e.preventDefault();
-    let formDataObj = getFormData(e);
+    let formDataObj = getFormDataInJson(e);
     let params;
     if (!!formDataObj) {
-      //let url = "http://localhost:8081/scenario/solar/create";
+      let url = "http://localhost:8081/scenario/solar/create";
       formDataObj.coordinates = JSON.parse(formDataObj.coordinates);
       formDataObj.solarPark = this.checkFormSolar(formDataObj);
 
@@ -166,9 +171,9 @@ class ScenarioSolarForm extends Component {
           let formattedTime = this.getFormattedDate(newDate);
           dates.push(formattedTime);
         }
-        params = "?times=" + dates.join();
+        url = url + "?times=" + dates.join();
       }
-      this.createSimulation(params, formDataObj);
+      this.createSimulation(url, formDataObj);
     }
   }
 

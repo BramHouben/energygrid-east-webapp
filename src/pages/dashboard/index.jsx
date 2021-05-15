@@ -31,7 +31,8 @@ class Dashboard extends React.Component {
   }
 
   async getLatestScenarios() {
-    await Axios.get(`http://localhost:8120/scenario/solar/latest`)
+    //If simulation service exist, we can call one request for the scenario's
+    await Axios.get(`http://localhost:8081/scenario/solar/latest`)
       .then((response) => {
         this.setState({
           data: response.data,

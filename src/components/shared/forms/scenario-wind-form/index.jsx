@@ -131,7 +131,7 @@ class ScenarioForm extends Component {
     e.preventDefault();
     let formDataObj = getFormDataInJson(e);
     if (!!formDataObj) {
-      let url = "http://localhost:8120/scenario/wind/create";
+      let url = "http://localhost:8081/scenario/wind/create";
       formDataObj.coordinates = JSON.parse(formDataObj.coordinates);
       formDataObj.type = parseFloat(formDataObj.type);
       formDataObj.windTurbine = this.checkFormTurbine(formDataObj);
