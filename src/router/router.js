@@ -11,6 +11,7 @@ import Forecast from "pages/forecast";
 import registration from "pages/registration";
 import Production from "pages/production";
 import TermsAndServices from "pages/terms-and-services";
+import Consumption from "pages/consumption";
 import ProtectedRoute from "./ProtectedRoute";
 import roles from "services/shared/account-role";
 import energyMarket from "pages/energy-market";
@@ -146,6 +147,17 @@ function routes() {
         ]}
         path={paths.Production}
         component={Production}
+      />
+      <ProtectedRoute
+        roles={[
+          roles.Customer,
+          roles.LargeScaleCustomer,
+          roles.Admin,
+          roles.UtilityCompany,
+          roles.ResponsibleParty,
+        ]}
+        path={paths.Consumption}
+        component={Consumption}
       />
     </BrowserRouter>
   );

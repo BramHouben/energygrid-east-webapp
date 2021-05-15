@@ -7,6 +7,7 @@ const region = `${apiUrl}region/`;
 const wind = `${apiUrl}scenario/wind`;
 const solar = `${apiUrl}scenario/solar`;
 // All paths need to end with a '/'
+const balance = `${apiUrl}energybalance/`;
 const energyMarket = `${apiUrl}market/`;
 
 const actions = {
@@ -20,6 +21,7 @@ const actions = {
   Login: `${authentication}login/`,
   CreateScenarioWind: `${wind}/create`,
   CreateScenarioSolar: `${solar}/create`,
+  latestbalance: `${balance}currentbalance/`,
   EnergyMarket: `${energyMarket}`,
 };
 

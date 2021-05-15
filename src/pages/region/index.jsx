@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import HouseTable from "components/shared/regionfilter/housetable";
 import "./index.css";
 import { withTranslation } from "react-i18next";
+import Footer from "components/shared/footer";
 import { Form } from "react-bootstrap";
 import ReactMapGL, { Marker } from "react-map-gl";
 import Header from "components/shared/header";
@@ -81,15 +82,15 @@ class region extends Component {
 
     return (
       <div>
-        <div className='header-wrapper'>
-          <Header pageName='Details' />
+        <div className="header-wrapper">
+          <Header pageName="Details" />
           <FilterHeader />
         </div>
-        <div id='regiondetailsinfo'>
-          <Form.Group controlId='formBasicSelectregion'>
+        <div id="regiondetailsinfo">
+          <Form.Group controlId="formBasicSelectregion">
             <Form.Label>{t("select region")}</Form.Label>
             <Form.Control
-              as='select'
+              as="select"
               onChange={(e) => {
                 this.regionchanged(e.target.value);
               }}
@@ -142,7 +143,7 @@ class region extends Component {
                   longitude={houses.coordinates[0]}
                 >
                   <button
-                    className='marker-btn'
+                    className="marker-btn"
                     onClick={(e) => {
                       e.preventDefault();
                       this.setState({
@@ -150,7 +151,7 @@ class region extends Component {
                       });
                     }}
                   >
-                    <img src='/assets/house/house.png' alt='house-icon' />
+                    <img src="/assets/house/house.png" alt="house-icon" />
                   </button>
                 </Marker>
               ))}
@@ -158,7 +159,8 @@ class region extends Component {
           ) : (
             <div></div>
           )}
-        </div>
+        </div>{" "}
+        <Footer />
       </div>
     );
   }
