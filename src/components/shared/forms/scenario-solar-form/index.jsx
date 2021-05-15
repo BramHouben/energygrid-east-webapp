@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { withTranslation } from "react-i18next";
 import { getFormDataInJson } from "services/shared/form-data-helper";
-import { Form, Dropdown, FormGroup, Row, Col, Button } from "react-bootstrap";
+import { Form, FormGroup, Row, Col, Button } from "react-bootstrap";
 import Axios from "axios";
 import data from "data/solarparks-east.json";
 import Datetime from "react-datetime";
@@ -9,8 +9,7 @@ import MapForm from "components/shared/maps/map-form";
 import "./index.css";
 import "moment/locale/nl";
 import "react-datetime/css/react-datetime.css";
-import { CreateScenarioWind } from "services/scenario";
-import { toast } from "react-toastify";
+import ApiActions from "services/shared/api/ApiActions";
 
 class ScenarioSolarForm extends Component {
   constructor(props) {
@@ -101,24 +100,6 @@ class ScenarioSolarForm extends Component {
   }
 
   async createSimulation(url, formDataObj) {
-    // let result;
-    // if (params !== null && params !== undefined) {
-    //   result = await CreateScenarioWind(params, formDataObj);
-    // } else {
-    //   result = await CreateScenarioWind(formDataObj);
-    // }
-    // const { t } = this.props;
-
-    // if (result.status === 201) {
-    //   toast.success(t("registration-success"));
-    // } else if (result.status === 409) {
-    //   toast.error(t("registration-duplicate"));
-    //   this.setState({ submitBtnDisabled: false });
-    // } else {
-    //   toast.error(t("registration-failure"));
-    //   this.setState({ submitBtnDisabled: false });
-    // }
-
     Axios.post(url, {
       name: formDataObj.name,
       scenarioType: formDataObj.scenarioType,
@@ -150,9 +131,8 @@ class ScenarioSolarForm extends Component {
   startSimulation(e) {
     e.preventDefault();
     let formDataObj = getFormDataInJson(e);
-    let params;
     if (!!formDataObj) {
-      let url = "http://localhost:8081/scenario/solar/create";
+      let url = ApiActions.CreateScenarioSolar;
       formDataObj.coordinates = JSON.parse(formDataObj.coordinates);
       formDataObj.solarPark = this.checkFormSolar(formDataObj);
 
@@ -306,12 +286,8 @@ class ScenarioSolarForm extends Component {
   }
 
   render() {
-    let {
-      scenarioItem,
-      scenarioItems,
-      selectedSolarPark,
-      coordinates,
-    } = this.state;
+    let { scenarioItem, scenarioItems, selectedSolarPark, coordinates } =
+      this.state;
 
     const { t } = this.props;
 

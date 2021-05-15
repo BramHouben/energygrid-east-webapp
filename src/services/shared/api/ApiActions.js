@@ -6,6 +6,9 @@ const authentication = `${apiUrl}authentication/`;
 const region = `${apiUrl}region/`;
 const wind = `${apiUrl}scenario/wind`;
 const solar = `${apiUrl}scenario/solar`;
+
+//If simulation service exist, we can call one request for the scenario's. Now we have only the latest from solar
+const scenario = `${apiUrl}scenario/solar/latest/`;
 // All paths need to end with a '/'
 const balance = `${apiUrl}energybalance/`;
 const energyMarket = `${apiUrl}market/`;
@@ -23,6 +26,7 @@ const actions = {
   CreateScenarioSolar: `${solar}/create`,
   latestbalance: `${balance}currentbalance/`,
   EnergyMarket: `${energyMarket}`,
+  Scenarios: `${scenario}`,
 };
 
 export default actions;

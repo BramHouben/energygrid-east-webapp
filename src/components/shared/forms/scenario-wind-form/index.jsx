@@ -10,6 +10,7 @@ import ScenarioSolarForm from "components/shared/forms/scenario-solar-form";
 import "./index.css";
 import "moment/locale/nl";
 import "react-datetime/css/react-datetime.css";
+import ApiActions from "services/shared/api/ApiActions";
 
 class ScenarioForm extends Component {
   constructor(props) {
@@ -131,7 +132,7 @@ class ScenarioForm extends Component {
     e.preventDefault();
     let formDataObj = getFormDataInJson(e);
     if (!!formDataObj) {
-      let url = "http://localhost:8081/scenario/wind/create";
+      let url = ApiActions.CreateScenarioWind;
       formDataObj.coordinates = JSON.parse(formDataObj.coordinates);
       formDataObj.type = parseFloat(formDataObj.type);
       formDataObj.windTurbine = this.checkFormTurbine(formDataObj);

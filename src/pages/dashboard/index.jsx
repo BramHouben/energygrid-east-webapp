@@ -11,6 +11,7 @@ import Modal from "components/shared/modal";
 import Footer from "components/shared/footer";
 import Axios from "axios";
 import { Card, Button, CardColumns } from "react-bootstrap";
+import ApiActions from "services/shared/api/ApiActions";
 
 const ResponsiveReactGridLayout = WidthProvider(Responsive);
 
@@ -32,8 +33,7 @@ class Dashboard extends React.Component {
   }
 
   async getLatestScenarios() {
-    //If simulation service exist, we can call one request for the scenario's
-    await Axios.get(`http://localhost:8081/scenario/solar/latest`)
+    await Axios.get(ApiActions.Scenarios)
       .then((response) => {
         this.setState({
           data: response.data,
