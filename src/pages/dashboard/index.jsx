@@ -21,14 +21,18 @@ class Dashboard extends React.Component {
     this.state = {
       charts: [],
       data: [],
+      solar: 0,
+      wind: 0,
     };
   }
 
   componentDidMount() {
     this.setState({ charts: data.charts });
     this.getLatestScenarios();
+    this.findTodaysScenarios();
     window.addEventListener("refresh-create-scenario", () => {
       this.getLatestScenarios();
+      this.findTodaysScenarios();
     });
   }
 
@@ -54,8 +58,21 @@ class Dashboard extends React.Component {
     );
   }
 
+  async findTodaysScenarios() {
+    await Axios.get(ApiActions.TodayScenarioWind).then((response) => {
+      if (response.status === 200) {
+        this.setState({ wind: response.data });
+      }
+    });
+    await Axios.get(ApiActions.TodayScenarioSolar).then((response) => {
+      if (response.status === 200) {
+        this.setState({ solar: response.data });
+      }
+    });
+  }
+
   render() {
-    let { charts, data } = this.state;
+    let { charts, data, solar, wind } = this.state;
     const { t } = this.props;
     let layout;
 
@@ -96,6 +113,28 @@ class Dashboard extends React.Component {
           ))}
         </ResponsiveReactGridLayout>
         <div className="scenario-container">
+          <div className="scenario-cards">
+            <Card style={{ width: "18rem" }}>
+              <Card.Body>
+                <Card.Title style={{ fontSize: "30px", textAlign: "left" }}>
+                  {solar}
+                </Card.Title>
+                <Card.Text style={{ textAlign: "left" }}>
+                  {t("description_solar")}
+                </Card.Text>
+              </Card.Body>
+            </Card>
+            <Card style={{ width: "18rem" }}>
+              <Card.Body>
+                <Card.Title style={{ fontSize: "30px", textAlign: "left" }}>
+                  {wind}
+                </Card.Title>
+                <Card.Text style={{ textAlign: "left" }}>
+                  {t("description_wind")}
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </div>
           <h2>Scenario's</h2>
           <CardColumns
             style={{
