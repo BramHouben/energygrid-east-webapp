@@ -10,6 +10,7 @@ import "./index.css";
 import "moment/locale/nl";
 import "react-datetime/css/react-datetime.css";
 import ApiActions from "services/shared/api/ApiActions";
+import { FormattedDate, FormHours } from "../form-checker";
 
 class ScenarioSolarForm extends Component {
   constructor(props) {
@@ -83,8 +84,8 @@ class ScenarioSolarForm extends Component {
 
   checkFormSolar(formDataObj) {
     let solarPark = {};
-    if (!!formDataObj.solarPark && formDataObj.solarPark !== "null") {
-      solarPark = JSON.parse(formDataObj.solarPark);
+    if (!!formDataObj.solarUnit && formDataObj.solarUnit !== "null") {
+      solarPark = JSON.parse(formDataObj.solarUnit);
       let newSolarPark = {};
       newSolarPark.id = parseInt(solarPark.id);
       newSolarPark.description = solarPark.text;
@@ -100,41 +101,26 @@ class ScenarioSolarForm extends Component {
   }
 
   async createSimulation(url, formDataObj) {
-    Axios.post(url, {
-      name: formDataObj.name,
-      scenarioType: formDataObj.scenarioType,
-      description: formDataObj.description,
-      type: formDataObj.type,
-      solarUnit: formDataObj.solarPark,
-      amount: formDataObj.amount,
-      coordinates: formDataObj.coordinates,
-    })
-      .then((response) => {
-        if (response.status === 200) {
-          var modal = document.getElementById("myModal");
-          modal.style.display = "none";
-
-          window.dispatchEvent(
-            new CustomEvent("refresh-create-scenario", {
-              bubbles: true,
-              composed: true,
-              detail: {},
-            })
-          );
-        }
-      })
-      .catch(() => {
-        console.log("Werkt niet");
-      });
+    Axios.post(url, formDataObj).then(() => {
+      var modal = document.getElementById("myModal");
+      modal.style.display = "none";
+      window.dispatchEvent(
+        new CustomEvent("refresh-create-scenario", {
+          bubbles: true,
+          composed: true,
+          detail: {},
+        })
+      );
+    });
   }
 
   startSimulation(e) {
     e.preventDefault();
     let formDataObj = getFormDataInJson(e);
+    let url = ApiActions.CreateScenarioSolar;
     if (!!formDataObj) {
-      let url = ApiActions.CreateScenarioSolar;
       formDataObj.coordinates = JSON.parse(formDataObj.coordinates);
-      formDataObj.solarPark = this.checkFormSolar(formDataObj);
+      formDataObj.solarUnit = this.checkFormSolar(formDataObj);
 
       if (!!formDataObj.amount) {
         formDataObj.amount = parseInt(formDataObj.amount);
@@ -142,16 +128,9 @@ class ScenarioSolarForm extends Component {
           formDataObj.description + ", " + formDataObj.amount * 20 + " panels";
       }
 
-      if (!!formDataObj.from && formDataObj.hours) {
-        console.log(formDataObj.from + ":" + formDataObj.hours);
-        let dates = [];
-        let date = new Date(formDataObj.from);
-        for (var i = 0; i <= parseInt(formDataObj.hours); i++) {
-          let newDate = new Date(date.valueOf() + i * 1000 * 60 * 60);
-          let formattedTime = this.getFormattedDate(newDate);
-          dates.push(formattedTime);
-        }
-        url = url + "?times=" + dates.join();
+      if (!!formDataObj.from && !!formDataObj.hours) {
+        const dates = FormHours(formDataObj.from, formDataObj.hours);
+        formDataObj.turnOffTimes = dates.join();
       }
       this.createSimulation(url, formDataObj);
     }
@@ -159,7 +138,6 @@ class ScenarioSolarForm extends Component {
 
   getJson() {
     const json = this.state.selectedSolarPark;
-    console.log(json);
     if (json) return JSON.stringify(json);
     return null;
   }
@@ -172,7 +150,6 @@ class ScenarioSolarForm extends Component {
     if (!!this.state.selectedSolarPark) {
       json = this.state.selectedSolarPark.coordinates;
     }
-
     const result = {
       x: !!json[1] ? json[1] : json.x,
       y: !!json[0] ? json[0] : json.y,
@@ -183,31 +160,9 @@ class ScenarioSolarForm extends Component {
   getFromJson() {
     let json = this.state.startDate;
     if (!!json) {
-      json = this.getFormattedDate(json);
+      json = FormattedDate(json);
     }
     return json;
-  }
-
-  getFormattedDate(d) {
-    let date = new Date(d);
-
-    let year = date.getFullYear();
-    let month = ("0" + (date.getMonth() + 1)).slice(-2);
-    let day = ("0" + date.getDate()).slice(-2);
-    let hours = "0" + date.getHours();
-    let minutes = "0" + date.getMinutes();
-
-    return (
-      year +
-      "-" +
-      month +
-      "-" +
-      day +
-      "T" +
-      hours.substr(-2) +
-      ":" +
-      minutes.substr(-2)
-    );
   }
 
   getScenarioForm(scenario, translate) {
@@ -430,12 +385,6 @@ class ScenarioSolarForm extends Component {
           </div>
           <Form.Control
             type="hidden"
-            name="solarPark"
-            value={this.getJson()}
-            data-cast="json"
-          />
-          <Form.Control
-            type="hidden"
             name="coordinates"
             value={this.getCoordinatesJson()}
             data-cast="json"
@@ -444,6 +393,12 @@ class ScenarioSolarForm extends Component {
             type="hidden"
             name="from"
             value={this.getFromJson()}
+            data-cast="json"
+          />
+          <Form.Control
+            type="hidden"
+            name="solarUnit"
+            value={this.getJson()}
             data-cast="json"
           />
         </Form>
