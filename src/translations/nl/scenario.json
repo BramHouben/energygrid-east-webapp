@@ -33,6 +33,6 @@
   "add_solarpark": "Zonnepark toevoegen",
   "remove_solarpark": "Zonnepark verwijderen",
   "turn_off_solarpark": "Zet zonnepark tijdelijk uit",
-  "description_wind": "Aantal actieve scenario's met betrekking tot windenergie",
-  "description_solar": "Aantal actieve scenario's met betrekking tot zonne-energie"
+  "description_wind": "Actieve scenario's met betrekking tot windenergie",
+  "description_solar": "Actieve scenario's met betrekking tot zonne-energie"
 }

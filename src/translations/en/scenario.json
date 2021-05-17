@@ -33,6 +33,6 @@
   "add_solarpark": "Add solar park",
   "remove_solarpark": "Remove solar park",
   "turn_off_solarpark": "Temporarily turn off solar park",
-  "description_wind": "Number of active wind energy scenarios",
+  "description_wind": "Number of active scenarios related to wind energy",
   "description_solar": "Number of active scenarios related to solar energy"
 }

@@ -12,6 +12,7 @@ import Footer from "components/shared/footer";
 import Axios from "axios";
 import { Card, Button, CardColumns } from "react-bootstrap";
 import ApiActions from "services/shared/api/ApiActions";
+import { HiArrowUp, HiArrowDown } from "react-icons/hi";
 
 const ResponsiveReactGridLayout = WidthProvider(Responsive);
 
@@ -23,6 +24,7 @@ class Dashboard extends React.Component {
       data: [],
       solar: 0,
       wind: 0,
+      kilowatt: 0.0,
     };
   }
 
@@ -31,6 +33,7 @@ class Dashboard extends React.Component {
     this.getLatestScenarios();
     this.findTodaysScenarios();
     window.addEventListener("refresh-create-scenario", () => {
+      this.setState({ kilowatt: 0 });
       this.getLatestScenarios();
       this.findTodaysScenarios();
     });
@@ -61,18 +64,26 @@ class Dashboard extends React.Component {
   async findTodaysScenarios() {
     await Axios.get(ApiActions.TodayScenarioWind).then((response) => {
       if (response.status === 200) {
-        this.setState({ wind: response.data });
+        const kilowatt = this.state.kilowatt;
+        this.setState({
+          wind: response.data.count,
+          kilowatt: kilowatt + response.data.kilowatt,
+        });
       }
     });
     await Axios.get(ApiActions.TodayScenarioSolar).then((response) => {
       if (response.status === 200) {
-        this.setState({ solar: response.data });
+        const kilowatt = this.state.kilowatt;
+        this.setState({
+          solar: response.data.count,
+          kilowatt: kilowatt + response.data.kilowatt,
+        });
       }
     });
   }
 
   render() {
-    let { charts, data, solar, wind } = this.state;
+    let { charts, data, solar, wind, kilowatt } = this.state;
     const { t } = this.props;
     let layout;
 
@@ -99,6 +110,53 @@ class Dashboard extends React.Component {
           <Header pageName="Dashboard" />
           <FilterHeader />
         </div>
+        <div className="scenario-cards">
+          <Card style={{ width: "18rem" }}>
+            <Card.Body>
+              <Card.Text style={{ textAlign: "left" }}>
+                {t("description_solar")}
+              </Card.Text>
+              <Card.Title
+                style={{
+                  fontSize: "30px",
+                  textAlign: "right",
+                }}
+              >
+                {solar ? solar : 0}
+              </Card.Title>
+            </Card.Body>
+          </Card>
+          <Card style={{ width: "18rem" }}>
+            <Card.Body>
+              <Card.Text style={{ textAlign: "left" }}>
+                {t("description_wind")}
+              </Card.Text>
+              <Card.Title
+                style={{
+                  fontSize: "30px",
+                  textAlign: "right",
+                }}
+              >
+                {wind ? wind : 0}
+              </Card.Title>
+            </Card.Body>
+          </Card>
+          <Card style={{ width: "18rem" }}>
+            <Card.Body>
+              <Card.Text style={{ textAlign: "left" }}>
+                {t("expected_production")}
+              </Card.Text>
+              <Card.Title style={{ fontSize: "30px", textAlign: "right" }}>
+                {!!kilowatt && kilowatt >= 0 ? (
+                  <HiArrowUp size={30} style={{ color: "green" }} />
+                ) : (
+                  <HiArrowDown size={30} style={{ color: "red" }} />
+                )}
+                {kilowatt.toFixed(2)}
+              </Card.Title>
+            </Card.Body>
+          </Card>
+        </div>
         <ResponsiveReactGridLayout
           className="layout"
           layout={layout}
@@ -113,28 +171,6 @@ class Dashboard extends React.Component {
           ))}
         </ResponsiveReactGridLayout>
         <div className="scenario-container">
-          <div className="scenario-cards">
-            <Card style={{ width: "18rem" }}>
-              <Card.Body>
-                <Card.Title style={{ fontSize: "30px", textAlign: "left" }}>
-                  {solar}
-                </Card.Title>
-                <Card.Text style={{ textAlign: "left" }}>
-                  {t("description_solar")}
-                </Card.Text>
-              </Card.Body>
-            </Card>
-            <Card style={{ width: "18rem" }}>
-              <Card.Body>
-                <Card.Title style={{ fontSize: "30px", textAlign: "left" }}>
-                  {wind}
-                </Card.Title>
-                <Card.Text style={{ textAlign: "left" }}>
-                  {t("description_wind")}
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </div>
           <h2>Scenario's</h2>
           <CardColumns
             style={{
