@@ -10,7 +10,7 @@ import "./index.css";
 import Modal from "components/shared/modal";
 import Footer from "components/shared/footer";
 import Axios from "axios";
-import { Card, Button, CardColumns } from "react-bootstrap";
+import { Card, CardColumns, Table } from "react-bootstrap";
 import ApiActions from "services/shared/api/ApiActions";
 import { HiArrowUp, HiArrowDown } from "react-icons/hi";
 import ForecastTable from "components/shared/forecast-table";
@@ -102,14 +102,15 @@ class Dashboard extends React.Component {
       ];
     } else {
       layout = [
-        { x: 0, y: 0, w: 1, h: 1 },
-        { x: 1, y: 0, w: 1, h: 1 },
-        { x: 2, y: 0, w: 1, h: 1 },
-        { x: 3, y: 0, w: 1, h: 1 },
+        { x: 0, y: 1, w: 1, h: 1 },
+        { x: 0, y: 2, w: 1, h: 1 },
+        { x: 0, y: 3, w: 1, h: 1 },
+        { x: 0, y: 4, w: 1, h: 1 },
         { x: 4, y: 0, w: 1, h: 1 },
-        { x: 5, y: 0, w: 3, h: 0.5 },
-        { x: 6, y: 0, w: 2, h: 1 },
-        { x: 7, y: 0, w: 2, h: 1.75 },
+        { x: 0, y: 0, w: 3, h: 0.5 },
+        { x: 1, y: 1, w: 2, h: 1 },
+        { x: 1, y: 2, w: 2, h: 1.25 },
+        { x: 1, y: 5, w: 2, h: 1.75 },
       ];
     }
 
@@ -213,7 +214,92 @@ class Dashboard extends React.Component {
               </Card.Body>
             </Card>
           </div>
-          <div className="scenario-container" key={7} data-grid={layout[7]}>
+          <div key={7} data-grid={layout[7]}>
+            <Table striped bordered hover responsive="sm">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>City</th>
+                  <th>Energy production (in TJ)</th>
+                  <th>Energy consumed (in TJ)</th>
+                  <th>Balance</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Almere</td>
+                  <td>721</td>
+                  <td>11.293</td>
+                  <td>- 10.572</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Lelystad</td>
+                  <td>1.742</td>
+                  <td>8.512</td>
+                  <td>- 6.770</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Dronten</td>
+                  <td>1.437</td>
+                  <td>3.826</td>
+                  <td>- 2.389</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Zwolle</td>
+                  <td>557</td>
+                  <td>9.848</td>
+                  <td>- 9.291</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Almelo</td>
+                  <td>268</td>
+                  <td>6.296</td>
+                  <td>- 6.028</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Enschede</td>
+                  <td>397</td>
+                  <td>10.297</td>
+                  <td>- 9.899</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>Apeldoorn</td>
+                  <td>883</td>
+                  <td>15.920</td>
+                  <td>- 15.036</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>Deventer</td>
+                  <td>408</td>
+                  <td>8.018</td>
+                  <td>- 7.609</td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>Arnhem</td>
+                  <td>478</td>
+                  <td>12.616</td>
+                  <td>- 12.138</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>Nijmegen</td>
+                  <td>423</td>
+                  <td>11.938</td>
+                  <td>- 11.515</td>
+                </tr>
+              </tbody>
+            </Table>
+          </div>
+          <div className="scenario-container" key={8} data-grid={layout[8]}>
             <CardColumns
               style={{
                 display: "flex",
@@ -227,6 +313,7 @@ class Dashboard extends React.Component {
                   <DefaultCard scenario={scenario} id={index} key={index} />
                 ))}
               {/* <div>
+              Dit moet in de scenario pagina
                 <Card
                   style={{
                     width: "100%",
