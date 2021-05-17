@@ -39,6 +39,9 @@ class ScenarioSolarForm extends Component {
   componentDidMount() {
     window.addEventListener("map-click-coordinates", (e) => {
       console.log(e);
+      if (e.currentTarget.origin !== "http://localhost:3000") {
+        return;
+      }
       if (e.detail.coordinates !== null) {
         this.setState({ coordinates: e.detail.coordinates });
       }
