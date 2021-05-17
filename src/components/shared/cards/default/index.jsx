@@ -49,7 +49,7 @@ class DefaultCard extends React.Component {
         >
           {translate("expected_missed_production")}
           <HiArrowDown size={30} style={{ color: "red" }} />
-          {result.toFixed(0)} Kilowatt
+          {result} Kilowatt
         </div>
       );
     }
@@ -64,7 +64,7 @@ class DefaultCard extends React.Component {
         {" "}
         {translate("expected_production")}
         <HiArrowUp size={30} style={{ color: "green" }} />
-        {result.toFixed(0)} Kilowatt
+        {result} Kilowatt
       </div>
     );
   }
@@ -155,7 +155,7 @@ class DefaultCard extends React.Component {
               {this.getChartData(scenario, id, t)}
             </Card.Body>
             <Card.Footer>
-              <small className='text-muted'>
+              <small className="text-muted">
                 <b>{t("created_at")}: </b>{" "}
                 {this.getDateCreated(scenario.createdAt)}
               </small>

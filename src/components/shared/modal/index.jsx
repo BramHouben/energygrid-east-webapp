@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { withTranslation } from "react-i18next";
-import ScenarioForm from "components/shared/forms/scenario-form";
+import ScenarioForm from "components/shared/forms/scenario-wind-form";
 import "./index.css";
 
 class Modal extends Component {

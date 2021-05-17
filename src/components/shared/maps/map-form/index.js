@@ -12,10 +12,10 @@ export default function MapForm() {
   });
 
   const [selectedCoordinates, setSelectedCoordinates] = useState(null);
+  const [selectedType, setSelectedType] = useState(null);
 
   function _onClick(feature) {
     setSelectedCoordinates(feature.lngLat);
-    console.log(selectedCoordinates);
     window.dispatchEvent(
       new CustomEvent("map-click-coordinates", {
         bubbles: true,
@@ -28,6 +28,7 @@ export default function MapForm() {
   window.addEventListener("set-marker", (e) => {
     if (e.detail.coordinates !== null) {
       setSelectedCoordinates(e.detail.coordinates);
+      setSelectedType(e.detail.type);
     }
   });
 
@@ -52,10 +53,15 @@ export default function MapForm() {
             offsetLeft={-25}
           >
             <button className="marker-btn">
-              <img
-                src="/assets/windturbines/marker-turbine.png"
-                alt="turbine-icon"
-              />
+              {(selectedType && selectedType === "Wind") ||
+              selectedType === "wind" ? (
+                <img
+                  src="/assets/windturbines/marker-turbine.png"
+                  alt="turbine-icon"
+                />
+              ) : (
+                <img src="/assets/solarpark/marker-sun.png" alt="solar-icon" />
+              )}
             </button>
           </Marker>
         ) : (

@@ -54,14 +54,8 @@ class Menu extends Component {
             <a key="dashboard" href="/">
               {t("dashboard")}
             </a>
-            <a key="simulation" href={routerPaths.Simulation}>
-              {t("simulation")}
-            </a>
             <a key="regiondetails" href={routerPaths.Region}>
               {t("regiondetails")}
-            </a>
-            <a key="details" href={routerPaths.Details}>
-              {t("details")}
             </a>
             <a key="map" href={routerPaths.Map}>
               {t("map")}

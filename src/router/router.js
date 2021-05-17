@@ -3,7 +3,6 @@ import React from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import paths from "services/shared/router-paths";
 import Dashboard from "pages/dashboard";
-import Simulation from "pages/simulation";
 import Login from "pages/login";
 import Map from "pages/map";
 import Region from "pages/region";
@@ -30,18 +29,6 @@ function routes() {
         path={paths.Root}
         exact
         component={Dashboard}
-      />
-      <ProtectedRoute
-        roles={[
-          roles.Customer,
-          roles.LargeScaleCustomer,
-          roles.Admin,
-          roles.UtilityCompany,
-          roles.ResponsibleParty,
-        ]}
-        path={paths.Simulation}
-        exact
-        component={Simulation}
       />
       <ProtectedRoute
         roles={[
