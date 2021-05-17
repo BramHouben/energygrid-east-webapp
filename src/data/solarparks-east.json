@@ -14,7 +14,8 @@
       "power": 1.01,
       "max": 1408950,
       "realised_at": 2015,
-      "units": 10
+      "units": 1350,
+      "type": "POLY_CRYSTALLINE"
     },
     {
       "id": 2,
@@ -30,7 +31,8 @@
       "power": 2,
       "max": 3090000,
       "realised_at": 2016,
-      "units": 10
+      "units": 1000,
+      "type": "POLY_CRYSTALLINE"
     },
     {
       "id": 3,
@@ -46,7 +48,8 @@
       "power": 6.699,
       "max": 1.0322401e7,
       "realised_at": 2017,
-      "units": 10
+      "units": 400,
+      "type": "POLY_CRYSTALLINE"
     },
     {
       "id": 4,
@@ -62,7 +65,8 @@
       "power": 1.933,
       "max": 2978534,
       "realised_at": 2017,
-      "units": 10
+      "units": 400,
+      "type": "MONO_CRYSTALLINE"
     },
     {
       "id": 5,
@@ -78,7 +82,8 @@
       "power": 11.461,
       "max": 1.7707245e7,
       "realised_at": 2017,
-      "units": 10
+      "units": 500,
+      "type": "POLY_CRYSTALLINE"
     },
     {
       "id": 6,
@@ -94,7 +99,8 @@
       "power": 2.488,
       "max": 2659050,
       "realised_at": 2017,
-      "units": 10
+      "units": 500,
+      "type": "POLY_CRYSTALLINE"
     },
     {
       "id": 7,
@@ -110,7 +116,8 @@
       "power": 2.738,
       "max": 2926238,
       "realised_at": 2019,
-      "units": 10
+      "units": 1000,
+      "type": "MONO_CRYSTALLINE"
     },
     {
       "id": 8,
@@ -126,7 +133,8 @@
       "power": 1.65,
       "max": 1763438,
       "realised_at": 2017,
-      "units": 10
+      "units": 1000,
+      "type": "MONO_CRYSTALLINE"
     },
     {
       "id": 9,
@@ -142,7 +150,8 @@
       "power": 1.331,
       "max": 1043172,
       "realised_at": 2017,
-      "units": 10
+      "units": 1400,
+      "type": "MONO_CRYSTALLINE"
     },
     {
       "id": 10,
@@ -158,7 +167,8 @@
       "power": 1.8468,
       "max": 1973768,
       "realised_at": 2017,
-      "units": 10
+      "units": 1400,
+      "type": "POLY_CRYSTALLINE"
     },
     {
       "id": 11,
@@ -174,7 +184,8 @@
       "power": 4.032,
       "max": 4309200,
       "realised_at": 2017,
-      "units": 10
+      "units": 1400,
+      "type": "POLY_CRYSTALLINE"
     },
     {
       "id": 12,
@@ -190,7 +201,8 @@
       "power": 1.845,
       "max": 1971844,
       "realised_at": 2017,
-      "units": 10
+      "units": 1000,
+      "type": "POLY_CRYSTALLINE"
     },
     {
       "id": 13,
@@ -206,7 +218,8 @@
       "power": 2.232,
       "max": 2353644,
       "realised_at": 2017,
-      "units": 10
+      "units": 800,
+      "type": "MONO_CRYSTALLINE"
     },
     {
       "id": 14,
@@ -222,7 +235,8 @@
       "power": 1,
       "max": 1068750,
       "realised_at": 2017,
-      "units": 10
+      "units": 800,
+      "type": "MONO_CRYSTALLINE"
     },
     {
       "id": 15,
@@ -239,7 +253,8 @@
       "power": 13.5,
       "max": 1.76985e7,
       "realised_at": 2018,
-      "units": 10
+      "units": 400,
+      "type": "MONO_CRYSTALLINE"
     },
     {
       "id": 16,
@@ -255,7 +270,8 @@
       "power": 6.24,
       "max": 7380360,
       "realised_at": 2019,
-      "units": 10
+      "units": 800,
+      "type": "POLY_CRYSTALLINE"
     },
     {
       "id": 17,
@@ -271,7 +287,8 @@
       "power": 1.728,
       "max": 2068416,
       "realised_at": 2017,
-      "units": 10
+      "units": 600,
+      "type": "POLY_CRYSTALLINE"
     },
     {
       "id": 18,
@@ -287,7 +304,8 @@
       "power": 12.152,
       "max": 1.4026446e7,
       "realised_at": 2019,
-      "units": 10
+      "units": 400,
+      "type": "POLY_CRYSTALLINE"
     },
     {
       "id": 19,
@@ -304,7 +322,8 @@
       "power": 4,
       "max": 4902000,
       "realised_at": 2018,
-      "units": 10
+      "units": 400,
+      "type": "MONO_CRYSTALLINE"
     },
     {
       "id": 20,
@@ -320,7 +339,8 @@
       "power": 3.85,
       "max": 4553588,
       "realised_at": 2017,
-      "units": 10
+      "units": 200,
+      "type": "MONO_CRYSTALLINE"
     },
     {
       "id": 21,
@@ -336,7 +356,8 @@
       "power": 5.192,
       "max": 6732726,
       "realised_at": 2019,
-      "units": 10
+      "units": 900,
+      "type": "POLY_CRYSTALLINE"
     },
     {
       "id": 22,
@@ -353,7 +374,8 @@
       "power": 17.13,
       "max": 2.050461e7,
       "realised_at": 2019,
-      "units": 10
+      "units": 2000,
+      "type": "POLY_CRYSTALLINE"
     },
     {
       "id": 23,
@@ -369,7 +391,8 @@
       "power": 34.54308,
       "max": 3.3472245e7,
       "realised_at": 2019,
-      "units": 10
+      "units": 1000,
+      "type": "POLY_CRYSTALLINE"
     },
     {
       "id": 24,
@@ -385,7 +408,8 @@
       "power": 10,
       "max": 1.21125e7,
       "realised_at": 2019,
-      "units": 10
+      "units": 1200,
+      "type": "MONO_CRYSTALLINE"
     },
     {
       "id": 25,
@@ -401,7 +425,8 @@
       "power": 2.317,
       "max": 2740432,
       "realised_at": 2017,
-      "units": 10
+      "units": 1500,
+      "type": "MONO_CRYSTALLINE"
     },
     {
       "id": 26,
@@ -417,7 +442,8 @@
       "power": 13,
       "max": 1.482e7,
       "realised_at": 2020,
-      "units": 10
+      "units": 800,
+      "type": "POLY_CRYSTALLINE"
     },
     {
       "id": 27,
@@ -433,7 +459,8 @@
       "power": 3.3,
       "max": 3950100,
       "realised_at": 2020,
-      "units": 10
+      "units": 750,
+      "type": "POLY_CRYSTALLINE"
     },
     {
       "id": 28,
@@ -450,7 +477,8 @@
       "power": 5.584,
       "max": 7002336,
       "realised_at": 2020,
-      "units": 10
+      "units": 500,
+      "type": "POLY_CRYSTALLINE"
     },
     {
       "id": 29,
@@ -466,7 +494,8 @@
       "power": 2.917,
       "max": 3491649,
       "realised_at": 2020,
-      "units": 10
+      "units": 100,
+      "type": "MONO_CRYSTALLINE"
     },
     {
       "id": 30,
@@ -482,7 +511,8 @@
       "power": 2.052,
       "max": 2602449,
       "realised_at": 2019,
-      "units": 10
+      "units": 1000,
+      "type": "POLY_CRYSTALLINE"
     }
   ]
 }
