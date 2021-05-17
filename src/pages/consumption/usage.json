@@ -1,0 +1,50 @@
+{
+  "id": 1,
+  "type": "line",
+  "data": {
+    "key": "Energy Usage",
+    "total": [],
+    "labels": [],
+    "datasets": [
+      {
+        "label": "KwH",
+        "lineTension": 0.5,
+        "backgroundColor": "transparent",
+        "borderColor": "#0E910A",
+        "borderWidth": 2,
+        "data": []
+      }
+    ]
+  },
+  "options": {
+    "barValueSpacing": 20,
+    "legend": {
+      "display": true,
+      "position": "right"
+    },
+    "scales": {
+      "yAxes": [
+        {
+          "ticks": {
+            "beginAtZero": true
+          },
+          "scaleLabel": {
+            "display": true,
+            "labelString": "Energy Usage in KwH"
+          }
+        }
+      ],
+      "xAxes": [
+        {
+          "ticks": {
+            "beginAtZero": true
+          },
+          "scaleLabel": {
+            "display": true,
+            "labelString": "Time in hours"
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,49 @@
+#footersuccess {
+  position: sticky;
+  margin-bottom: 0;
+  border-top: 2px solid black;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#progressbarsuccess {
+  border-radius: 25px;
+
+  margin-right: 15%;
+  margin-left: 15%;
+}
+
+#footererror {
+  animation: blinkingText 0.8s infinite;
+
+  position: sticky;
+  margin-bottom: 0;
+
+  color: red;
+  border-top: 2px solid red;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#progressbarerror {
+  border-radius: 25px;
+  margin-right: 15%;
+  margin-left: 15%;
+}
+@keyframes blinkingText {
+  0% {
+    color: #000;
+  }
+  49% {
+    color: transparent;
+  }
+  50% {
+    color: transparent;
+  }
+  99% {
+    color: transparent;
+  }
+  100% {
+    color: #000;
+  }
+}

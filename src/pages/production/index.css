@@ -1,0 +1,54 @@
+#productionWrapper {
+  width: 100%;
+}
+
+#chartsWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#productionInfo {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+#today,
+#yesterday {
+  flex: 1;
+  padding: 0.5rem;
+}
+
+.infoBox {
+  width: 100%;
+  background-color: #eee;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.infoBox .lblHeader,
+.infoBox .lblInfo {
+  display: block;
+  text-align: center;
+}
+
+.infoBox .lblHeader {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.infoBox .lblInfo {
+  font-weight: lighter;
+}
+
+.chartBox {
+  width: 100%;
+}
+
+#card-wrapper {
+  width: unset !important;
+  margin: 0.5rem !important;
+}
