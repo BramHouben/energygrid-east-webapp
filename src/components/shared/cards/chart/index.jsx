@@ -42,6 +42,7 @@ class ChartCard extends React.Component {
           border="dark"
           style={{
             width: "100%",
+            borderRadius: "25px",
           }}
         >
           <Card.Header as="h5" style={{ textAlign: "center" }}>
