@@ -6,9 +6,12 @@ import Axios from "axios";
 import data from "data/turbine.json";
 import Datetime from "react-datetime";
 import MapForm from "components/shared/maps/map-form";
+import ScenarioSolarForm from "components/shared/forms/scenario-solar-form";
 import "./index.css";
 import "moment/locale/nl";
 import "react-datetime/css/react-datetime.css";
+import ApiActions from "services/shared/api/ApiActions";
+import { FormattedDate, FormHours } from "../form-checker";
 
 class ScenarioForm extends Component {
   constructor(props) {
@@ -42,6 +45,10 @@ class ScenarioForm extends Component {
 
   componentDidMount() {
     window.addEventListener("map-click-coordinates", (e) => {
+      console.log(e);
+      if (e.currentTarget.origin !== "http://localhost:3000") {
+        return;
+      }
       if (e.detail.coordinates !== null) {
         this.setState({ coordinates: e.detail.coordinates });
       }
@@ -70,7 +77,10 @@ class ScenarioForm extends Component {
             new CustomEvent("set-marker", {
               bubbles: true,
               composed: true,
-              detail: { coordinates: turbine.geometry.coordinates },
+              detail: {
+                coordinates: turbine.geometry.coordinates,
+                type: "wind",
+              },
             })
           );
         }
@@ -95,15 +105,7 @@ class ScenarioForm extends Component {
   }
 
   createSimulation(url, formDataObj) {
-    Axios.post(url, {
-      name: formDataObj.name,
-      scenarioType: formDataObj.scenarioType,
-      description: formDataObj.description,
-      type: formDataObj.type,
-      windTurbine: formDataObj.windTurbine,
-      amount: formDataObj.amount,
-      coordinates: formDataObj.coordinates,
-    })
+    Axios.post(url, formDataObj)
       .then((response) => {
         if (response.status === 200) {
           var modal = document.getElementById("myModal");
@@ -126,8 +128,8 @@ class ScenarioForm extends Component {
   startSimulation(e) {
     e.preventDefault();
     let formDataObj = getFormDataInJson(e);
+    let url = ApiActions.CreateScenarioWind;
     if (!!formDataObj) {
-      let url = "http://localhost:8081/scenario/wind/create";
       formDataObj.coordinates = JSON.parse(formDataObj.coordinates);
       formDataObj.type = parseFloat(formDataObj.type);
       formDataObj.windTurbine = this.checkFormTurbine(formDataObj);
@@ -141,15 +143,8 @@ class ScenarioForm extends Component {
       }
 
       if (!!formDataObj.from && formDataObj.hours) {
-        console.log(formDataObj.from + ":" + formDataObj.hours);
-        let dates = [];
-        let date = new Date(formDataObj.from);
-        for (var i = 0; i <= parseInt(formDataObj.hours); i++) {
-          let newDate = new Date(date.valueOf() + i * 1000 * 60 * 60);
-          let formattedTime = this.getFormattedDate(newDate);
-          dates.push(formattedTime);
-        }
-        url = url + "?times=" + dates.join();
+        const dates = FormHours(formDataObj.from, formDataObj.hours);
+        formDataObj.windTurbineOffTimes = dates.join();
       }
       this.createSimulation(url, formDataObj);
     }
@@ -157,7 +152,6 @@ class ScenarioForm extends Component {
 
   getJson() {
     const json = this.state.selectedTurbine;
-    console.log(json);
     if (json) return JSON.stringify(json);
     return null;
   }
@@ -170,7 +164,6 @@ class ScenarioForm extends Component {
     if (!!this.state.selectedTurbine) {
       json = this.state.selectedTurbine.geometry.coordinates;
     }
-
     const result = { x: json[1], y: json[0] };
     return JSON.stringify(result);
   }
@@ -178,31 +171,9 @@ class ScenarioForm extends Component {
   getFromJson() {
     let json = this.state.startDate;
     if (!!json) {
-      json = this.getFormattedDate(json);
+      json = FormattedDate(json);
     }
     return json;
-  }
-
-  getFormattedDate(d) {
-    let date = new Date(d);
-
-    let year = date.getFullYear();
-    let month = ("0" + (date.getMonth() + 1)).slice(-2);
-    let day = ("0" + date.getDate()).slice(-2);
-    let hours = "0" + date.getHours();
-    let minutes = "0" + date.getMinutes();
-
-    return (
-      year +
-      "-" +
-      month +
-      "-" +
-      day +
-      "T" +
-      hours.substr(-2) +
-      ":" +
-      minutes.substr(-2)
-    );
   }
 
   getScenarioForm(scenario, translate) {
@@ -466,7 +437,7 @@ class ScenarioForm extends Component {
         ) : (
           <div>
             {selectedItem === "Sun" ||
-              (selectedItem === "sun" && t("unavailable"))}
+              (selectedItem === "sun" && <ScenarioSolarForm />)}
           </div>
         )}
       </div>
