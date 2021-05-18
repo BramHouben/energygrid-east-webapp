@@ -10,7 +10,7 @@ import "./index.css";
 import Modal from "components/shared/modal";
 import Footer from "components/shared/footer";
 import Axios from "axios";
-import { Card, CardColumns, Table } from "react-bootstrap";
+import { Card, CardColumns, Table, Button } from "react-bootstrap";
 import ApiActions from "services/shared/api/ApiActions";
 import { HiArrowUp, HiArrowDown } from "react-icons/hi";
 import ForecastTable from "components/shared/forecast-table";
@@ -50,16 +50,6 @@ class Dashboard extends React.Component {
       .catch(() => {
         console.log("Werkt niet");
       });
-  }
-
-  openModal() {
-    window.dispatchEvent(
-      new CustomEvent("open-modal", {
-        bubbles: true,
-        composed: true,
-        detail: {},
-      })
-    );
   }
 
   async findTodaysScenarios() {
@@ -206,10 +196,10 @@ class Dashboard extends React.Component {
             <Card style={{ width: "18rem", borderRadius: "25px" }}>
               <Card.Body>
                 <Card.Text style={{ textAlign: "left" }}>
-                  Kosten energie per KwH
+                  SOME DETAILS
                 </Card.Text>
                 <Card.Title style={{ fontSize: "30px", textAlign: "right" }}>
-                  €0,23
+                  DESCRIPTION
                 </Card.Title>
               </Card.Body>
             </Card>
@@ -309,32 +299,16 @@ class Dashboard extends React.Component {
             >
               {!!data &&
                 data.length > 0 &&
-                data.map((scenario, index) => (
-                  <DefaultCard scenario={scenario} id={index} key={index} />
-                ))}
-              {/* <div>
-              Dit moet in de scenario pagina
-                <Card
-                  style={{
-                    width: "100%",
-                    justifyContent: "space-between",
-                    flex: 1,
-                    borderRadius: "25px",
-                  }}
-                >
-                  <Card.Body>
-                    <Card.Text>
-                      <Button variant="primary" onClick={this.openModal}>
-                        {t("add_scenario")}
-                      </Button>
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
-              </div> */}
+                data.map(
+                  (scenario, index) =>
+                    index === 0 && (
+                      <DefaultCard scenario={scenario} id={index} key={index} />
+                    )
+                )}
             </CardColumns>
           </div>
         </ResponsiveReactGridLayout>
-        <Modal /> <Footer />
+        <Footer />
       </div>
     );
   }
