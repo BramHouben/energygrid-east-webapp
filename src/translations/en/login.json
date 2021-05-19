@@ -1,0 +1,9 @@
+{
+  "title": "Login",
+  "email": "E-mail",
+  "email-placeholder": "E-mail",
+  "password": "Password",
+  "password-placeholder": "Password",
+  "submit-btn": "Login",
+  "login-failed": "Wrong username or password"
+}

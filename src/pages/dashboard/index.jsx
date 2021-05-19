@@ -8,8 +8,11 @@ import { withTranslation } from "react-i18next";
 import DefaultCard from "components/shared/cards/default";
 import "./index.css";
 import Modal from "components/shared/modal";
+import Footer from "components/shared/footer";
 import Axios from "axios";
 import { Card, Button, CardColumns } from "react-bootstrap";
+import ApiActions from "services/shared/api/ApiActions";
+import { HiArrowUp, HiArrowDown } from "react-icons/hi";
 
 const ResponsiveReactGridLayout = WidthProvider(Responsive);
 
@@ -19,19 +22,25 @@ class Dashboard extends React.Component {
     this.state = {
       charts: [],
       data: [],
+      solar: 0,
+      wind: 0,
+      kilowatt: 0.0,
     };
   }
 
   componentDidMount() {
     this.setState({ charts: data.charts });
     this.getLatestScenarios();
+    this.findTodaysScenarios();
     window.addEventListener("refresh-create-scenario", () => {
+      this.setState({ kilowatt: 0 });
       this.getLatestScenarios();
+      this.findTodaysScenarios();
     });
   }
 
   async getLatestScenarios() {
-    await Axios.get(`http://localhost:8081/scenario/wind/latest`)
+    await Axios.get(ApiActions.Scenarios)
       .then((response) => {
         this.setState({
           data: response.data,
@@ -52,8 +61,29 @@ class Dashboard extends React.Component {
     );
   }
 
+  async findTodaysScenarios() {
+    await Axios.get(ApiActions.TodayScenarioWind).then((response) => {
+      if (response.status === 200) {
+        const kilowatt = this.state.kilowatt;
+        this.setState({
+          wind: response.data.count,
+          kilowatt: kilowatt + response.data.kilowatt,
+        });
+      }
+    });
+    await Axios.get(ApiActions.TodayScenarioSolar).then((response) => {
+      if (response.status === 200) {
+        const kilowatt = this.state.kilowatt;
+        this.setState({
+          solar: response.data.count,
+          kilowatt: kilowatt + response.data.kilowatt,
+        });
+      }
+    });
+  }
+
   render() {
-    let { charts, data } = this.state;
+    let { charts, data, solar, wind, kilowatt } = this.state;
     const { t } = this.props;
     let layout;
 
@@ -79,6 +109,53 @@ class Dashboard extends React.Component {
         <div className="header-wrapper">
           <Header pageName="Dashboard" />
           <FilterHeader />
+        </div>
+        <div className="scenario-cards">
+          <Card style={{ width: "18rem" }}>
+            <Card.Body>
+              <Card.Text style={{ textAlign: "left" }}>
+                {t("description_solar")}
+              </Card.Text>
+              <Card.Title
+                style={{
+                  fontSize: "30px",
+                  textAlign: "right",
+                }}
+              >
+                {solar ? solar : 0}
+              </Card.Title>
+            </Card.Body>
+          </Card>
+          <Card style={{ width: "18rem" }}>
+            <Card.Body>
+              <Card.Text style={{ textAlign: "left" }}>
+                {t("description_wind")}
+              </Card.Text>
+              <Card.Title
+                style={{
+                  fontSize: "30px",
+                  textAlign: "right",
+                }}
+              >
+                {wind ? wind : 0}
+              </Card.Title>
+            </Card.Body>
+          </Card>
+          <Card style={{ width: "18rem" }}>
+            <Card.Body>
+              <Card.Text style={{ textAlign: "left" }}>
+                {t("expected_production")}
+              </Card.Text>
+              <Card.Title style={{ fontSize: "30px", textAlign: "right" }}>
+                {!!kilowatt && kilowatt >= 0 ? (
+                  <HiArrowUp size={30} style={{ color: "green" }} />
+                ) : (
+                  <HiArrowDown size={30} style={{ color: "red" }} />
+                )}
+                {kilowatt.toFixed(2)}
+              </Card.Title>
+            </Card.Body>
+          </Card>
         </div>
         <ResponsiveReactGridLayout
           className="layout"
@@ -110,7 +187,7 @@ class Dashboard extends React.Component {
             <div>
               <Card
                 style={{
-                  width: "72rem",
+                  width: "100%",
                   justifyContent: "space-between",
                   flex: 1,
                 }}
@@ -126,7 +203,7 @@ class Dashboard extends React.Component {
             </div>
           </CardColumns>
         </div>
-        <Modal />
+        <Modal /> <Footer />
       </div>
     );
   }

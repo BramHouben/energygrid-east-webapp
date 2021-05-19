@@ -1,0 +1,7 @@
+{
+  "pageName": "Energy market",
+  "sell-buy-label": "Sell or buy energy (kWh)",
+  "sell-by-description": "Negative is selling, positive number is buying",
+  "submit-btn": "Buy/sell",
+  "price": "Price €"
+}

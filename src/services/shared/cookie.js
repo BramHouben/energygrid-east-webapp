@@ -5,11 +5,11 @@ export function setAuthorizationCookie(authorizationTokes) {
   expirationDate.setHours(expirationDate.getHours() + 24);
 
   const cookie = new Cookies();
-  cookie.remove("Jwt", { path: "/" });
-  cookie.set("Jwt", authorizationTokes, {
+  cookie.remove("jwt", { path: "/" });
+  cookie.set("jwt", authorizationTokes, {
     path: "/",
     expires: expirationDate,
     sameSite: true,
-    secure: false
+    secure: false,
   });
 }
