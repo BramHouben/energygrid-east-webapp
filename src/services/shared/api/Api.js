@@ -7,8 +7,7 @@ export const Get = async (action) => {
       cache: "no-cache",
       credentials: "same-origin",
       headers: {
-        "Content-Type": "application/json",
-        Jwt: new Cookies().get("Jwt")?.jwt,
+        Jwt: new Cookies().get("jwt"),
       },
 
       redirect: "follow",
@@ -30,7 +29,7 @@ export const Post = async (action, json = null) => {
       credentials: "same-origin",
       headers: {
         "Content-Type": "application/json",
-        Jwt: new Cookies().get("Jwt")?.jwt,
+        Jwt: new Cookies().get("jwt"),
       },
 
       redirect: "follow",
@@ -53,7 +52,7 @@ export const Put = async (action, json = null) => {
       credentials: "same-origin",
       headers: {
         "Content-Type": "application/json",
-        Jwt: new Cookies().get("Jwt")?.jwt,
+        Jwt: new Cookies().get("jwt"),
       },
 
       redirect: "follow",
@@ -75,8 +74,7 @@ export const Delete = async (action, json = null) => {
       cache: "no-cache",
       credentials: "same-origin",
       headers: {
-        "Content-Type": "application/json",
-        Jwt: new Cookies().get("Jwt")?.jwt,
+        Jwt: new Cookies().get("jwt"),
       },
 
       redirect: "follow",

@@ -5,13 +5,13 @@ import { getClaim } from "services/jwt";
 import paths from "services/shared/router-paths";
 
 const ProtectedRoute = ({ component: Component, user, roles, ...rest }) => {
-  const jwt = new Cookies()?.get("Jwt")?.jwt;
+  const jwt = new Cookies()?.get("jwt");
 
   return (
     <Route
       {...rest}
       render={(props) => {
-        if (jwt !== undefined && roles.includes(getClaim("AccountRole"))) {
+        if (jwt !== undefined && roles.includes(getClaim("role"))) {
           return <Component {...rest} {...props} />;
         }
 

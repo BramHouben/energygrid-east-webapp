@@ -2,3 +2,9 @@
   width: 70%;
   margin: auto;
 }
+
+#btn-remove-account-wrapper {
+  width: 100%;
+  margin-top: 25px;
+  text-align: center;
+}

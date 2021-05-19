@@ -11,6 +11,7 @@
   "terms-and-services-label": "Gebruikersovereenkomst",
   "terms-and-services-checkbox": "Ik accepteer de gebruikersovereenkomst",
   "submit-btn": "Registeren",
+  "invalid-data": "Gegevens zijn ongeldig",
   "password-mismatch": "Wachtwoorden komen niet overeen",
   "registration-success": "Account aangemaakt",
   "registration-duplicate": "Gebruikersnaam of email al in gebruik",

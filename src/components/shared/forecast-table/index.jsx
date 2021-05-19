@@ -14,6 +14,11 @@ export default class ForecastTable extends Component {
   }
 
   componentDidMount() {
+    this.getForecast(
+      JSON.parse(localStorage.getItem("coordinates")),
+      JSON.parse(localStorage.getItem("city"))
+    );
+
     window.addEventListener("weather-header", (e) => {
       this.getForecast(e.detail.coordinates, e.detail.city);
     });
@@ -38,13 +43,13 @@ export default class ForecastTable extends Component {
   setSunGrade(sunPercentage) {
     if (sunPercentage <= 15) return "#fe4444";
     if (sunPercentage > 15 && sunPercentage <= 60) return "#fe982f";
-    if (sunPercentage > 60) return "#39a839";
+    return "#39a839";
   }
 
   setWindGrade(windSpeed) {
     if (windSpeed > 2.5 && windSpeed <= 9) return "#fe982f";
     if (windSpeed > 9 && windSpeed <= 25) return "#39a839";
-    else return "#fe4444";
+    return "#fe4444";
   }
 
   render() {

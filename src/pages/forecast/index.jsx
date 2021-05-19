@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Header from "components/shared/header";
 import FilterHeader from "components/shared/filter-header";
+import Footer from "components/shared/footer";
 import ForecastTable from "components/shared/forecast-table";
 
 export default class Forecast extends Component {
@@ -15,7 +16,7 @@ export default class Forecast extends Component {
           <Header pageName="Weather forecast" />
           <FilterHeader />
         </div>
-        <ForecastTable />
+        <ForecastTable /> <Footer />
       </div>
     );
   }

@@ -2,7 +2,7 @@ import Cookies from "universal-cookie";
 
 export function getClaim(claim) {
   const cookie = new Cookies();
-  const token = cookie.get("Jwt")?.jwt;
+  const token = cookie.get("jwt");
   if (token === undefined) {
     return undefined;
   }
