@@ -29,8 +29,10 @@
     "react-password-strength-bar": "^0.3.3",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.3",
+    "react-stomp": "^5.1.0",
     "react-toastify": "^7.0.3",
     "react-tooltip": "^4.2.17",
+    "sockjs-client": "^1.5.1",
     "universal-cookie": "^4.0.4",
     "web-vitals": "^1.1.1"
   },
