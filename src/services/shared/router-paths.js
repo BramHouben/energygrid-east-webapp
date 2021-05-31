@@ -11,7 +11,7 @@ const paths = {
   Production: "/production/",
   TermsAndServices: "/terms-and-services/",
   Consumption: "/consumption/",
-  Pwa: "/pwa"
+  Pwa: "/pwa/"
 };
 
 export default paths;
