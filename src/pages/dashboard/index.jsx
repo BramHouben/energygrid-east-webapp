@@ -7,13 +7,14 @@ import { Responsive, WidthProvider } from "react-grid-layout";
 import { withTranslation } from "react-i18next";
 import DefaultCard from "components/shared/cards/default";
 import "./index.css";
-import Modal from "components/shared/modal";
 import Footer from "components/shared/footer";
 import Axios from "axios";
-import { Card, CardColumns, Table, Button } from "react-bootstrap";
+import { Card, CardColumns, Table } from "react-bootstrap";
 import ApiActions from "services/shared/api/ApiActions";
 import { HiArrowUp, HiArrowDown } from "react-icons/hi";
 import ForecastTable from "components/shared/forecast-table";
+import SockJsClient from "react-stomp";
+import paginationFactory from "react-bootstrap-table2-paginator";
 
 const ResponsiveReactGridLayout = WidthProvider(Responsive);
 
@@ -26,8 +27,18 @@ class Dashboard extends React.Component {
       solar: 0,
       wind: 0,
       kilowatt: 0.0,
+      production: [],
     };
   }
+
+  onConnected = () => {};
+
+  onMessageReceive = (message) => {
+    console.log(message);
+    if (!!message) {
+      this.setState({ production: message });
+    }
+  };
 
   componentDidMount() {
     this.setState({ charts: data.charts });
@@ -38,6 +49,9 @@ class Dashboard extends React.Component {
       this.getLatestScenarios();
       this.findTodaysScenarios();
     });
+
+    //Fetch Data from solar/simulation/overview
+    //Received overview of production of solarpark
   }
 
   async getLatestScenarios() {
@@ -74,9 +88,16 @@ class Dashboard extends React.Component {
   }
 
   render() {
-    let { charts, data, solar, wind, kilowatt } = this.state;
+    let { charts, data, solar, wind, kilowatt, production } = this.state;
     const { t } = this.props;
     let layout;
+    let pagination = 0;
+
+    if (!!production && production.length > 0) {
+      pagination = paginationFactory({
+        page: Math.ceil(production.length / 10),
+      });
+    }
 
     var mq = window.matchMedia("(max-width: 768px)");
     if (mq.matches) {
@@ -205,87 +226,34 @@ class Dashboard extends React.Component {
             </Card>
           </div>
           <div key={7} data-grid={layout[7]}>
-            <Table striped bordered hover responsive="sm">
+            <Table
+              striped
+              bordered
+              hover
+              responsive="sm"
+              pagination={pagination}
+            >
               <thead>
                 <tr>
                   <th>ID</th>
-                  <th>City</th>
-                  <th>Energy production (in TJ)</th>
-                  <th>Energy consumed (in TJ)</th>
-                  <th>Balance</th>
+                  <th>Beschrijving</th>
+                  <th>Aantal zonnepanelen</th>
+                  <th>Productie vandaag</th>
+                  <th>Productie jaarlijks</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Almere</td>
-                  <td>721</td>
-                  <td>11.293</td>
-                  <td>- 10.572</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Lelystad</td>
-                  <td>1.742</td>
-                  <td>8.512</td>
-                  <td>- 6.770</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>Dronten</td>
-                  <td>1.437</td>
-                  <td>3.826</td>
-                  <td>- 2.389</td>
-                </tr>
-                <tr>
-                  <td>4</td>
-                  <td>Zwolle</td>
-                  <td>557</td>
-                  <td>9.848</td>
-                  <td>- 9.291</td>
-                </tr>
-                <tr>
-                  <td>5</td>
-                  <td>Almelo</td>
-                  <td>268</td>
-                  <td>6.296</td>
-                  <td>- 6.028</td>
-                </tr>
-                <tr>
-                  <td>6</td>
-                  <td>Enschede</td>
-                  <td>397</td>
-                  <td>10.297</td>
-                  <td>- 9.899</td>
-                </tr>
-                <tr>
-                  <td>7</td>
-                  <td>Apeldoorn</td>
-                  <td>883</td>
-                  <td>15.920</td>
-                  <td>- 15.036</td>
-                </tr>
-                <tr>
-                  <td>8</td>
-                  <td>Deventer</td>
-                  <td>408</td>
-                  <td>8.018</td>
-                  <td>- 7.609</td>
-                </tr>
-                <tr>
-                  <td>9</td>
-                  <td>Arnhem</td>
-                  <td>478</td>
-                  <td>12.616</td>
-                  <td>- 12.138</td>
-                </tr>
-                <tr>
-                  <td>10</td>
-                  <td>Nijmegen</td>
-                  <td>423</td>
-                  <td>11.938</td>
-                  <td>- 11.515</td>
-                </tr>
+                {!!production &&
+                  production.length > 0 &&
+                  production.map((object, index) => (
+                    <tr key={index}>
+                      <td>{object.solarPark.solarParkId}</td>
+                      <td>{object.solarPark.description}</td>
+                      <td>{object.solarPark.amountOfUnits * 20}</td>
+                      <td>{object.todayProduction}</td>
+                      <td>{object.yearProduction}</td>
+                    </tr>
+                  ))}
               </tbody>
             </Table>
           </div>
@@ -309,6 +277,13 @@ class Dashboard extends React.Component {
           </div>
         </ResponsiveReactGridLayout>
         <Footer />
+        <SockJsClient
+          url={process.env.REACT_APP_SOCKET_API}
+          topics={["/topic-overview"]}
+          onConnect={this.onConnected}
+          onMessage={(msg) => this.onMessageReceive(msg)}
+          debug={false}
+        />
       </div>
     );
   }
