@@ -5,12 +5,12 @@ import { withTranslation } from "react-i18next";
 import { BuyOrSellEnergy } from "services/shared/energy-market";
 import { getFormDataInJson } from "services/shared/form-data-helper";
 import "./index.css";
-
+import EnergyMarketCard from "components/shared/cards/energymarketcard";
 class EnergyMarket extends Component {
   constructor() {
     super();
     this.state = {
-      price: 0,
+      energyMarketInfo: {},
     };
   }
 
@@ -28,13 +28,14 @@ class EnergyMarket extends Component {
 
   render() {
     const { t } = this.props;
-    const { price } = this.state;
+    const energyMarketInfo = this.state.energyMarketInfo;
 
     return (
       <div>
         <Header pageName={t("pageName")} />
-        <div className="content">
-          <Form onSubmit={this.onSubmit} id="energy-market-form">
+        <div className='content'>
+          <EnergyMarketCard energyMarketInfo={energyMarketInfo} />
+          {/* <Form onSubmit={this.onSubmit} id="energy-market-form">
             <Form.Group>
               <Form.Label>{t("sell-buy-label")}</Form.Label>
               <Form.Control
@@ -51,7 +52,7 @@ class EnergyMarket extends Component {
             </label>
             <br />
             <Button>{t("submit-btn")}</Button>
-          </Form>
+          </Form> */}
         </div>
       </div>
     );
