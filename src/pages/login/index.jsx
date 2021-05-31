@@ -34,6 +34,11 @@ class Login extends Component {
         i18n.changeLanguage(user.language);
       }
 
+      if ( (window.matchMedia('(display-mode: standalone)').matches) && (accountRole !== "CUSTOMER") ) {
+        window.location.replace(paths.Pwa);
+        return;
+      }
+
       window.location.replace(paths.Root);
     } else {
       toast.error(t("login-failed"));
