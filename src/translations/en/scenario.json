@@ -29,10 +29,15 @@
   "average_production_per_turbine": "Average production per windmill",
   "number_of_units": "Number of units, (1 unit = 20 panels)",
   "select_solarpark": "Select solar park",
-  "solar_type": "Type of solarpanels",
+  "reactor_type": "Type of reactor",
   "add_solarpark": "Add solar park",
   "remove_solarpark": "Remove solar park",
   "turn_off_solarpark": "Temporarily turn off solar park",
   "description_wind": "Number of active scenarios related to wind energy",
-  "description_solar": "Number of active scenarios related to solar energy"
+  "description_solar": "Number of active scenarios related to solar energy",
+  "add_reactor": "Add a new reactor",
+  "remove_reactor": "Remove a existing reactor",
+  "shutoff_reactor": "Temporarily turn off a reactor",
+  "max_power": "The maximum of power the reactor can generate",
+  "select_nuclear": "Select nuclear powerplant"
 }

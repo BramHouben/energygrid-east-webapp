@@ -29,10 +29,15 @@
   "average_production_per_turbine": "Gemiddelde productie per windmolen",
   "number_of_units": "Aantal units, (1 unit = 20 panelen)",
   "select_solarpark": "Selecteer zonnepark",
-  "solar_type": "Type zonnepanelen",
+  "reactor_type": "Type reactor",
   "add_solarpark": "Zonnepark toevoegen",
   "remove_solarpark": "Zonnepark verwijderen",
   "turn_off_solarpark": "Zet zonnepark tijdelijk uit",
   "description_wind": "Actieve scenario's met betrekking tot windenergie",
-  "description_solar": "Actieve scenario's met betrekking tot zonne-energie"
+  "description_solar": "Actieve scenario's met betrekking tot zonne-energie",
+  "add_reactor": "Voeg een nieuwe reactor toe",
+  "remove_reactor": "Verwijder een bestaande reactor",
+  "shutoff_reactor": "Zet een reactor tijdelijk uit",
+  "max_power": "De maximale hoeveelheid stroom die de reactor kan genereren",
+  "select_nuclear": "Select nuclear powerplant"
 }
