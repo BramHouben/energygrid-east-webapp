@@ -13,3 +13,10 @@ export function setAuthorizationCookie(authorizationTokes) {
     secure: false,
   });
 }
+
+export function getJwt() {
+  const cookie = new Cookies();
+  const token = cookie.get("jwt");
+
+  return token;
+}

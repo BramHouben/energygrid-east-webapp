@@ -1,6 +1,6 @@
 {
   "id": 1,
-  "type": "line",
+  "type": "bar",
   "data": {
     "key": "Energy Usage",
     "total": [],
@@ -9,7 +9,7 @@
       {
         "label": "KwH",
         "lineTension": 0.5,
-        "backgroundColor": "transparent",
+        "backgroundColor": "#0E910A",
         "borderColor": "#0E910A",
         "borderWidth": 2,
         "data": []
@@ -17,6 +17,9 @@
     ]
   },
   "options": {
+    "animation": {
+      "duration": 1
+    },
     "barValueSpacing": 20,
     "legend": {
       "display": true,
