@@ -9,12 +9,12 @@ import DefaultCard from "components/shared/cards/default";
 import "./index.css";
 import Footer from "components/shared/footer";
 import Axios from "axios";
-import { Card, CardColumns, Table } from "react-bootstrap";
+import { Card, CardColumns, Table, Button } from "react-bootstrap";
 import ApiActions from "services/shared/api/ApiActions";
 import { HiArrowUp, HiArrowDown } from "react-icons/hi";
 import ForecastTable from "components/shared/forecast-table";
 import SockJsClient from "react-stomp";
-import paginationFactory from "react-bootstrap-table2-paginator";
+import Modal from "components/shared/modal";
 
 const ResponsiveReactGridLayout = WidthProvider(Responsive);
 
@@ -28,6 +28,7 @@ class Dashboard extends React.Component {
       wind: 0,
       kilowatt: 0.0,
       production: [],
+      lowestProduction: null,
     };
   }
 
@@ -37,17 +38,16 @@ class Dashboard extends React.Component {
     console.log(message);
     if (!!message) {
       this.setState({ production: message });
+      //this.getLowestProduction();
     }
   };
 
   componentDidMount() {
-    this.setState({ charts: data.charts });
-    this.getLatestScenarios();
-    this.findTodaysScenarios();
+    this.initDashboard();
+    this.getLowestProduction(this.state.production);
     window.addEventListener("refresh-create-scenario", () => {
       this.setState({ kilowatt: 0.0 });
-      this.getLatestScenarios();
-      this.findTodaysScenarios();
+      this.initDashboard();
     });
 
     //Fetch Data from solar/simulation/overview
@@ -87,17 +87,59 @@ class Dashboard extends React.Component {
     });
   }
 
+  async fetchProductionOverview() {
+    //await Axios.get(ApiActions.OverviewSolarProduction).then((response) => {
+    await Axios.get("http://localhost:8120/solar/production/overview").then(
+      (response) => {
+        if (response.status === 200) {
+          this.setState({
+            production: response.data,
+          });
+          this.getLowestProduction(response.data);
+        }
+      }
+    );
+  }
+
+  getLowestProduction(production) {
+    if (!!production && production.length > 0) {
+      let result;
+      production.reduce(
+        (object, obj) => ({
+          min: Math.min(object.min, obj.min),
+        }),
+        { min: Infinity }
+      );
+
+      console.log(result);
+
+      this.setState({ lowestProduction: null });
+    }
+  }
+
+  openModal() {
+    window.dispatchEvent(
+      new CustomEvent("open-modal", {
+        bubbles: true,
+        composed: true,
+        detail: {},
+      })
+    );
+  }
+
+  initDashboard() {
+    this.setState({ charts: data.charts });
+
+    this.getLatestScenarios();
+    this.findTodaysScenarios();
+    this.fetchProductionOverview();
+  }
+
   render() {
-    let { charts, data, solar, wind, kilowatt, production } = this.state;
+    let { charts, data, solar, wind, kilowatt, production, lowestProduction } =
+      this.state;
     const { t } = this.props;
     let layout;
-    let pagination = 0;
-
-    if (!!production && production.length > 0) {
-      pagination = paginationFactory({
-        page: Math.ceil(production.length / 10),
-      });
-    }
 
     var mq = window.matchMedia("(max-width: 768px)");
     if (mq.matches) {
@@ -197,11 +239,11 @@ class Dashboard extends React.Component {
             <Card style={{ width: "18rem", borderRadius: "25px" }}>
               <Card.Body>
                 <Card.Text style={{ textAlign: "left" }}>
-                  Balans in energie
+                  Nieuw Scenario toevoegen
                 </Card.Text>
-                <Card.Title style={{ fontSize: "30px", textAlign: "right" }}>
-                  100%
-                </Card.Title>
+                <Button variant="primary" onClick={this.openModal}>
+                  {t("add_scenario")}
+                </Button>
               </Card.Body>
             </Card>
             <Card style={{ width: "18rem", borderRadius: "25px" }}>
@@ -217,35 +259,33 @@ class Dashboard extends React.Component {
             <Card style={{ width: "18rem", borderRadius: "25px" }}>
               <Card.Body>
                 <Card.Text style={{ textAlign: "left" }}>
-                  SOME DETAILS
+                  Laagste dag productie
                 </Card.Text>
-                <Card.Title style={{ fontSize: "30px", textAlign: "right" }}>
-                  DESCRIPTION
+                <Card.Title style={{ fontSize: "24px", textAlign: "right" }}>
+                  {!!lowestProduction && !!lowestProduction.solarPark
+                    ? `${
+                        lowestProduction.solarPark.description
+                      } - ${lowestProduction.todayProduction.toFixed(2)} KwH`
+                    : null}
                 </Card.Title>
               </Card.Body>
             </Card>
           </div>
           <div key={7} data-grid={layout[7]}>
-            <Table
-              striped
-              bordered
-              hover
-              responsive="sm"
-              pagination={pagination}
-            >
+            <Table striped bordered hover responsive="sm">
               <thead>
                 <tr>
                   <th>ID</th>
                   <th>Beschrijving</th>
                   <th>Aantal zonnepanelen</th>
-                  <th>Productie vandaag</th>
-                  <th>Productie jaarlijks</th>
+                  <th>Productie vandaag (in KwH)</th>
+                  <th>Productie jaarlijks (in KwH)</th>
                 </tr>
               </thead>
               <tbody>
                 {!!production &&
                   production.length > 0 &&
-                  production.map((object, index) => (
+                  production.slice(0, 15).map((object, index) => (
                     <tr key={index}>
                       <td>{object.solarPark.solarParkId}</td>
                       <td>{object.solarPark.description}</td>
@@ -276,6 +316,7 @@ class Dashboard extends React.Component {
             </CardColumns>
           </div>
         </ResponsiveReactGridLayout>
+        <Modal />
         <Footer />
         <SockJsClient
           url={process.env.REACT_APP_SOCKET_API}

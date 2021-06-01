@@ -1,0 +1,24 @@
+{
+    "DownstreamPathTemplate": "/solar/production/{everything}",
+    "DownstreamScheme": "http",
+    "DownstreamHostAndPorts": [
+      {
+        "Host": "simulationsolarservice",
+        "Port": 8120
+      }
+    ],
+    "UpstreamPathTemplate": "/solar/production/{everything}",
+    "UpstreamHttpMethod": ["GET", "PUT", "POST", "DELETE"]
+  },
+  {
+    "DownstreamPathTemplate": "/api/ws/update/{everything}",
+    "DownstreamScheme": "http",
+    "DownstreamHostAndPorts": [
+      {
+        "Host": "websocketsservice",
+        "Port": 8443
+      }
+    ],
+    "UpstreamPathTemplate": "/api/ws/update/{everything}",
+    "UpstreamHttpMethod": ["GET", "PUT", "POST", "DELETE"]
+  },
