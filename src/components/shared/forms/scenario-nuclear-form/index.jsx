@@ -12,7 +12,10 @@ import "react-datetime/css/react-datetime.css";
 import ApiActions from "services/shared/api/ApiActions";
 import { FormattedDate, FormHours } from "../form-checker";
 import { Get } from "services/shared/api/Api";
-import { dateTimeTodayString, dateTodayString } from "services/shared/time-helper";
+import {
+  dateTimeTodayString,
+  dateTodayString,
+} from "services/shared/time-helper";
 
 class ScenarioNuclearForm extends Component {
   constructor(props) {
@@ -20,9 +23,9 @@ class ScenarioNuclearForm extends Component {
     this.state = {
       scenarioItem: "ADD_REACTOR",
       scenarioItems: [
-        { 
-          name: "ADD_REACTOR", 
-          value: "add_reactor" 
+        {
+          name: "ADD_REACTOR",
+          value: "add_reactor",
         },
         {
           name: "REMOVE_REACTOR",
@@ -54,8 +57,9 @@ class ScenarioNuclearForm extends Component {
     });
 
     const result = await Get(ApiActions.AllNuclearSimulations);
+    console.log(result);
     var simulations = await result.text();
-    this.setState({nuclearPlants: JSON.parse(simulations)});
+    this.setState({ nuclearPlants: JSON.parse(simulations) });
   }
 
   handleSelect = (e) => {
@@ -132,9 +136,8 @@ class ScenarioNuclearForm extends Component {
     formDataObj = this.checkNuclearForm(formDataObj);
     let url;
     if (formDataObj.scenarioType !== "null") {
-      url = ApiActions.CreateScenarioNuclear 
-    }
-    else {
+      url = ApiActions.CreateScenarioNuclear;
+    } else {
       url = ApiActions.CreateSimulationNuclear;
     }
 
@@ -306,9 +309,7 @@ class ScenarioNuclearForm extends Component {
                       this.state.selectedNuclearPlant &&
                       this.state.selectedNuclearPlant.reactorGeneration === 1
                     }
-                    value={
-                      1
-                    }
+                    value={1}
                   >
                     1st Generation Reactor
                   </option>
@@ -317,9 +318,7 @@ class ScenarioNuclearForm extends Component {
                       this.state.selectedNuclearPlant &&
                       this.state.selectedNuclearPlant.reactorGeneration === 2
                     }
-                    value={
-                      2
-                    }
+                    value={2}
                   >
                     2nd Generation Reactor
                   </option>
@@ -328,9 +327,7 @@ class ScenarioNuclearForm extends Component {
                       this.state.selectedNuclearPlant &&
                       this.state.selectedNuclearPlant.reactorGeneration === 3
                     }
-                    value={
-                      3
-                    }
+                    value={3}
                   >
                     3rd Generation Reactor
                   </option>

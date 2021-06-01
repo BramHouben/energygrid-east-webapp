@@ -435,11 +435,13 @@ class ScenarioForm extends Component {
               data-cast="json"
             />
           </Form>
-      ) : selectedItem === "Sun" || selectedItem === "sun" ? (
-        <ScenarioSolarForm />
-      ) : (
-        <ScenarioNuclearForm />
-      )}
+        ) : selectedItem === "Sun" || selectedItem === "sun" ? (
+          <ScenarioSolarForm />
+        ) : selectedItem === "Nuclear" || selectedItem === "nuclear" ? (
+          <ScenarioNuclearForm />
+        ) : (
+          <div></div>
+        )}
       </div>
     );
   }

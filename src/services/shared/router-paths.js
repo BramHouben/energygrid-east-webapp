@@ -7,7 +7,7 @@ const paths = {
   Forecast: "/forecast/",
   Map: "/map/",
   Region: "/region/",
-  Registration: "/registration/",
+  Registration: "/register/",
   Production: "/production/",
   TermsAndServices: "/terms-and-services/",
   Consumption: "/consumption/",

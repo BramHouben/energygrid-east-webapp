@@ -159,7 +159,7 @@ function routes() {
         path={paths.Pwa}
         component={Pwa}
       />
-      <ProtectedRoute
+      <Route
         roles={[
           roles.Customer,
           roles.LargeScaleCustomer,
