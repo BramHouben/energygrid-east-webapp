@@ -7,6 +7,7 @@ import data from "data/turbine.json";
 import Datetime from "react-datetime";
 import MapForm from "components/shared/maps/map-form";
 import ScenarioSolarForm from "components/shared/forms/scenario-solar-form";
+import ScenarioNuclearForm from "components/shared/forms/scenario-nuclear-form";
 import "./index.css";
 import "moment/locale/nl";
 import "react-datetime/css/react-datetime.css";
@@ -18,7 +19,7 @@ class ScenarioForm extends Component {
     super(props);
     this.state = {
       selectedItem: "",
-      items: ["wind", "sun"],
+      items: ["wind", "sun", "Nuclear"],
       scenarioItem: "ADD_WIND_PARK",
       scenarioItems: [
         { name: "ADD_WIND_PARK", value: "add_windpark" },
@@ -434,12 +435,11 @@ class ScenarioForm extends Component {
               data-cast="json"
             />
           </Form>
-        ) : (
-          <div>
-            {selectedItem === "Sun" ||
-              (selectedItem === "sun" && <ScenarioSolarForm />)}
-          </div>
-        )}
+      ) : selectedItem === "Sun" || selectedItem === "sun" ? (
+        <ScenarioSolarForm />
+      ) : (
+        <ScenarioNuclearForm />
+      )}
       </div>
     );
   }

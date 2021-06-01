@@ -6,6 +6,8 @@ const authentication = `${apiUrl}authentication/`;
 const region = `${apiUrl}region/`;
 const wind = `${apiUrl}scenario/wind`;
 const solar = `${apiUrl}scenario/solar`;
+const nuclearSimulation = "http://localhost:8180/simulation/nuclear";
+const nuclearScenario = "http://localhost:8180/scenario/nuclear";
 
 //If simulation service exist, we can call one request for the scenario's. Now we have only the latest from solar
 const scenario = `${apiUrl}scenario/wind/latest/`;
@@ -29,6 +31,9 @@ const actions = {
   Scenarios: `${scenario}`,
   TodayScenarioWind: `${wind}/today`,
   TodayScenarioSolar: `${solar}/today`,
+  AllNuclearSimulations: `${nuclearSimulation}/all`,
+  CreateSimulationNuclear: `${nuclearSimulation}/create`,
+  CreateScenarioNuclear: `${nuclearScenario}/create`
 };
 
 export default actions;
