@@ -72,6 +72,9 @@ class Menu extends Component {
             <a key="account" href={routerPaths.Account}>
               {t("account")}
             </a>
+            <a key="user-management" href={routerPaths.UserManagement}>
+              User Management
+            </a>
             <button
               onClick={() => this.logout()}
               type="button"

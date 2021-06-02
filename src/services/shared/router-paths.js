@@ -13,6 +13,7 @@ const paths = {
   Consumption: "/consumption/",
   Pwa: "/pwa/",
   Scenario: "/scenario/",
+  UserManagement: "/user-management/",
 };
 
 export default paths;
