@@ -3,6 +3,7 @@ import { Button } from "react-bootstrap";
 import { withTranslation } from "react-i18next";
 import routerPaths from "services/shared/router-paths";
 import Cookies from "universal-cookie";
+import { getClaim } from "services/jwt";
 import "./index.css";
 
 class Menu extends Component {
@@ -31,6 +32,9 @@ class Menu extends Component {
 
   render() {
     const { t } = this.props;
+    const jwt = getClaim("role");
+    console.log(jwt);
+
     return (
       <div>
         <Button
@@ -69,9 +73,11 @@ class Menu extends Component {
             <a key="account" href={routerPaths.Account}>
               {t("account")}
             </a>
-            <a key="user-management" href={routerPaths.UserManagement}>
-              User Management
-            </a>
+            {jwt == "ADMIN" && (
+              <a key="user-management" href={routerPaths.UserManagement}>
+                User Management
+              </a>
+            )}
             <button
               onClick={() => this.logout()}
               type="button"

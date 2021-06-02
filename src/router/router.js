@@ -123,7 +123,7 @@ function routes() {
         path={paths.Region}
         component={Region}
       />
-      <ProtectedRoute
+      <Route
         roles={[
           roles.Customer,
           roles.LargeScaleCustomer,

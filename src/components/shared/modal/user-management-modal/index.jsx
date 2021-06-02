@@ -4,7 +4,7 @@ import { getJwt } from "services/shared/cookie";
 import Axios from "axios";
 import "./index.css";
 
-export default class TweetModal extends Component {
+export default class UserManagementModal extends Component {
   constructor(props) {
     super(props);
     this.handleShow = this.handleShow.bind(this);
@@ -54,7 +54,6 @@ export default class TweetModal extends Component {
     return (
       <div>
         <Button
-          className="tweet-button"
           onClick={this.handleShow}
           style={{
             backgroundColor: "#82de94",
@@ -65,11 +64,7 @@ export default class TweetModal extends Component {
         >
           Add new Grid Operator
         </Button>
-        <Modal
-          className="tweet-modal"
-          show={this.state.show}
-          onHide={this.handleClose}
-        >
+        <Modal show={this.state.show} onHide={this.handleClose}>
           <Modal.Header>
             <Modal.Title>Add Grid Operator</Modal.Title>
           </Modal.Header>
