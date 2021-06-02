@@ -43,14 +43,14 @@ function routes() {
         exact
         component={Account}
       />
-      <ProtectedRoute
-        roles={[
-          roles.Customer,
-          roles.LargeScaleCustomer,
-          roles.Admin,
-          roles.UtilityCompany,
-          roles.ResponsibleParty,
-        ]}
+      <Route
+        // roles={[
+        //   roles.Customer,
+        //   roles.LargeScaleCustomer,
+        //   roles.Admin,
+        //   roles.UtilityCompany,
+        //   roles.ResponsibleParty,
+        // ]}
         path={paths.EnergyMarket}
         exact
         component={energyMarket}

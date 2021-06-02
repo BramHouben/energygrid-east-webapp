@@ -40,7 +40,7 @@ class regionCityDropdown extends Component {
 
   render() {
     const { cities } = this.state;
-  const { t } = this.props;
+    const { t } = this.props;
     return (
       <div>
         {cities.length > 0 ? (
@@ -61,7 +61,7 @@ class regionCityDropdown extends Component {
             </Form.Control>
           </Form.Group>
         ) : (
-            <div>{t("select city")}</div>
+          <div>{t("select city")}</div>
         )}
       </div>
     );

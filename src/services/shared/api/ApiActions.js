@@ -29,6 +29,7 @@ const actions = {
   Scenarios: `${scenario}`,
   TodayScenarioWind: `${wind}/today`,
   TodayScenarioSolar: `${solar}/today`,
+  getLatestMarktInfo: `${energyMarket}`,
 };
 
 export default actions;
