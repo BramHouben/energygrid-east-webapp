@@ -9,7 +9,7 @@ const solar = `${apiUrl}scenario/solar`;
 
 //If simulation service exist, we can call one request for the scenario's. Now we have only the latest from solar
 const scenario = `${apiUrl}scenario/wind/latest/`;
-const simulation = `${apiUrl}solar/production`;
+const simulation = `http://localhost:8120/solar/production`;
 // All paths need to end with a '/'
 const balance = `${apiUrl}energybalance/`;
 const energyMarket = `${apiUrl}market/`;
@@ -31,6 +31,7 @@ const actions = {
   TodayScenarioWind: `${wind}/today`,
   TodayScenarioSolar: `${solar}/today`,
   OverviewSolarProduction: `${simulation}/overview`,
+  ResultsSolarProduction: `${simulation}/results`,
 };
 
 export default actions;

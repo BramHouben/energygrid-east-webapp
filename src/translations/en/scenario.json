@@ -34,5 +34,9 @@
   "remove_solarpark": "Remove solar park",
   "turn_off_solarpark": "Temporarily turn off solar park",
   "description_wind": "Number of active scenarios related to wind energy",
-  "description_solar": "Number of active scenarios related to solar energy"
+  "description_solar": "Number of active scenarios related to solar energy",
+  "daily_production": "Daily production",
+  "annual_production": "Annual production",
+  "cost_of_energy": "Energy costs per KwH",
+  "number_of_panels": "Number of panels"
 }
