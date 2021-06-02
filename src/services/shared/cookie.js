@@ -16,7 +16,5 @@ export function setAuthorizationCookie(authorizationTokes) {
 
 export function getJwt() {
   const cookie = new Cookies();
-  const token = cookie.get("jwt");
-
-  return token;
+  return cookie.get("jwt");
 }
