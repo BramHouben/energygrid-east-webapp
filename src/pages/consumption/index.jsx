@@ -26,7 +26,7 @@ export default class Forecast extends Component {
 
     let date = this.getFormattedDate(fulldate);
 
-    Axios.get(`http://localhost:8170/usage/day`, {
+    Axios.get(`http://localhost:8081/usage/day`, {
       params: {
         date: date,
       },
@@ -38,8 +38,8 @@ export default class Forecast extends Component {
         let chartKw = [];
 
         for (let i of result.data) {
-          chartLabels.push(result.data[i].hour);
-          chartKw.push(result.data[i].kwh);
+          chartLabels.push(i.hour);
+          chartKw.push(i.kwh);
         }
 
         data.data.labels = chartLabels;
@@ -72,24 +72,24 @@ export default class Forecast extends Component {
 
     return (
       <div>
-        <div className="header-wrapper">
-          <Header pageName="Weather forecast" />
+        <div className='header-wrapper'>
+          <Header pageName='Weather forecast' />
           <FilterHeader />
         </div>
-        <div className="usage-container">
-          <FormGroup className="usage-control">
+        <div className='usage-container'>
+          <FormGroup className='usage-control'>
             <Form.Label>Date</Form.Label>
             <Datetime
               inputProps={{ readOnly: true }}
-              name="from"
-              dateFormat="DD-MM-YYYY"
+              name='from'
+              dateFormat='DD-MM-YYYY'
               timeFormat={false}
               isValidDate={valid}
               value={this.state.date}
               onChange={this.handleDayChange}
             />
           </FormGroup>
-          <div className="usage-chart">
+          <div className='usage-chart'>
             <ChartCard chart={chart} />
           </div>
         </div>

@@ -14,7 +14,8 @@ import Consumption from "pages/consumption";
 import ProtectedRoute from "./ProtectedRoute";
 import roles from "services/shared/account-role";
 import energyMarket from "pages/energy-market";
-import Scenario from "pages/scenario";
+import Pwa from "pages/pwa";
+import UserManagement from "pages/user-management";
 
 function routes() {
   return (
@@ -23,6 +24,7 @@ function routes() {
         roles={[
           roles.Customer,
           roles.LargeScaleCustomer,
+          roles.GridOperator,
           roles.Admin,
           roles.UtilityCompany,
           roles.ResponsibleParty,
@@ -35,6 +37,7 @@ function routes() {
         roles={[
           roles.Customer,
           roles.LargeScaleCustomer,
+          roles.GridOperator,
           roles.Admin,
           roles.UtilityCompany,
           roles.ResponsibleParty,
@@ -47,6 +50,7 @@ function routes() {
         roles={[
           roles.Customer,
           roles.LargeScaleCustomer,
+          roles.GridOperator,
           roles.Admin,
           roles.UtilityCompany,
           roles.ResponsibleParty,
@@ -59,6 +63,7 @@ function routes() {
         roles={[
           roles.Customer,
           roles.LargeScaleCustomer,
+          roles.GridOperator,
           roles.Admin,
           roles.UtilityCompany,
           roles.ResponsibleParty,
@@ -71,6 +76,7 @@ function routes() {
         roles={[
           roles.Customer,
           roles.LargeScaleCustomer,
+          roles.GridOperator,
           roles.Admin,
           roles.UtilityCompany,
           roles.ResponsibleParty,
@@ -83,6 +89,7 @@ function routes() {
         roles={[
           roles.Customer,
           roles.LargeScaleCustomer,
+          roles.GridOperator,
           roles.Admin,
           roles.UtilityCompany,
           roles.ResponsibleParty,
@@ -95,6 +102,7 @@ function routes() {
         roles={[
           roles.Customer,
           roles.LargeScaleCustomer,
+          roles.GridOperator,
           roles.Admin,
           roles.UtilityCompany,
           roles.ResponsibleParty,
@@ -107,6 +115,7 @@ function routes() {
         roles={[
           roles.Customer,
           roles.LargeScaleCustomer,
+          roles.GridOperator,
           roles.Admin,
           roles.UtilityCompany,
           roles.ResponsibleParty,
@@ -118,6 +127,7 @@ function routes() {
         roles={[
           roles.Customer,
           roles.LargeScaleCustomer,
+          roles.GridOperator,
           roles.Admin,
           roles.UtilityCompany,
           roles.ResponsibleParty,
@@ -129,6 +139,7 @@ function routes() {
         roles={[
           roles.Customer,
           roles.LargeScaleCustomer,
+          roles.GridOperator,
           roles.Admin,
           roles.UtilityCompany,
           roles.ResponsibleParty,
@@ -140,6 +151,7 @@ function routes() {
         roles={[
           roles.Customer,
           roles.LargeScaleCustomer,
+          roles.GridOperator,
           roles.Admin,
           roles.UtilityCompany,
           roles.ResponsibleParty,
@@ -155,8 +167,13 @@ function routes() {
           roles.UtilityCompany,
           roles.ResponsibleParty,
         ]}
-        path={paths.Scenario}
-        component={Scenario}
+        path={paths.Pwa}
+        component={Pwa}
+      />
+      <ProtectedRoute
+        roles={[roles.Admin]}
+        path={paths.UserManagement}
+        component={UserManagement}
       />
     </BrowserRouter>
   );

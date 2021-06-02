@@ -5,7 +5,7 @@ configure({ adapter: new EnzymeAdapter() });
 
 test("Check if claims exists", () => {
   expect(claims).toEqual({
-    accountRole: "AccountRole",
+    accountRole: "role",
     userName: "Username",
     uuid: "Uuid",
     expires: "exp",

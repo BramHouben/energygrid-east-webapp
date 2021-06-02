@@ -8,6 +8,7 @@ import { setAuthorizationCookie } from "services/shared/cookie";
 import paths from "services/shared/router-paths";
 import { withTranslation } from "react-i18next";
 import { getClaim } from "services/jwt";
+import jwtClaims from "services/shared/jwt-claims";
 
 class Login extends Component {
   onSubmit = async (e) => {
@@ -18,6 +19,12 @@ class Login extends Component {
     const { t } = this.props;
 
     if (loginResult.status === 200) {
+      const accountRole = getClaim(jwtClaims.accountRole);
+      if ( (window.matchMedia('(display-mode: standalone)').matches) && (accountRole !== "CUSTOMER") ) {
+        toast.error(t("You are not allowed to use this app"));
+        return;
+      }
+
       setAuthorizationCookie(await loginResult.text());
       const userUuid = getClaim("uuid");
       const findUserResult = await FindUser(userUuid);
@@ -25,6 +32,11 @@ class Login extends Component {
         const user = await findUserResult.json();
         const { i18n } = this.props;
         i18n.changeLanguage(user.language);
+      }
+
+      if ( (window.matchMedia('(display-mode: standalone)').matches) && (accountRole !== "CUSTOMER") ) {
+        window.location.replace(paths.Pwa);
+        return;
       }
 
       window.location.replace(paths.Root);
