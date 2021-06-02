@@ -16,6 +16,7 @@ class ScenarioPage extends React.Component {
     this.state = {
       solar: [],
       wind: [],
+      nuclear: []
     };
   }
 
@@ -29,6 +30,7 @@ class ScenarioPage extends React.Component {
   initScenarios() {
     this.getLatestSolarScenarios();
     this.getLatestWindScenarios();
+    this.getLatesNuclearScenarios();
   }
 
   async getLatestSolarScenarios() {
@@ -55,6 +57,18 @@ class ScenarioPage extends React.Component {
       });
   }
 
+  async getLatesNuclearScenarios() {
+    await Axios.get(ApiActions.ScenariosNuclear)
+      .then((response) => {
+        this.setState({
+          nuclear: response.data,
+        });
+      })
+      .catch(() => {
+        console.log("Werkt niet");
+      });
+  }
+
   openModal() {
     window.dispatchEvent(
       new CustomEvent("open-modal", {
@@ -66,7 +80,7 @@ class ScenarioPage extends React.Component {
   }
 
   render() {
-    let { solar, wind } = this.state;
+    let { solar, wind, nuclear } = this.state;
     const { t } = this.props;
 
     return (
@@ -77,6 +91,23 @@ class ScenarioPage extends React.Component {
         </div>
         <div className="scenario-container">
           <h2>Scenario's</h2>
+          <div>
+              <Card
+                style={{
+                  width: "100%",
+                  justifyContent: "space-between",
+                  flex: 1,
+                }}
+              >
+                <Card.Body>
+                  <Card.Text>
+                    <Button variant="primary" onClick={this.openModal}>
+                      {t("add_scenario")}
+                    </Button>
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </div>
           <CardColumns
             style={{
               display: "flex",
@@ -95,23 +126,12 @@ class ScenarioPage extends React.Component {
               wind.map((scenario, index) => (
                 <DefaultCard scenario={scenario} id={index} key={index} />
               ))}
-            <div>
-              <Card
-                style={{
-                  width: "100%",
-                  justifyContent: "space-between",
-                  flex: 1,
-                }}
-              >
-                <Card.Body>
-                  <Card.Text>
-                    <Button variant="primary" onClick={this.openModal}>
-                      {t("add_scenario")}
-                    </Button>
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </div>
+               
+            {!!nuclear &&
+              nuclear.length > 0 &&
+              nuclear.map((scenario, index) => (
+                <DefaultCard scenario={scenario} id={index} key={index} />
+              ))}
           </CardColumns>
         </div>
         <Modal /> <Footer />
