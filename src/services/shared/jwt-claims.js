@@ -1,5 +1,5 @@
 const jwtClaims = {
-  accountRole: "AccountRole",
+  accountRole: "role",
   userName: "Username",
   uuid: "Uuid",
   expires: "exp",
