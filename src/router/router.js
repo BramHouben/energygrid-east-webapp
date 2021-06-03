@@ -44,13 +44,13 @@ function routes() {
         component={Account}
       />
       <Route
-        // roles={[
-        //   roles.Customer,
-        //   roles.LargeScaleCustomer,
-        //   roles.Admin,
-        //   roles.UtilityCompany,
-        //   roles.ResponsibleParty,
-        // ]}
+        roles={[
+          roles.Customer,
+          roles.LargeScaleCustomer,
+          roles.Admin,
+          roles.UtilityCompany,
+          roles.ResponsibleParty,
+        ]}
         path={paths.EnergyMarket}
         exact
         component={energyMarket}
