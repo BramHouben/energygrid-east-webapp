@@ -27,7 +27,6 @@ class ChartCard extends React.Component {
       case "bar":
         return <ChartBar chart={chart} />;
       case "heatmap":
-        console.log(chart);
         return <HeatMap chart={chart} />;
     }
   }
@@ -42,6 +41,7 @@ class ChartCard extends React.Component {
           border="dark"
           style={{
             width: "100%",
+            borderRadius: "25px",
           }}
         >
           <Card.Header as="h5" style={{ textAlign: "center" }}>
@@ -52,7 +52,6 @@ class ChartCard extends React.Component {
             {chart.data.total &&
               chart.data.total.length > 0 &&
               chart.data.total.map((total) => {
-                console.log(total);
                 return (
                   <div>
                     {t("total")}: {total}

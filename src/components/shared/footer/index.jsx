@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import ProgressBar from "react-bootstrap/ProgressBar";
 import "components/shared/footer/index.css";
 import ApiActions from "services/shared/api/ApiActions";
+import SockJsClient from "react-stomp";
 
 export default class Footer extends Component {
   constructor(props) {
@@ -35,6 +36,20 @@ export default class Footer extends Component {
     this.fetchData();
   }
 
+  onConnected = () => {};
+
+  onMessageReceive = (message) => {
+    console.log(message);
+    if (!!message) {
+      this.setState({
+        latestConsume: message.consume,
+        latestTime: message.time,
+        latestProcent: message.balance,
+        latestProduce: message.production,
+      });
+    }
+  };
+
   render() {
     let latestprocentbalance = this.state.latestProcent;
     return (
@@ -66,6 +81,13 @@ export default class Footer extends Component {
                 label={`${latestprocentbalance}% completed`}
               />
             </div>
+            <SockJsClient
+              url={process.env.REACT_APP_SOCKET_API}
+              topics={["/topic"]}
+              onConnect={this.onConnected}
+              onMessage={(msg) => this.onMessageReceive(msg)}
+              debug={false}
+            />
           </div>
         ) : (
           <div></div>

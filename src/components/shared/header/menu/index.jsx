@@ -57,17 +57,26 @@ class Menu extends Component {
             <a key="regiondetails" href={routerPaths.Region}>
               {t("regiondetails")}
             </a>
+            <a key="scenario" href={routerPaths.Scenario}>
+              {t("scenario")}
+            </a>
             <a key="map" href={routerPaths.Map}>
               {t("map")}
             </a>
             <a key="forecast" href={routerPaths.Forecast}>
               {t("forecast")}
             </a>
+            <a key="scenario" href={routerPaths.Scenario}>
+              {t("scenario")}
+            </a>
             <a key="energy-market" href={routerPaths.EnergyMarket}>
               {t("energy-market")}
             </a>
             <a key="account" href={routerPaths.Account}>
               {t("account")}
+            </a>
+            <a key="user-management" href={routerPaths.UserManagement}>
+              User Management
             </a>
             <button
               onClick={() => this.logout()}

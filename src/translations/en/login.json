@@ -5,5 +5,6 @@
   "password": "Password",
   "password-placeholder": "Password",
   "submit-btn": "Login",
-  "login-failed": "Wrong username or password"
+  "login-failed": "Wrong username or password",
+  "no_account_yet": "No account yet? register here"
 }

@@ -7,11 +7,13 @@ const paths = {
   Forecast: "/forecast/",
   Map: "/map/",
   Region: "/region/",
-  Registration: "/registration/",
+  Registration: "/register/",
   Production: "/production/",
   TermsAndServices: "/terms-and-services/",
   Consumption: "/consumption/",
-  Pwa: "/pwa/"
+  Scenario: "/scenario/",
+  Pwa: "/pwa/",
+  UserManagement: "/user-management/",
 };
 
 export default paths;
