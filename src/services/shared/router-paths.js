@@ -13,7 +13,6 @@ const paths = {
   Consumption: "/consumption/",
   Scenario: "/scenario/",
   Pwa: "/pwa/",
-  Scenario: "/scenario/",
   UserManagement: "/user-management/",
 };
 
