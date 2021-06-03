@@ -9,6 +9,7 @@ import paths from "services/shared/router-paths";
 import { withTranslation } from "react-i18next";
 import { getClaim } from "services/jwt";
 import jwtClaims from "services/shared/jwt-claims";
+import routerPaths from "services/shared/router-paths";
 
 class Login extends Component {
   onSubmit = async (e) => {
@@ -20,7 +21,10 @@ class Login extends Component {
 
     if (loginResult.status === 200) {
       const accountRole = getClaim(jwtClaims.accountRole);
-      if ( (window.matchMedia('(display-mode: standalone)').matches) && (accountRole !== "CUSTOMER") ) {
+      if (
+        window.matchMedia("(display-mode: standalone)").matches &&
+        accountRole !== "CUSTOMER"
+      ) {
         toast.error(t("You are not allowed to use this app"));
         return;
       }
@@ -34,7 +38,10 @@ class Login extends Component {
         i18n.changeLanguage(user.language);
       }
 
-      if ( (window.matchMedia('(display-mode: standalone)').matches) && (accountRole !== "CUSTOMER") ) {
+      if (
+        window.matchMedia("(display-mode: standalone)").matches &&
+        accountRole !== "CUSTOMER"
+      ) {
         window.location.replace(paths.Pwa);
         return;
       }
@@ -81,6 +88,11 @@ class Login extends Component {
           >
             {t("submit-btn")}
           </Button>
+          <div style={{ marginTop: "20px", textAlign: "center" }}>
+            <a key="register" href={routerPaths.Registration}>
+              {t("no_account_yet")}
+            </a>
+          </div>
         </Form>
       </div>
     );

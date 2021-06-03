@@ -57,6 +57,9 @@ class Menu extends Component {
             <a key="regiondetails" href={routerPaths.Region}>
               {t("regiondetails")}
             </a>
+            <a key="scenario" href={routerPaths.Scenario}>
+              {t("scenario")}
+            </a>
             <a key="map" href={routerPaths.Map}>
               {t("map")}
             </a>

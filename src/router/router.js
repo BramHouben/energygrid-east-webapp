@@ -16,6 +16,7 @@ import roles from "services/shared/account-role";
 import energyMarket from "pages/energy-market";
 import Scenario from "pages/scenario";
 import Pwa from "pages/pwa";
+import ScenarioPage from "pages/scenario";
 import UserManagement from "pages/user-management";
 
 function routes() {
@@ -184,6 +185,16 @@ function routes() {
         path={paths.Pwa}
         component={Pwa}
       />
+      <Route
+        roles={[
+          roles.Customer,
+          roles.LargeScaleCustomer,
+          roles.Admin,
+          roles.UtilityCompany,
+          roles.ResponsibleParty,
+        ]}
+        path={paths.Scenario}
+        component={ScenarioPage}/>
       <ProtectedRoute
         roles={[roles.Admin]}
         path={paths.UserManagement}

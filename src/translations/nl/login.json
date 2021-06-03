@@ -5,5 +5,6 @@
   "password": "Wachtwoord",
   "password-placeholder": "Wachtwoord",
   "submit-btn": "Inloggen",
-  "login-failed": "Verkeerde gebruikersnaam of wachtwoord"
+  "login-failed": "Verkeerde gebruikersnaam of wachtwoord",
+  "no_account_yet": "Nog geen account? registreer hier"
 }
