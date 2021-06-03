@@ -16,7 +16,7 @@ class ScenarioPage extends React.Component {
     this.state = {
       solar: [],
       wind: [],
-      nuclear: []
+      nuclear: [],
     };
   }
 
@@ -92,22 +92,22 @@ class ScenarioPage extends React.Component {
         <div className="scenario-container">
           <h2>Scenario's</h2>
           <div>
-              <Card
-                style={{
-                  width: "100%",
-                  justifyContent: "space-between",
-                  flex: 1,
-                }}
-              >
-                <Card.Body>
-                  <Card.Text>
-                    <Button variant="primary" onClick={this.openModal}>
-                      {t("add_scenario")}
-                    </Button>
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </div>
+            <Card
+              style={{
+                width: "100%",
+                justifyContent: "space-between",
+                flex: 1,
+              }}
+            >
+              <Card.Body>
+                <Card.Text>
+                  <Button variant="primary" onClick={this.openModal}>
+                    {t("add_scenario")}
+                  </Button>
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </div>
           <CardColumns
             style={{
               display: "flex",
@@ -126,7 +126,7 @@ class ScenarioPage extends React.Component {
               wind.map((scenario, index) => (
                 <DefaultCard scenario={scenario} id={index} key={index} />
               ))}
-               
+
             {!!nuclear &&
               nuclear.length > 0 &&
               nuclear.map((scenario, index) => (
