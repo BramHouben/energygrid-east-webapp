@@ -39,5 +39,9 @@
   "remove_reactor": "Verwijder een bestaande reactor",
   "shutoff_reactor": "Zet een reactor tijdelijk uit",
   "max_power": "De maximale hoeveelheid stroom die de reactor kan genereren",
-  "select_nuclear": "Select nuclear powerplant"
+  "select_nuclear": "Select nuclear powerplant",
+  "daily_production": "Dagelijkse productie",
+  "annual_production": "Jaarlijkse productie",
+  "cost_of_energy": "Kosten energy per KwH",
+  "number_of_panels": "Aantal zonnepanelen"
 }

@@ -39,5 +39,9 @@
   "remove_reactor": "Remove a existing reactor",
   "shutoff_reactor": "Temporarily turn off a reactor",
   "max_power": "The maximum of power the reactor can generate",
-  "select_nuclear": "Select nuclear powerplant"
+  "select_nuclear": "Select nuclear powerplant",
+  "daily_production": "Daily production",
+  "annual_production": "Annual production",
+  "cost_of_energy": "Energy costs per KwH",
+  "number_of_panels": "Number of panels"
 }
