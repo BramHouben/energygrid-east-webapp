@@ -27,3 +27,20 @@ export function getNameOfMonth(dateTime) {
   const monthNames = ["januari", "februari", "maart", "april", "mei", "juni", "juli", "augustus", "september", "oktober", "november", "december"];
   return monthNames[dateTime.getMonth()];
 }
+
+export function dateTimeTodayString() {
+  const today = new Date();
+  return today.getFullYear() + "-" + formatNumbersToLocalDateTime(today.getMonth()) + "-" + 
+  formatNumbersToLocalDateTime(today.getDay()) + "T" + formatNumbersToLocalDateTime(today.getHours()) + ":" + 
+  formatNumbersToLocalDateTime(today.getMinutes()) + ":" + formatNumbersToLocalDateTime(today.getSeconds()); 
+}
+
+function formatNumbersToLocalDateTime(input) {
+  if (input < 10) {
+    return "0" + input;
+  }
+  
+  return input;
+}
+
+
