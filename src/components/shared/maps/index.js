@@ -16,7 +16,7 @@ export default function Maps() {
   const [selectedWindTurbinePark, setSelectedWindTurbinePark] = useState(null);
 
   return (
-    <div style={{width: '100%'}}>
+    <div style={{ width: "100%" }}>
       <ReactMapGL
         {...viewport}
         mapboxApiAccessToken={process.env.REACT_APP_MAP_BOX_TOKEN}

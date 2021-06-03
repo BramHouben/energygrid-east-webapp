@@ -7,13 +7,14 @@ import { Responsive, WidthProvider } from "react-grid-layout";
 import { withTranslation } from "react-i18next";
 import DefaultCard from "components/shared/cards/default";
 import "./index.css";
-import Modal from "components/shared/modal";
 import Footer from "components/shared/footer";
 import Axios from "axios";
-import { Card, CardColumns, Table, Button } from "react-bootstrap";
+import { Card, CardColumns, Table } from "react-bootstrap";
 import ApiActions from "services/shared/api/ApiActions";
 import { HiArrowUp, HiArrowDown } from "react-icons/hi";
 import ForecastTable from "components/shared/forecast-table";
+import SockJsClient from "react-stomp";
+import Modal from "components/shared/modal";
 
 const ResponsiveReactGridLayout = WidthProvider(Responsive);
 
@@ -26,17 +27,27 @@ class Dashboard extends React.Component {
       solar: 0,
       wind: 0,
       kilowatt: 0.0,
+      production: [],
+      annualProduction: 0,
+      dailyProduction: 0,
     };
   }
 
+  onConnected = () => {};
+
+  onMessageReceive = (message) => {
+    console.log(message);
+    if (!!message) {
+      this.setState({ production: message });
+      this.initProductionResults();
+    }
+  };
+
   componentDidMount() {
-    this.setState({ charts: data.charts });
-    this.getLatestScenarios();
-    this.findTodaysScenarios();
+    this.initDashboard();
     window.addEventListener("refresh-create-scenario", () => {
       this.setState({ kilowatt: 0.0 });
-      this.getLatestScenarios();
-      this.findTodaysScenarios();
+      this.initDashboard();
     });
   }
 
@@ -73,8 +84,58 @@ class Dashboard extends React.Component {
     });
   }
 
+  async fetchProductionOverview() {
+    //await Axios.get(ApiActions.OverviewSolarProduction).then((response) => {
+    await Axios.get(ApiActions.OverviewSolarProduction).then((response) => {
+      if (response.status === 200) {
+        this.setState({
+          production: response.data,
+        });
+      }
+    });
+  }
+
+  async initProductionResults() {
+    await Axios.get(ApiActions.ResultsSolarProduction).then((response) => {
+      if (response.status === 200) {
+        this.setState({
+          annualProduction: response.data.yearProduction,
+          dailyProduction: response.data.todayProduction,
+        });
+      }
+    });
+  }
+
+  openModal() {
+    window.dispatchEvent(
+      new CustomEvent("open-modal", {
+        bubbles: true,
+        composed: true,
+        detail: {},
+      })
+    );
+  }
+
+  initDashboard() {
+    this.setState({ charts: data.charts });
+
+    this.getLatestScenarios();
+    this.findTodaysScenarios();
+    this.fetchProductionOverview();
+    this.initProductionResults();
+  }
+
   render() {
-    let { charts, data, solar, wind, kilowatt } = this.state;
+    let {
+      charts,
+      data,
+      solar,
+      wind,
+      kilowatt,
+      production,
+      annualProduction,
+      dailyProduction,
+    } = this.state;
     const { t } = this.props;
     let layout;
 
@@ -176,17 +237,7 @@ class Dashboard extends React.Component {
             <Card style={{ width: "18rem", borderRadius: "25px" }}>
               <Card.Body>
                 <Card.Text style={{ textAlign: "left" }}>
-                  Balans in energie
-                </Card.Text>
-                <Card.Title style={{ fontSize: "30px", textAlign: "right" }}>
-                  100%
-                </Card.Title>
-              </Card.Body>
-            </Card>
-            <Card style={{ width: "18rem", borderRadius: "25px" }}>
-              <Card.Body>
-                <Card.Text style={{ textAlign: "left" }}>
-                  Kosten energie per KwH
+                  {t("cost_of_energy")}
                 </Card.Text>
                 <Card.Title style={{ fontSize: "30px", textAlign: "right" }}>
                   €0,22
@@ -196,11 +247,59 @@ class Dashboard extends React.Component {
             <Card style={{ width: "18rem", borderRadius: "25px" }}>
               <Card.Body>
                 <Card.Text style={{ textAlign: "left" }}>
-                  SOME DETAILS
+                  {t("annual_production")}
                 </Card.Text>
-                <Card.Title style={{ fontSize: "30px", textAlign: "right" }}>
-                  DESCRIPTION
-                </Card.Title>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    flexWrap: "wrap",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <img
+                    src="/assets/solarpark/solar-panel.png"
+                    alt="solarpanel-icon"
+                    style={{ width: "75px" }}
+                  />
+                  <Card.Title
+                    style={{
+                      fontSize: "24px",
+                      textAlign: "right",
+                      marginRight: "10px",
+                    }}
+                  >
+                    {annualProduction.toFixed(2)}
+                  </Card.Title>
+                </div>
+              </Card.Body>
+            </Card>
+            <Card style={{ width: "18rem", borderRadius: "25px" }}>
+              <Card.Body>
+                <Card.Text>{t("daily_production")}</Card.Text>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    flexWrap: "wrap",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <img
+                    src="/assets/solarpark/solar-panel.png"
+                    alt="solarpanel-icon"
+                    style={{ width: "75px" }}
+                  />
+                  <Card.Title
+                    style={{
+                      fontSize: "24px",
+                      textAlign: "right",
+                      marginRight: "10px",
+                    }}
+                  >
+                    {dailyProduction.toFixed(2)}
+                  </Card.Title>
+                </div>
               </Card.Body>
             </Card>
           </div>
@@ -209,83 +308,24 @@ class Dashboard extends React.Component {
               <thead>
                 <tr>
                   <th>ID</th>
-                  <th>City</th>
-                  <th>Energy production (in TJ)</th>
-                  <th>Energy consumed (in TJ)</th>
-                  <th>Balance</th>
+                  <th>{t("description")}</th>
+                  <th>{t("number_of_panels")}</th>
+                  <th>{t("daily_production")}(in KwH)</th>
+                  <th>{t("annual_production")}(in KwH)</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Almere</td>
-                  <td>721</td>
-                  <td>11.293</td>
-                  <td>- 10.572</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Lelystad</td>
-                  <td>1.742</td>
-                  <td>8.512</td>
-                  <td>- 6.770</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>Dronten</td>
-                  <td>1.437</td>
-                  <td>3.826</td>
-                  <td>- 2.389</td>
-                </tr>
-                <tr>
-                  <td>4</td>
-                  <td>Zwolle</td>
-                  <td>557</td>
-                  <td>9.848</td>
-                  <td>- 9.291</td>
-                </tr>
-                <tr>
-                  <td>5</td>
-                  <td>Almelo</td>
-                  <td>268</td>
-                  <td>6.296</td>
-                  <td>- 6.028</td>
-                </tr>
-                <tr>
-                  <td>6</td>
-                  <td>Enschede</td>
-                  <td>397</td>
-                  <td>10.297</td>
-                  <td>- 9.899</td>
-                </tr>
-                <tr>
-                  <td>7</td>
-                  <td>Apeldoorn</td>
-                  <td>883</td>
-                  <td>15.920</td>
-                  <td>- 15.036</td>
-                </tr>
-                <tr>
-                  <td>8</td>
-                  <td>Deventer</td>
-                  <td>408</td>
-                  <td>8.018</td>
-                  <td>- 7.609</td>
-                </tr>
-                <tr>
-                  <td>9</td>
-                  <td>Arnhem</td>
-                  <td>478</td>
-                  <td>12.616</td>
-                  <td>- 12.138</td>
-                </tr>
-                <tr>
-                  <td>10</td>
-                  <td>Nijmegen</td>
-                  <td>423</td>
-                  <td>11.938</td>
-                  <td>- 11.515</td>
-                </tr>
+                {!!production &&
+                  production.length > 0 &&
+                  production.slice(0, 15).map((object, index) => (
+                    <tr key={object.solarPark.solarParkId}>
+                      <td>{index + 1}</td>
+                      <td>{object.solarPark.description}</td>
+                      <td>{object.solarPark.amountOfUnits * 20}</td>
+                      <td>{object.todayProduction}</td>
+                      <td>{object.yearProduction}</td>
+                    </tr>
+                  ))}
               </tbody>
             </Table>
           </div>
@@ -308,10 +348,18 @@ class Dashboard extends React.Component {
             </CardColumns>
           </div>
         </ResponsiveReactGridLayout>
+        <Modal />
         <Footer />
+        <SockJsClient
+          url={process.env.REACT_APP_SOCKET_API}
+          topics={["/topic-overview"]}
+          onConnect={this.onConnected}
+          onMessage={(msg) => this.onMessageReceive(msg)}
+          debug={false}
+        />
       </div>
     );
   }
 }
 
-export default withTranslation("scenario")(Dashboard);
+export default withTranslation("scenario", "dashboard")(Dashboard);

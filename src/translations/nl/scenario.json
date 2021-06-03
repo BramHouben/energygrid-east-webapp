@@ -34,5 +34,9 @@
   "remove_solarpark": "Zonnepark verwijderen",
   "turn_off_solarpark": "Zet zonnepark tijdelijk uit",
   "description_wind": "Actieve scenario's met betrekking tot windenergie",
-  "description_solar": "Actieve scenario's met betrekking tot zonne-energie"
+  "description_solar": "Actieve scenario's met betrekking tot zonne-energie",
+  "daily_production": "Dagelijkse productie",
+  "annual_production": "Jaarlijkse productie",
+  "cost_of_energy": "Kosten energy per KwH",
+  "number_of_panels": "Aantal zonnepanelen"
 }
