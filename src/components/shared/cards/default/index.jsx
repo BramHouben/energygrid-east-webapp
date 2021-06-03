@@ -126,7 +126,12 @@ class DefaultCard extends React.Component {
       <div>
         {!!scenario ? (
           <Card
-            style={{ width: "72rem", flex: 2, justifyContent: "space-between" }}
+            style={{
+              width: "72rem",
+              flex: 2,
+              justifyContent: "space-between",
+              borderRadius: "25px",
+            }}
           >
             <Card.Body>
               <Card.Title style={{ textAlign: "left" }}>
