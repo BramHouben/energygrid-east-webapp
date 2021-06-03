@@ -33,6 +33,7 @@ const actions = {
   ScenariosNuclear: `${scenario}/nuclear/latest/`,
   TodayScenarioWind: `${wind}/today`,
   TodayScenarioSolar: `${solar}/today`,
+  getLatestMarktInfo: `${energyMarket}`,
   OverviewSolarProduction: `${production}/overview`,
   ResultsSolarProduction: `${production}/results`,
   AllNuclearSimulations: `${nuclearSimulation}/all`,
