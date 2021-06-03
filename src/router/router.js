@@ -48,7 +48,7 @@ function routes() {
         exact
         component={Account}
       />
-      <ProtectedRoute
+      <Route
         roles={[
           roles.Customer,
           roles.LargeScaleCustomer,

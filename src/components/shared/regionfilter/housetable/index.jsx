@@ -80,7 +80,7 @@ const RemotePagination = ({
   </div>
 );
 
-class houseTable extends Component {
+class HouseTable extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -154,4 +154,4 @@ class houseTable extends Component {
     );
   }
 }
-export default withTranslation("regionfilter")(houseTable);
+export default withTranslation("regionfilter")(HouseTable);
