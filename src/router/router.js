@@ -161,7 +161,7 @@ function routes() {
         path={paths.Consumption}
         component={Consumption}
       />
-      <ProtectedRoute
+      <Route
         roles={[
           roles.Customer,
           roles.LargeScaleCustomer,
