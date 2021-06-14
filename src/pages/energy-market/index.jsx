@@ -7,40 +7,25 @@ import Axios from "axios";
 import ApiActions from "services/shared/api/ApiActions";
 import "./index.css";
 import EnergyMarketCard from "components/shared/cards/energymarketcard";
+import { EnergyHistory } from "services/shared/energy-market";
 class EnergyMarket extends Component {
   constructor() {
     super();
     this.state = {
-      energyMarketInfo: [
-        {
-          id: "ioejoipsefjkife",
-          type: "buy",
-          amount: "2000kwh",
-        },
-        {
-          id: "ioejoipsseesefjkife",
-          type: "sell",
-          amount: "3000kwh",
-        },
-      ],
+      energyMarketInfo: [],
     };
   }
 
-  // async getLatestInfo() {
-  //   await Axios.get(ApiActions.getLatestMarktInfo)
-  //     .then((result) => {
-  //       this.setState({
-  //         energyMarketInfo: result.data,
-  //       });
-  //     })
-  //     .catch((result) => {
-  //       console.log("error loading results");
-  //     });
-  // }
-
-  // componentDidMount() {
-  //   this.getLatestInfo();
-  // }
+  componentDidMount = async () => {
+    let result = await EnergyHistory();
+    if (result.status === 200) {
+      let energyMarketInfo = await result.json();
+      energyMarketInfo.forEach(
+        (d) => (d.type = d.amountTotal > 0 ? "buy" : "sell")
+      );
+      this.setState({ energyMarketInfo });
+    }
+  };
 
   render() {
     const { t } = this.props;
@@ -49,13 +34,14 @@ class EnergyMarket extends Component {
     return (
       <div>
         <Header pageName={t("pageName")} />
-        <div className='content'>
-          {energyMarketInfo !== null ? (
+
+        {energyMarketInfo !== null ? (
+          <div className='content'>
             <EnergyMarketCard energyMarketInfo={energyMarketInfo} />
-          ) : (
-            <div>No data can be displayed</div>
-          )}
-        </div>
+          </div>
+        ) : (
+          <div>No data can be displayed</div>
+        )}
       </div>
     );
   }

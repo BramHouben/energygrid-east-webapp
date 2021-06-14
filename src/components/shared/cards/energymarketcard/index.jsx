@@ -28,10 +28,10 @@ export default class EnergyMarketCard extends Component {
                       <HiArrowDown size={30} style={{ color: "red" }} />
                     )}
                   </Card.Title>
-                  <Card.Text>{energy.amount} </Card.Text>
+                  <Card.Text>{energy.amountTotal} </Card.Text>
                 </Card.Body>
                 <Card.Footer>
-                  <small className='text-muted'>Last updated 1 mins ago</small>
+                  <small className="text-muted">Last updated 1 mins ago</small>
                 </Card.Footer>
               </Card>
             ))}

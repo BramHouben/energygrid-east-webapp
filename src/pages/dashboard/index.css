@@ -11,7 +11,6 @@
 
 .scenario-container {
   margin: 40px;
-  text-align: center;
 }
 
 .chartRow {
@@ -20,8 +19,12 @@
   flex-direction: row;
 }
 
-.scenario-cards {
+.dashboard-cards {
   display: flex;
   justify-content: space-evenly;
   padding: 20px;
+}
+
+.dashboard-forecast {
+  text-align: center;
 }

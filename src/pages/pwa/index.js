@@ -1,4 +1,6 @@
 import React from 'react'
+import './index.css'
+import PWAFooter from './pwafooter'
 
 export default class Pwa extends React.Component {
     constructor() {
@@ -7,10 +9,12 @@ export default class Pwa extends React.Component {
         };
     }
     
-
     render() {
         return (
-            <label>PWA</label>
+            <div>
+                <h1>Welkom op de mobiele app</h1>
+                <PWAFooter />
+            </div>
         )
     }
 }
