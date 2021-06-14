@@ -50,7 +50,11 @@ class EnergyMarket extends Component {
       <div>
         <Header pageName={t("pageName")} />
         <div className='content'>
-          <EnergyMarketCard energyMarketInfo={energyMarketInfo} />
+          {energyMarketInfo !== null ? (
+            <EnergyMarketCard energyMarketInfo={energyMarketInfo} />
+          ) : (
+            <div>No data can be displayed</div>
+          )}
         </div>
       </div>
     );
