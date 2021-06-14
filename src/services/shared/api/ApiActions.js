@@ -13,7 +13,7 @@ const production = "http://localhost:8120/solar/production/";
 const scenario = `${apiUrl}scenario/`;
 // All paths need to end with a '/'
 const balance = `${apiUrl}energybalance/`;
-const energyMarket = `${apiUrl}market/`;
+const energyMarket = `${apiUrl}energymarket/`;
 
 const actions = {
   User: user,
