@@ -167,18 +167,18 @@ class Dashboard extends React.Component {
 
     return (
       <div>
-        <div className="header-wrapper">
-          <Header pageName="Dashboard" />
+        <div className='header-wrapper'>
+          <Header pageName='Dashboard' />
           <FilterHeader />
         </div>
         <ResponsiveReactGridLayout
-          className="layout"
+          className='layout'
           layout={layout}
           cols={{ lg: 3, md: 10, sm: 6, xs: 4, xxs: 2 }}
           rowHeight={450}
           width={1200}
         >
-          <div className="dashboard-forecast" key={6} data-grid={layout[6]}>
+          <div className='dashboard-forecast' key={6} data-grid={layout[6]}>
             <ForecastTable />
           </div>
 
@@ -188,7 +188,7 @@ class Dashboard extends React.Component {
             </div>
           ))}
 
-          <div className="dashboard-cards" key={5} data-grid={layout[5]}>
+          <div className='dashboard-cards' key={5} data-grid={layout[5]}>
             <Card style={{ width: "18rem", borderRadius: "25px" }}>
               <Card.Body>
                 <Card.Text style={{ textAlign: "left" }}>
@@ -258,8 +258,8 @@ class Dashboard extends React.Component {
                   }}
                 >
                   <img
-                    src="/assets/solarpark/solar-panel.png"
-                    alt="solarpanel-icon"
+                    src='/assets/solarpark/solar-panel.png'
+                    alt='solarpanel-icon'
                     style={{ width: "75px" }}
                   />
                   <Card.Title
@@ -286,8 +286,8 @@ class Dashboard extends React.Component {
                   }}
                 >
                   <img
-                    src="/assets/solarpark/solar-panel.png"
-                    alt="solarpanel-icon"
+                    src='/assets/solarpark/solar-panel.png'
+                    alt='solarpanel-icon'
                     style={{ width: "75px" }}
                   />
                   <Card.Title
@@ -304,7 +304,7 @@ class Dashboard extends React.Component {
             </Card>
           </div>
           <div key={7} data-grid={layout[7]}>
-            <Table striped bordered hover responsive="sm">
+            <Table striped bordered hover responsive='sm'>
               <thead>
                 <tr>
                   <th>ID</th>
@@ -329,7 +329,7 @@ class Dashboard extends React.Component {
               </tbody>
             </Table>
           </div>
-          <div className="scenario-container" key={8} data-grid={layout[8]}>
+          <div className='scenario-container' key={8} data-grid={layout[8]}>
             <CardColumns
               style={{
                 display: "flex",
@@ -351,7 +351,7 @@ class Dashboard extends React.Component {
         <Modal />
         <Footer />
         <SockJsClient
-          url={process.env.REACT_APP_SOCKET_API}
+          url={ApiActions.getBalanceWebSocket}
           topics={["/topic-overview"]}
           onConnect={this.onConnected}
           onMessage={(msg) => this.onMessageReceive(msg)}

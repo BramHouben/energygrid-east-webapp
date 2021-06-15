@@ -8,7 +8,7 @@ const wind = `${apiUrl}scenario/wind/`;
 const solar = `${apiUrl}scenario/solar/`;
 const nuclearSimulation = `${apiUrl}simulation/nuclear/`;
 const production = `${apiUrl}solar/production/`;
-
+const websocket = `${apiUrl}ws-energy-grid/`;
 //If simulation service exist, we can call one request for the scenario's. Now we have only the latest from solar
 const scenario = `${apiUrl}scenario/`;
 // All paths need to end with a '/'
@@ -39,6 +39,7 @@ const actions = {
   AllNuclearSimulations: `${nuclearSimulation}all/`,
   CreateSimulationNuclear: `${nuclearSimulation}create/`,
   CreateScenarioNuclear: `${scenario}nuclear/create/`,
+  getBalanceWebSocket: `${websocket}`,
 };
 
 export default actions;

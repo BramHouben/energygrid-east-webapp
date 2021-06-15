@@ -55,11 +55,11 @@ export default class Footer extends Component {
     return (
       <div>
         {latestprocentbalance === 100 ? (
-          <div id="footersuccess">
-            <div id="progressbarsuccess">
+          <div id='footersuccess'>
+            <div id='progressbarsuccess'>
               <h1>Balance is: {latestprocentbalance}</h1>
               <ProgressBar
-                variant="success"
+                variant='success'
                 animated
                 now={latestprocentbalance}
                 label={`${latestprocentbalance}% completed`}
@@ -70,19 +70,19 @@ export default class Footer extends Component {
           <div></div>
         )}
         {latestprocentbalance !== 100 ? (
-          <div id="footererror">
-            <div id="progressbarerror">
+          <div id='footererror'>
+            <div id='progressbarerror'>
               <h1>Balance is: {latestprocentbalance}</h1>
 
               <ProgressBar
-                variant="danger"
+                variant='danger'
                 animated
                 now={latestprocentbalance}
                 label={`${latestprocentbalance}% completed`}
               />
             </div>
             <SockJsClient
-              url={process.env.REACT_APP_SOCKET_API}
+              url={ApiActions.getBalanceWebSocket}
               topics={["/topic"]}
               onConnect={this.onConnected}
               onMessage={(msg) => this.onMessageReceive(msg)}
