@@ -7,7 +7,7 @@ const region = `${apiUrl}region/`;
 const wind = `${apiUrl}scenario/wind/`;
 const solar = `${apiUrl}scenario/solar/`;
 const nuclearSimulation = `${apiUrl}simulation/nuclear/`;
-const production = "http://localhost:8120/solar/production/";
+const production = `${apiUrl}solar/production/`;
 
 //If simulation service exist, we can call one request for the scenario's. Now we have only the latest from solar
 const scenario = `${apiUrl}scenario/`;
