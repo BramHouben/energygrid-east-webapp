@@ -1,5 +1,5 @@
 // const apiUrl = "http://localhost:8081/";
-const apiUrl = "http://52.185.67.61:8081/";
+const apiUrl = "http://20.84.168.136:8081/";
 
 const user = `${apiUrl}user/`;
 const weather = `${apiUrl}weather/`;
