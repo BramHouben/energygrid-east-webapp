@@ -131,7 +131,9 @@ class region extends Component {
           {streetChosen ? (
             <ReactMapGL
               {...viewport}
-              mapboxApiAccessToken='pk.eyJ1IjoiZnJpdHNqaHV1dSIsImEiOiJja21uN2Z4dWgwdWNtMndyem15MXg3c3o0In0.CNS2hAKmJdjcjJRY1cNKXQ'
+              mapboxApiAccessToken={
+                "pk.eyJ1IjoiZnJpdHNqaHV1dSIsImEiOiJja21uN2Z4dWgwdWNtMndyem15MXg3c3o0In0.CNS2hAKmJdjcjJRY1cNKXQ"
+              }
               onViewportChange={(viewport) => {
                 this.setState({ viewport });
               }}

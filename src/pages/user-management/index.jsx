@@ -7,6 +7,7 @@ import { getJwt } from "services/shared/cookie";
 import Axios from "axios";
 import { RiDeleteBin2Fill } from "react-icons/ri";
 import "./index.css";
+import ApiActions from "services/shared/api/ApiActions";
 
 export default class UserManagement extends Component {
   constructor(props) {
@@ -25,7 +26,7 @@ export default class UserManagement extends Component {
       headers: { Authorization: `Bearer ${getJwt()}` },
     };
 
-    Axios.get(`http://localhost:8081/user/operator`, config)
+    Axios.get(ApiActions.GetOperator, config)
       .then((response) => {
         this.setState({
           operators: response.data,
@@ -37,7 +38,7 @@ export default class UserManagement extends Component {
   }
 
   deleteOperator(uuid) {
-    Axios.delete(`http://localhost:8081/user/operator`, {
+    Axios.delete(ApiActions.DeleteOperator, {
       headers: {
         Authorization: `Bearer ${getJwt()}`,
       },
@@ -59,12 +60,12 @@ export default class UserManagement extends Component {
 
     return (
       <div>
-        <div className="header-wrapper">
-          <Header pageName="User management" />
+        <div className='header-wrapper'>
+          <Header pageName='User management' />
           <FilterHeader />
         </div>
-        <div className="management-container">
-          <Table striped bordered hover responsive="sm">
+        <div className='management-container'>
+          <Table striped bordered hover responsive='sm'>
             <thead>
               <tr>
                 <th>ID</th>

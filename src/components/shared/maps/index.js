@@ -19,7 +19,9 @@ export default function Maps() {
     <div style={{ width: "100%" }}>
       <ReactMapGL
         {...viewport}
-        mapboxApiAccessToken='pk.eyJ1IjoiZnJpdHNqaHV1dSIsImEiOiJja21uN2Z4dWgwdWNtMndyem15MXg3c3o0In0.CNS2hAKmJdjcjJRY1cNKXQ'
+        mapboxApiAccessToken={
+          "pk.eyJ1IjoiZnJpdHNqaHV1dSIsImEiOiJja21uN2Z4dWgwdWNtMndyem15MXg3c3o0In0.CNS2hAKmJdjcjJRY1cNKXQ"
+        }
         //mapStyle="mapbox://styles/fritsjhuuu/ckmunrfw755q417p0db5st0ff"
         onViewportChange={(viewport) => {
           setViewport(viewport);

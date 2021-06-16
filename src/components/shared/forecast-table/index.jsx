@@ -3,6 +3,7 @@ import "./index.css";
 import { GiWindTurbine } from "react-icons/gi";
 import { FaSolarPanel } from "react-icons/fa";
 import Axios from "axios";
+import ApiActions from "services/shared/api/ApiActions";
 
 export default class ForecastTable extends Component {
   constructor() {
@@ -25,7 +26,7 @@ export default class ForecastTable extends Component {
   }
 
   getForecast(coordinates, city) {
-    Axios.post(`http://localhost:8081/weather/forecast`, {
+    Axios.post(ApiActions.ForeCast, {
       coordinates: coordinates,
     })
       .then((response) => {
@@ -57,12 +58,12 @@ export default class ForecastTable extends Component {
     console.log(forecast);
 
     return (
-      <div className="forecast-container">
+      <div className='forecast-container'>
         {forecast.map((day) => (
-          <div className="day-container">
-            <div className="day-date">{day.date}</div>
-            <div className="temperature-container">
-              <div className="temperature-data">
+          <div className='day-container'>
+            <div className='day-date'>{day.date}</div>
+            <div className='temperature-container'>
+              <div className='temperature-data'>
                 <div>
                   <b>Max:</b> {day.maxTemperature} °C
                 </div>
@@ -71,13 +72,13 @@ export default class ForecastTable extends Component {
                 </div>
               </div>
               <div
-                className="forecast-image"
+                className='forecast-image'
                 style={{
                   backgroundImage: `url(http://openweathermap.org/img/wn/${day.symbol}@2x.png)`,
                 }}
               />
             </div>
-            <div className="stats-container">
+            <div className='stats-container'>
               <div>
                 <b>Wind speed:</b> {day.windSpeed} m/s
               </div>
@@ -85,23 +86,23 @@ export default class ForecastTable extends Component {
                 <b>Sun percentage:</b> {day.sunPercentage}%
               </div>
             </div>
-            <div className="grade-container">
+            <div className='grade-container'>
               <div
-                className="icon"
+                className='icon'
                 style={{ backgroundColor: this.setSunGrade(day.sunPercentage) }}
               >
                 <FaSolarPanel size={30} />
               </div>
               <div
-                className="icon"
+                className='icon'
                 style={{ backgroundColor: this.setWindGrade(day.windSpeed) }}
               >
                 <GiWindTurbine size={30} />
               </div>
             </div>
-            <div className="winddirection-container">
+            <div className='winddirection-container'>
               <div
-                className="icon"
+                className='icon'
                 style={{
                   backgroundImage: `url(/assets/weather/windarrow.png)`,
                   transform: `rotate(${day.windDirection}deg)`,

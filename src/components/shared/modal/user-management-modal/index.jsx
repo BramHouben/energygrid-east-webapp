@@ -3,6 +3,7 @@ import { Form, Button, Modal } from "react-bootstrap";
 import { getJwt } from "services/shared/cookie";
 import Axios from "axios";
 import "./index.css";
+import ApiActions from "services/shared/api/ApiActions";
 
 export default class TweetModal extends Component {
   constructor(props) {
@@ -37,24 +38,20 @@ export default class TweetModal extends Component {
       headers: { Authorization: `Bearer ${getJwt()}` },
     };
 
-    Axios.post(
-      `http://localhost:8081/user/operator`,
-      formDataObj,
-      config
-    ).catch(() => {
+    Axios.post(ApiActions.AddOperator, formDataObj, config).catch(() => {
       console.log("Werkt niet");
     });
   }
 
   render() {
     if (this.state.isLoading) {
-      return <div className="loading" />;
+      return <div className='loading' />;
     }
 
     return (
       <div>
         <Button
-          className="tweet-button"
+          className='tweet-button'
           onClick={this.handleShow}
           style={{
             backgroundColor: "#82de94",
@@ -66,7 +63,7 @@ export default class TweetModal extends Component {
           Add new Grid Operator
         </Button>
         <Modal
-          className="tweet-modal"
+          className='tweet-modal'
           show={this.state.show}
           onHide={this.handleClose}
         >
@@ -76,14 +73,14 @@ export default class TweetModal extends Component {
           <Form onSubmit={this.addOperator}>
             <Modal.Body>
               <Form.Control
-                name="username"
-                type="text"
-                placeholder="Username"
+                name='username'
+                type='text'
+                placeholder='Username'
               />
               <Form.Control
-                name="email"
-                type="email"
-                placeholder="Email"
+                name='email'
+                type='email'
+                placeholder='Email'
                 style={{
                   marginTop: "10px",
                 }}
@@ -91,7 +88,7 @@ export default class TweetModal extends Component {
             </Modal.Body>
             <Modal.Footer>
               <Button
-                type="submit"
+                type='submit'
                 style={{
                   backgroundColor: "#82de94",
                   borderColor: "#82de94",

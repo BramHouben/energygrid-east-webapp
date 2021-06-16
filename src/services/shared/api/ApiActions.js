@@ -15,10 +15,12 @@ const scenario = `${apiUrl}scenario/`;
 // All paths need to end with a '/'
 const balance = `${apiUrl}energybalance/`;
 const energyMarket = `${apiUrl}energymarket/`;
+const usage = `${apiUrl}usage/`;
 
 const actions = {
   User: user,
   CurrentWeather: `${weather}current/`,
+  ForeCast: `${weather}forecast/`,
   ProvinceInfo: `${region}province/info/`,
   CityInfo: `${region}city/info/`,
   CityInfoStats: `${region}city/stats/`,
@@ -36,11 +38,15 @@ const actions = {
   TodayScenarioSolar: `${solar}today/`,
   getLatestMarktInfo: `${energyMarket}`,
   OverviewSolarProduction: `${production}overview/`,
+  AddOperator: `${user}operator/`,
+  DeleteOperator: `${user}operator/`,
+  GetOperator: `${user}operator/`,
   ResultsSolarProduction: `${production}results/`,
   AllNuclearSimulations: `${nuclearSimulation}all/`,
   CreateSimulationNuclear: `${nuclearSimulation}create/`,
   CreateScenarioNuclear: `${scenario}nuclear/create/`,
   getBalanceWebSocket: `${websocket}`,
+  UsageDay: `${usage}day/`,
 };
 
 export default actions;

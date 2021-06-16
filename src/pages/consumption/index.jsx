@@ -9,6 +9,7 @@ import data from "./usage.json";
 import moment from "moment";
 import "react-datetime/css/react-datetime.css";
 import "./index.css";
+import ApiActions from "services/shared/api/ApiActions";
 
 export default class Forecast extends Component {
   constructor(props) {
@@ -26,7 +27,7 @@ export default class Forecast extends Component {
 
     let date = this.getFormattedDate(fulldate);
 
-    Axios.get(`http://localhost:8081/usage/day`, {
+    Axios.get(ApiActions.UsageDay, {
       params: {
         date: date,
       },

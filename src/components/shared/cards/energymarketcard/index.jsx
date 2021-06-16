@@ -16,7 +16,6 @@ export default class EnergyMarketCard extends Component {
       <div>
         {energyMarketInfo !== null && energyMarketInfo.length > 0 ? (
           <CardColumns>
-            <h1>Markt geschiedenis</h1>
             {energyMarketInfo.map((energy) => (
               <Card key={energy.id}>
                 <Card.Body>
@@ -31,7 +30,7 @@ export default class EnergyMarketCard extends Component {
                   <Card.Text>{energy.amountTotal} </Card.Text>
                 </Card.Body>
                 <Card.Footer>
-                  <small className="text-muted">Last updated 1 mins ago</small>
+                  <small className='text-muted'>Last updated 1 mins ago</small>
                 </Card.Footer>
               </Card>
             ))}
