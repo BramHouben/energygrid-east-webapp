@@ -31,7 +31,7 @@ function routes() {
           roles.UtilityCompany,
           roles.ResponsibleParty,
         ]}
-        path={paths.Root}
+        path={paths.Dashboard}
         exact
         component={Dashboard}
       />

@@ -46,7 +46,7 @@ class Login extends Component {
         return;
       }
 
-      window.location.replace(paths.Root);
+      window.location.pathname = paths.Dashboard;
     } else {
       toast.error(t("login-failed"));
     }
@@ -56,15 +56,15 @@ class Login extends Component {
     const { t } = this.props;
 
     return (
-      <div id="login">
+      <div id='login'>
         <h1>{t("title")}</h1>
         <Form onSubmit={this.onSubmit}>
           <Form.Group>
             <Form.Label>{t("email")}</Form.Label>
             <Form.Control
               required
-              type="email"
-              name="email"
+              type='email'
+              name='email'
               placeholder={t("email-placeholder")}
             />
           </Form.Group>
@@ -72,14 +72,14 @@ class Login extends Component {
             <Form.Label>{t("password")}</Form.Label>
             <Form.Control
               required
-              name="password"
-              type="password"
+              name='password'
+              type='password'
               placeholder={t("password-placeholder")}
             />
           </Form.Group>
           <Button
             block
-            type="submit"
+            type='submit'
             style={{
               backgroundColor: "#82de94",
               borderColor: "#82de94",
@@ -89,7 +89,7 @@ class Login extends Component {
             {t("submit-btn")}
           </Button>
           <div style={{ marginTop: "20px", textAlign: "center" }}>
-            <a key="register" href={routerPaths.Registration}>
+            <a key='register' href={routerPaths.Registration}>
               {t("no_account_yet")}
             </a>
           </div>

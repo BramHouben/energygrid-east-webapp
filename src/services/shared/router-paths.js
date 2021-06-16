@@ -1,6 +1,7 @@
 // All paths must end with an /
 const paths = {
   Root: "/",
+  Dashboard: "/dashboard/",
   Account: "/account/",
   EnergyMarket: "/energy-market/",
   Login: "/login/",
