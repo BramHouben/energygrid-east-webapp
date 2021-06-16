@@ -85,11 +85,11 @@ class ScenarioPage extends React.Component {
 
     return (
       <div>
-        <div className="header-wrapper">
-          <Header pageName="Dashboard" />
+        <div className='header-wrapper'>
+          <Header pageName='Dashboard' />
           <FilterHeader />
         </div>
-        <div className="scenario-container">
+        <div className='scenario-container'>
           <h2>Scenario's</h2>
           <div>
             <Card
@@ -101,7 +101,7 @@ class ScenarioPage extends React.Component {
             >
               <Card.Body>
                 <Card.Text>
-                  <Button variant="primary" onClick={this.openModal}>
+                  <Button variant='primary' onClick={this.openModal}>
                     {t("add_scenario")}
                   </Button>
                 </Card.Text>
@@ -127,11 +127,11 @@ class ScenarioPage extends React.Component {
                 <DefaultCard scenario={scenario} id={index} key={index} />
               ))}
 
-            {!!nuclear &&
+            {/* {!!nuclear &&
               nuclear.length > 0 &&
               nuclear.map((scenario, index) => (
                 <DefaultCard scenario={scenario} id={index} key={index} />
-              ))}
+              ))} */}
           </CardColumns>
         </div>
         <Modal /> <Footer />

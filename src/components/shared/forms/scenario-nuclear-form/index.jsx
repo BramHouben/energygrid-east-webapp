@@ -48,9 +48,7 @@ class ScenarioNuclearForm extends Component {
   async componentDidMount() {
     window.addEventListener("map-click-coordinates", (e) => {
       console.log(e);
-      if (e.currentTarget.origin !== "http://20.84.201.30") {
-        return;
-      }
+
       if (e.detail.coordinates !== null) {
         this.setState({ coordinates: e.detail.coordinates });
       }
