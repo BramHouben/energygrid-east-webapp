@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import ReactMapGL, { Marker } from "react-map-gl";
 import "./index.css";
-
+const MAPBOX_TOKEN =
+  "pk.eyJ1IjoiZnJpdHNqaHV1dSIsImEiOiJja21uN2Z4dWgwdWNtMndyem15MXg3c3o0In0.CNS2hAKmJdjcjJRY1cNKXQ";
 export default function MapForm() {
   const [viewport, setViewport] = useState({
     latitude: 52.18889722321286,
@@ -36,9 +37,7 @@ export default function MapForm() {
     <div>
       <ReactMapGL
         {...viewport}
-        mapboxApiAccessToken={
-          "pk.eyJ1IjoiZnJpdHNqaHV1dSIsImEiOiJja21uN2Z4dWgwdWNtMndyem15MXg3c3o0In0.CNS2hAKmJdjcjJRY1cNKXQ"
-        }
+        mapboxApiAccessToken={MAPBOX_TOKEN}
         //mapStyle="mapbox://styles/fritsjhuuu/ckmunrfw755q417p0db5st0ff"
         onViewportChange={(viewport) => {
           setViewport(viewport);

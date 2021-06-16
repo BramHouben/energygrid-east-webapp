@@ -9,7 +9,9 @@ import Header from "components/shared/header";
 import FilterHeader from "components/shared/filter-header";
 import CityInformation from "components/shared/regionfilter/cityinformation";
 import RegionCityDropdown from "components/shared/regionfilter/regioncitydropdown";
-class region extends Component {
+const MAPBOX_TOKEN =
+  "pk.eyJ1IjoiZnJpdHNqaHV1dSIsImEiOiJja21uN2Z4dWgwdWNtMndyem15MXg3c3o0In0.CNS2hAKmJdjcjJRY1cNKXQ";
+class Region extends Component {
   constructor(props) {
     super(props);
 
@@ -57,7 +59,7 @@ class region extends Component {
     });
   }
   async regionchanged(currentregion) {
-    console.log(region);
+    console.log(currentregion);
     this.setState({
       currentCity: "",
       streetChosen: false,
@@ -131,9 +133,7 @@ class region extends Component {
           {streetChosen ? (
             <ReactMapGL
               {...viewport}
-              mapboxApiAccessToken={
-                "pk.eyJ1IjoiZnJpdHNqaHV1dSIsImEiOiJja21uN2Z4dWgwdWNtMndyem15MXg3c3o0In0.CNS2hAKmJdjcjJRY1cNKXQ"
-              }
+              mapboxApiAccessToken={MAPBOX_TOKEN}
               onViewportChange={(viewport) => {
                 this.setState({ viewport });
               }}
@@ -167,4 +167,4 @@ class region extends Component {
     );
   }
 }
-export default withTranslation("regionfilter")(region);
+export default withTranslation("regionfilter")(Region);
