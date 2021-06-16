@@ -1,6 +1,6 @@
 import Account from "pages/account";
 import React from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Redirect } from "react-router-dom";
 import paths from "services/shared/router-paths";
 import Dashboard from "pages/dashboard";
 import Login from "pages/login";
@@ -20,6 +20,9 @@ import Pwa from "pages/pwa";
 function routes() {
   return (
     <BrowserRouter>
+      <Route exact path={paths.Root}>
+        <Redirect to={paths.Login} />
+      </Route>
       <ProtectedRoute
         roles={[
           roles.Customer,
