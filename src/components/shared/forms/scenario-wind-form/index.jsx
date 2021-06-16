@@ -47,7 +47,7 @@ class ScenarioForm extends Component {
   componentDidMount() {
     window.addEventListener("map-click-coordinates", (e) => {
       console.log(e);
-      if (e.currentTarget.origin !== "http://localhost:3000") {
+      if (e.currentTarget.origin !== "http://20.84.201.30") {
         return;
       }
       if (e.detail.coordinates !== null) {
@@ -184,7 +184,7 @@ class ScenarioForm extends Component {
           <Col>
             <Form.Group>
               <Form.Label>{translate("number_of_turbines")}</Form.Label>
-              <Form.Control placeholder="1" name="amount" type="number" />
+              <Form.Control placeholder='1' name='amount' type='number' />
             </Form.Group>
           </Col>
         );
@@ -193,7 +193,7 @@ class ScenarioForm extends Component {
           <Col>
             <Form.Group>
               <Form.Label>{translate("id")}</Form.Label>
-              <Form.Control placeholder="1" name="turbineId" type="number" />
+              <Form.Control placeholder='1' name='turbineId' type='number' />
             </Form.Group>
           </Col>
         );
@@ -203,7 +203,7 @@ class ScenarioForm extends Component {
             <FormGroup>
               <Form.Label>{translate("select_turbine")}</Form.Label>
               <Form.Control
-                as="select"
+                as='select'
                 required
                 onChange={this.handleSelectTurbine.bind(this)}
               >
@@ -226,7 +226,7 @@ class ScenarioForm extends Component {
               <FormGroup>
                 <Form.Label>{translate("select_turbine")}</Form.Label>
                 <Form.Control
-                  as="select"
+                  as='select'
                   required
                   onChange={this.handleSelectTurbine.bind(this)}
                 >
@@ -245,7 +245,7 @@ class ScenarioForm extends Component {
               <FormGroup>
                 <Form.Label>{translate("from")}</Form.Label>
                 <Datetime
-                  name="from"
+                  name='from'
                   locale={localStorage.getItem("language")}
                   value={this.state.startDate}
                   onChange={this.handleStartChange}
@@ -255,7 +255,7 @@ class ScenarioForm extends Component {
             <Col>
               <FormGroup>
                 <Form.Label>{translate("number_off_hours")}</Form.Label>
-                <Form.Control placeholder="1" name="hours" type="number" />
+                <Form.Control placeholder='1' name='hours' type='number' />
               </FormGroup>
             </Col>
           </div>
@@ -279,9 +279,9 @@ class ScenarioForm extends Component {
     const { t } = this.props;
 
     return (
-      <div id="scenario-form">
+      <div id='scenario-form'>
         <Dropdown onSelect={this.handleSelect}>
-          <Dropdown.Toggle variant="secondary">
+          <Dropdown.Toggle variant='secondary'>
             {selectedItem ? t(selectedItem) : t("choose_category")}
           </Dropdown.Toggle>
 
@@ -294,21 +294,21 @@ class ScenarioForm extends Component {
         <br />
         {(selectedItem && selectedItem === "Wind") ||
         selectedItem === "wind" ? (
-          <Form onSubmit={this.startSimulation.bind(this)} id="scenario-form">
+          <Form onSubmit={this.startSimulation.bind(this)} id='scenario-form'>
             <Form.Group>
               <Form.Label>{t("name")}</Form.Label>
               <Form.Control
-                type="text"
-                placeholder="Scenario 1"
-                name="name"
+                type='text'
+                placeholder='Scenario 1'
+                name='name'
                 required
               />
             </Form.Group>
             <FormGroup>
               <Form.Label>{t("select_scenario")}</Form.Label>
               <Form.Control
-                name="scenarioType"
-                as="select"
+                name='scenarioType'
+                as='select'
                 required
                 onChange={this.handleScenario.bind(this)}
               >
@@ -327,8 +327,8 @@ class ScenarioForm extends Component {
                   <Form.Label>{t("description")}</Form.Label>
                   <Form.Control
                     placeholder={t("description")}
-                    name="description"
-                    type="text"
+                    name='description'
+                    type='text'
                     value={
                       this.state.selectedTurbine &&
                       this.state.selectedTurbine.text
@@ -340,8 +340,8 @@ class ScenarioForm extends Component {
                 <FormGroup>
                   <Form.Label>Type turbine</Form.Label>
                   <Form.Control
-                    name="type"
-                    as="select"
+                    name='type'
+                    as='select'
                     required
                     defaultValue={t("choose")}
                   >
@@ -384,9 +384,9 @@ class ScenarioForm extends Component {
                 <Form.Group>
                   <Form.Label>Lat</Form.Label>
                   <Form.Control
-                    placeholder="lat"
-                    name="latitude"
-                    type="number"
+                    placeholder='lat'
+                    name='latitude'
+                    type='number'
                     value={
                       coordinates[1] ||
                       (selectedTurbine && selectedTurbine.geometry
@@ -397,9 +397,9 @@ class ScenarioForm extends Component {
                   />
                   <Form.Label>Lon</Form.Label>
                   <Form.Control
-                    placeholder="lon"
-                    name="longitude"
-                    type="number"
+                    placeholder='lon'
+                    name='longitude'
+                    type='number'
                     value={
                       coordinates[0] ||
                       (selectedTurbine && selectedTurbine.geometry
@@ -411,28 +411,28 @@ class ScenarioForm extends Component {
                 </Form.Group>
               </Col>
             </Row>
-            <div className="scenario-btn">
-              <Button variant="primary" type="submit">
+            <div className='scenario-btn'>
+              <Button variant='primary' type='submit'>
                 {t("start_simulation")}
               </Button>
             </div>
             <Form.Control
-              type="hidden"
-              name="windTurbine"
+              type='hidden'
+              name='windTurbine'
               value={this.getJson()}
-              data-cast="json"
+              data-cast='json'
             />
             <Form.Control
-              type="hidden"
-              name="coordinates"
+              type='hidden'
+              name='coordinates'
               value={this.getCoordinatesJson()}
-              data-cast="json"
+              data-cast='json'
             />
             <Form.Control
-              type="hidden"
-              name="from"
+              type='hidden'
+              name='from'
               value={this.getFromJson()}
-              data-cast="json"
+              data-cast='json'
             />
           </Form>
         ) : selectedItem === "Sun" || selectedItem === "sun" ? (

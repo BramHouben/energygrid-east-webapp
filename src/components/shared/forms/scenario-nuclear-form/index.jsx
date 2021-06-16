@@ -48,7 +48,7 @@ class ScenarioNuclearForm extends Component {
   async componentDidMount() {
     window.addEventListener("map-click-coordinates", (e) => {
       console.log(e);
-      if (e.currentTarget.origin !== "http://localhost:3000") {
+      if (e.currentTarget.origin !== "http://20.84.201.30") {
         return;
       }
       if (e.detail.coordinates !== null) {
@@ -188,7 +188,7 @@ class ScenarioNuclearForm extends Component {
             <FormGroup>
               <Form.Label>{translate("select_nuclear")}</Form.Label>
               <Form.Control
-                as="select"
+                as='select'
                 required
                 onChange={this.handleSelectSolarPark.bind(this)}
               >
@@ -213,7 +213,7 @@ class ScenarioNuclearForm extends Component {
               <FormGroup>
                 <Form.Label>{translate("select_nuclear")}</Form.Label>
                 <Form.Control
-                  as="select"
+                  as='select'
                   required
                   onChange={this.handleSelectSolarPark.bind(this)}
                 >
@@ -234,7 +234,7 @@ class ScenarioNuclearForm extends Component {
               <FormGroup>
                 <Form.Label>{translate("from")}</Form.Label>
                 <Datetime
-                  name="from"
+                  name='from'
                   locale={localStorage.getItem("language")}
                   value={this.state.startDate}
                   onChange={this.handleStartChange}
@@ -244,7 +244,7 @@ class ScenarioNuclearForm extends Component {
             <Col>
               <FormGroup>
                 <Form.Label>{translate("number_off_hours")}</Form.Label>
-                <Form.Control placeholder="1" name="hours" type="number" />
+                <Form.Control placeholder='1' name='hours' type='number' />
               </FormGroup>
             </Col>
           </div>
@@ -262,26 +262,26 @@ class ScenarioNuclearForm extends Component {
     const { t } = this.props;
 
     return (
-      <div id="scenario-form">
+      <div id='scenario-form'>
         <br />
         <Form
           onSubmit={this.startSimulation.bind(this)}
-          id="scenario-nuclear-form"
+          id='scenario-nuclear-form'
         >
           <Form.Group>
             <Form.Label>{t("name")}</Form.Label>
             <Form.Control
-              type="text"
-              placeholder="Scenario 1"
-              name="name"
+              type='text'
+              placeholder='Scenario 1'
+              name='name'
               required
             />
           </Form.Group>
           <FormGroup>
             <Form.Label>{t("select_scenario")}</Form.Label>
             <Form.Control
-              name="scenarioType"
-              as="select"
+              name='scenarioType'
+              as='select'
               required
               onMouseLeave={this.handleScenario.bind(this)}
             >
@@ -299,8 +299,8 @@ class ScenarioNuclearForm extends Component {
               <FormGroup>
                 <Form.Label>{t("reactor_type")}</Form.Label>
                 <Form.Control
-                  name="reactorGeneration"
-                  as="select"
+                  name='reactorGeneration'
+                  as='select'
                   required
                   defaultValue={t("choose")}
                 >
@@ -338,9 +338,9 @@ class ScenarioNuclearForm extends Component {
               <Form.Group>
                 <Form.Label>{t("max_power")}</Form.Label>
                 <Form.Control
-                  placeholder="1"
-                  name="maxPower"
-                  type="number"
+                  placeholder='1'
+                  name='maxPower'
+                  type='number'
                   value={
                     this.state.selectedNuclearPlant &&
                     this.state.selectedNuclearPlant.maxPower &&
@@ -361,9 +361,9 @@ class ScenarioNuclearForm extends Component {
               <Form.Group>
                 <Form.Label>Lat</Form.Label>
                 <Form.Control
-                  placeholder="lat"
-                  name="latitude"
-                  type="number"
+                  placeholder='lat'
+                  name='latitude'
+                  type='number'
                   value={
                     coordinates[1] ||
                     (selectedNuclearPlant && selectedNuclearPlant.coordinates
@@ -374,9 +374,9 @@ class ScenarioNuclearForm extends Component {
                 />
                 <Form.Label>Lon</Form.Label>
                 <Form.Control
-                  placeholder="lon"
-                  name="longitude"
-                  type="number"
+                  placeholder='lon'
+                  name='longitude'
+                  type='number'
                   value={
                     coordinates[0] ||
                     (selectedNuclearPlant && selectedNuclearPlant.coordinates
@@ -388,28 +388,28 @@ class ScenarioNuclearForm extends Component {
               </Form.Group>
             </Col>
           </Row>
-          <div className="scenario-btn">
-            <Button variant="primary" type="submit">
+          <div className='scenario-btn'>
+            <Button variant='primary' type='submit'>
               {t("start_simulation")}
             </Button>
           </div>
           <Form.Control
-            type="hidden"
-            name="coordinates"
+            type='hidden'
+            name='coordinates'
             value={this.getCoordinatesJson()}
-            data-cast="json"
+            data-cast='json'
           />
           <Form.Control
-            type="hidden"
-            name="from"
+            type='hidden'
+            name='from'
             value={this.getFromJson()}
-            data-cast="json"
+            data-cast='json'
           />
           <Form.Control
-            type="hidden"
-            name="nuclearPlant"
+            type='hidden'
+            name='nuclearPlant'
             value={this.getJson()}
-            data-cast="json"
+            data-cast='json'
           />
         </Form>
       </div>
