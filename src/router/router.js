@@ -16,8 +16,6 @@ import roles from "services/shared/account-role";
 import energyMarket from "pages/energy-market";
 import Scenario from "pages/scenario";
 import Pwa from "pages/pwa";
-// import ScenarioPage from "pages/scenario";
-import UserManagement from "pages/user-management";
 
 function routes() {
   return (
