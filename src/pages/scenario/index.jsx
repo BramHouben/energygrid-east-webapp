@@ -4,6 +4,7 @@ import FilterHeader from "components/shared/filter-header";
 import { withTranslation } from "react-i18next";
 import DefaultCard from "components/shared/cards/default";
 import WindCard from "components/shared/cards/wind";
+import NuclearCard from "components/shared/cards/nuclear";
 import "./index.css";
 import Modal from "components/shared/modal/scenario";
 import Footer from "components/shared/footer";
@@ -131,7 +132,7 @@ class ScenarioPage extends React.Component {
             {/* {!!nuclear &&
               nuclear.length > 0 &&
               nuclear.map((scenario, index) => (
-                <DefaultCard scenario={scenario} id={index} key={index} />
+                <NuclearCard scenario={scenario} id={index} key={index} />
               ))} */}
           </CardColumns>
         </div>

@@ -4,6 +4,7 @@ import { withTranslation } from "react-i18next";
 import routerPaths from "services/shared/router-paths";
 import Cookies from "universal-cookie";
 import "./index.css";
+import { getClaim } from "services/jwt";
 
 class Menu extends Component {
   constructor(props) {
@@ -31,54 +32,57 @@ class Menu extends Component {
 
   render() {
     const { t } = this.props;
+    const jwt = getClaim("role");
     return (
       <div>
         <Button
-          id='open-menu-button'
-          className='link-btn corporate-identity-font'
-          type='button'
+          id="open-menu-button"
+          className="link-btn corporate-identity-font"
+          type="button"
           onClick={() => this.openNav()}
         >
           &#9776;
         </Button>
 
-        <div id='menu'>
+        <div id="menu">
           <button
-            className='closebtn link-btn'
-            type='button'
+            className="closebtn link-btn"
+            type="button"
             onClick={() => this.closeNav()}
           >
             &times;
           </button>
-          <div id='menu-links'>
-            <a key='dashboard' href={routerPaths.Dashboard}>
+          <div id="menu-links">
+            <a key="dashboard" href={routerPaths.Dashboard}>
               {t("dashboard")}
             </a>
-            <a key='regiondetails' href={routerPaths.Region}>
+            <a key="regiondetails" href={routerPaths.Region}>
               {t("regiondetails")}
             </a>
-            <a key='scenario' href={routerPaths.Scenario}>
+            <a key="scenario" href={routerPaths.Scenario}>
               {t("scenario")}
             </a>
-            <a key='map' href={routerPaths.Map}>
+            <a key="map" href={routerPaths.Map}>
               {t("map")}
             </a>
-            <a key='forecast' href={routerPaths.Forecast}>
+            <a key="forecast" href={routerPaths.Forecast}>
               {t("forecast")}
             </a>
-            <a key='energy-market' href={routerPaths.EnergyMarket}>
+            <a key="energy-market" href={routerPaths.EnergyMarket}>
               {t("energy-market")}
             </a>
-            <a key='account' href={routerPaths.Account}>
+            <a key="account" href={routerPaths.Account}>
               {t("account")}
             </a>
-            <a key='user-management' href={routerPaths.UserManagement}>
-              User Management
-            </a>
+            {jwt == "ADMIN" && (
+              <a key="user-management" href={routerPaths.UserManagement}>
+                User Management
+              </a>
+            )}
             <button
               onClick={() => this.logout()}
-              type='button'
-              className='link-btn'
+              type="button"
+              className="link-btn"
             >
               {t("logout")}
             </button>
