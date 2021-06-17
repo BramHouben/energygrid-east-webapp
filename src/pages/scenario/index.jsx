@@ -3,6 +3,7 @@ import Header from "components/shared/header";
 import FilterHeader from "components/shared/filter-header";
 import { withTranslation } from "react-i18next";
 import DefaultCard from "components/shared/cards/default";
+import WindCard from "components/shared/cards/wind";
 import "./index.css";
 import Modal from "components/shared/modal/scenario";
 import Footer from "components/shared/footer";
@@ -85,11 +86,11 @@ class ScenarioPage extends React.Component {
 
     return (
       <div>
-        <div className='header-wrapper'>
-          <Header pageName='Dashboard' />
+        <div className="header-wrapper">
+          <Header pageName="Dashboard" />
           <FilterHeader />
         </div>
-        <div className='scenario-container'>
+        <div className="scenario-container">
           <h2>Scenario's</h2>
           <div>
             <Card
@@ -101,7 +102,7 @@ class ScenarioPage extends React.Component {
             >
               <Card.Body>
                 <Card.Text>
-                  <Button variant='primary' onClick={this.openModal}>
+                  <Button variant="primary" onClick={this.openModal}>
                     {t("add_scenario")}
                   </Button>
                 </Card.Text>
@@ -124,7 +125,7 @@ class ScenarioPage extends React.Component {
             {!!wind &&
               wind.length > 0 &&
               wind.map((scenario, index) => (
-                <DefaultCard scenario={scenario} id={index} key={index} />
+                <WindCard scenario={scenario} id={index} key={index} />
               ))}
 
             {/* {!!nuclear &&
