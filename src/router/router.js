@@ -1,6 +1,6 @@
 import Account from "pages/account";
 import React from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Redirect } from "react-router-dom";
 import paths from "services/shared/router-paths";
 import Dashboard from "pages/dashboard";
 import Login from "pages/login";
@@ -14,19 +14,25 @@ import Consumption from "pages/consumption";
 import ProtectedRoute from "./ProtectedRoute";
 import roles from "services/shared/account-role";
 import energyMarket from "pages/energy-market";
+import Scenario from "pages/scenario";
+import Pwa from "pages/pwa";
 
 function routes() {
   return (
     <BrowserRouter>
+      <Route exact path={paths.Root}>
+        <Redirect to={paths.Login} />
+      </Route>
       <ProtectedRoute
         roles={[
           roles.Customer,
           roles.LargeScaleCustomer,
+          roles.GridOperator,
           roles.Admin,
           roles.UtilityCompany,
           roles.ResponsibleParty,
         ]}
-        path={paths.Root}
+        path={paths.Dashboard}
         exact
         component={Dashboard}
       />
@@ -34,6 +40,7 @@ function routes() {
         roles={[
           roles.Customer,
           roles.LargeScaleCustomer,
+          roles.GridOperator,
           roles.Admin,
           roles.UtilityCompany,
           roles.ResponsibleParty,
@@ -42,10 +49,11 @@ function routes() {
         exact
         component={Account}
       />
-      <ProtectedRoute
+      <Route
         roles={[
           roles.Customer,
           roles.LargeScaleCustomer,
+          roles.GridOperator,
           roles.Admin,
           roles.UtilityCompany,
           roles.ResponsibleParty,
@@ -58,6 +66,7 @@ function routes() {
         roles={[
           roles.Customer,
           roles.LargeScaleCustomer,
+          roles.GridOperator,
           roles.Admin,
           roles.UtilityCompany,
           roles.ResponsibleParty,
@@ -70,6 +79,7 @@ function routes() {
         roles={[
           roles.Customer,
           roles.LargeScaleCustomer,
+          roles.GridOperator,
           roles.Admin,
           roles.UtilityCompany,
           roles.ResponsibleParty,
@@ -82,6 +92,7 @@ function routes() {
         roles={[
           roles.Customer,
           roles.LargeScaleCustomer,
+          roles.GridOperator,
           roles.Admin,
           roles.UtilityCompany,
           roles.ResponsibleParty,
@@ -94,6 +105,7 @@ function routes() {
         roles={[
           roles.Customer,
           roles.LargeScaleCustomer,
+          roles.GridOperator,
           roles.Admin,
           roles.UtilityCompany,
           roles.ResponsibleParty,
@@ -106,6 +118,7 @@ function routes() {
         roles={[
           roles.Customer,
           roles.LargeScaleCustomer,
+          roles.GridOperator,
           roles.Admin,
           roles.UtilityCompany,
           roles.ResponsibleParty,
@@ -117,6 +130,7 @@ function routes() {
         roles={[
           roles.Customer,
           roles.LargeScaleCustomer,
+          roles.GridOperator,
           roles.Admin,
           roles.UtilityCompany,
           roles.ResponsibleParty,
@@ -128,6 +142,7 @@ function routes() {
         roles={[
           roles.Customer,
           roles.LargeScaleCustomer,
+          roles.GridOperator,
           roles.Admin,
           roles.UtilityCompany,
           roles.ResponsibleParty,
@@ -139,12 +154,37 @@ function routes() {
         roles={[
           roles.Customer,
           roles.LargeScaleCustomer,
+          roles.GridOperator,
           roles.Admin,
           roles.UtilityCompany,
           roles.ResponsibleParty,
         ]}
         path={paths.Consumption}
         component={Consumption}
+      />
+      <Route
+        roles={[
+          roles.Customer,
+          roles.LargeScaleCustomer,
+          roles.GridOperator,
+          roles.Admin,
+          roles.UtilityCompany,
+          roles.ResponsibleParty,
+        ]}
+        path={paths.Scenario}
+        component={Scenario}
+      />
+      <ProtectedRoute
+        roles={[
+          roles.Customer,
+          roles.LargeScaleCustomer,
+          roles.GridOperator,
+          roles.Admin,
+          roles.UtilityCompany,
+          roles.ResponsibleParty,
+        ]}
+        path={paths.Pwa}
+        component={Pwa}
       />
     </BrowserRouter>
   );

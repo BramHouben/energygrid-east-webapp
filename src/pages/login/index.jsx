@@ -8,6 +8,8 @@ import { setAuthorizationCookie } from "services/shared/cookie";
 import paths from "services/shared/router-paths";
 import { withTranslation } from "react-i18next";
 import { getClaim } from "services/jwt";
+import jwtClaims from "services/shared/jwt-claims";
+import routerPaths from "services/shared/router-paths";
 
 class Login extends Component {
   onSubmit = async (e) => {
@@ -18,6 +20,15 @@ class Login extends Component {
     const { t } = this.props;
 
     if (loginResult.status === 200) {
+      const accountRole = getClaim(jwtClaims.accountRole);
+      if (
+        window.matchMedia("(display-mode: standalone)").matches &&
+        accountRole !== "CUSTOMER"
+      ) {
+        toast.error(t("You are not allowed to use this app"));
+        return;
+      }
+
       setAuthorizationCookie(await loginResult.text());
       const userUuid = getClaim("uuid");
       const findUserResult = await FindUser(userUuid);
@@ -27,7 +38,15 @@ class Login extends Component {
         i18n.changeLanguage(user.language);
       }
 
-      window.location.replace(paths.Root);
+      if (
+        window.matchMedia("(display-mode: standalone)").matches &&
+        accountRole !== "CUSTOMER"
+      ) {
+        window.location.replace(paths.Pwa);
+        return;
+      }
+
+      window.location.pathname = paths.Dashboard;
     } else {
       toast.error(t("login-failed"));
     }
@@ -37,15 +56,15 @@ class Login extends Component {
     const { t } = this.props;
 
     return (
-      <div id="login">
+      <div id='login'>
         <h1>{t("title")}</h1>
         <Form onSubmit={this.onSubmit}>
           <Form.Group>
             <Form.Label>{t("email")}</Form.Label>
             <Form.Control
               required
-              type="email"
-              name="email"
+              type='email'
+              name='email'
               placeholder={t("email-placeholder")}
             />
           </Form.Group>
@@ -53,14 +72,14 @@ class Login extends Component {
             <Form.Label>{t("password")}</Form.Label>
             <Form.Control
               required
-              name="password"
-              type="password"
+              name='password'
+              type='password'
               placeholder={t("password-placeholder")}
             />
           </Form.Group>
           <Button
             block
-            type="submit"
+            type='submit'
             style={{
               backgroundColor: "#82de94",
               borderColor: "#82de94",
@@ -69,6 +88,11 @@ class Login extends Component {
           >
             {t("submit-btn")}
           </Button>
+          <div style={{ marginTop: "20px", textAlign: "center" }}>
+            <a key='register' href={routerPaths.Registration}>
+              {t("no_account_yet")}
+            </a>
+          </div>
         </Form>
       </div>
     );

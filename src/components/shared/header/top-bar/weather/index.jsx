@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./index.css";
 import Axios from "axios";
-
+import ApiActions from "services/shared/api/ApiActions";
 export default class Weather extends Component {
   constructor() {
     super();
@@ -27,7 +27,7 @@ export default class Weather extends Component {
     localStorage.setItem("coordinates", JSON.stringify(coordinates));
     localStorage.setItem("city", JSON.stringify(city));
 
-    Axios.post(`http://localhost:8081/weather/current`, {
+    Axios.post(ApiActions.CurrentWeather, {
       coordinates: JSON.parse(localStorage.getItem("coordinates")),
     })
       .then((response) => {
@@ -37,21 +37,20 @@ export default class Weather extends Component {
           symbol: response.data.symbol,
         });
       })
-      .catch(() => {
-      });
+      .catch(() => {});
   }
 
   render() {
     let { city, temperature, symbol } = this.state;
 
     return (
-      <div className="weather-container">
-        <div className="weather-data">
+      <div className='weather-container'>
+        <div className='weather-data'>
           <div>{temperature} °C</div>
           <div>{city}</div>
         </div>
         <div
-          className="weather-image"
+          className='weather-image'
           style={{
             backgroundImage: `url(http://openweathermap.org/img/wn/${symbol}@2x.png)`,
           }}

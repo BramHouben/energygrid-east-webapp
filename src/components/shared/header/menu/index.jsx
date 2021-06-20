@@ -4,6 +4,7 @@ import { withTranslation } from "react-i18next";
 import routerPaths from "services/shared/router-paths";
 import Cookies from "universal-cookie";
 import "./index.css";
+import { getClaim } from "services/jwt";
 
 class Menu extends Component {
   constructor(props) {
@@ -31,6 +32,7 @@ class Menu extends Component {
 
   render() {
     const { t } = this.props;
+    const jwt = getClaim("role");
     return (
       <div>
         <Button
@@ -51,11 +53,14 @@ class Menu extends Component {
             &times;
           </button>
           <div id="menu-links">
-            <a key="dashboard" href="/">
+            <a key="dashboard" href={routerPaths.Dashboard}>
               {t("dashboard")}
             </a>
             <a key="regiondetails" href={routerPaths.Region}>
               {t("regiondetails")}
+            </a>
+            <a key="scenario" href={routerPaths.Scenario}>
+              {t("scenario")}
             </a>
             <a key="map" href={routerPaths.Map}>
               {t("map")}
@@ -69,6 +74,11 @@ class Menu extends Component {
             <a key="account" href={routerPaths.Account}>
               {t("account")}
             </a>
+            {jwt == "ADMIN" && (
+              <a key="user-management" href={routerPaths.UserManagement}>
+                User Management
+              </a>
+            )}
             <button
               onClick={() => this.logout()}
               type="button"

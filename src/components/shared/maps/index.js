@@ -4,6 +4,9 @@ import data from "../../../data/solarparks-east.json";
 import turbines from "data/windturbines-east.json";
 import "./index.css";
 
+const MAPBOX_TOKEN =
+  "pk.eyJ1IjoiZnJpdHNqaHV1dSIsImEiOiJja21uN2Z4dWgwdWNtMndyem15MXg3c3o0In0.CNS2hAKmJdjcjJRY1cNKXQ";
+
 export default function Maps() {
   const [viewport, setViewport] = useState({
     latitude: 52.18889722321286,
@@ -16,10 +19,10 @@ export default function Maps() {
   const [selectedWindTurbinePark, setSelectedWindTurbinePark] = useState(null);
 
   return (
-    <div style={{width: '100%'}}>
+    <div style={{ width: "100%" }}>
       <ReactMapGL
         {...viewport}
-        mapboxApiAccessToken={process.env.REACT_APP_MAP_BOX_TOKEN}
+        mapboxApiAccessToken={MAPBOX_TOKEN}
         //mapStyle="mapbox://styles/fritsjhuuu/ckmunrfw755q417p0db5st0ff"
         onViewportChange={(viewport) => {
           setViewport(viewport);
@@ -32,7 +35,7 @@ export default function Maps() {
             longitude={solarPark.coordinates.y}
           >
             <button
-              className="marker-btn"
+              className='marker-btn'
               onClick={(e) => {
                 e.preventDefault();
                 setSelectedWindTurbinePark(null);
@@ -40,8 +43,8 @@ export default function Maps() {
               }}
             >
               <img
-                src="/assets/solarpark/marker-sun.png"
-                alt="solarpanel-icon"
+                src='/assets/solarpark/marker-sun.png'
+                alt='solarpanel-icon'
               />
             </button>
           </Marker>
@@ -54,7 +57,7 @@ export default function Maps() {
             longitude={park.geometry.coordinates[0]}
           >
             <button
-              className="marker-btn"
+              className='marker-btn'
               onClick={(e) => {
                 e.preventDefault();
                 setSelectedSolarPark(null);
@@ -62,8 +65,8 @@ export default function Maps() {
               }}
             >
               <img
-                src="/assets/windturbines/marker-turbines.png"
-                alt="solarpanel-icon"
+                src='/assets/windturbines/marker-turbines.png'
+                alt='solarpanel-icon'
               />
             </button>
           </Marker>
@@ -71,14 +74,14 @@ export default function Maps() {
 
         {selectedSolarPark ? (
           <Popup
-            className="popup"
+            className='popup'
             latitude={selectedSolarPark.coordinates.x}
             longitude={selectedSolarPark.coordinates.y}
             onClose={() => {
               setSelectedSolarPark(null);
             }}
           >
-            <div id="popup-items">
+            <div id='popup-items'>
               <h4>{selectedSolarPark.applicant}</h4>
               <p>
                 {selectedSolarPark.adress} {selectedSolarPark.zipcode}{" "}
@@ -98,14 +101,14 @@ export default function Maps() {
 
         {selectedWindTurbinePark ? (
           <Popup
-            className="popup"
+            className='popup'
             latitude={selectedWindTurbinePark.geometry.coordinates[1]}
             longitude={selectedWindTurbinePark.geometry.coordinates[0]}
             onClose={() => {
               setSelectedWindTurbinePark(null);
             }}
           >
-            <div id="popup-items">
+            <div id='popup-items'>
               <h4>{selectedWindTurbinePark.properties.title}</h4>
               <p>{selectedWindTurbinePark.properties.description}</p>
               <p>

@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import ProgressBar from "react-bootstrap/ProgressBar";
 import "components/shared/footer/index.css";
 import ApiActions from "services/shared/api/ApiActions";
+import SockJsClient from "react-stomp";
 
 export default class Footer extends Component {
   constructor(props) {
@@ -35,16 +36,30 @@ export default class Footer extends Component {
     this.fetchData();
   }
 
+  onConnected = () => {};
+
+  onMessageReceive = (message) => {
+    console.log(message);
+    if (!!message) {
+      this.setState({
+        latestConsume: message.consume,
+        latestTime: message.time,
+        latestProcent: message.balance,
+        latestProduce: message.production,
+      });
+    }
+  };
+
   render() {
     let latestprocentbalance = this.state.latestProcent;
     return (
       <div>
         {latestprocentbalance === 100 ? (
-          <div id="footersuccess">
-            <div id="progressbarsuccess">
+          <div id='footersuccess'>
+            <div id='progressbarsuccess'>
               <h1>Balance is: {latestprocentbalance}</h1>
               <ProgressBar
-                variant="success"
+                variant='success'
                 animated
                 now={latestprocentbalance}
                 label={`${latestprocentbalance}% completed`}
@@ -55,17 +70,24 @@ export default class Footer extends Component {
           <div></div>
         )}
         {latestprocentbalance !== 100 ? (
-          <div id="footererror">
-            <div id="progressbarerror">
+          <div id='footererror'>
+            <div id='progressbarerror'>
               <h1>Balance is: {latestprocentbalance}</h1>
 
               <ProgressBar
-                variant="danger"
+                variant='danger'
                 animated
                 now={latestprocentbalance}
                 label={`${latestprocentbalance}% completed`}
               />
             </div>
+            <SockJsClient
+              url={ApiActions.getBalanceWebSocket}
+              topics={["/topic"]}
+              onConnect={this.onConnected}
+              onMessage={(msg) => this.onMessageReceive(msg)}
+              debug={false}
+            />
           </div>
         ) : (
           <div></div>

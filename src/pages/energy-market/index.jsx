@@ -1,58 +1,47 @@
 import Header from "components/shared/header";
 import React, { Component } from "react";
-import { Form, Button } from "react-bootstrap";
-import { withTranslation } from "react-i18next";
-import { BuyOrSellEnergy } from "services/shared/energy-market";
-import { getFormDataInJson } from "services/shared/form-data-helper";
-import "./index.css";
 
+import { withTranslation } from "react-i18next";
+
+import Axios from "axios";
+import ApiActions from "services/shared/api/ApiActions";
+import "./index.css";
+import EnergyMarketCard from "components/shared/cards/energymarketcard";
+import { EnergyHistory } from "services/shared/energy-market";
 class EnergyMarket extends Component {
   constructor() {
     super();
     this.state = {
-      price: 0,
+      energyMarketInfo: [],
     };
   }
 
-  onEnergyChange = (e) => {
-    const price = Math.abs(e.target.value * 0.22);
-    this.setState({ price });
-  };
-
-  onSubmit = async (e) => {
-    e.preventDefault();
-    const formData = getFormDataInJson(e);
-    formData.region = "east";
-    await BuyOrSellEnergy(formData);
+  componentDidMount = async () => {
+    let result = await EnergyHistory();
+    if (result.status === 200) {
+      let energyMarketInfo = await result.json();
+      energyMarketInfo.forEach(
+        (d) => (d.type = d.amountTotal > 0 ? "buy" : "sell")
+      );
+      this.setState({ energyMarketInfo });
+    }
   };
 
   render() {
     const { t } = this.props;
-    const { price } = this.state;
+    const energyMarketInfo = this.state.energyMarketInfo;
 
     return (
       <div>
         <Header pageName={t("pageName")} />
-        <div className="content">
-          <Form onSubmit={this.onSubmit} id="energy-market-form">
-            <Form.Group>
-              <Form.Label>{t("sell-buy-label")}</Form.Label>
-              <Form.Control
-                name="energyQuantity"
-                onChange={this.onEnergyChange}
-                defaultValue="0"
-                required
-                type="number"
-              />
-              <small>{t("sell-by-description")}</small>
-            </Form.Group>
-            <label>
-              {t("price")} {price}
-            </label>
-            <br />
-            <Button>{t("submit-btn")}</Button>
-          </Form>
-        </div>
+
+        {energyMarketInfo !== null ? (
+          <div className='content'>
+            <EnergyMarketCard energyMarketInfo={energyMarketInfo} />
+          </div>
+        ) : (
+          <div>No data can be displayed</div>
+        )}
       </div>
     );
   }

@@ -9,7 +9,9 @@ import Header from "components/shared/header";
 import FilterHeader from "components/shared/filter-header";
 import CityInformation from "components/shared/regionfilter/cityinformation";
 import RegionCityDropdown from "components/shared/regionfilter/regioncitydropdown";
-class region extends Component {
+const MAPBOX_TOKEN =
+  "pk.eyJ1IjoiZnJpdHNqaHV1dSIsImEiOiJja21uN2Z4dWgwdWNtMndyem15MXg3c3o0In0.CNS2hAKmJdjcjJRY1cNKXQ";
+class Region extends Component {
   constructor(props) {
     super(props);
 
@@ -57,7 +59,7 @@ class region extends Component {
     });
   }
   async regionchanged(currentregion) {
-    console.log(region);
+    console.log(currentregion);
     this.setState({
       currentCity: "",
       streetChosen: false,
@@ -82,15 +84,15 @@ class region extends Component {
 
     return (
       <div>
-        <div className="header-wrapper">
-          <Header pageName="Details" />
+        <div className='header-wrapper'>
+          <Header pageName='Details' />
           <FilterHeader />
         </div>
-        <div id="regiondetailsinfo">
-          <Form.Group controlId="formBasicSelectregion">
+        <div id='regiondetailsinfo'>
+          <Form.Group controlId='formBasicSelectregion'>
             <Form.Label>{t("select region")}</Form.Label>
             <Form.Control
-              as="select"
+              as='select'
               onChange={(e) => {
                 this.regionchanged(e.target.value);
               }}
@@ -131,7 +133,7 @@ class region extends Component {
           {streetChosen ? (
             <ReactMapGL
               {...viewport}
-              mapboxApiAccessToken={process.env.REACT_APP_MAP_BOX_TOKEN}
+              mapboxApiAccessToken={MAPBOX_TOKEN}
               onViewportChange={(viewport) => {
                 this.setState({ viewport });
               }}
@@ -143,7 +145,7 @@ class region extends Component {
                   longitude={houses.coordinates[0]}
                 >
                   <button
-                    className="marker-btn"
+                    className='marker-btn'
                     onClick={(e) => {
                       e.preventDefault();
                       this.setState({
@@ -151,7 +153,7 @@ class region extends Component {
                       });
                     }}
                   >
-                    <img src="/assets/house/house.png" alt="house-icon" />
+                    <img src='/assets/house/house.png' alt='house-icon' />
                   </button>
                 </Marker>
               ))}
@@ -165,4 +167,4 @@ class region extends Component {
     );
   }
 }
-export default withTranslation("regionfilter")(region);
+export default withTranslation("regionfilter")(Region);

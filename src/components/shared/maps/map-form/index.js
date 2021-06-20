@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import ReactMapGL, { Marker } from "react-map-gl";
 import "./index.css";
-
+const MAPBOX_TOKEN =
+  "pk.eyJ1IjoiZnJpdHNqaHV1dSIsImEiOiJja21uN2Z4dWgwdWNtMndyem15MXg3c3o0In0.CNS2hAKmJdjcjJRY1cNKXQ";
 export default function MapForm() {
   const [viewport, setViewport] = useState({
     latitude: 52.18889722321286,
@@ -36,7 +37,7 @@ export default function MapForm() {
     <div>
       <ReactMapGL
         {...viewport}
-        mapboxApiAccessToken={process.env.REACT_APP_MAP_BOX_TOKEN}
+        mapboxApiAccessToken={MAPBOX_TOKEN}
         //mapStyle="mapbox://styles/fritsjhuuu/ckmunrfw755q417p0db5st0ff"
         onViewportChange={(viewport) => {
           setViewport(viewport);
@@ -52,15 +53,15 @@ export default function MapForm() {
             offsetTop={-50}
             offsetLeft={-25}
           >
-            <button className="marker-btn">
+            <button className='marker-btn'>
               {(selectedType && selectedType === "Wind") ||
               selectedType === "wind" ? (
                 <img
-                  src="/assets/windturbines/marker-turbine.png"
-                  alt="turbine-icon"
+                  src='/assets/windturbines/marker-turbine.png'
+                  alt='turbine-icon'
                 />
               ) : (
-                <img src="/assets/solarpark/marker-sun.png" alt="solar-icon" />
+                <img src='/assets/solarpark/marker-sun.png' alt='solar-icon' />
               )}
             </button>
           </Marker>
